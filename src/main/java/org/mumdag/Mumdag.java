@@ -2,6 +2,8 @@ package org.mumdag;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.mumdag.core.OutputXmlDoc;
+import org.mumdag.utils.PropertyHandler;
 
 
 public class Mumdag {
@@ -11,9 +13,8 @@ public class Mumdag {
 	public static void main(String[] args) {
 		log.info("Mumdag started");
 
-/*
 		// Generate an empty document with a given template file
-		String templateFilePath = "";
+		String templateFilePath;
 		OutputXmlDoc oxd = null;
 		try {
 			templateFilePath = PropertyHandler.getInstance("./src/main/resources/config.properties").getValue("OutputXmlDoc.templatePath");
@@ -24,7 +25,7 @@ public class Mumdag {
 			ex.printStackTrace();
 			return;
 		}
-*/
+
 
 /*		// Reading the execution rules
 		String executionRulesFilePath = "";
@@ -49,7 +50,6 @@ public class Mumdag {
 			LocalArtistIndex lai = new LocalArtistIndex(startPath);
 			artistList = lai.getArtistList();
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		log.info("Building artist index finsihed ... {} artists found", artistList.size());
@@ -65,7 +65,6 @@ public class Mumdag {
 		    	oxd.createOutputXmlDoc();
 				oxd = er.executeRules(artistName, artistCanonicalPath, oxd);
 			} catch (Exception e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		    oxd.writeOutputDocToFile(artistCanonicalPath + "/.metadata/", "test.xml");
