@@ -11,17 +11,17 @@ public class Mumdag {
 	private static final Logger log = LogManager.getLogger(Mumdag.class);
 	
 	public static void main(String[] args) {
-		log.info("Mumdag started");
+		log.info(" Mumdag started");
 
 		// Generate an empty document with a given template file
 		String templateFilePath;
 		OutputXmlDoc oxd = null;
 		try {
-			templateFilePath = PropertyHandler.getInstance("./src/main/resources/config.properties").getValue("OutputXmlDoc.templatePath");
+			templateFilePath = PropertyHandler.getInstance("./src/main/resources/configFiles/config.properties").getValue("OutputXmlDoc.templatePath");
 			oxd = new OutputXmlDoc(templateFilePath);
-			log.info("Empty output document created from template '{}'", templateFilePath);
+			log.info(" Empty output document created from template '{}'", templateFilePath);
 		} catch (Exception ex) {
-			log.error("{}: {} ... Mumdag exited",  ex.getClass().getSimpleName(), ex.getMessage());
+			log.error(" {}: {} ... Mumdag exited",  ex.getClass().getSimpleName(), ex.getMessage());
 			ex.printStackTrace();
 			return;
 		}
@@ -72,7 +72,7 @@ public class Mumdag {
 		    i++;
 		}
 */
-		log.info("Mumdag finished");
+		log.info(" Mumdag finished");
 	}
 
 }

@@ -1,0 +1,10 @@
+discogs.com	= ^http[s]?:\/\/www.discogs.com\/artist\/([a-z0-9]+)			|||	DiscogsScraper.Artist			
+allmusic.com = ^http[s]?:\/\/www.allmusic.com\/artist\/([a-z0-9]+)			|||	AllmusicScraper.Artist
+bbc.co.uk = ^http[s]?:\/\/www.bbc.co.uk\/music\/artists\/([a-z0-9\-]+)		|||	BBCScraper.Artist
+viaf.org = ^http[s]?:\/\/viaf.org\/viaf\/([a-z0-9]+)						||| ViafScraper
+imdb.com = ^http[s]?:\/\/www.imdb.com\/name\/([a-z0-9]+)					||| IMDBScraper
+www.last.fm = mbid															||| LastFMScraper.Artist
+setlist.fm = mbid															||| SetlistFMScraper.Artist
+itunes.apple.com = ^http[s]?:\/\/itunes.apple.com\/artist\/([a-z0-9]+)		|||	ItunesScraper.Artist
+open.spotify.com = ^http[s]?:\/\/open.spotify.com\/artist\/([a-zA-Z0-9]+)	||| SpotifyScraper.Artist
+wikidata.org = ^http[s]?:\/\/www.wikidata.org\/wiki\/([a-zA-Z0-9]+)			||| WikidataScraper

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<MappingRules>
+	<RuleSet name="LocalMusicFileScraper">
+		<Rule no="1" name="mapReleaseGroupId">
+			<Action no="1">
+				<Input>$mb_rg_id$=getId3v24Tag(MUSICBRAINZ_RELEASE_GROUP_ID)</Input>
+				<Output>addReleaseGroup($mb_rg_id$)</Output>
+			</Action>
+			<Action no="2">
+				<Input>-</Input>
+				<Output></Output>
+			</Action>
+		</Rule>
+		<Rule no="2" name="mapReleaseId">
+			<Action no="1">
+				<Input>$mb_r_id$=getId3v24Tag(MUSICBRAINZ_RELEASE_ID)</Input>
+				<Output>addRelease($mb_r_id$)</Output>
+			</Action>
+			<Action no="2">
+				<Input>-</Input>
+				<Output>-</Output>
+			</Action>
+		</Rule>
+	</RuleSet>
+	<RuleSet name="MusicBrainzScraper">
+		<Rule no="10" name="requestArtist">
+			<Action no="1">
+				<Input>$mb_a_id$=getMbArtistId()</Input>
+				<Output>-</Output>
+			</Action>
+			<Action no="2">
+				<Input>requestMbArtist($mb_a_id$)</Input>
+				<Output></Output>
+			</Action>
+		</Rule>
+		<Rule no="11" name="mapArtistInfo">
+			<Action no="1">
+				<Input>readXpath(123)</Input>
+				<Output>writeXpath(1234)</Output>
+			</Action>
+			<Action no="2">
+				<Input>readXpath(222)</Input>
+				<Output>writeXpath(333)</Output>
+			</Action>
+			<Action no="3">
+				<Input>readXpath(444)</Input>
+				<Output>writeXpath()</Output>
+			</Action>
+		</Rule>
+	</RuleSet>
+</MappingRules>

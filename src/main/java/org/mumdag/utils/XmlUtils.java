@@ -1,5 +1,7 @@
 package org.mumdag.utils;
 
+//-----------------------------------------------------------------------------
+
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
@@ -45,24 +47,22 @@ private static final Logger log = LogManager.getLogger(XmlUtils.class);
 //DOC:				nok
 //TEST:				ok
 public static String resolveXpathString(String xpath, String... replacementStrings) {
+	if(StringUtils.isEmpty(xpath)) {
+		return xpath;
+	}
 	for (String replacementString : replacementStrings) {
-		if(replacementString == null || replacementString.length() == 0) {
-			return xpath;
-		}
-		String[] parts = replacementString.split("::");
-		if(parts.length == 2) {
-			String replKey = parts[0];
-			String replVal = parts[1];
-			xpath = xpath.replaceAll(replKey, replVal);
-		}
-		else if(parts.length == 1) {
-			String replKey = parts[0];
-			int idxOfReplKey = xpath.indexOf(replKey);
-			if(idxOfReplKey == -1) {
-				return xpath;
-			}
-			else {
-				xpath = xpath.substring(0, idxOfReplKey-1) + xpath.substring(idxOfReplKey+replKey.length()+1, xpath.length());
+		if(StringUtils.isNotEmpty(replacementString)) {
+			String[] parts = replacementString.split("::");
+			if (parts.length == 2) {
+				String replKey = parts[0];
+				String replVal = parts[1];
+				xpath = xpath.replaceAll(replKey, replVal);
+			} else if (parts.length == 1) {
+				String replKey = parts[0];
+				int idxOfReplKey = xpath.indexOf(replKey);
+				if (idxOfReplKey != -1) {
+					xpath = xpath.substring(0, idxOfReplKey - 1) + xpath.substring(idxOfReplKey + replKey.length() + 1, xpath.length());
+				}
 			}
 		}
 	}
@@ -74,7 +74,7 @@ public static String resolveXpathString(String xpath, String... replacementStrin
 //ERROR HANDLING:	nok
 //DOC:				nok
 //TEST:				nok
-public static String resolveXpathString(String xpath, HashMap<String, String> resolveXpathInfos) throws Exception {
+public static String resolveXpathString(String xpath, HashMap<String, String> resolveXpathInfos) {
 	String patternStr = "(\\[|'| )(_[a-zA-Z]{3,}_)(\\]|'| )";
 	return resolveXpathString(xpath, resolveXpathInfos, patternStr);
 }
@@ -84,14 +84,13 @@ public static String resolveXpathString(String xpath, HashMap<String, String> re
 //ERROR HANDLING:	nok
 //DOC:				nok
 //TEST:				nok
-public static String resolveXpathString(String xpath, HashMap<String, String> resolveXpathInfos, String patternStr) throws Exception {
+static String resolveXpathString(String xpath, HashMap<String, String> resolveXpathInfos, String patternStr) {
 	Pattern pattern = Pattern.compile(patternStr);
 	Matcher matcher = pattern.matcher(xpath);
 	while (matcher.find()) {
 		String replaceStr = matcher.group(2);
 		String strPrefix = matcher.group(1);
 		String strPostfix = matcher.group(3);
-		//log.info("strPrefix={} strPostfix={}", strPrefix, strPostfix);
 		//search in the resolveXpathInfo map with the key (replaceStr), but without the leading and closing '_' 
 		String newReplacementStr = replaceStr.substring(1, replaceStr.length()-1);
 		String replacementStr = resolveXpathInfos.get(newReplacementStr);
@@ -189,14 +188,16 @@ public static List<String> getNodeTextByXPath(String xmlString, String xpathStri
 		e.printStackTrace();
 	}
 	
-	if(nl.getLength() == 0) {
+	if(nl != null && nl.getLength() == 0) {
 		log.warn("XPath '{}' resulted in {} nodes", xpathString, nl.getLength());
 		return retList;
 	}
-	
-	for(int i = 0; i < nl.getLength(); i++) {
-		retList.add(nl.item(i).getNodeValue());
-	}
+
+	if(nl != null) {
+        for (int i = 0; i < nl.getLength(); i++) {
+            retList.add(nl.item(i).getNodeValue());
+        }
+    }
 	
 	return retList;
 }
@@ -243,26 +244,27 @@ public static List<String> getNodeByXPath(String xmlString, String xpathString, 
 		log.warn("XPath '{}' resulted in {} nodes", xpathString, nl.getLength());
 		return retList;
 	}
-	
-	for(int i = 0; i < nl.getLength(); i++) {
-		String childStr = "";
-		NodeList childNl = nl.item(i).getChildNodes();
-		for(int j = 0; j < childNl.getLength(); j++) {
-			Node childNode = childNl.item(j);
-			String childNodeName = childNode.getNodeName();
-			String childNodeValue = "";
-			if(childNodeNameList.contains(childNodeName)) {
-				childNodeValue = childNode.getTextContent();
-				if(StringUtils.isNotEmpty(childStr)) {
-					childStr = childStr + "," + childNodeName + "=" + childNodeValue;
-				}
-				else {
-					childStr = childNodeName + "=" + childNodeValue;
-				}
-			}
-		}
-		retList.add(childStr);
-	}
+
+	if(nl != null) {
+        for (int i = 0; i < nl.getLength(); i++) {
+            String childStr = "";
+            NodeList childNl = nl.item(i).getChildNodes();
+            for (int j = 0; j < childNl.getLength(); j++) {
+                Node childNode = childNl.item(j);
+                String childNodeName = childNode.getNodeName();
+                String childNodeValue;
+                if (childNodeNameList.contains(childNodeName)) {
+                    childNodeValue = childNode.getTextContent();
+                    if (StringUtils.isNotEmpty(childStr)) {
+                        childStr = childStr + "," + childNodeName + "=" + childNodeValue;
+                    } else {
+                        childStr = childNodeName + "=" + childNodeValue;
+                    }
+                }
+            }
+            retList.add(childStr);
+        }
+    }
 	return retList;
 }
 

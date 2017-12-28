@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<MappingRules>
+	<RuleSet name="LocalMusicFileScraper">
+		<Rule no="1" name="scrapeLocalMusicFiles">
+			<Action no="1">
+				<Method>scrapeAllMusicFilesWithMBTags</Method>
+				<ReturnVar/>
+				<ParamList/>
+			</Action>
+		</Rule>
+		<Rule no="2" name="setMusicBrainzIds">
+			<Action no="1">
+				<Method>writeMusicBrainzArtistId</Method>
+				<ReturnVar/>
+				<ParamList/>
+			</Action>
+			<Action no="2">
+				<Method>writeMusicBrainzReleaseGroupId</Method>
+				<ReturnVar/>
+				<ParamList/>
+			</Action>			
+			<Action no="3">
+				<Method>writeMusicBrainzReleaseId</Method>
+				<ReturnVar/>
+				<ParamList/>
+			</Action>
+			<Action no="4">
+				<Method>writeMediumDiscNo</Method>
+				<ReturnVar/>
+				<ParamList/>
+			</Action>
+			<Action no="5">
+				<Method>writeMusicBrainzTrackId</Method>
+				<ReturnVar/>
+				<ParamList/>
+			</Action>
+		</Rule>
+		<Rule no="3" name="setTrackInfo">
+			<Action no="1">
+				<Method>writeTags</Method>
+				<ReturnVar/>
+				<ParamList>ARTIST,GENRE</ParamList>
+			</Action>
+			<Action no="2">
+				<Method>writeFileInfo</Method>
+				<ReturnVar/>
+				<ParamList/>
+			</Action>
+			<Action no="3">
+				<Method>writeFileInfo</Method>
+				<ReturnVar/>
+				<ParamList/>
+			</Action>
+			<Action no="4">
+				<Method>writeAudioInfo</Method>
+				<ReturnVar/>
+				<ParamList/>
+			</Action>
+		</Rule>
+	</RuleSet>
+	<RuleSet name="MusicBrainzScraper">
+		<Rule no="1" name="testSomething">
+			<Action no="1">
+				<Method>setArtistMbIdInDoc</Method>
+				<ReturnVar/>
+				<ParamList>"lalalal"</ParamList>
+			</Action>
+		</Rule>
+	</RuleSet>
+</MappingRules>

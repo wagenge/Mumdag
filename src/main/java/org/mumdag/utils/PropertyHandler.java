@@ -32,7 +32,7 @@ private HashSet<String> propIdMap = new HashSet<>();
 //DOC:				nok
 //TEST:				nok
 private PropertyHandler() throws Exception {
-	FileInputStream file = new FileInputStream("./src/main/resources/config.properties");
+	FileInputStream file = new FileInputStream("./src/main/resources/configFiles/config.properties");
 	this.properties = new Properties();
 	this.properties.load(file);
 	this.propIdMap.add("config");

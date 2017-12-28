@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Artist>
+	<UniqueIdList/>
+	<NameList/>
+	<Type/>
+	<AreaList/>
+	<PeriodList/>
+	<ArtistDescriptionList/>
+	<TagList/>
+	<UrlList/>
+	<RatingList/>
+	<ArtistCreditList/>
+	<FanartList/>
+	<DisambiguationList/>
+	<AnnotationList/>
+	<Discography>
+		<ReleaseGroupList/>
+	</Discography>
+</Artist>

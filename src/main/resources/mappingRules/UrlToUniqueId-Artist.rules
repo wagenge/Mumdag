@@ -1,0 +1,10 @@
+discogs.com	= ^http[s]?:\/\/www.discogs.com\/artist\/([a-z0-9]+)			¦¦¦	Discogs
+allmusic.com = ^http[s]?:\/\/www.allmusic.com\/artist\/([a-z0-9]+)			¦¦¦	Allmusic
+bbc.co.uk = mbid															¦¦¦	BBC
+viaf.org = ^http[s]?:\/\/viaf.org\/viaf\/([a-z0-9]+)						¦¦¦ VIAF
+imdb.com = ^http[s]?:\/\/www.imdb.com\/name\/([a-z0-9]+)					¦¦¦ IMDB
+www.last.fm = mbid															¦¦¦ LastFM
+setlist.fm = mbid															¦¦¦ SetlistFM
+itunes.apple.com = ^http[s]?:\/\/itunes.apple.com\/artist\/([a-z0-9]+)		¦¦¦	AppleMusic
+open.spotify.com = ^http[s]?:\/\/open.spotify.com\/artist\/([a-zA-Z0-9]+)	¦¦¦ Spotify
+wikidata.org = ^http[s]?:\/\/www.wikidata.org\/wiki\/([a-zA-Z0-9]+)			¦¦¦ Wikidata

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<MappingRules>
+	<RuleSet name="LocalMusicFileScraper">
+		<Rule no="1" name="scrapeLocalFiles">
+			<Action no="1">
+				<Input>ret2=test2(ABC, DEF)</Input>
+				<Output>$ret1$=test1($ret2$)</Output>
+			</Action>
+			<Action no="2">
+				<Input>test3()</Input>
+				<Output>test1("ABC")</Output>
+			</Action>
+			<Action no="4">
+				<Input>test4()</Input>
+				<Output>test5($ret2$)</Output>
+			</Action>
+		</Rule>
+	</RuleSet>
+</MappingRules>

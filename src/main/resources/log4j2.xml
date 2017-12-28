@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<Configuration> 
+  <Appenders> 
+    <File name="FileLogger" fileName="./logs/DevLog4j.log" append="true"> 
+      <PatternLayout pattern="%d %-5p %C{-1}.%M%m%n"/> 
+    </File> 
+    <Console name="STDOUT" target="SYSTEM_OUT"> 
+      <PatternLayout pattern="%d %-5p %C{-1}.%M%m%n"/> 
+    </Console> 
+  </Appenders> 
+  <Loggers> 
+    <Logger name="hello" level="all" includeLocation="true"> 
+      <AppenderRef ref="FileLogger"/> 
+    </Logger> 
+    <Root level="all" includeLocation="true"> 
+		<AppenderRef ref="FileLogger"/>
+		<AppenderRef ref="STDOUT"/> 
+    </Root> 
+  </Loggers> 
+</Configuration>

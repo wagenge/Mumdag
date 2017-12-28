@@ -1,0 +1,174 @@
+ArtistNode.xpathAbsolute = /Artist[_arid_]
+ArtistNode.subType = node
+
+ArtistId.xpathTarget = /Artist
+ArtistId.xpathAbsolute = /Artist/@_arid_
+ArtistId.subType = attribute
+ArtistId.xpathCheckNodeEmpty = /Artist[count(@*)=0]
+ArtistId.xpathCheckSameAttrName = /Artist[_aridattrname_]
+ArtistId.xpathCheckSameAttrValue = /Artist[_arid_]
+ArtistId.xpathTemplate = /Artist
+
+UniqueIdNode.xpathRelative = /UniqueIdList/UniqueId[last()]
+UniqueIdNode.subType = node
+UniqueIdNode.xpathCheckNodeEmpty = /UniqueIdList/UniqueId[count(*[.!='']) = 0]
+UniqueIdNode.xpathCheckSameAttrName = /UniqueIdList/UniqueId[_unidattrname_ and _sourceattrname_]
+UniqueIdNode.xpathCheckSameAttrValue = /UniqueIdList/UniqueId[_unid_ and _source_]
+UniqueIdNode.xpathTemplate = /UniqueIdList/UniqueId
+
+UniqueIdValue.xpathRelative = /UniqueIdList/UniqueId[_unid_ and _source_]/Value
+UniqueIdValue.subType = text
+UniqueIdValue.xpathCheckNodeEmpty = /UniqueIdList/UniqueId[_unid_ and _source_]/Value[not(text())]
+UniqueIdValue.xpathCheckSameAttrName = /UniqueIdList/UniqueId[_unidattrname_ and _sourceattrname_]/Value
+UniqueIdValue.xpathCheckSameAttrValue = /UniqueIdList/UniqueId[_unid_ and _source_]/Value
+UniqueIdValue.xpathCheckSameNodeText = /UniqueIdList/UniqueId[_unid_ and _source_]/Value/text() = '_unidvalue_'
+UniqueIdValue.xpathTemplate = /UniqueIdList/UniqueId/Value
+
+UniqueIdSourceUrl.xpathRelative = /UniqueIdList/UniqueId[_unid_ and _source_]/SourceUrl
+UniqueIdSourceUrl.subType = text
+UniqueIdSourceUrl.xpathCheckNodeEmpty = /UniqueIdList/UniqueId[_unid_ and _source_]/SourceUrl[not(text())]
+UniqueIdSourceUrl.xpathCheckSameAttrName = /UniqueIdList/UniqueId[_unidattrname_ and _sourceattrname_]/SourceUrl
+UniqueIdSourceUrl.xpathCheckSameAttrValue = /UniqueIdList/UniqueId[_unid_ and _source_]/SourceUrl
+UniqueIdSourceUrl.xpathCheckSameNodeText = /UniqueIdList/UniqueId[_unid_ and _source_]/SourceUrl/text() = '_sourceurl_'
+UniqueIdSourceUrl.xpathTemplate = /UniqueIdList/UniqueId/SourceUrl
+
+UniqueIdSourceWSUrl.xpathRelative = /UniqueIdList/UniqueId[_unid_ and _source_]/SourceWSUrl
+UniqueIdSourceWSUrl.subType = text
+UniqueIdSourceWSUrl.xpathCheckNodeEmpty = /UniqueIdList/UniqueId[_unid_ and _source_]/SourceWSUrl[not(text())]
+UniqueIdSourceWSUrl.xpathCheckSameAttrName = /UniqueIdList/UniqueId[_unidattrname_ and _sourceattrname_]/SourceWSUrl
+UniqueIdSourceWSUrl.xpathCheckSameAttrValue = /UniqueIdList/UniqueId[_unid_ and _source_]/SourceWSUrl
+UniqueIdSourceWSUrl.xpathCheckSameNodeText = /UniqueIdList/UniqueId[_unid_ and _source_]/SourceWSUrl/text() = '_sourcewsurl_'
+UniqueIdSourceWSUrl.xpathTemplate = /UniqueIdList/UniqueId/SourceWSUrl
+
+Name.xpathRelative = /NameList/Name[last()]
+Name.subType = text
+Name.xpathCheckNodeEmpty = /NameList/Name[not(text())]
+Name.xpathCheckSameAttrName = /NameList/Name[_scraperattr_ and _srcattr_ and _ntypeattr_]
+Name.xpathCheckSameAttrValue = /NameList/Name[_arid_ and _src_ and _ntype_]
+Name.xpathCheckSameNodeText = /NameList/Name[_arid_ and _src_ and _ntype_]/text() = '_arname_'
+Name.xpathTemplate = /NameList/Name
+
+ArtistAnnotationList.xpathAbsolute = /Artist[_arid_]/AnnotationList/Annotation[last()]
+ArtistAnnotationList.subType = text
+ArtistAnnotationList.xpathCheckNodeEmpty = /Artist[_arid_]/AnnotationList/Annotation[not(text())]
+ArtistAnnotationList.xpathCheckSameAttrName = /Artist[_arid_]/AnnotationList/Annotation[_scraperattr_ and _sourceattr_]
+ArtistAnnotationList.xpathCheckSameAttrValue = /Artist[_arid_]/AnnotationList/Annotation[_arid_ and _source_]
+ArtistAnnotationList.xpathCheckSameNodeText = /Artist[_arid_]/AnnotationList/Annotation/text() = '_anotation_'
+ArtistAnnotationList.xpathTemplate = /Artist/AnnotationList/Annotation
+
+ArtistDisambiguationList.xpathAbsolute = /Artist[_arid_]/DisambiguationList/Disambiguation[last()]
+ArtistDisambiguationList.subType = text
+ArtistDisambiguationList.xpathCheckNodeEmpty = /Artist[_arid_]/DisambiguationList/Disambiguation[not(text())]
+ArtistDisambiguationList.xpathCheckSameAttrName = /Artist[_arid_]/DisambiguationList/Disambiguation[_scraperattr_ and _sourceattr_]
+ArtistDisambiguationList.xpathCheckSameAttrValue = /Artist[_arid_]/DisambiguationList/Disambiguation[_arid_ and _source_]
+ArtistDisambiguationList.xpathCheckSameNodeText = /Artist[_arid_]/DisambiguationList/Disambiguation/text() = '_disambiguation_'
+ArtistDisambiguationList.xpathTemplate = /Artist/DisambiguationList/Disambiguation
+
+ArtistType.xpathAbsolute = /Artist[_arid_]/Type
+ArtistType.subType = text
+ArtistType.xpathCheckNodeEmpty = /Artist[_arid_]/Type[not(text())]
+ArtistType.xpathCheckSameNodeText = /Artist[_arid_]/Type/text() = '_artype_'
+ArtistType.xpathTemplate = /Artist/Type
+
+PeriodList.xpathRelative = /PeriodList/Date[last()]
+PeriodList.subType = text
+PeriodList.xpathCheckNodeEmpty = /PeriodList/Date[not(text())]
+PeriodList.xpathCheckSameAttrName = /PeriodList/Date[_srcattr_ and _datetypeattr_]
+PeriodList.xpathCheckSameAttrValue = /PeriodList/Date[_arid_ and _datetype_]
+PeriodList.xpathCheckSameNodeText = /PeriodList/Date/text() = '_ardate_'
+PeriodList.xpathTemplate = /PeriodList/Date
+
+ArtistAreaList.xpathAbsolute = /Artist[_arid_]/AreaList/Area[last()]
+ArtistAreaList.subType = text
+ArtistAreaList.xpathCheckNodeEmpty = /Artist[_arid_]/AreaList/Area[not(text())]
+ArtistAreaList.xpathCheckSameAttrName = /Artist[_arid_]/AreaList/Area[_areaidattr_ and _areaseqattr_ and _areaeventattr_ and _areatypeattr_ and _areasortnameattr_]
+ArtistAreaList.xpathCheckSameAttrValue = /Artist[_arid_]/AreaList/Area[_areaid_ and _areaseq_ and _areaevent_ and _areatype_ and _areasortname_]
+ArtistAreaList.xpathCheckSameNodeText = /Artist[_arid_]/AreaList/Area/text() = '_areaname_'
+ArtistAreaList.xpathTemplate = /Artist/AreaList/Area
+
+ArtistUrlList.xpathAbsolute = /Artist[_arid_]/UrlList/Url[last()]
+ArtistUrlList.subType = text
+ArtistUrlList.xpathCheckNodeEmpty = /Artist[_arid_]/UrlList/Url[not(text())]
+ArtistUrlList.xpathCheckSameAttrName = /Artist[_arid_]/UrlList/Url[_scraperattr_ and _urltypeattr_]
+ArtistUrlList.xpathCheckSameAttrValue = /Artist[_arid_]/UrlList/Url[_arid_ and _urltype_]
+ArtistUrlList.xpathCheckSameNodeText = /Artist[_arid_]/UrlList/Url/text() = '_url_'
+ArtistUrlList.xpathTemplate = /Artist/UrlList/Url
+
+ArtistTagList.xpathAbsolute = /Artist[_arid_]/TagList/Tag[last()]
+ArtistTagList.subType = text
+ArtistTagList.xpathCheckNodeEmpty = /Artist[_arid_]/TagList/Tag[not(text())]
+ArtistTagList.xpathCheckSameAttrName = /Artist[_arid_]/TagList/Tag[_scraperattr_ and _countattr_]
+ArtistTagList.xpathCheckSameAttrValue = /Artist[_arid_]/TagList/Tag[_arid_ and _count_]
+ArtistTagList.xpathCheckSameNodeText = /Artist[_arid_]/TagList/Tag/text() = '_tag_'
+ArtistTagList.xpathTemplate = /Artist/TagList/Tag
+
+ArtistRatingList.xpathAbsolute = /Artist[_arid_]/RatingList/Rating[last()]
+ArtistRatingList.subType = text
+ArtistRatingList.xpathCheckNodeEmpty = /Artist[_arid_]/RatingList/Rating[not(text())]
+ArtistRatingList.xpathCheckSameAttrName = /Artist[_arid_]/RatingList/Rating[_scraperattr_ and _sourceattr_ and _votescountattr_]
+ArtistRatingList.xpathCheckSameAttrValue = /Artist[_arid_]/RatingList/Rating[_arid_ and _source_ and _votescount_]
+ArtistRatingList.xpathCheckSameNodeText = /Artist[_arid_]/RatingList/Rating/text() = '_rating_'
+ArtistRatingList.xpathTemplate = /Artist/RatingList/Rating
+
+ArtistCreditNode.xpathAbsolute = /Artist[_arid_]/ArtistCreditList/ArtistCredit[last()]
+ArtistCreditNode.subType = node
+ArtistCreditNode.xpathCheckNodeEmpty = /Artist[_arid_]/ArtistCreditList/ArtistCredit[not(text())]
+ArtistCreditNode.xpathCheckSameAttrName = /Artist[_arid_]/ArtistCreditList/ArtistCredit[_unidattrname_]
+ArtistCreditNode.xpathCheckSameAttrValue = /Artist[_arid_]/ArtistCreditList/ArtistCredit[_acid_]
+ArtistCreditNode.xpathTemplate = /Artist/ArtistCreditList/ArtistCredit
+
+ArtistCreditBase.xpathAbsolute = /Artist[_arid_]/ArtistCreditList/ArtistCredit[_acid_]
+ArtistCreditBase.subType = node
+
+RoleList.xpathRelative = /RoleList/Role[last()]
+RoleList.subType = text
+RoleList.xpathCheckNodeEmpty = /RoleList/Role[not(text())]
+RoleList.xpathCheckSameAttrName = /RoleList/Role[_srcattr_ and _roletypeattr_]
+RoleList.xpathCheckSameAttrValue = /RoleList/Role[_arid_ and _roletype_]
+RoleList.xpathCheckSameNodeText = /RoleList/Role/text() = '_role_'
+RoleList.xpathTemplate = /RoleList/Role
+
+ReleaseGroupNode.xpathAbsolute = /Artist[_arid_]/Discography/ReleaseGroupList/ReleaseGroup[last()]
+ReleaseGroupNode.subType = node
+ReleaseGroupNode.xpathCheckNodeEmpty = /Artist[_arid_]/Discography/ReleaseGroupList/ReleaseGroup[not(@*)]
+ReleaseGroupNode.xpathCheckSameAttrName = /Artist[_arid_]/Discography/ReleaseGroupList/ReleaseGroup[_unidattrname_]
+ReleaseGroupNode.xpathCheckSameAttrValue = /Artist[_arid_]/Discography/ReleaseGroupList/ReleaseGroup[_rgid_]
+ReleaseGroupNode.xpathTemplate = /Artist/Discography/ReleaseGroupList/ReleaseGroup
+
+ReleaseGroupUniqueIdNode.xpathAbsolute = /Artist[_arid_]/Discography/ReleaseGroupList/ReleaseGroup[_rgid_]/UniqueIdList/UniqueId[_unid_]
+ReleaseGroupUniqueIdNode.subType = node
+
+ReleaseNode.xpathAbsolute = /Artist[_arid_]/Discography/ReleaseGroupList/ReleaseGroup[_rgid_]/ReleaseList/Release[last()]
+ReleaseNode.subType = node
+ReleaseNode.xpathCheckNodeEmpty = /Artist[_arid_]/Discography/ReleaseGroupList/ReleaseGroup[_rgid_]/ReleaseList/Release[not(@*)]
+ReleaseNode.xpathCheckSameAttrName = /Artist[_arid_]/Discography/ReleaseGroupList/ReleaseGroup[_rgid_]/ReleaseList/Release[_unidattrname_]
+ReleaseNode.xpathCheckSameAttrValue = /Artist[_arid_]/Discography/ReleaseGroupList/ReleaseGroup[_rgid_]/ReleaseList/Release[_rid_]
+ReleaseNode.xpathTemplate = /Artist/Discography/ReleaseGroupList/ReleaseGroup/ReleaseList/Release
+
+Release.xpathAbsolute = /Artist[_arid_]/Discography/ReleaseGroupList/ReleaseGroup[_rgid_]/ReleaseList/Release[_rid_]
+
+ReleaseUniqueId.xpathAbsolute = /Artist[_arid_]/Discography/ReleaseGroupList/ReleaseGroup[_rgid_]/ReleaseList/Release[_rid_]/UniqueIdList/UniqueId[_unid_]
+
+Medium.xpathAbsolute = /Artist[_arid_]/Discography/ReleaseGroupList/ReleaseGroup[_rgid_]/ReleaseList/Release[_rid_]/MediumList/Medium[_mid_]
+
+Track.xpathAbsolute = /Artist[_arid_]/Discography/ReleaseGroupList/ReleaseGroup[_rgid_]/ReleaseList/Release[_rid_]/MediumList/Medium[_mid_]/TrackList/Track[_trid_]
+
+TrackUniqueId.xpathAbsolute = /Artist[_arid_]/Discography/ReleaseGroupList/ReleaseGroup[_rgid_]/ReleaseList/Release[_rid_]/MediumList/Medium[_mid_]/TrackList/Track[_trid_]/UniqueIdList/UniqueId[_unid_]
+
+TrackTag.xpathAbsolute = /Artist[_arid_]/Discography/ReleaseGroupList/ReleaseGroup[_rgid_]/ReleaseList/Release[_rid_]/MediumList/Medium[_mid_]/TrackList/Track[_trid_]/TagList/Tag[_tagAttr_]
+
+TrackFileInfo.xpathAbsolute = /Artist[_arid_]/Discography/ReleaseGroupList/ReleaseGroup[_rgid_]/ReleaseList/Release[_rid_]/MediumList/Medium[_mid_]/TrackList/Track[_trid_]/FileInfo
+
+TrackAudioInfo.xpathAbsolute = /Artist[_arid_]/Discography/ReleaseGroupList/ReleaseGroup[_rgid_]/ReleaseList/Release[_rid_]/MediumList/Medium[_mid_]/TrackList/Track[_trid_]/AudioInfo
+
+GeneralUniqueIdNode.rel = UniqueId[_unid_]
+GeneralUniqueIdNode.subType = node
+
+GeneralUniqueIdValue.rel = Value
+GeneralUniqueIdValue.subType = text
+
+GeneralUniqueIdSourceUrl.rel = SourceUrl
+GeneralUniqueIdSourceUrl.subType = text
+
+GeneralUniqueIdSourceWSUrl.rel = SourceWSUrl
+GeneralUniqueIdSourceWSUrl.subType = text

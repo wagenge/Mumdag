@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<MappingRules>
+	<RuleSet name="LocalMusicFileScraper">
+		<Rule no="1" name="scrapeLocalFiles">
+			<Action no="1">
+				<Input>scrapeAllMusicFilesWithMBTags()</Input>
+				<Output>-</Output>
+			</Action>
+		</Rule>
+	</RuleSet>
+</MappingRules>
