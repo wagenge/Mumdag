@@ -71,9 +71,9 @@ public static String resolveXpathString(String xpath, String... replacementStrin
 
 //-----------------------------------------------------------------------------
 
-//ERROR HANDLING:	nok
+//ERROR HANDLING:	ok
 //DOC:				nok
-//TEST:				nok
+//TEST:				ok
 public static String resolveXpathString(String xpath, HashMap<String, String> resolveXpathInfos) {
 	String patternStr = "(\\[|'| )(_[a-zA-Z]{3,}_)(\\]|'| )";
 	return resolveXpathString(xpath, resolveXpathInfos, patternStr);
@@ -83,8 +83,11 @@ public static String resolveXpathString(String xpath, HashMap<String, String> re
 
 //ERROR HANDLING:	nok
 //DOC:				nok
-//TEST:				nok
-static String resolveXpathString(String xpath, HashMap<String, String> resolveXpathInfos, String patternStr) {
+//TEST:				ok (implicite with test_resolveXpathString_map_ok()
+private static String resolveXpathString(String xpath, HashMap<String, String> resolveXpathInfos, String patternStr) {
+    if(StringUtils.isEmpty(xpath)) {
+        return xpath;
+    }
 	Pattern pattern = Pattern.compile(patternStr);
 	Matcher matcher = pattern.matcher(xpath);
 	while (matcher.find()) {
@@ -101,7 +104,7 @@ static String resolveXpathString(String xpath, HashMap<String, String> resolveXp
 		}
 
 		//if a replacement string is found and it is not an empty string
-		if(replacementStr != null && replacementStr.length() > 0) {
+		if(StringUtils.isNotEmpty(replacementStr)) {
 			//case: [id='1234'] ==> [@id='1234']
 			if(replacementStr.contains("=") && !(replacementStr.charAt(0) == '@')) {
 				replacementStr = "@" + replacementStr;
@@ -127,9 +130,9 @@ static String resolveXpathString(String xpath, HashMap<String, String> resolveXp
 				int idxOfReplStr = xpath.indexOf(replaceStr);
 				int idxOfPrevSlash = xpath.lastIndexOf('/', idxOfReplStr)+1;
 				int idxOfReplStrEnd = idxOfReplStr + replaceStr.length()+1;
-				StringBuffer buf = new StringBuffer(xpath);
-				buf.replace(idxOfPrevSlash, idxOfReplStrEnd, "contains(., '')");
-				xpath = buf.toString();
+				StringBuilder bld = new StringBuilder(xpath);
+				bld.replace(idxOfPrevSlash, idxOfReplStrEnd, "contains(., '')");
+				xpath = bld.toString();
 			}
 		}
 		//if no replacement string is found
@@ -147,7 +150,7 @@ static String resolveXpathString(String xpath, HashMap<String, String> resolveXp
 //ERROR HANDLING:	nok
 //DOC:				nok
 //TEST:				nok
-public static String removePredicatesFromXpath(String xpath) throws Exception {
+public static String removePredicatesFromXpath(String xpath) {
 	return xpath.replaceAll("(\\[.*?\\])", "");
 }
 

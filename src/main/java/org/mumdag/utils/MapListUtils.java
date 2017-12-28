@@ -2,7 +2,10 @@ package org.mumdag.utils;
 
 //-----------------------------------------------------------------------------
 
+import org.apache.commons.lang3.StringUtils;
+
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 
@@ -19,25 +22,28 @@ public final class MapListUtils {
 //DOC:				nok
 //TEST:				nok
 public static List<String> createInfoList(String... infoStrings) {
-	List<String> infoStringList = new ArrayList<>();
-	
-    for(int i = 0; i < infoStrings.length; i++){
-    	infoStringList.add(infoStrings[i]);
+	if(infoStrings != null && infoStrings.length > 0) {
+	    return Arrays.asList(infoStrings);
     }
-	return infoStringList;
+    else {
+	    return new ArrayList<>();
+    }
 }
 
 //-----------------------------------------------------------------------------
 
-//ERROR HANDLING:	nok
+//ERROR HANDLING:	ok
 //DOC:				nok
-//TEST:				nok
+//TEST:				ok
 public static List<String> createInfoList(List<String> infoStringList, String... infoStrings) {
-
-  for(int i = 0; i < infoStrings.length; i++){
-  	infoStringList.add(infoStrings[i]);
-  }
-	return infoStringList;
+    List<String> retList = new ArrayList<>();
+    if(infoStringList != null) {
+        retList.addAll(infoStringList);
+    }
+    if(infoStrings != null && infoStrings.length > 0) {
+        retList.addAll(Arrays.asList(infoStrings));
+    }
+	return retList;
 }
 
 //-----------------------------------------------------------------------------

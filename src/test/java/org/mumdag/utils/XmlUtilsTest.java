@@ -2,10 +2,18 @@ package org.mumdag.utils;
 
 //-----------------------------------------------------------------------------
 
+import org.apache.commons.lang3.StringUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+import org.testng.collections.Lists;
+
+import java.net.MalformedURLException;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
@@ -17,18 +25,18 @@ private static final Logger log = LogManager.getLogger(XmlUtilsTest.class);
 
 //=============================================================================
 /*
- * 	TEST METHODS (public)
+ * 	TEST METHODS INCLUDING DATAPROVIDER (public)
  */
 
 //DOC:			nok
 //ASSERTION:	ok
 @Test(dataProvider = "data_resolveXpathString_varargs_ok")
-public void test_resolveXpathString_varargs_ok(String testDesc, String xpath, String paramStr, String expRes) throws Exception {
-    log.info(".{} ... started", testDesc);
+public void test_resolveXpathString_varargs_ok(String testDesc, String xpath, String paramStr, String expRes) {
+    log.info("{} ... started", testDesc);
     String [] params = paramStr.split("\\|\\|");
     String res = XmlUtils.resolveXpathString(xpath, params);
     assertThat(res).isEqualTo(expRes);
-    log.info(".{} ... finished successfully!", testDesc);
+    log.info("{} ... finished successfully!", testDesc);
 }
 
 //-----------------------------------------------------------------------------
@@ -104,6 +112,58 @@ public Object[][] data_resolveXpathString_varargs_ok() {
     };
 }
 
+//-----------------------------------------------------------------------------
+
+//DOC:			nok
+//ASSERTION:	ok
+@Test(dataProvider = "data_resolveXpathString_map_ok")
+public void test_resolveXpathString_map_ok(String testDesc, String xpath, String paramStr, String expRes) {
+    log.info("{} ... started", testDesc);
+    HashMap<String, String> resolveMap = new HashMap<>();
+    String [] params = paramStr.split("\\|\\|");
+    for (String param : params) {
+        if (StringUtils.isNotEmpty(param)) {
+            String[] parts = param.split("::");
+            if (parts.length == 2) {
+                resolveMap.put(parts[0], parts[1]);
+            } else if (parts.length == 1) {
+                resolveMap.put(parts[0], "");
+            }
+        }
+    }
+    String res = XmlUtils.resolveXpathString(xpath, resolveMap);
+    assertThat(res).isEqualTo(expRes);
+    log.info("{} ... finished successfully!", testDesc);
+}
+
+//-----------------------------------------------------------------------------
+
+@DataProvider
+public Object[][] data_resolveXpathString_map_ok() {
+    List<Object[]> result = Lists.newArrayList();
+    result.addAll(Arrays.asList(data_resolveXpathString_varargs_ok()));
+    result.addAll(Arrays.asList(data_resolveXpathString_map2_ok()));
+    return result.toArray(new Object[result.size()][]);
+}
+
+//-----------------------------------------------------------------------------
+
+//DOC:	nok
+@DataProvider
+public Object[][] data_resolveXpathString_map2_ok() {
+    return new Object[][] {
+        new Object[] {"17 - xpath, three params, one text param",
+                        "/my/xpath[_with_]/different[_parameters_]/and/text() = '_text_'",
+                        "_with_::@key='value'||_parameters_::@key2='value2'||_text_::value3",
+                        "/my/xpath[@key='value']/different[@key2='value2']/and/text() = 'value3'"},
+        new Object[] {"18 - xpath, three params, text param empty",
+                        "/my/xpath[_with_]/different[_parameters_]/and/text() = '_text_'",
+                        "_with_::@key='value'||_parameters_::@key2='value2'||_text_::",
+                        "/my/xpath[@key='value']/different[@key2='value2']/and/contains(., '')"},
+    };
+}
+
+//-----------------------------------------------------------------------------
 
 @Test
 public void testRemovePredicatesFromXpath() throws Exception {
@@ -120,5 +180,7 @@ public void testGetNodeByXPath() throws Exception {
 @Test
 public void testGetNodeAttributeTextByXPath() throws Exception {
 }
+
+//-----------------------------------------------------------------------------
 
 }
