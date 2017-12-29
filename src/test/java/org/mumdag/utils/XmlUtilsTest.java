@@ -10,7 +10,6 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import org.testng.collections.Lists;
 
-import java.net.MalformedURLException;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
@@ -21,7 +20,7 @@ import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
 public class XmlUtilsTest {
 
-private static final Logger log = LogManager.getLogger(XmlUtilsTest.class);
+private static Logger log = null;
 
 //=============================================================================
 /*
@@ -179,6 +178,17 @@ public void testGetNodeByXPath() throws Exception {
 
 @Test
 public void testGetNodeAttributeTextByXPath() throws Exception {
+}
+
+//=============================================================================
+/*
+ * 	METHODS STARTED BEFORE TEST METHOD OR TEST CLASS (public)
+ */
+
+@BeforeClass
+public static void setLogger() {
+    System.setProperty("log4j.configurationFile","./src/test/resources/log4j2-testing.xml");
+    log = LogManager.getLogger(XmlUtilsTest.class);
 }
 
 //-----------------------------------------------------------------------------

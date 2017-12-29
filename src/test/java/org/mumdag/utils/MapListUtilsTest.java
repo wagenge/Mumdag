@@ -5,10 +5,12 @@ package org.mumdag.utils;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
@@ -17,7 +19,7 @@ import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
 public class MapListUtilsTest {
 
-private static final Logger log = LogManager.getLogger(MapListUtilsTest.class);
+private static Logger log = null;
 
 //=============================================================================
 /*
@@ -26,6 +28,7 @@ private static final Logger log = LogManager.getLogger(MapListUtilsTest.class);
 
 //-----------------------------------------------------------------------------
 
+//DOC:	nok
 @Test(dataProvider = "data_createInfoList_ok")
 public void test_createInfoList_ok(String testDesc, String infoStr, String expRes) {
     log.info("{} ... started", testDesc);
@@ -65,6 +68,7 @@ public Object[][] data_createInfoList_ok() {
 
 //-----------------------------------------------------------------------------
 
+//DOC:	nok
 @Test(dataProvider = "data_createInfoList_list_ok")
 public void test_createInfoList_list_ok(String testDesc, String infoListStr, String infoStr, String expRes) {
     log.info("{} ... started", testDesc);
@@ -110,8 +114,47 @@ public Object[][] data_createInfoList_list_ok() {
 
 //-----------------------------------------------------------------------------
 
-@Test
-public void testCreateResolveXpathMap() throws Exception {
+//DOC:	nok
+@Test(dataProvider = "data_createResolveXpathMap_ok")
+public void test_createResolveXpathMap_ok(String testDesc, String resolveStr, String expRes) throws Exception {
+    log.info("{} ... started", testDesc);
+    String [] infos = resolveStr.split("\\|\\|");
+    if(StringUtils.isEmpty(resolveStr)) {
+        infos = null;
+    }
+    HashMap<String, String> resMap = MapListUtils.createResolveXpathMap(infos);
+    String res = resMap.toString();
+    assertThat(res).isEqualTo(expRes);
+    log.info("{} ... finished successfully!", testDesc);
+}
+
+//-----------------------------------------------------------------------------
+
+//DOC:	nok
+@DataProvider
+public Object[][] data_createResolveXpathMap_ok() {
+    return new Object[][] {
+        new Object[] {"01 - three key-value-pairs",
+                        "key1||value1||key2||value2||key3||value3",
+                        "{key1=value1, key2=value2, key3=value3}"},
+        new Object[] {"02 - three key-value-pairs, first value missing",
+                        "key1||||key2||value2||key3||value3",
+                        "{key1=, key2=value2, key3=value3}"},
+        new Object[] {"03 - three key-value-pairs, all values missing",
+                        "key1||||key2||||key3||",
+                        "{key1=, key2=, key3=null}"},
+    };
+}
+
+//=============================================================================
+/*
+ * 	METHODS STARTED BEFORE TEST METHOD OR TEST CLASS (public)
+ */
+
+@BeforeClass
+public static void setLogger() {
+    System.setProperty("log4j.configurationFile","./src/test/resources/log4j2-testing.xml");
+    log = LogManager.getLogger(MapListUtilsTest.class);
 }
 
 //-----------------------------------------------------------------------------
