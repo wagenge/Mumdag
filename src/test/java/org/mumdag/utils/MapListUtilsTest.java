@@ -26,8 +26,6 @@ private static Logger log = null;
  * 	TEST METHODS INCLUDING DATAPROVIDER (public)
  */
 
-//-----------------------------------------------------------------------------
-
 //DOC:	nok
 @Test(dataProvider = "data_createInfoList_ok")
 public void test_createInfoList_ok(String testDesc, String infoStr, String expRes) {
@@ -116,7 +114,7 @@ public Object[][] data_createInfoList_list_ok() {
 
 //DOC:	nok
 @Test(dataProvider = "data_createResolveXpathMap_ok")
-public void test_createResolveXpathMap_ok(String testDesc, String resolveStr, String expRes) throws Exception {
+public void test_createResolveXpathMap_ok(String testDesc, String resolveStr, String expRes) {
     log.info("{} ... started", testDesc);
     String [] infos = resolveStr.split("\\|\\|");
     if(StringUtils.isEmpty(resolveStr)) {
@@ -146,9 +144,10 @@ public Object[][] data_createResolveXpathMap_ok() {
     };
 }
 
+
 //=============================================================================
 /*
- * 	METHODS STARTED BEFORE TEST METHOD OR TEST CLASS (public)
+ * 	ANNOTATED METHODS (public)
  */
 
 @BeforeClass

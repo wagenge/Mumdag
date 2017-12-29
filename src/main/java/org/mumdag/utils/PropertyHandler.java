@@ -25,12 +25,12 @@ private HashSet<String> propIdMap = new HashSet<>();
 
 //=============================================================================	
 /*
-* 	CONSTRUCTOR METHODS INCLUDING INSTANTIATION METHODS (public)
+* 	CONSTRUCTOR METHODS INCLUDING INSTANTIATION METHODS (private/public)
 */	
 
 //ERROR HANDLING:	ok
 //DOC:				nok
-//TEST:				nok
+//TEST:				ok, implicit via getInstance method
 private PropertyHandler() throws Exception {
 	FileInputStream file = new FileInputStream("./src/main/resources/configFiles/config.properties");
 	this.properties = new Properties();
@@ -42,7 +42,7 @@ private PropertyHandler() throws Exception {
  
 //ERROR HANDLING:	ok
 //DOC:				nok
-//TEST:				nok
+//TEST:				ok, implicit via getInstance method
 private PropertyHandler(String fileName) throws Exception {
 	FileInputStream file = new FileInputStream(fileName);
 	this.properties = new Properties();
@@ -55,7 +55,7 @@ private PropertyHandler(String fileName) throws Exception {
 //ERROR HANDLING:	ok
 //DOC:				nok
 //TEST:				nok
-//IMPLEMENTATION:	nok, implement according getInstance method
+//IMPLEMENTATION:	ok
 private PropertyHandler(String fileName, String propId) throws Exception {
 	FileInputStream file = new FileInputStream(fileName);
 	this.properties = new Properties();
@@ -67,7 +67,7 @@ private PropertyHandler(String fileName, String propId) throws Exception {
 
 //ERROR HANDLING:	ok
 //DOC:				nok
-//TEST:				nok
+//TEST:				ok
 public static synchronized PropertyHandler getInstance() throws Exception {
     if (instance == null) {
         instance = new PropertyHandler();
@@ -79,12 +79,24 @@ public static synchronized PropertyHandler getInstance() throws Exception {
 
 //ERROR HANDLING:	ok
 //DOC:				nok
-//TEST:				nok
+//TEST:				ok
 public static synchronized PropertyHandler getInstance(String fileName) throws Exception {
     if (instance == null) {
         instance = new PropertyHandler(fileName);
     }
     return instance;
+}
+
+//-----------------------------------------------------------------------------
+
+//ERROR HANDLING:	ok
+//DOC:				nok
+//TEST:				nok
+public static synchronized PropertyHandler getInstance(String fileName, String propId) throws Exception {
+	if (instance == null) {
+		instance = new PropertyHandler(fileName, propId);
+	}
+	return instance;
 }
 
 
@@ -120,7 +132,7 @@ public HashMap<String, String> getAllValues() {
 
 //-----------------------------------------------------------------------------
 
-//ERROR HANDLING:	ok (nok: implement own Exception)
+//ERROR HANDLING:	ok
 //DOC:				nok
 //TEST:				nok
 public boolean containsKey(String key) {
@@ -129,9 +141,9 @@ public boolean containsKey(String key) {
 
 //-----------------------------------------------------------------------------
 
-//ERROR HANDLING:	nok 
+//ERROR HANDLING:	ok
 //DOC:				nok
-//TEST:				nok
+//TEST:				ok
 public void addPropertiesFromFile(String fileName, String propId) throws Exception {
 	if(!this.propIdMap.contains(propId)) {
 		FileInputStream file = new FileInputStream(fileName);

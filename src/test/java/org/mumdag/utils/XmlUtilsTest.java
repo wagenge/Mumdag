@@ -180,9 +180,10 @@ public void testGetNodeByXPath() throws Exception {
 public void testGetNodeAttributeTextByXPath() throws Exception {
 }
 
+
 //=============================================================================
 /*
- * 	METHODS STARTED BEFORE TEST METHOD OR TEST CLASS (public)
+ * 	ANNOTATED METHODS (public)
  */
 
 @BeforeClass
