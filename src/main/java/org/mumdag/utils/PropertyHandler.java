@@ -2,6 +2,8 @@ package org.mumdag.utils;
 
 //-----------------------------------------------------------------------------
 
+import org.apache.commons.lang3.StringUtils;
+
 import java.io.FileInputStream;
 import java.security.InvalidParameterException;
 import java.text.MessageFormat;
@@ -55,7 +57,7 @@ private PropertyHandler(String fileName) throws Exception {
 //ERROR HANDLING:	ok
 //DOC:				nok
 //TEST:				nok
-//IMPLEMENTATION:	ok
+//IMPLEMENTATION:	ok, implicit via getInstance method
 private PropertyHandler(String fileName, String propId) throws Exception {
 	FileInputStream file = new FileInputStream(fileName);
 	this.properties = new Properties();
@@ -91,7 +93,7 @@ public static synchronized PropertyHandler getInstance(String fileName) throws E
 
 //ERROR HANDLING:	ok
 //DOC:				nok
-//TEST:				nok
+//TEST:				ok
 public static synchronized PropertyHandler getInstance(String fileName, String propId) throws Exception {
 	if (instance == null) {
 		instance = new PropertyHandler(fileName, propId);
@@ -107,7 +109,7 @@ public static synchronized PropertyHandler getInstance(String fileName, String p
 
 //ERROR HANDLING:	ok (nok: implement own Exception)
 //DOC:				nok
-//TEST:				ok
+//TEST:				ok, implicit via getInstance method
 public String getValue(String propKey) {
 	String retVal = this.properties.getProperty(propKey);
 	if(retVal == null) {
@@ -118,9 +120,9 @@ public String getValue(String propKey) {
 
 //-----------------------------------------------------------------------------
 
-//ERROR HANDLING:	ok (nok: implement own Exception)
+//ERROR HANDLING:	ok
 //DOC:				nok
-//TEST:				nok
+//TEST:				ok
 public HashMap<String, String> getAllValues() {
 	HashMap<String, String> retMap = new HashMap<>();
 	for(String key : this.properties.stringPropertyNames()) {
@@ -134,9 +136,13 @@ public HashMap<String, String> getAllValues() {
 
 //ERROR HANDLING:	ok
 //DOC:				nok
-//TEST:				nok
+//TEST:				ok
 public boolean containsKey(String key) {
-	return this.properties.containsKey(key);
+    boolean retVal = false;
+	if(StringUtils.isNotEmpty(key)) {
+        retVal = this.properties.containsKey(key);
+    }
+    return retVal;
 }
 
 //-----------------------------------------------------------------------------
