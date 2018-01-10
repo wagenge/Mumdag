@@ -23,10 +23,7 @@ import javax.xml.xpath.XPathFactory;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.w3c.dom.Attr;
-import org.w3c.dom.Document;
-import org.w3c.dom.Node;
-import org.w3c.dom.NodeList;
+import org.w3c.dom.*;
 
 //-----------------------------------------------------------------------------
 
@@ -147,37 +144,46 @@ private static String resolveXpathString(String xpath, HashMap<String, String> r
 
 //-----------------------------------------------------------------------------
 
-//ERROR HANDLING:	nok
+//ERROR HANDLING:	ok
 //DOC:				nok
-//TEST:				nok
+//TEST:				ok
 public static String removePredicatesFromXpath(String xpath) {
-	return xpath.replaceAll("(\\[.*?\\])", "");
+	String retStr = "";
+	if(StringUtils.isNotEmpty(xpath)) {
+		retStr = xpath.replaceAll("(\\[.*?])", "");
+	}
+	return retStr;
 }
 
 //-----------------------------------------------------------------------------
 
-//ERROR HANDLING:	nok
+//ERROR HANDLING:	ok
 //DOC:				nok
-//TEST:				nok
-public static List<String> getNodeTextByXPath(String xmlString, String xpathString) throws Exception {
+//TEST:				ok
+public static List<String> getNodeTextByXPath(String xmlString, String xpathString) {
 	List<String> retList = new ArrayList<>();
 	
-	if(xmlString.length() == 0) {
+	if(StringUtils.isEmpty(xmlString)) {
 		log.warn("cannot resolve node text from an empty xml");
 		return retList;
 	}
-	final InputStream is = new ByteArrayInputStream(xmlString.getBytes(StandardCharsets.UTF_8));
-	DocumentBuilder dBuilder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
-	Document xmlDoc = dBuilder.parse(is);
 
-	if(xpathString.endsWith("/")) {
-		xpathString = xpathString.substring(0, xpathString.length()-1);
+	Document xmlDoc;
+	try {
+	    xmlDoc = getXmlDocFromXmlString(xmlString);
 	}
-	if(xpathString.length() == 0) {
+	catch (Exception ex) {
+		log.warn("cannot resolve node text from an corrupt xml\n Error: {}", ex.getMessage());
+		return retList;
+	}
+
+	if(StringUtils.isEmpty(xpathString)) {
 		log.warn("cannot resolve node text from an empty xpath");
 		return retList;
 	}
-	
+	if(xpathString.endsWith("/")) {
+		xpathString = xpathString.substring(0, xpathString.length()-1);
+	}
 	log.trace("get value on xpath='{}'", xpathString);
 	
 	XPathFactory xPathfactory = XPathFactory.newInstance();
@@ -188,7 +194,7 @@ public static List<String> getNodeTextByXPath(String xmlString, String xpathStri
 		expr = xpath.compile(xpathString);
 		nl = (NodeList) expr.evaluate(xmlDoc, XPathConstants.NODESET);
 	} catch (XPathExpressionException e) {
-		e.printStackTrace();
+		log.warn("XPath '{}' is not correct\n Error: {}", xpathString, e.getMessage());
 	}
 	
 	if(nl != null && nl.getLength() == 0) {
@@ -200,6 +206,7 @@ public static List<String> getNodeTextByXPath(String xmlString, String xpathStri
         for (int i = 0; i < nl.getLength(); i++) {
             retList.add(nl.item(i).getNodeValue());
         }
+        log.trace("XPath '{}' resulted in {} nodes", xpathString, nl.getLength());
     }
 	
 	return retList;
@@ -207,48 +214,56 @@ public static List<String> getNodeTextByXPath(String xmlString, String xpathStri
 
 //-----------------------------------------------------------------------------
 
-//ERROR HANDLING:	nok
+//ERROR HANDLING:	ok
 //DOC:				nok
-//TEST:				nok
-public static List<String> getNodeByXPath(String xmlString, String xpathString, String childNodeNames) throws Exception {
-	List<String> childNodeNameList = Arrays.asList(childNodeNames.split(","));
-	List<String> retList = new ArrayList<>();
-	
-	if(xmlString.length() == 0) {
-		log.warn("cannot resolve node text from an empty xml");
-		return retList;
-	}
-	final InputStream is = new ByteArrayInputStream(xmlString.getBytes(StandardCharsets.UTF_8));
-	DocumentBuilder dBuilder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
-	Document xmlDoc = dBuilder.parse(is);
+//TEST:				ok
+public static List<String> getNodeByXPath(String xmlString, String xpathString, String childNodeNames) {
+    List<String> retList = new ArrayList<>();
+    if(StringUtils.isEmpty(childNodeNames)) {
+        return retList;
+    }
+    List<String> childNodeNameList = Arrays.asList(StringUtils.stripAll(childNodeNames.split(",")));
 
-	if(xpathString.endsWith("/")) {
-		xpathString = xpathString.substring(0, xpathString.length()-1);
-	}
-	if(xpathString.length() == 0) {
-		log.warn("cannot resolve node text from an empty xpath");
-		return retList;
-	}
-	
-	log.trace("get value on xpath='{}'", xpathString);
-	
-	XPathFactory xPathfactory = XPathFactory.newInstance();
-	XPath xpath = xPathfactory.newXPath();
-	XPathExpression expr;
-	NodeList nl = null;
-	try {
-		expr = xpath.compile(xpathString);
-		nl = (NodeList) expr.evaluate(xmlDoc, XPathConstants.NODESET);
-	} catch (XPathExpressionException e) {
-		e.printStackTrace();
-	}
-	
-	if(nl != null && nl.getLength() == 0) {
-		log.warn("XPath '{}' resulted in {} nodes", xpathString, nl.getLength());
-		return retList;
-	}
+    if(StringUtils.isEmpty(xmlString)) {
+        log.warn("cannot resolve node text from an empty xml");
+        return retList;
+    }
 
-	if(nl != null) {
+    Document xmlDoc;
+    try {
+        xmlDoc = getXmlDocFromXmlString(xmlString);
+    }
+    catch (Exception ex) {
+        log.warn("cannot resolve node text from an corrupt xml\n Error: {}", ex.getMessage());
+        return retList;
+    }
+
+    if(StringUtils.isEmpty(xpathString)) {
+        log.warn("cannot resolve node text from an empty xpath");
+        return retList;
+    }
+    if(xpathString.endsWith("/")) {
+        xpathString = xpathString.substring(0, xpathString.length()-1);
+    }
+    log.trace("get value on xpath='{}'", xpathString);
+
+    XPathFactory xPathfactory = XPathFactory.newInstance();
+    XPath xpath = xPathfactory.newXPath();
+    XPathExpression expr;
+    NodeList nl = null;
+    try {
+        expr = xpath.compile(xpathString);
+        nl = (NodeList) expr.evaluate(xmlDoc, XPathConstants.NODESET);
+    } catch (XPathExpressionException e) {
+        log.warn("XPath '{}' is not correct\n Error: {}", xpathString, e.getMessage());
+    }
+
+    if(nl != null && nl.getLength() == 0) {
+        log.warn("XPath '{}' resulted in {} nodes", xpathString, nl.getLength());
+        return retList;
+    }
+
+    if(nl != null) {
         for (int i = 0; i < nl.getLength(); i++) {
             String childStr = "";
             NodeList childNl = nl.item(i).getChildNodes();
@@ -257,73 +272,140 @@ public static List<String> getNodeByXPath(String xmlString, String xpathString, 
                 String childNodeName = childNode.getNodeName();
                 String childNodeValue;
                 if (childNodeNameList.contains(childNodeName)) {
-                    childNodeValue = childNode.getTextContent();
-                    if (StringUtils.isNotEmpty(childStr)) {
-                        childStr = childStr + "," + childNodeName + "=" + childNodeValue;
-                    } else {
-                        childStr = childNodeName + "=" + childNodeValue;
+                    if(childNode.getNodeType() == Node.ELEMENT_NODE) {
+                        Element childElem = (Element) childNode;
+                        NodeList childChildNl = childElem.getElementsByTagName("*");
+                        if(childChildNl.getLength() == 0) {
+                            childNodeValue = childNode.getTextContent();
+                            if (StringUtils.isNotEmpty(childStr)) {
+                                childStr = childStr + "," + childNodeName + "=" + childNodeValue;
+                            } else {
+                                childStr = childNodeName + "=" + childNodeValue;
+                            }
+                        }
+                        else {
+                            for (int k = 0; k < childChildNl.getLength(); k++) {
+                                Node childChildNode = childChildNl.item(k);
+                                String childChildNodeName = childChildNode.getNodeName();
+                                String childChildNodeValue;
+                                if(childChildNode.getNodeType() == Node.ELEMENT_NODE) {
+                                    childChildNodeValue = childChildNode.getFirstChild().getNodeValue();
+                                    if(StringUtils.isNotEmpty(childChildNodeValue.trim())) {
+                                        if (StringUtils.isNotEmpty(childStr)) {
+                                            childStr = childStr + "," + childChildNodeName + "=" + childChildNodeValue;
+                                        } else {
+                                            childStr = childChildNodeName + "=" + childChildNodeValue;
+                                        }
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
             }
             retList.add(childStr);
         }
     }
-	return retList;
+    return retList;
+}
+
+//-----------------------------------------------------------------------------
+
+//ERROR HANDLING:	ok
+//DOC:				nok
+//TEST:				ok, via test_getNodeAttributeTextByXPath_ok()
+public static List<String> getNodeAttributeTextByXPath(String xmlString, String xpathString) {
+    return XmlUtils.getNodeAttributeTextByXPath(xmlString, xpathString, null);
 }
 
 //-----------------------------------------------------------------------------	
 
-//ERROR HANDLING:	nok
+//ERROR HANDLING:	ok
 //DOC:				nok
-//TEST:				nok
-public static List<String> getNodeAttributeTextByXPath(String xmlString, String xpathString, String attrName) throws Exception {
-	List<String> retList = new ArrayList<>();
-	if(xmlString.length() == 0) {
-		log.warn("cannot resolve node text from an empty xml");
-		return retList;
-	}
-	final InputStream is = new ByteArrayInputStream(xmlString.getBytes(StandardCharsets.UTF_8));
-	DocumentBuilder dBuilder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
-	Document xmlDoc = dBuilder.parse(is);
-	
-	if(xpathString.endsWith("/")) {
-		xpathString = xpathString.substring(0, xpathString.length()-1);
-	}
-	
-	if(xpathString.length() == 0) {
-		log.warn("attribute name {} resolved from an empty xpath", attrName);
-		return retList;
-	}
-	
-	log.trace("get attribute '{}' on xpath='{}'", attrName, xpathString);
-	
-	XPathFactory xPathfactory = XPathFactory.newInstance();
-	XPath xpath = xPathfactory.newXPath();
-	XPathExpression expr;
-	NodeList nl = null;
-	try {
-		expr = xpath.compile(xpathString);
-		nl = (NodeList) expr.evaluate(xmlDoc, XPathConstants.NODESET);
-	} catch (XPathExpressionException e) {
-		e.printStackTrace();
-	}
-	
-	if(nl != null && nl.getLength() == 0) {
-		log.warn("XPath '{}' resulted in {} nodes", xpathString, nl.getLength());
-		return retList;
-	}
+//TEST:				ok
+public static List<String> getNodeAttributeTextByXPath(String xmlString, String xpathString, String attrNames) {
+    List<String> retList = new ArrayList<>();
+    List<String> attrNameList = new ArrayList<>();
+    if(StringUtils.isNotEmpty(attrNames)) {
+        attrNameList = Arrays.asList(StringUtils.stripAll(attrNames.split(",")));
+    }
 
-	if(nl != null) {
-		for (int i = 0; i < nl.getLength(); i++) {
-			Attr attr = (Attr) nl.item(i);
-			String name = attr.getName();
-			String value = attr.getValue();
-			retList.add(name + "=" + value);
-		}
-	}
-	
-	return retList;
-}	
+    if(StringUtils.isEmpty(xmlString)) {
+        log.warn("cannot resolve node text from an empty xml");
+        return retList;
+    }
+
+    Document xmlDoc;
+    try {
+        xmlDoc = getXmlDocFromXmlString(xmlString);
+    }
+    catch (Exception ex) {
+        log.warn("cannot resolve node text from an corrupt xml\n Error: {}", ex.getMessage());
+        return retList;
+    }
+
+    if(StringUtils.isEmpty(xpathString)) {
+        log.warn("cannot resolve attribute(s) '{}' from an empty xpath", StringUtils.join(attrNameList, ", "));
+        return retList;
+    }
+    if(xpathString.endsWith("/")) {
+        xpathString = xpathString.substring(0, xpathString.length()-1);
+    }
+    log.trace("get attribute(s) '{}' on xpath='{}'", StringUtils.join(attrNameList, ", "), xpathString);
+
+    XPathFactory xPathfactory = XPathFactory.newInstance();
+    XPath xpath = xPathfactory.newXPath();
+    XPathExpression expr;
+    NodeList nl = null;
+    try {
+        expr = xpath.compile(xpathString);
+        nl = (NodeList) expr.evaluate(xmlDoc, XPathConstants.NODESET);
+    } catch (XPathExpressionException e) {
+        log.warn("XPath '{}' is not correct\n Error: {}", xpathString, e.getMessage());
+    }
+
+    if(nl != null && nl.getLength() == 0) {
+        log.warn("XPath '{}' resulted in {} nodes", xpathString, nl.getLength());
+        return retList;
+    }
+
+    if(nl != null) {
+        for (int i = 0; i < nl.getLength(); i++) {
+            Node node =  nl.item(i);
+            NamedNodeMap attrMap = node.getAttributes();
+            if(attrNameList.size() > 0) {
+                for(int j = 0; j < attrNameList.size(); j++) {
+                    Node attrNode = attrMap.getNamedItem(attrNameList.get(j));
+                    if(attrNode != null) {
+                        retList.add(attrNode.getNodeName() + "=" + attrNode.getNodeValue());
+                    }
+                }
+            }
+            else {
+                for (int k = 0; k < attrMap.getLength(); k++) {
+                    Node attrNode = attrMap.item(k);
+                    retList.add(attrNode.getNodeName() + "=" + attrNode.getNodeValue());
+                }
+            }
+        }
+    }
+    return retList;
+}
+
+
+//=============================================================================
+/*
+ * 	HELPER METHODS (private)
+ */
+
+//ERROR HANDLING:	ok
+//DOC:				nok
+//TEST:				ok, implicite via test_getNodeTextByXPath_ok, test_getNodeByXPath_ok and test_getNodeByXPath_ok
+private static Document getXmlDocFromXmlString(String xmlString) throws Exception {
+    final InputStream is = new ByteArrayInputStream(xmlString.getBytes(StandardCharsets.UTF_8));
+    DocumentBuilder dBuilder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
+    return dBuilder.parse(is);
+}
 
 //-----------------------------------------------------------------------------
 

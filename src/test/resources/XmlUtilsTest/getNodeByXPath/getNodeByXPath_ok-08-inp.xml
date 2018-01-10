@@ -1,0 +1,606 @@
+<?xml version="1.0" encoding="UTF-8"?><metadata xmlns="http://musicbrainz.org/ns/mmd-2.0#">
+  <artist type="Group" type-id="e431f5f6-b5d2-343d-8b36-72607fffb74b" id="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d">
+    <name>The Beatles</name>
+    <sort-name>Beatles, The</sort-name>
+    <annotation>
+      <text>The official name of “The White Album” is “The Beatles”; please do not add incorrectly titled releases to the database!
+
+Please do not re-add individual mono remaster releases to their individual release groups. The mono remasters were never released separately, and are all already in the database as 13 mediums of the release the name "The Beatles in Mono".</text>
+    </annotation>
+    <isni-list>
+      <isni>0000000121707484</isni>
+    </isni-list>
+    <country>GB</country>
+    <area id="8a754a16-0027-3a29-b6d7-2b40ea0481ed">
+      <name>United Kingdom</name>
+      <sort-name>United Kingdom</sort-name>
+      <iso-3166-1-code-list>
+        <iso-3166-1-code>GB</iso-3166-1-code>
+      </iso-3166-1-code-list>
+    </area>
+    <begin-area id="c249c30e-88ab-4b2f-a745-96a25bd7afee">
+      <name>Liverpool</name>
+      <sort-name>Liverpool</sort-name>
+      <iso-3166-2-code-list>
+        <iso-3166-2-code>GB-LIV</iso-3166-2-code>
+      </iso-3166-2-code-list>
+    </begin-area>
+    <life-span>
+      <begin>1957-03</begin>
+      <end>1970-04-10</end>
+      <ended>true</ended>
+    </life-span>
+    <alias-list count="14">
+      <alias sort-name="B" type-id="1937e404-b981-3cb7-8151-4c86ebfc8d8e" type="Search hint">B</alias>
+      <alias type-id="1937e404-b981-3cb7-8151-4c86ebfc8d8e" type="Search hint" sort-name="Be">Be</alias>
+      <alias type="Search hint" type-id="1937e404-b981-3cb7-8151-4c86ebfc8d8e" sort-name="Beat">Beat</alias>
+      <alias type-id="894afba6-2816-3c24-8072-eadb66bd04bc" locale="en" type="Artist name" sort-name="Beatles">Beatles</alias>
+      <alias type-id="1937e404-b981-3cb7-8151-4c86ebfc8d8e" type="Search hint" sort-name="Beetles">Beetles</alias>
+      <alias locale="es" sort-name="Los Beatles" primary="primary">Los Beatles</alias>
+      <alias type-id="894afba6-2816-3c24-8072-eadb66bd04bc" type="Artist name" locale="en" sort-name="Beatles, The" primary="primary">The Beatles</alias>
+      <alias sort-name="Savage Young Beatles, The">The Savage Young Beatles</alias>
+      <alias sort-name="fab four" type-id="1937e404-b981-3cb7-8151-4c86ebfc8d8e" type="Search hint">fab four</alias>
+      <alias locale="ru" primary="primary" sort-name="Битлз">Битлз</alias>
+      <alias locale="ja" primary="primary" sort-name="ビートルズ (ザ)">ザ・ビートルズ</alias>
+      <alias locale="zh_Hans" sort-name="披头士" primary="primary">披头士</alias>
+      <alias locale="zh_Hant" sort-name="披頭四" primary="primary">披頭四</alias>
+      <alias locale="ko" sort-name="더 비틀즈" primary="primary">더 비틀즈</alias>
+    </alias-list>
+    <relation-list target-type="artist">
+      <relation type-id="a6f62641-2f58-470e-b02b-88d7b984dc9f" type="tribute">
+        <target>08387cc6-dc48-4d72-ba3f-05c09c9a77fb</target>
+        <direction>backward</direction>
+        <begin>2015</begin>
+        <artist id="08387cc6-dc48-4d72-ba3f-05c09c9a77fb">
+          <name>Where’s Ringo</name>
+          <sort-name>Where’s Ringo</sort-name>
+        </artist>
+      </relation>
+      <relation type="member of band" type-id="5be4c609-9afa-4ea0-910b-12ffb71e3821">
+        <target>0d4ab0f9-bbda-4ab1-ae2c-f772ffcfbea9</target>
+        <direction>backward</direction>
+        <begin>1960-08-12</begin>
+        <end>1962-08-16</end>
+        <ended>true</ended>
+        <attribute-list>
+          <attribute>drums</attribute>
+        </attribute-list>
+        <artist id="0d4ab0f9-bbda-4ab1-ae2c-f772ffcfbea9">
+          <name>Pete Best</name>
+          <sort-name>Best, Pete</sort-name>
+          <disambiguation>original drummer in The Beatles</disambiguation>
+        </artist>
+      </relation>
+      <relation type-id="a6f62641-2f58-470e-b02b-88d7b984dc9f" type="tribute">
+        <target>0f697bc6-6df7-41c9-b550-39981e520d70</target>
+        <direction>backward</direction>
+        <begin>1976</begin>
+        <artist id="0f697bc6-6df7-41c9-b550-39981e520d70">
+          <name>The Beatles Revival Band</name>
+          <sort-name>Beatles Revival Band, The</sort-name>
+          <disambiguation>German cover band</disambiguation>
+        </artist>
+      </relation>
+      <relation type-id="a6f62641-2f58-470e-b02b-88d7b984dc9f" type="tribute">
+        <target>1bad4ffd-1727-4865-a45e-2fdfd3befe44</target>
+        <direction>backward</direction>
+        <artist id="1bad4ffd-1727-4865-a45e-2fdfd3befe44">
+          <name>Hard Day’s Night</name>
+          <sort-name>Hard Day’s Night</sort-name>
+          <disambiguation>Beatles tribute band from Los Angeles, CA</disambiguation>
+        </artist>
+      </relation>
+      <relation type="member of band" type-id="5be4c609-9afa-4ea0-910b-12ffb71e3821">
+        <target>300c4c73-33ac-4255-9d57-4e32627f5e13</target>
+        <direction>backward</direction>
+        <begin>1962-08</begin>
+        <end>1970-04-10</end>
+        <ended>true</ended>
+        <attribute-list>
+          <attribute>drums</attribute>
+        </attribute-list>
+        <artist id="300c4c73-33ac-4255-9d57-4e32627f5e13">
+          <name>Ringo Starr</name>
+          <sort-name>Starr, Ringo</sort-name>
+        </artist>
+      </relation>
+      <relation type-id="a6f62641-2f58-470e-b02b-88d7b984dc9f" type="tribute">
+        <target>31f6812d-12ab-406f-a13d-ad54976e49c6</target>
+        <direction>backward</direction>
+        <artist id="31f6812d-12ab-406f-a13d-ad54976e49c6">
+          <name>The Cavern Beatles</name>
+          <sort-name>Beatles Cover Band</sort-name>
+          <disambiguation>Beatles Cover Band</disambiguation>
+        </artist>
+      </relation>
+      <relation type-id="a6f62641-2f58-470e-b02b-88d7b984dc9f" type="tribute">
+        <target>38603e0b-ed17-498a-9322-40c2d93cb2b4</target>
+        <direction>backward</direction>
+        <artist id="38603e0b-ed17-498a-9322-40c2d93cb2b4">
+          <name>Hard Day’s Night</name>
+          <sort-name>Hard Day’s Night</sort-name>
+          <disambiguation>Beatles tribute band from Cleveland, OH</disambiguation>
+        </artist>
+      </relation>
+      <relation type-id="a6f62641-2f58-470e-b02b-88d7b984dc9f" type="tribute">
+        <target>3d45df45-d73b-4366-a47d-b4ffb81cef3d</target>
+        <direction>backward</direction>
+        <artist id="3d45df45-d73b-4366-a47d-b4ffb81cef3d">
+          <name>The Beetles</name>
+          <sort-name>Beetles, The</sort-name>
+          <disambiguation>Beatles cover band</disambiguation>
+        </artist>
+      </relation>
+      <relation type="member of band" type-id="5be4c609-9afa-4ea0-910b-12ffb71e3821">
+        <target>42a8f507-8412-4611-854f-926571049fa0</target>
+        <direction>backward</direction>
+        <begin>1958-04</begin>
+        <end>1970-04-10</end>
+        <ended>true</ended>
+        <attribute-list>
+          <attribute>guitar</attribute>
+          <attribute>lead vocals</attribute>
+          <attribute>original</attribute>
+        </attribute-list>
+        <artist id="42a8f507-8412-4611-854f-926571049fa0">
+          <name>George Harrison</name>
+          <sort-name>Harrison, George</sort-name>
+          <disambiguation>The Beatles</disambiguation>
+        </artist>
+      </relation>
+      <relation type-id="5be4c609-9afa-4ea0-910b-12ffb71e3821" type="member of band">
+        <target>49a51491-650e-44b3-8085-2f07ac2986dd</target>
+        <direction>backward</direction>
+        <begin>1960-01</begin>
+        <end>1962</end>
+        <ended>true</ended>
+        <attribute-list>
+          <attribute>bass guitar</attribute>
+        </attribute-list>
+        <artist id="49a51491-650e-44b3-8085-2f07ac2986dd">
+          <name>Stuart Sutcliffe</name>
+          <sort-name>Sutcliffe, Stuart</sort-name>
+        </artist>
+      </relation>
+      <relation type="member of band" type-id="5be4c609-9afa-4ea0-910b-12ffb71e3821">
+        <target>4d5447d7-c61c-4120-ba1b-d7f471d385b9</target>
+        <direction>backward</direction>
+        <end>1970-04-10</end>
+        <ended>true</ended>
+        <attribute-list>
+          <attribute>guitar</attribute>
+          <attribute>lead vocals</attribute>
+          <attribute>original</attribute>
+        </attribute-list>
+        <artist id="4d5447d7-c61c-4120-ba1b-d7f471d385b9">
+          <name>John Lennon</name>
+          <sort-name>Lennon, John</sort-name>
+          <disambiguation>Beatle</disambiguation>
+        </artist>
+      </relation>
+      <relation type-id="a6f62641-2f58-470e-b02b-88d7b984dc9f" type="tribute">
+        <target>503c67ae-98d9-4cd8-a7d4-204c41ddaa3d</target>
+        <direction>backward</direction>
+        <artist id="503c67ae-98d9-4cd8-a7d4-204c41ddaa3d">
+          <name>Abbey Road</name>
+          <sort-name>Abbey Road</sort-name>
+          <disambiguation>Belgian Beatles and Sixties Cover Group</disambiguation>
+        </artist>
+      </relation>
+      <relation type-id="a6f62641-2f58-470e-b02b-88d7b984dc9f" type="tribute">
+        <target>5153cd90-37c6-4fa0-8da6-dbf5513b4a44</target>
+        <direction>backward</direction>
+        <artist id="5153cd90-37c6-4fa0-8da6-dbf5513b4a44">
+          <name>The Beatles Revival</name>
+          <sort-name>Beatles Revival, The</sort-name>
+          <disambiguation>Czech 'The Beatles' tribute band</disambiguation>
+        </artist>
+      </relation>
+      <relation type-id="a6f62641-2f58-470e-b02b-88d7b984dc9f" type="tribute">
+        <target>5213c51f-d3d8-4784-8e66-759c8b592d70</target>
+        <direction>backward</direction>
+        <artist id="5213c51f-d3d8-4784-8e66-759c8b592d70">
+          <name>The Caverners</name>
+          <sort-name>Caverners, The</sort-name>
+        </artist>
+      </relation>
+      <relation type-id="a6f62641-2f58-470e-b02b-88d7b984dc9f" type="tribute">
+        <target>7cac6d47-ef4e-4347-8835-63ed3f2e74a7</target>
+        <direction>backward</direction>
+        <artist id="7cac6d47-ef4e-4347-8835-63ed3f2e74a7">
+          <name>Beatles Back2Back</name>
+          <sort-name>Beatles Back2Back</sort-name>
+          <disambiguation>The Beatles tribute band</disambiguation>
+        </artist>
+      </relation>
+      <relation type="tribute" type-id="a6f62641-2f58-470e-b02b-88d7b984dc9f">
+        <target>80af295d-c252-4eb2-ba7b-a8d44ada1725</target>
+        <direction>backward</direction>
+        <artist id="80af295d-c252-4eb2-ba7b-a8d44ada1725">
+          <name>The Crab Four</name>
+          <sort-name>Crab Four, The</sort-name>
+          <disambiguation>Belgian Beatles tribute band</disambiguation>
+        </artist>
+      </relation>
+      <relation type-id="a6f62641-2f58-470e-b02b-88d7b984dc9f" type="tribute">
+        <target>911217e1-d165-4fb9-9e9f-3f12509b0eb5</target>
+        <direction>backward</direction>
+        <artist id="911217e1-d165-4fb9-9e9f-3f12509b0eb5">
+          <name>The Fabfakes</name>
+          <sort-name>Fabfakes, The</sort-name>
+          <disambiguation>Beatles Tribute Band</disambiguation>
+        </artist>
+      </relation>
+      <relation type-id="a6f62641-2f58-470e-b02b-88d7b984dc9f" type="tribute">
+        <target>a6d31e9e-272b-40f7-afbe-d0d3f06bece6</target>
+        <direction>backward</direction>
+        <artist id="a6d31e9e-272b-40f7-afbe-d0d3f06bece6">
+          <name>Sgt. Pepper</name>
+          <sort-name>Sgt. Pepper</sort-name>
+          <disambiguation>Belgian Beatles cover group</disambiguation>
+        </artist>
+      </relation>
+      <relation type="tribute" type-id="a6f62641-2f58-470e-b02b-88d7b984dc9f">
+        <target>abdd68e9-cd78-453e-a0d6-315dc73cf0e4</target>
+        <direction>backward</direction>
+        <artist id="abdd68e9-cd78-453e-a0d6-315dc73cf0e4">
+          <name>Liverpool Lads a Beatles Tribute</name>
+          <sort-name>Liverpool Lads</sort-name>
+          <disambiguation>Beatles Tribute Band</disambiguation>
+        </artist>
+      </relation>
+      <relation type="tribute" type-id="a6f62641-2f58-470e-b02b-88d7b984dc9f">
+        <target>ad60d963-44f1-4b41-b785-8284edcaaffe</target>
+        <direction>backward</direction>
+        <artist id="ad60d963-44f1-4b41-b785-8284edcaaffe">
+          <name>Counterfeit Beatles</name>
+          <sort-name>Counterfeit Beatles</sort-name>
+          <disambiguation>The Beatles tribute band</disambiguation>
+        </artist>
+      </relation>
+      <relation type-id="a6f62641-2f58-470e-b02b-88d7b984dc9f" type="tribute">
+        <target>adbe5706-d9dc-42df-987f-d9302ad669d7</target>
+        <direction>backward</direction>
+        <artist id="adbe5706-d9dc-42df-987f-d9302ad669d7">
+          <name>A Hard Night’s Day</name>
+          <sort-name>Hard Night’s Day, A</sort-name>
+        </artist>
+      </relation>
+      <relation type-id="5be4c609-9afa-4ea0-910b-12ffb71e3821" type="member of band">
+        <target>ba550d0e-adac-4864-b88b-407cab5e76af</target>
+        <direction>backward</direction>
+        <begin>1957-07</begin>
+        <end>1970-04-10</end>
+        <ended>true</ended>
+        <attribute-list>
+          <attribute>bass guitar</attribute>
+          <attribute>lead vocals</attribute>
+          <attribute>original</attribute>
+        </attribute-list>
+        <artist id="ba550d0e-adac-4864-b88b-407cab5e76af">
+          <name>Paul McCartney</name>
+          <sort-name>McCartney, Paul</sort-name>
+        </artist>
+      </relation>
+      <relation type-id="a6f62641-2f58-470e-b02b-88d7b984dc9f" type="tribute">
+        <target>d4617e66-94f7-41c2-83ad-86c6e446f3a9</target>
+        <direction>backward</direction>
+        <artist id="d4617e66-94f7-41c2-83ad-86c6e446f3a9">
+          <name>Rain</name>
+          <sort-name>Rain</sort-name>
+          <disambiguation>A Tribute to the Beatles</disambiguation>
+        </artist>
+      </relation>
+      <relation type="tribute" type-id="a6f62641-2f58-470e-b02b-88d7b984dc9f">
+        <target>efd345ae-4c44-404c-9347-34802a218a60</target>
+        <direction>backward</direction>
+        <artist id="efd345ae-4c44-404c-9347-34802a218a60">
+          <name>Harrison</name>
+          <sort-name>Harrison</sort-name>
+          <disambiguation>Belgian Beatles tribute band</disambiguation>
+        </artist>
+      </relation>
+      <relation type="tribute" type-id="a6f62641-2f58-470e-b02b-88d7b984dc9f">
+        <target>f540dcbe-4ae8-45c7-817b-372241202276</target>
+        <direction>backward</direction>
+        <artist id="f540dcbe-4ae8-45c7-817b-372241202276">
+          <name>Not The Beatles</name>
+          <sort-name>Not The Beatles</sort-name>
+        </artist>
+      </relation>
+    </relation-list>
+    <relation-list target-type="url">
+      <relation type="lyrics" type-id="e4d73442-3762-45a8-905c-401da65544ed">
+        <target id="7ccb2b9e-88f7-4030-bdde-f3eb81d16aa5">http://decoda.com/the-beatles-lyrics</target>
+      </relation>
+      <relation type="lyrics" type-id="e4d73442-3762-45a8-905c-401da65544ed">
+        <target id="5f3d83eb-6ad6-4db7-a6ed-d4f437db91c6">http://genius.com/artists/The-beatles</target>
+      </relation>
+      <relation type="lyrics" type-id="e4d73442-3762-45a8-905c-401da65544ed">
+        <target id="b1e3f0b8-eee0-4ced-87b9-d7088481ae10">http://lyrics.wikia.com/The_Beatles</target>
+      </relation>
+      <relation type-id="d94fb61c-fa20-4e3c-a19a-71a949fb2c55" type="other databases">
+        <target id="7c3c8677-b843-4300-8002-62d4a2a9f969">http://musicmoz.org/Bands_and_Artists/B/Beatles,_The/</target>
+      </relation>
+      <relation type-id="e4d73442-3762-45a8-905c-401da65544ed" type="lyrics">
+        <target id="28f763a2-ad86-4adc-8a4a-ef5c1a666861">http://muzikum.eu/en/122-3389/the-beatles/lyrics.html</target>
+      </relation>
+      <relation type-id="d94fb61c-fa20-4e3c-a19a-71a949fb2c55" type="other databases">
+        <target id="b4b3477b-92fa-46bb-b8f6-00458ed8c278">http://rateyourmusic.com/artist/the_beatles</target>
+      </relation>
+      <relation type="VIAF" type-id="e8571dcc-35d4-4e91-a577-a3382fd84460">
+        <target id="787c5ab9-5546-4753-8280-fb4eec8df66b">http://viaf.org/viaf/141205608</target>
+      </relation>
+      <relation type-id="d94fb61c-fa20-4e3c-a19a-71a949fb2c55" type="other databases">
+        <target id="ce11dac4-3aa0-4980-b828-c982865085e9">http://www.45cat.com/artist/the-beatles</target>
+      </relation>
+      <relation type="fanpage" type-id="f484f897-81cc-406e-96f9-cd799a04ee24">
+        <target id="3aeb82b2-2a1c-474e-abb2-bf4f67316cf2">http://www.aboutthebeatles.com/</target>
+      </relation>
+      <relation type="allmusic" type-id="6b3e3c85-0002-4f34-aca6-80ace0d7e846">
+        <target id="b1e974fb-3872-4344-abc2-6abd6a9e4b46">http://www.allmusic.com/artist/mn0000754032</target>
+      </relation>
+      <relation type-id="d028a975-000c-4525-9333-d3c8425e4b54" type="BBC Music page">
+        <target id="85e5480a-f7ae-4d03-bbd2-d0c372bd2dc4">http://www.bbc.co.uk/music/artists/b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d</target>
+      </relation>
+      <relation type-id="f484f897-81cc-406e-96f9-cd799a04ee24" type="fanpage">
+        <target id="a83dee2a-fe4b-44ce-8007-88c34c34a91e">http://www.beatles.ru/</target>
+      </relation>
+      <relation type="fanpage" type-id="f484f897-81cc-406e-96f9-cd799a04ee24">
+        <target id="91c7742e-cb41-4bf6-8ae5-e4dd9634899d">http://www.beatlesfanclub.nl/</target>
+      </relation>
+      <relation type-id="f484f897-81cc-406e-96f9-cd799a04ee24" type="fanpage">
+        <target id="6eb6e76f-3954-4c5f-a745-dc241d13585f">http://www.britishbeatlesfanclub.co.uk/</target>
+      </relation>
+      <relation type-id="f484f897-81cc-406e-96f9-cd799a04ee24" type="fanpage">
+        <target id="45db1b46-1848-456f-bb27-7f72b66ffe11">http://www.dmbeatles.com/</target>
+      </relation>
+      <relation type-id="94c8b0cc-4477-4106-932c-da60e63de61c" type="IMDb">
+        <target id="00788bbc-11f2-4445-a53e-d2ce36128822">http://www.imdb.com/name/nm1397313/</target>
+      </relation>
+      <relation type="last.fm" type-id="08db8098-c0df-4b78-82c3-c8697b4bba7f">
+        <target id="3307c5e9-b873-4f70-a516-08df0cb4f54c">http://www.last.fm/music/The+Beatles</target>
+      </relation>
+      <relation type-id="769085a1-c2f7-4c24-a532-2375a77693bd" type="streaming music">
+        <target id="0117e867-0685-4a87-823d-063c3f99df0d">http://www.pandora.com/beatles</target>
+      </relation>
+      <relation type="secondhandsongs" type-id="79c5b84d-a206-4f4c-9832-78c028c312c3">
+        <target id="9fa78c08-2c45-4135-851e-3e642bc32633">http://www.secondhandsongs.com/artist/41</target>
+      </relation>
+      <relation type="streaming music" type-id="769085a1-c2f7-4c24-a532-2375a77693bd">
+        <target id="0446e3c9-a8f6-44a0-962c-7e610a7fed13">http://www.staimusic.com/en/bands/the-beatles_4309.html</target>
+      </relation>
+      <relation type="official homepage" type-id="fe33d22f-c3b0-4d68-bd53-a856badf2b15">
+        <target id="7bea8a51-7f45-4941-8c9c-b20d975199b1">http://www.thebeatles.com/</target>
+      </relation>
+      <relation type-id="d94fb61c-fa20-4e3c-a19a-71a949fb2c55" type="other databases">
+        <target id="fb3e8117-18d1-4858-bb8f-ade6f4f42bf6">http://www.whosampled.com/The-Beatles/</target>
+      </relation>
+      <relation type-id="221132e9-e30e-43f2-a741-15afc4c5fa7c" type="image">
+        <target id="2d52342e-8321-4f94-89c1-6f902107aa91">https://commons.wikimedia.org/wiki/File:The_Fabs.JPG</target>
+      </relation>
+      <relation type="wikipedia" type-id="29651736-fa6d-48e4-aadc-a557c6add1cb">
+        <target id="20d528f8-dbad-45fa-a3d0-c48a5a9f47fc">https://en.wikipedia.org/wiki/The_Beatles</target>
+      </relation>
+      <relation type-id="f8319a2f-f824-4617-81c8-be6560b3b203" type="purchase for download">
+        <target id="bee9493d-ed07-44cf-895c-7a0581408789">https://itunes.apple.com/artist/id136975</target>
+      </relation>
+      <relation type-id="bac47923-ecde-4b59-822e-d08f0cd10156" type="myspace">
+        <target id="f57c02f1-4e21-49a9-82f7-b9735279b147">https://myspace.com/thebeatles</target>
+      </relation>
+      <relation type="streaming music" type-id="769085a1-c2f7-4c24-a532-2375a77693bd">
+        <target id="ddec3fa9-1775-4c9c-a9ca-8b447fc8c5e9">https://open.spotify.com/artist/3WrFJ7ztbogyGnTHbHJFl2</target>
+      </relation>
+      <relation type="purchase for download" type-id="f8319a2f-f824-4617-81c8-be6560b3b203">
+        <target id="48f9aeee-02dc-45c2-866f-f160faa157b5">https://play.google.com/store/music/artist?id=Apyx6rt3d2amstq7u3ntxenxhkq</target>
+      </relation>
+      <relation type="social network" type-id="99429741-f3f6-484b-84f8-23af51991770">
+        <target id="043fa87a-7b70-405d-9881-daf6c0e60472">https://plus.google.com/111520018934389590684</target>
+      </relation>
+      <relation type="soundcloud" type-id="89e4a949-0976-440d-bda1-5f772c1e5710">
+        <target id="d0ccbd13-6622-4798-8b36-c82d13210b05">https://soundcloud.com/thebeatles</target>
+      </relation>
+      <relation type-id="99429741-f3f6-484b-84f8-23af51991770" type="social network">
+        <target id="2d8ccf0f-9840-4cb8-9f17-5e79812c9186">https://twitter.com/thebeatles</target>
+      </relation>
+      <relation type-id="611b1862-67af-4253-a64f-34adba305d1d" type="purchase for mail-order">
+        <target id="798c0711-1dbe-4faa-bd50-9774652b0d0d">https://www.amazon.co.uk/-/e/B000APTK6K</target>
+      </relation>
+      <relation type-id="769085a1-c2f7-4c24-a532-2375a77693bd" type="streaming music">
+        <target id="f056116b-17dd-4574-8a92-954442b4a0a4">https://www.deezer.com/artist/1</target>
+      </relation>
+      <relation type-id="04a5b104-a4c2-4bac-99a1-7b837c37d9e4" type="discogs">
+        <target id="4327d342-5545-4168-a4c9-f8a740099d5d">https://www.discogs.com/artist/82730</target>
+      </relation>
+      <relation type-id="99429741-f3f6-484b-84f8-23af51991770" type="social network">
+        <target id="a6080060-611f-4dff-a91d-d0cc61fb74b9">https://www.facebook.com/thebeatles</target>
+      </relation>
+      <relation type-id="4fb0eeec-a6eb-4ae3-ad52-b55765b94e8f" type="discography">
+        <target id="8ab92260-9120-4fab-aedd-970e6b22d319">https://www.musicmeter.nl/artist/13409</target>
+      </relation>
+      <relation type-id="d94fb61c-fa20-4e3c-a19a-71a949fb2c55" type="other databases">
+        <target id="f01c1794-8f43-4cba-a763-331d77513cf1">https://www.musik-sammler.de/artist/the-beatles/</target>
+      </relation>
+      <relation type="setlistfm" type-id="bf5d0d5e-27a1-4e94-9df7-3cdc67b3b207">
+        <target id="2b453d73-3653-433c-a36c-b2eeb130927b">https://www.setlist.fm/setlists/the-beatles-23d6a88b.html</target>
+      </relation>
+      <relation type="wikidata" type-id="689870a4-a1e4-4912-b17f-7b2664215698">
+        <target id="7a14a19d-17d6-452e-8741-6ace4eea275c">https://www.wikidata.org/wiki/Q1299</target>
+      </relation>
+      <relation type="youtube" type-id="6a540e5b-58c6-4192-b6ba-dbc71ec8fcf0">
+        <target id="82a6b2f6-7d0a-4777-b7bd-44ab4b6ce26f">https://www.youtube.com/user/thebeatles</target>
+      </relation>
+    </relation-list>
+    <tag-list>
+      <tag count="0">
+        <name>1</name>
+      </tag>
+      <tag count="0">
+        <name>60s</name>
+      </tag>
+      <tag count="0">
+        <name>80s</name>
+      </tag>
+      <tag count="0">
+        <name>a filk artist</name>
+      </tag>
+      <tag count="0">
+        <name>adult alternative pop rock</name>
+      </tag>
+      <tag count="1">
+        <name>art pop</name>
+      </tag>
+      <tag count="1">
+        <name>art rock</name>
+      </tag>
+      <tag count="0">
+        <name>bbc</name>
+      </tag>
+      <tag count="1">
+        <name>beat music</name>
+      </tag>
+      <tag count="1">
+        <name>blues rock</name>
+      </tag>
+      <tag count="1">
+        <name>boys band</name>
+      </tag>
+      <tag count="7">
+        <name>british</name>
+      </tag>
+      <tag count="1">
+        <name>british invasion</name>
+      </tag>
+      <tag count="0">
+        <name>british psychedelia</name>
+      </tag>
+      <tag count="1">
+        <name>british rhythm &amp; blues</name>
+      </tag>
+      <tag count="-1">
+        <name>britpop</name>
+      </tag>
+      <tag count="0">
+        <name>classic pop and rock</name>
+      </tag>
+      <tag count="1">
+        <name>classical pop</name>
+      </tag>
+      <tag count="0">
+        <name>english</name>
+      </tag>
+      <tag count="2">
+        <name>experimental</name>
+      </tag>
+      <tag count="1">
+        <name>folk pop</name>
+      </tag>
+      <tag count="1">
+        <name>folk rock</name>
+      </tag>
+      <tag count="0">
+        <name>folk-rock</name>
+      </tag>
+      <tag count="0">
+        <name>hair metal</name>
+      </tag>
+      <tag count="2">
+        <name>hard rock</name>
+      </tag>
+      <tag count="0">
+        <name>heavy metal</name>
+      </tag>
+      <tag count="0">
+        <name>indie rock</name>
+      </tag>
+      <tag count="0">
+        <name>instrumental pop</name>
+      </tag>
+      <tag count="1">
+        <name>liverpool</name>
+      </tag>
+      <tag count="0">
+        <name>male vocalists</name>
+      </tag>
+      <tag count="2">
+        <name>merseybeat</name>
+      </tag>
+      <tag count="0">
+        <name>one beatles</name>
+      </tag>
+      <tag count="0">
+        <name>orchestral</name>
+      </tag>
+      <tag count="0">
+        <name>orchestral pop</name>
+      </tag>
+      <tag count="0">
+        <name>overrated</name>
+      </tag>
+      <tag count="0">
+        <name>parlophone</name>
+      </tag>
+      <tag count="10">
+        <name>pop</name>
+      </tag>
+      <tag count="4">
+        <name>pop rock</name>
+      </tag>
+      <tag count="0">
+        <name>pop-metal</name>
+      </tag>
+      <tag count="0">
+        <name>pop-rock</name>
+      </tag>
+      <tag count="0">
+        <name>pop/rock</name>
+      </tag>
+      <tag count="0">
+        <name>progressive rock</name>
+      </tag>
+      <tag count="0">
+        <name>psychedelic</name>
+      </tag>
+      <tag count="2">
+        <name>psychedelic pop</name>
+      </tag>
+      <tag count="2">
+        <name>psychedelic rock</name>
+      </tag>
+      <tag count="1">
+        <name>rhythm &amp; blues</name>
+      </tag>
+      <tag count="11">
+        <name>rock</name>
+      </tag>
+      <tag count="2">
+        <name>rock &amp; roll</name>
+      </tag>
+      <tag count="0">
+        <name>rock and roll</name>
+      </tag>
+      <tag count="0">
+        <name>rock roll</name>
+      </tag>
+      <tag count="0">
+        <name>singer songwriter</name>
+      </tag>
+      <tag count="1">
+        <name>sunshine pop</name>
+      </tag>
+      <tag count="0">
+        <name>the-beatles</name>
+      </tag>
+      <tag count="0">
+        <name>tribute albums</name>
+      </tag>
+      <tag count="1">
+        <name>uk</name>
+      </tag>
+      <tag count="0">
+        <name>united kingdom</name>
+      </tag>
+    </tag-list>
+    <rating votes-count="67">4.8</rating>
+  </artist>
+</metadata>
