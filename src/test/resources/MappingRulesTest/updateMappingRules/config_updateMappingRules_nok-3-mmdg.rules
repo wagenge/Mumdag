@@ -1,0 +1,4 @@
+ArtistNode.abs = /Artist[_arid_]
+ArtistNode.subType = node
+ArtistId.abs = /Artist/@_arid_
+ArtistId.subType = attribute

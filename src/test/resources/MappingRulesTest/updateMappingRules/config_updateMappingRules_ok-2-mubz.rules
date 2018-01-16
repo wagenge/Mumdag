@@ -1,0 +1,4 @@
+ArtistId.abs = /metadata/artist/@_arid_
+ArtistId.subType = attribute
+ArtistName.abs = /metadata/artist[_arid_]/name
+ArtistName.subType = text

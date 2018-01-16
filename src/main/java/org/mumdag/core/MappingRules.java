@@ -8,6 +8,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.HashMap;
 
+import org.apache.commons.lang3.StringUtils;
 import org.mumdag.core.OutputXmlDoc.NodeAction;
 import org.mumdag.core.OutputXmlDoc.NodeStatus;
 
@@ -29,14 +30,14 @@ private HashMap<String, HashMap<String, String>> mappingRules = new HashMap<>();
 */	
 //ERROR HANDLING:	ok
 //DOC:				nok
-//TEST:				nok
+//TEST:				ok, implicit via test_updateMappingRules_ok()
 private MappingRules() {	}
 
 //-----------------------------------------------------------------------------	
 
 //ERROR HANDLING:	ok
 //DOC:				nok
-//TEST:				nok
+//TEST:				ok, implicit via test_updateMappingRules_ok()
 public static synchronized MappingRules getInstance() {
 	if (instance == null) {
 		instance = new MappingRules();
@@ -48,23 +49,30 @@ public static synchronized MappingRules getInstance() {
 /*
 * 	GETTER/SETTER/UPDATER METHODS (public)	
 */
-//ERROR HANDLING:	nok
+//ERROR HANDLING:	ok
 //DOC:				nok
-//TEST:				nok
-public void updateMappingRules(String filePath, String scraperId, String ruleType) throws IOException {
-	BufferedReader  bfr = new BufferedReader(new FileReader(new File(filePath)));
+//TEST:				ok
+public void updateMappingRules(String filePath, String scraperId, String ruleType) throws Exception {
+    if(StringUtils.isEmpty(scraperId)) {
+        throw new Exception("Parameter scraperId not found!");
+    }
+    if(StringUtils.isEmpty(ruleType)) {
+        throw new Exception("Parameter ruleType not found!");
+    }
 
+    BufferedReader  bfr = new BufferedReader(new FileReader(new File(filePath)));
     String line;
     while ((line = bfr.readLine()) != null) {
-        if (!line.startsWith("#") && !line.isEmpty()) {
+        if (!line.startsWith("#") && !line.isEmpty() &&
+				line.indexOf('.') > 0 && line.indexOf('=') > 0 && line.indexOf('.') < line.indexOf('=')){
         	//split key and value ('=')
         	String[] pair = line.trim().split("=", 2);
             //split left side ('.') key for outer HashMap and key for inner HashMap
         	String key = pair[0].trim();
-            String[] anotherPair = key.trim().split("\\.");
+            String[] keyPair = key.trim().split("\\.");
             //create key (scraperId.anotherPair[0])
-            String outerKey = scraperId + "." + anotherPair[0].trim();
-            String innerKey = anotherPair[1].trim();
+            String outerKey = scraperId + "." + keyPair[0].trim();
+            String innerKey = keyPair[1].trim();
             String innerValue = pair[1].trim();
         	HashMap<String, String> innerMap = new HashMap<>();
             //check if key already exists
@@ -87,9 +95,9 @@ public void updateMappingRules(String filePath, String scraperId, String ruleTyp
 
 //-----------------------------------------------------------------------------
 
-//ERROR HANDLING:	nok
+//ERROR HANDLING:	ok
 //DOC:				nok
-//TEST:				nok
+//TEST:				ok
 public HashMap<String, String> getMappingRule(String scraperId, String ruleName) {
 	return this.mappingRules.get(scraperId+"."+ruleName);
 }
@@ -141,6 +149,9 @@ public HashMap<NodeStatus, NodeAction> getCopyBehavior(String scraperId, String 
 
 //-----------------------------------------------------------------------------
 
+//ERROR HANDLING:	ok
+//DOC:				nok
+//TEST:				ok, implicit via test_updateMappingRules_ok()
 public HashMap<String, HashMap<String, String>> getMappingRules() {	return mappingRules;	}
 
 //-----------------------------------------------------------------------------

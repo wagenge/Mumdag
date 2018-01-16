@@ -30,10 +30,12 @@ private static Logger log = null;
 @Test(dataProvider = "data_createInfoList_ok")
 public void test_createInfoList_ok(String testDesc, String infoStr, String expRes) {
     log.info("{} ... started", testDesc);
-    String [] infos = infoStr.split("\\|\\|");
-    if(StringUtils.isEmpty(infoStr)) {
-        infos = null;
+
+    String [] infos = null;
+    if(StringUtils.isNotEmpty(infoStr)) {
+        infos = infoStr.split("\\|\\|");
     }
+
     List<String> resList = MapListUtils.createInfoList(infos);
     String res = String.join(", ", resList);
     assertThat(res).isEqualTo(expRes);
@@ -61,6 +63,9 @@ public Object[][] data_createInfoList_ok() {
         new Object[] {"05 - empty value",
                         "",
                         ""},
+        new Object[] {"06 - null value",
+                        null,
+                        ""},
     };
 }
 
@@ -70,15 +75,18 @@ public Object[][] data_createInfoList_ok() {
 @Test(dataProvider = "data_createInfoList_list_ok")
 public void test_createInfoList_list_ok(String testDesc, String infoListStr, String infoStr, String expRes) {
     log.info("{} ... started", testDesc);
-    String [] infoListArr = infoListStr.split("\\|\\|");
-    List<String> infoList = Arrays.asList(infoListArr);
-    String [] infos = infoStr.split("\\|\\|");
-    if(StringUtils.isEmpty(infoStr)) {
-        infos = null;
+
+    String [] infoListArr;
+    List<String> infoList = null;
+    String [] infos = null;
+    if(StringUtils.isNotEmpty(infoListStr)) {
+        infoListArr = infoListStr.split("\\|\\|");
+        infoList = Arrays.asList(infoListArr);
     }
-    if(StringUtils.isEmpty(infoListStr)) {
-        infoList = null;
+    if(StringUtils.isNotEmpty(infoStr)) {
+        infos = infoStr.split("\\|\\|");
     }
+
     List<String> resList = MapListUtils.createInfoList(infoList, infos);
     String res = String.join(", ", resList);
     assertThat(res).isEqualTo(expRes);
@@ -99,13 +107,25 @@ public Object[][] data_createInfoList_list_ok() {
                         "",
                         "value4||value5||value6",
                         "value4, value5, value6"},
-        new Object[] {"03 - list, empty new values",
+        new Object[] {"03 - null list, three new values",
+                        null,
+                        "value4||value5||value6",
+                        "value4, value5, value6"},
+        new Object[] {"04 - list, empty new values",
                         "value1||value2||value3",
                         "",
                         "value1, value2, value3"},
-        new Object[] {"04 - empty list, empty new values",
+        new Object[] {"05 - list, null new values",
+                        "value1||value2||value3",
+                        null,
+                        "value1, value2, value3"},
+        new Object[] {"06 - empty list, empty new values",
                         "",
                         "",
+                        ""},
+        new Object[] {"07 - null list, null new values",
+                        null,
+                        null,
                         ""},
     };
 }
