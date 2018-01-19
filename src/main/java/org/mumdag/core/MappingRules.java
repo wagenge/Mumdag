@@ -5,12 +5,11 @@ package org.mumdag.core;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
-import java.io.IOException;
 import java.util.HashMap;
 
 import org.apache.commons.lang3.StringUtils;
-import org.mumdag.core.OutputXmlDoc.NodeAction;
-import org.mumdag.core.OutputXmlDoc.NodeStatus;
+import org.mumdag.model.OutputXmlDoc.NodeAction;
+import org.mumdag.model.OutputXmlDoc.NodeStatus;
 
 //-----------------------------------------------------------------------------
 

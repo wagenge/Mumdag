@@ -1,4 +1,4 @@
-package org.mumdag.core;
+package org.mumdag.model;
 
 //-----------------------------------------------------------------------------
 
@@ -32,6 +32,7 @@ import javax.xml.xpath.XPathFactory;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.mumdag.core.MappingRules;
 import org.mumdag.utils.MapListUtils;
 import org.mumdag.utils.PropertyHandler;
 import org.mumdag.utils.XmlUtils;
@@ -105,7 +106,61 @@ public OutputXmlDoc(String templateFilePath) throws Exception {
 //=============================================================================	
 /*
 * 	METHODS FOR WRITING/READING ARTIST BLOCK (public)
-*/	
+*/
+
+
+//ERROR HANDLING:	nok
+//DOC:				nok
+//TEST:				nok
+public void writeNameInfos(String name, String sortName, List<String> nameInfo, HashMap<String, Object> resolveInfo) throws Exception {
+
+/*    //preparing infos of the artists' name (id, source, type)
+    String artistIdAttr = this.mbIdAttrName+"="+additionalInfo.get("artistId");
+    String artistIdAttrCheck = "@"+this.mbIdAttrName+"='"+additionalInfo.get("artistId")+"'";
+    if(additionalInfo.containsKey("artistCreditId")) {
+        artistIdAttr = this.mbIdAttrName+"="+additionalInfo.get("artistCreditId");
+        artistIdAttrCheck = "@"+this.mbIdAttrName+"='"+additionalInfo.get("artistCreditId")+"'";
+    }
+    String artistNameSourceAttr = this.sourceAttrName+"="+this.sourceAttrValue;
+    String artistNameSourceAttrCheck = "@"+this.sourceAttrName+"='"+this.sourceAttrValue+"'";
+
+    String artistNameTypeAttr = "type"+"="+additionalInfo.get("artistNameType");
+    String artistNameTypeAttrCheck = "@"+"type"+"="+"'"+additionalInfo.get("artistNameType")+"'";
+    if(nameInfo != null) {
+        for(int i = 0; i < nameInfo.size(); i++) {
+            String nameInfoStr = nameInfo.get(i);
+            if(nameInfoStr.contains("type=")) {
+                String[] nameInfoArr = nameInfoStr.split("=");
+                String typeVal = nameInfoArr[1];
+                artistNameTypeAttr = nameInfoStr;
+                artistNameTypeAttrCheck = "@"+"type"+"="+"'"+typeVal+"'";
+            }
+        }
+    }
+*/
+    // define the behavior of the operation depending on the current node state (artists' aliases)
+    //HashMap<NodeStatus, NodeAction> copyBehavior = this.mappingRules.getCopyBehavior(this.scraperId, copyBehaviorRule);
+    //copyBehavior = resolveInfo.get("copyRule");
+
+    //prepare information to resolve the xpaths
+    //HashMap<String, String> resolveXpathInfos = MapListHelper.createResolveXpathMap("_arid_", artistIdAttrCheck, "_scraperattr_", "@"+this.mbIdAttrName,
+    //        "_arname_", name, "_src_", artistNameSourceAttrCheck, "_srcattr_", "@"+this.sourceAttrName,
+     //       "_ntype_", artistNameTypeAttrCheck, "_ntypeattr_", "@"+"type");
+
+    //preparing artist' name info list
+    if(nameInfo == null) {
+        nameInfo = new ArrayList<String>();
+    }
+    nameInfo = MapListUtils.createInfoList(nameInfo, name);
+    if(sortName != null && sortName.length() > 0) {
+        String artistSortNameAttr = "sort-name"+"="+sortName;
+        nameInfo = MapListUtils.createInfoList(nameInfo,  artistSortNameAttr);
+    }
+
+    //put Name to MMDG
+    writeInfo(nameInfo, (String)resolveInfo.get("targetRule"), (String)resolveInfo.get("resolvedBase"), (HashMap<String, String>)resolveInfo.get("resolveMap"), (HashMap<NodeStatus, NodeAction>)resolveInfo.get("copyBehavior"));
+}
+
 /*
 //ERROR HANDLING:	ok
 //DOC:				nok
@@ -1162,7 +1217,16 @@ public NodeStatus writeInfo(String valueToAdd, String ruleName,  String resolved
 //DOC:				nok
 //TEST:				nok
 public NodeStatus writeInfo(List<String> valuesToAdd, String ruleName, String resolvedBaseXpath, HashMap<String, String> resolveXpathInfos, HashMap<NodeStatus, NodeAction> copyBehavior) throws Exception {
-	HashMap<String, String> mmdgMappingRule = this.mappingRules.getMappingRule(this.scraperId, ruleName);
+    //get the maping rule for the given ruleName
+    // in case the ruleName has two part (separated by a '.') use the second part
+    HashMap<String, String> mmdgMappingRule;
+    if(ruleName.contains(".")) {
+        mmdgMappingRule = this.mappingRules.getMappingRule(this.scraperId, ruleName.split("\\.")[1]);
+    }
+    else {
+        mmdgMappingRule = this.mappingRules.getMappingRule(this.scraperId, ruleName);
+    }
+
 	String xpathTarget = "";
 	if(mmdgMappingRule.containsKey("xpathTarget")) {
 		xpathTarget = mmdgMappingRule.get("xpathTarget");
@@ -1231,12 +1295,12 @@ public NodeStatus mapInfo(List<String> valuesToAdd, String targetXpath, String s
 	String checkXpathSameAttrValue = checkXpaths.get("xpathCheckSameAttrValue");
 	String checkXpathSameNodeText = checkXpaths.get("xpathCheckSameNodeText");
 	
-	if(checkXpathSameAttrValue.length() > 0 && checkXpathSameNodeText.length() > 0 && getNumberOfNodes(checkXpathSameAttrValue, true) == 1 && checkIfNodeHasGivenContent(checkXpathSameNodeText, true) == true) {
+	if(checkXpathSameAttrValue.length() > 0 && checkXpathSameNodeText.length() > 0 && getNumberOfNodes(checkXpathSameAttrValue, true) == 1 && checkIfNodeHasGivenContent(checkXpathSameNodeText, true)) {
 		nodeState = NodeStatus.SAME_NODE_EXISTS;
 		whatToDo = copyBehavior.get(nodeState);
 		log.info("SAME_NODE_EXISTS for xpaths #1'{}' and #2'{}' ... whatToDo='{}'", checkXpathSameAttrValue, checkXpathSameNodeText, whatToDo.toString());		
 	}
-	else if(checkXpathSameNodeText.length() > 0 && checkIfNodeHasGivenContent(checkXpathSameNodeText, true) == true) {
+	else if(checkXpathSameNodeText.length() > 0 && checkIfNodeHasGivenContent(checkXpathSameNodeText, true)) {
 		nodeState = NodeStatus.NODE_WITH_SAME_CONTENT_EXISTS;
 		whatToDo = copyBehavior.get(nodeState);
 		log.info("NODE_WITH_SAME_CONTENT_EXISTS for xpath '{}' ... whatToDo='{}'", checkXpathSameNodeText, whatToDo.toString());
@@ -1308,7 +1372,7 @@ public NodeStatus mapInfo(List<String> valuesToAdd, String targetXpath, String s
 //ERROR HANDLING:	nok
 //DOC:				nok
 //TEST:				nok
-public String getResolvedBaseXpath(String ruleName, HashMap<String, String> resolveXpathInfos) throws Exception {
+public String getResolvedBase(String ruleName, HashMap<String, String> resolveXpathInfos) throws Exception {
 	HashMap<String, String> artistBaseRule = this.mappingRules.getMappingRule(this.scraperId, ruleName);
 	String baseXpathUnresolved = artistBaseRule.get("xpathAbsolute");
 	
@@ -1582,7 +1646,7 @@ public void writeOutputDocToFile(String filePath, String fileName) {
 	 }
 	
 	outputXmlDoc.getDocumentElement().normalize();
-	Transformer transformer = null;
+	Transformer transformer= null;
 	try {
 		transformer = TransformerFactory.newInstance().newTransformer();
 		transformer.setOutputProperty(OutputKeys.ENCODING, "UTF-8");
@@ -1592,7 +1656,9 @@ public void writeOutputDocToFile(String filePath, String fileName) {
 	DOMSource source = new DOMSource(outputXmlDoc);
 	StreamResult result = new StreamResult(new File(filePath + "\\" + fileName));
 	try {
-		transformer.transform(source, result);
+	    if(transformer != null) {
+            transformer.transform(source, result);
+        }
 	} catch (TransformerException e) {
 		e.printStackTrace();
 	}
@@ -1814,7 +1880,52 @@ public String getNodeAttributeTextByXPath(String xpathString, String attrName) {
 	}
 	Element el = (Element)nl.item(0);
 	return el.getAttribute(attrName); 
-}	
+}
+
+//-----------------------------------------------------------------------------
+
+//ERROR HANDLING:	nok
+//DOC:				nok
+//TEST:				nok
+public HashMap<String, String> createResolveMap(String... resolveStrings) {
+    HashMap<String, String> resolveMap = new HashMap<>();
+    if(resolveStrings != null) {
+        for (int i = 0; i < resolveStrings.length; i++) {
+            String resolveStr = resolveStrings[i];
+            String[] keyValPair = resolveStr.split("::");
+            if(keyValPair.length == 2) {
+                //put the original resolveInfo (e.g. _idAttr_ -> mbid=123abc or _arname_ -> Beatles, The)
+                resolveMap.put(keyValPair[0], keyValPair[1]);
+
+                //put the check resolveInfo
+                String keyCheck = keyValPair[0].substring(0, keyValPair[0].length()-1) + "Check_";
+                String valCheck = "";
+                // case 1: _idAttrCheck_ -> @mbid='123abc'
+                if(keyValPair[1].contains("=")) {
+                    valCheck = "@" + keyValPair[1].replaceFirst("=", "='") + "'";
+                }
+                // case 2: _arname_ -> 'Beatles, The'
+                else {
+                    valCheck = "'" + keyValPair[1] + "'";
+                }
+                resolveMap.put(keyCheck, valCheck);
+
+                //put the attrName resolveInfo (e.g. _idAttrName_ -> @mbid)
+                String keyName = keyValPair[0].substring(0, keyValPair[0].length()-1) + "Name_";
+                // case 1: _idAttrName_ -> @mbid
+                if(keyValPair[1].contains("=")) {
+                    String valName = "@" + keyValPair[1].substring(0, keyValPair[1].indexOf('='));
+                    resolveMap.put(keyName, valName);
+                }
+            }
+            else if(keyValPair.length == 1) {
+                //put the empty resolveInfo (e.g. _idAttr_ -> ''
+                resolveMap.put(keyValPair[0], "");
+            }
+        }
+    }
+    return resolveMap;
+}
 	
 //-----------------------------------------------------------------------------
 

@@ -4,7 +4,6 @@ package org.mumdag.core;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.assertj.core.api.Assertions;
 import org.mumdag.utils.XmlUtilsTest;
 import org.testng.annotations.*;
 
@@ -27,7 +26,6 @@ private static Logger log = null;
 /*
  * 	TEST METHODS (public)
  */
-
 
 //DOC:			nok  
 //ASSERTION:	ok
@@ -228,6 +226,8 @@ public Object[][] data_getMappingRuleElem_ok() {
                             "/Artist[_arid_]"},
     };
 }
+
+
 //=============================================================================
 /*
  * 	ANNOTATED METHODS (public)
@@ -236,7 +236,7 @@ public Object[][] data_getMappingRuleElem_ok() {
 @BeforeClass
 public static void setLogger() {
     System.setProperty("log4j.configurationFile","./src/test/resources/log4j2-testing.xml");
-    log = LogManager.getLogger(XmlUtilsTest.class);
+    log = LogManager.getLogger(MappingRulesTest.class);
 }
 
 //-----------------------------------------------------------------------------

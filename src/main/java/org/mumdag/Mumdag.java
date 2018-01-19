@@ -2,8 +2,10 @@ package org.mumdag;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.mumdag.core.OutputXmlDoc;
+import org.mumdag.core.LocalArtistIndex;
 import org.mumdag.utils.PropertyHandler;
+
+import java.util.Map;
 
 
 public class Mumdag {
@@ -13,7 +15,7 @@ public class Mumdag {
 	public static void main(String[] args) {
 		log.info(" Mumdag started");
 
-		// Generate an empty document with a given template file
+/*		// Generate an empty document with a given template file
 		String templateFilePath;
 		OutputXmlDoc oxd = null;
 		try {
@@ -25,7 +27,7 @@ public class Mumdag {
 			ex.printStackTrace();
 			return;
 		}
-
+*/
 
 /*		// Reading the execution rules
 		String executionRulesFilePath = "";
@@ -39,11 +41,12 @@ public class Mumdag {
 			ex.printStackTrace();
 			return;
 		}
-		
+*/
 		// Extract the artists-(folders) for a given starting path.
 		//	The depth of the artist folder is configured in the config.properties   
 		String startPath;
 		Map<String, String> artistList = null;
+		Integer artistListSize = 0;
 		try {
 			startPath = PropertyHandler.getInstance().getValue("LocalArtistIndex.startPath");
 			log.info("Building artist index started ...  start reading at {}", startPath);
@@ -52,9 +55,12 @@ public class Mumdag {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		log.info("Building artist index finsihed ... {} artists found", artistList.size());
+		if(artistList != null) {
+			artistListSize = artistList.size();
+		}
+		log.info("Building artist index finsihed ... {} artists found", artistListSize);
 			
-		int i = 1;	
+/*		int i = 1;
 		for (Map.Entry<String, String> artist : artistList.entrySet()) {			
 		    String artistName = artist.getKey();
 		    String artistCanonicalPath = artist.getValue();

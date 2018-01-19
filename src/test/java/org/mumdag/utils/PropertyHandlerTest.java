@@ -248,7 +248,7 @@ public Object[][] data_addPropertiesFromFile_ok() {
 @BeforeClass
 public static void setLogger() {
     System.setProperty("log4j.configurationFile","./src/test/resources/log4j2-testing.xml");
-    log = LogManager.getLogger(XmlUtilsTest.class);
+    log = LogManager.getLogger(PropertyHandlerTest.class);
 }
 
 //-----------------------------------------------------------------------------

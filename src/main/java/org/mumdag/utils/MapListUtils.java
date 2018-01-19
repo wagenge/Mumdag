@@ -2,6 +2,9 @@ package org.mumdag.utils;
 
 //-----------------------------------------------------------------------------
 
+import org.apache.commons.lang3.ArrayUtils;
+import org.apache.commons.lang3.StringUtils;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -61,6 +64,70 @@ public static HashMap<String, String> createResolveXpathMap(String... resolveXpa
         }
     }
 	return resolveXpathMap;
+}
+
+//-----------------------------------------------------------------------------
+
+//ERROR HANDLING:	nok
+//DOC:				nok
+//TEST:				nok
+public static HashMap<String, String> createMap(String... mapString) {
+    return createMap(Arrays.asList(mapString));
+}
+
+//-----------------------------------------------------------------------------
+
+//ERROR HANDLING:	nok
+//DOC:				nok
+//TEST:				nok
+public static HashMap<String, String> createMap(List<String> mapList) {
+    HashMap<String, String> retMap = new HashMap<>();
+    if(mapList != null) {
+        for (String mapStr: mapList) {
+            String[] keyValPair = mapStr.split("::");
+            if(keyValPair.length == 2) {
+                //put the extracted value to the map
+                retMap.put(keyValPair[0], keyValPair[1]);
+            }
+            else if(keyValPair.length == 1) {
+                //put the key with an empty value into the map
+                retMap.put(keyValPair[0], "");
+            }
+        }
+    }
+    return retMap;
+}
+
+//-----------------------------------------------------------------------------
+
+//ERROR HANDLING:	nok
+//DOC:				nok
+//TEST:				nok
+public static HashMap<String, Object> createObjMap(String... mapString) {
+    return createObjMap(Arrays.asList(mapString));
+}
+
+//-----------------------------------------------------------------------------
+
+//ERROR HANDLING:	nok
+//DOC:				nok
+//TEST:				nok
+public static HashMap<String, Object> createObjMap(List<String> mapList) {
+    HashMap<String, Object> retMap = new HashMap<>();
+    if(mapList != null) {
+        for (String mapStr: mapList) {
+            String[] keyValPair = mapStr.split("::");
+            if(keyValPair.length == 2) {
+                //put the extracted value to the map
+                retMap.put(keyValPair[0], (Object)keyValPair[1]);
+            }
+            else if(keyValPair.length == 1) {
+                //put the key with an empty value into the map
+                retMap.put(keyValPair[0], (Object)"");
+            }
+        }
+    }
+    return retMap;
 }
 
 //-----------------------------------------------------------------------------

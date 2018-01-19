@@ -1,6 +1,9 @@
 ArtistNode.xpathAbsolute = /Artist[_arid_]
 ArtistNode.subType = node
 
+Artist.xpathAbsolute = /Artist[_aridCheck_]
+Artist.subType = node
+
 ArtistId.xpathTarget = /Artist
 ArtistId.xpathAbsolute = /Artist/@_arid_
 ArtistId.subType = attribute
@@ -43,9 +46,9 @@ UniqueIdSourceWSUrl.xpathTemplate = /UniqueIdList/UniqueId/SourceWSUrl
 Name.xpathRelative = /NameList/Name[last()]
 Name.subType = text
 Name.xpathCheckNodeEmpty = /NameList/Name[not(text())]
-Name.xpathCheckSameAttrName = /NameList/Name[_scraperattr_ and _srcattr_ and _ntypeattr_]
-Name.xpathCheckSameAttrValue = /NameList/Name[_arid_ and _src_ and _ntype_]
-Name.xpathCheckSameNodeText = /NameList/Name[_arid_ and _src_ and _ntype_]/text() = '_arname_'
+Name.xpathCheckSameAttrName = /NameList/Name[_idAttrName_ and _srcAttrName_ and _ntypeAttrName_]
+Name.xpathCheckSameAttrValue = /NameList/Name[_idAttr_ and _srcAttr_ and _ntypeAttr_]
+Name.xpathCheckSameNodeText = /NameList/Name[_idAttr_ and _srcAttr_ and _ntypeAttr_]/text() = '_arnameCheck_'
 Name.xpathTemplate = /NameList/Name
 
 ArtistAnnotationList.xpathAbsolute = /Artist[_arid_]/AnnotationList/Annotation[last()]
