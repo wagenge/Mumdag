@@ -47,8 +47,8 @@ Name.xpathRelative = /NameList/Name[last()]
 Name.subType = text
 Name.xpathCheckNodeEmpty = /NameList/Name[not(text())]
 Name.xpathCheckSameAttrName = /NameList/Name[_idAttrName_ and _srcAttrName_ and _ntypeAttrName_]
-Name.xpathCheckSameAttrValue = /NameList/Name[_idAttr_ and _srcAttr_ and _ntypeAttr_]
-Name.xpathCheckSameNodeText = /NameList/Name[_idAttr_ and _srcAttr_ and _ntypeAttr_]/text() = '_arnameCheck_'
+Name.xpathCheckSameAttrValue = /NameList/Name[_idAttrCheck_ and _srcAttrCheck_ and _ntypeAttrCheck_]
+Name.xpathCheckSameNodeText = /NameList/Name[_idAttrCheck_ and _srcAttrCheck_ and _ntypeAttrCheck_]/text() = '_arnameCheck_'
 Name.xpathTemplate = /NameList/Name
 
 ArtistAnnotationList.xpathAbsolute = /Artist[_arid_]/AnnotationList/Annotation[last()]
@@ -67,11 +67,11 @@ ArtistDisambiguationList.xpathCheckSameAttrValue = /Artist[_arid_]/Disambiguatio
 ArtistDisambiguationList.xpathCheckSameNodeText = /Artist[_arid_]/DisambiguationList/Disambiguation/text() = '_disambiguation_'
 ArtistDisambiguationList.xpathTemplate = /Artist/DisambiguationList/Disambiguation
 
-ArtistType.xpathAbsolute = /Artist[_arid_]/Type
-ArtistType.subType = text
-ArtistType.xpathCheckNodeEmpty = /Artist[_arid_]/Type[not(text())]
-ArtistType.xpathCheckSameNodeText = /Artist[_arid_]/Type/text() = '_artype_'
-ArtistType.xpathTemplate = /Artist/Type
+Type.xpathRelative = /Type
+Type.subType = text
+Type.xpathCheckNodeEmpty = /Type[not(text())]
+Type.xpathCheckSameNodeText = /Type/text() = '_artypeCheck_'
+Type.xpathTemplate = /Type
 
 PeriodList.xpathRelative = /PeriodList/Date[last()]
 PeriodList.subType = text

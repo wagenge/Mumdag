@@ -374,17 +374,27 @@ public static List<String> getNodeAttributeTextByXPath(String xmlString, String 
             Node node =  nl.item(i);
             NamedNodeMap attrMap = node.getAttributes();
             if(attrNameList.size() > 0) {
-                for(int j = 0; j < attrNameList.size(); j++) {
-                    Node attrNode = attrMap.getNamedItem(attrNameList.get(j));
-                    if(attrNode != null) {
-                        retList.add(attrNode.getNodeName() + "=" + attrNode.getNodeValue());
+                for(String attrName : attrNameList) {
+                    if(attrMap != null) {
+                        Node attrNode = attrMap.getNamedItem(attrName);
+                        if (attrNode != null) {
+                            retList.add(attrNode.getNodeName() + "=" + attrNode.getNodeValue());
+                        }
+                    }
+                    else {
+                        retList.add(node.getNodeName() + "=" + node.getNodeValue());
                     }
                 }
             }
             else {
-                for (int k = 0; k < attrMap.getLength(); k++) {
-                    Node attrNode = attrMap.item(k);
-                    retList.add(attrNode.getNodeName() + "=" + attrNode.getNodeValue());
+                if(attrMap != null) {
+                    for (int k = 0; k < attrMap.getLength(); k++) {
+                        Node attrNode = attrMap.item(k);
+                        retList.add(attrNode.getNodeName() + "=" + attrNode.getNodeValue());
+                    }
+                }
+                else {
+                    retList.add(node.getNodeName() + "=" + node.getNodeValue());
                 }
             }
         }

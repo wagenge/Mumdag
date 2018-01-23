@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Artist mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d">
+	<UniqueIdList/>
+	<NameList>
+		<Name mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" sort-name="Beatles, The" source="MusicBrainz" type="Name">The Beatles</Name>
+		<Name mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" sort-name="B" source="MusicBrainz" type="Search hint" type-id="1937e404-b981-3cb7-8151-4c86ebfc8d8e">B</Name>
+		<Name mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" sort-name="Be" source="MusicBrainz" type="Search hint" type-id="1937e404-b981-3cb7-8151-4c86ebfc8d8e">Be</Name>
+		<Name mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" sort-name="Beat" source="MusicBrainz" type="Search hint" type-id="1937e404-b981-3cb7-8151-4c86ebfc8d8e">Beat</Name>
+		<Name locale="en" mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" sort-name="Beatles" source="MusicBrainz" type="Artist name" type-id="894afba6-2816-3c24-8072-eadb66bd04bc">Beatles</Name>
+		<Name mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" sort-name="Beetles" source="MusicBrainz" type="Search hint" type-id="1937e404-b981-3cb7-8151-4c86ebfc8d8e">Beetles</Name>
+		<Name locale="es" mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" primary="primary" sort-name="Los Beatles" source="MusicBrainz" type="Alias">Los Beatles</Name>
+		<Name locale="en" mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" primary="primary" sort-name="Beatles, The" source="MusicBrainz" type="Artist name" type-id="894afba6-2816-3c24-8072-eadb66bd04bc">The Beatles</Name>
+		<Name mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" sort-name="Savage Young Beatles, The" source="MusicBrainz" type="Alias">The Savage Young Beatles</Name>
+		<Name mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" sort-name="fab four" source="MusicBrainz" type="Search hint" type-id="1937e404-b981-3cb7-8151-4c86ebfc8d8e">fab four</Name>
+		<Name locale="ru" mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" primary="primary" sort-name="Битлз" source="MusicBrainz" type="Alias">Битлз</Name>
+		<Name locale="ja" mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" primary="primary" sort-name="ビートルズ (ザ)" source="MusicBrainz" type="Alias">ザ・ビートルズ</Name>
+		<Name locale="zh_Hans" mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" primary="primary" sort-name="披头士" source="MusicBrainz" type="Alias">披头士</Name>
+		<Name locale="zh_Hant" mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" primary="primary" sort-name="披頭四" source="MusicBrainz" type="Alias">披頭四</Name>
+		<Name locale="ko" mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" primary="primary" sort-name="더 비틀즈" source="MusicBrainz" type="Alias">더 비틀즈</Name>
+	</NameList>
+	<Type/>
+	<AreaList/>
+	<PeriodList/>
+	<DescriptionList/>
+	<TagList/>
+	<UrlList/>
+	<RatingList/>
+	<ArtistCreditList/>
+	<ArtList/>
+	<DisambiguationList/>
+	<AnnotationList/>
+	<Discography>
+		<ReleaseGroupList/>
+	</Discography>
+</Artist>

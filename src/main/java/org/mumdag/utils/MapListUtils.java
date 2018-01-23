@@ -51,6 +51,22 @@ public static List<String> createInfoList(List<String> infoStringList, String...
 //ERROR HANDLING:	ok
 //DOC:				nok
 //TEST:				ok
+public static ArrayList<String> createInfoList(ArrayList<String> infoStringList, String... infoStrings) {
+    ArrayList<String> retList = new ArrayList<>();
+    if(infoStringList != null) {
+        retList.addAll(infoStringList);
+    }
+    if(infoStrings != null && infoStrings.length > 0) {
+        retList.addAll(Arrays.asList(infoStrings));
+    }
+    return retList;
+}
+
+//-----------------------------------------------------------------------------
+
+//ERROR HANDLING:	ok
+//DOC:				nok
+//TEST:				ok
 public static HashMap<String, String> createResolveXpathMap(String... resolveXpathStrings) {
     HashMap<String, String> resolveXpathMap = new HashMap<>();
     if(resolveXpathStrings != null) {

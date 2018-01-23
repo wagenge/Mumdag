@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Artist mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d">
+	<UniqueIdList/>
+	<NameList>
+		<Name mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" sort-name="Beatles, The" source="MusicBrainz" type="Name">The Beatles</Name>
+		<Name mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" sort-name="fab four" source="MusicBrainz" type="Search hint" type-id="1937e404-b981-3cb7-8151-4c86ebfc8d8e">fab four</Name>
+	</NameList>
+	<Type/>
+	<AreaList/>
+	<PeriodList/>
+	<ArtistDescriptionList/>
+	<TagList/>
+	<UrlList/>
+	<RatingList/>
+	<ArtistCreditList/>
+	<FanartList/>
+	<DisambiguationList/>
+	<AnnotationList/>
+	<Discography>
+		<ReleaseGroupList/>
+	</Discography>
+</Artist>

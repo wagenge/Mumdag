@@ -109,57 +109,143 @@ public OutputXmlDoc(String templateFilePath) throws Exception {
 */
 
 
+// ERROR HANDLING:	nok
+// DOC:				nok
+// TEST:			partly ok, missing properties, parameters and entries of the insertInfo map are not checked
+public void writeArtistName(HashMap<String, Object> insertInfo, String copyRule, String scraperName) throws Exception {
+    String idAttrName = PropertyHandler.getInstance().getValue(scraperName + ".Scraper.idAttrName");
+    String idAttrValue = (String)insertInfo.get("unid");
+    List<String> resolveInfoList = new ArrayList<>();
+    resolveInfoList.add("_arid_::"+idAttrName+"="+idAttrValue);
+
+    writeNameInfo(insertInfo, resolveInfoList, "Artist.Name", copyRule, scraperName);
+}
+
+//-----------------------------------------------------------------------------
+
+// ERROR HANDLING:	nok
+// DOC:				nok
+// TEST:			partly ok, missing properties, parameters and entries of the insertInfo map are not checked
+public void writeArtistTypeAndGender(HashMap<String, Object> insertInfo, String copyRule, String scraperName) throws Exception {
+    String idAttrName = PropertyHandler.getInstance().getValue(scraperName + ".Scraper.idAttrName");
+    String idAttrValue = (String)insertInfo.get("unid");
+    List<String> resolveInfoList = new ArrayList<>();
+    resolveInfoList.add("_arid_::"+idAttrName+"="+idAttrValue);
+
+    //put ArtistType to MMDG
+    writeGenderInfo(insertInfo, resolveInfoList, "Artist.Type", copyRule, scraperName);
+}
+
+//=============================================================================
+/*
+ * 	METHODS FOR WRITING/READING GENERAL BLOCKS (public)
+ */
+
 //ERROR HANDLING:	nok
 //DOC:				nok
 //TEST:				nok
-public void writeNameInfos(String name, String sortName, List<String> nameInfo, HashMap<String, Object> resolveInfo) throws Exception {
-
-/*    //preparing infos of the artists' name (id, source, type)
-    String artistIdAttr = this.mbIdAttrName+"="+additionalInfo.get("artistId");
-    String artistIdAttrCheck = "@"+this.mbIdAttrName+"='"+additionalInfo.get("artistId")+"'";
-    if(additionalInfo.containsKey("artistCreditId")) {
-        artistIdAttr = this.mbIdAttrName+"="+additionalInfo.get("artistCreditId");
-        artistIdAttrCheck = "@"+this.mbIdAttrName+"='"+additionalInfo.get("artistCreditId")+"'";
+@SuppressWarnings("unchecked")
+private void writeNameInfo(HashMap<String, Object> insertInfo, List<String> resolveInfoList, String targetRule, String copyRule, String scraperName) throws Exception {
+    //extract information about (scraper)id, source, name and name type
+    String scraperId = PropertyHandler.getInstance().getValue(scraperName + ".Scraper.id");
+    String idAttrName = PropertyHandler.getInstance().getValue(scraperName + ".Scraper.idAttrName");
+    String idAttrValue = (String)insertInfo.get("unid");
+    String srcAttrName = PropertyHandler.getInstance().getValue(scraperName + ".Scraper.srcAttrName");
+    String srcAttrValue = PropertyHandler.getInstance().getValue(scraperName + ".Scraper.srcAttrValue");
+    String ntypeAttrName = "type";
+    String ntypeAttrValue = "unkown";
+    if(insertInfo.containsKey("nameType")) {
+        ntypeAttrValue = (String) insertInfo.get("nameType");
     }
-    String artistNameSourceAttr = this.sourceAttrName+"="+this.sourceAttrValue;
-    String artistNameSourceAttrCheck = "@"+this.sourceAttrName+"='"+this.sourceAttrValue+"'";
+    String arNameValue = (String)insertInfo.get("name");
+    String arSortNameValue = "";
+    if(insertInfo.containsKey("sortName")) {
+        arSortNameValue = (String) insertInfo.get("sortName");
+    }
 
-    String artistNameTypeAttr = "type"+"="+additionalInfo.get("artistNameType");
-    String artistNameTypeAttrCheck = "@"+"type"+"="+"'"+additionalInfo.get("artistNameType")+"'";
-    if(nameInfo != null) {
-        for(int i = 0; i < nameInfo.size(); i++) {
-            String nameInfoStr = nameInfo.get(i);
+    //extract the additionInfo list
+    // if the name type is set in the additionalInfo list, take it from these list
+    ArrayList<String> insertInfoList = new ArrayList<>();
+    if(insertInfo.containsKey("additionalInfo")) {
+        insertInfoList.addAll((List<String>)insertInfo.get("additionalInfo"));
+        for(String nameInfoStr: insertInfoList) {
             if(nameInfoStr.contains("type=")) {
-                String[] nameInfoArr = nameInfoStr.split("=");
-                String typeVal = nameInfoArr[1];
-                artistNameTypeAttr = nameInfoStr;
-                artistNameTypeAttrCheck = "@"+"type"+"="+"'"+typeVal+"'";
+                String[] nameTypeInfos = nameInfoStr.split("=");
+                ntypeAttrValue = nameTypeInfos[1];
             }
         }
     }
-*/
-    // define the behavior of the operation depending on the current node state (artists' aliases)
-    //HashMap<NodeStatus, NodeAction> copyBehavior = this.mappingRules.getCopyBehavior(this.scraperId, copyBehaviorRule);
-    //copyBehavior = resolveInfo.get("copyRule");
+
+    // define the behavior of the operation depending on the state of the information to be inserted
+    HashMap<NodeStatus, NodeAction> copyBehavior = this.mappingRules.getCopyBehavior(scraperId, copyRule);
 
     //prepare information to resolve the xpaths
-    //HashMap<String, String> resolveXpathInfos = MapListHelper.createResolveXpathMap("_arid_", artistIdAttrCheck, "_scraperattr_", "@"+this.mbIdAttrName,
-    //        "_arname_", name, "_src_", artistNameSourceAttrCheck, "_srcattr_", "@"+this.sourceAttrName,
-     //       "_ntype_", artistNameTypeAttrCheck, "_ntypeattr_", "@"+"type");
+    HashMap<String, String> resolveMap = createResolveMap("_idAttr_::"+idAttrName+"="+idAttrValue,
+            "_srcAttr_::"+srcAttrName+"="+srcAttrValue,
+            "_ntypeAttr_::"+ntypeAttrName+"="+ntypeAttrValue,
+            "_arname_::"+arNameValue);
 
-    //preparing artist' name info list
-    if(nameInfo == null) {
-        nameInfo = new ArrayList<String>();
-    }
-    nameInfo = MapListUtils.createInfoList(nameInfo, name);
-    if(sortName != null && sortName.length() > 0) {
-        String artistSortNameAttr = "sort-name"+"="+sortName;
-        nameInfo = MapListUtils.createInfoList(nameInfo,  artistSortNameAttr);
+    //resolve the base for Artist
+    // resolveInfo is converted into a String[]
+    HashMap<String, String> resolveBaseMap = createResolveMap(resolveInfoList.stream().toArray(String[]::new));
+    String resolvedBase = getResolvedBase("Artist", resolveBaseMap);
+
+    //add idAttr, srcAttr and ntypeAttr to insertInfoList list
+    insertInfoList.add(resolveMap.get("_idAttr_"));
+    insertInfoList.add(resolveMap.get("_srcAttr_"));
+    insertInfoList.add(resolveMap.get("_ntypeAttr_"));
+
+    //add name and sort-name (attribute) to the insertInfoList
+    insertInfoList.add(arNameValue);
+    if(arSortNameValue != null && arSortNameValue.length() > 0) {
+        String artistSortNameAttr = "sort-name"+"="+arSortNameValue;
+        insertInfoList.add(artistSortNameAttr);
     }
 
     //put Name to MMDG
-    writeInfo(nameInfo, (String)resolveInfo.get("targetRule"), (String)resolveInfo.get("resolvedBase"), (HashMap<String, String>)resolveInfo.get("resolveMap"), (HashMap<NodeStatus, NodeAction>)resolveInfo.get("copyBehavior"));
+    writeInfo(insertInfoList, targetRule, resolvedBase, resolveMap, copyBehavior);
 }
+
+//-----------------------------------------------------------------------------
+
+//ERROR HANDLING:	nok
+//DOC:				nok
+//TEST:				nok
+@SuppressWarnings("unchecked")
+private void writeGenderInfo(HashMap<String, Object> insertInfo, List<String> resolveInfoList, String targetRule, String copyRule, String scraperName) throws Exception {
+    //extract information about (scraper)id, source, name and name type
+    String scraperId = PropertyHandler.getInstance().getValue(scraperName + ".Scraper.id");
+    String idAttrName = PropertyHandler.getInstance().getValue(scraperName + ".Scraper.idAttrName");
+    String idAttrValue = (String)insertInfo.get("unid");
+    String arTypeValue = (String)insertInfo.get("type");
+
+    // define the behavior of the operation depending on the state of the information to be inserted
+    HashMap<NodeStatus, NodeAction> copyBehavior = this.mappingRules.getCopyBehavior(scraperId, copyRule);
+
+    //resolve the base for Artist
+    // resolveInfo is converted into a String[]
+    HashMap<String, String> resolveBaseMap = createResolveMap(resolveInfoList.stream().toArray(String[]::new));
+    String resolvedBase = getResolvedBase("Artist", resolveBaseMap);
+
+    //prepare information to resolve the xpaths
+    HashMap<String, String> resolveMap = createResolveMap("_arid_::"+idAttrName+"="+idAttrValue, "_idAttr_::"+idAttrName+"="+idAttrValue, "_artype_::"+arTypeValue);
+
+    //prepeare the info to be inserted
+    ArrayList<String> insertInfoList = new ArrayList<>();
+    insertInfoList.add(resolveMap.get("_idAttr_"));
+    insertInfoList.add(arTypeValue);
+    if(insertInfo.containsKey("additionalInfo")) {
+        insertInfoList.addAll((List<String>) insertInfo.get("additionalInfo"));
+    }
+    if(insertInfo.containsKey("gender")) {
+        insertInfoList.add("gender="+insertInfo.get("gender"));
+    }
+
+    //put ArtistType to MMDG
+    writeInfo(insertInfoList, targetRule, resolvedBase, resolveMap, copyBehavior);
+}
+
+//-----------------------------------------------------------------------------
 
 /*
 //ERROR HANDLING:	ok
@@ -1906,7 +1992,7 @@ public HashMap<String, String> createResolveMap(String... resolveStrings) {
                 }
                 // case 2: _arname_ -> 'Beatles, The'
                 else {
-                    valCheck = "'" + keyValPair[1] + "'";
+                    valCheck = keyValPair[1];
                 }
                 resolveMap.put(keyCheck, valCheck);
 

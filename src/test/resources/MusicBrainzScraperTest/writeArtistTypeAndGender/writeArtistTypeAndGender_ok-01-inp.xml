@@ -1,0 +1,45 @@
+<metadata xmlns="http://musicbrainz.org/ns/mmd-2.0#">
+	<artist type="Group" type-id="e431f5f6-b5d2-343d-8b36-72607fffb74b" id="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d">
+		<name>The Beatles</name>
+		<sort-name>Beatles, The</sort-name>
+		<isni-list>
+			<isni>0000000121707484</isni>
+		</isni-list>
+		<country>GB</country>
+		<area id="8a754a16-0027-3a29-b6d7-2b40ea0481ed">
+			<name>United Kingdom</name>
+			<sort-name>United Kingdom</sort-name>
+			<iso-3166-1-code-list>
+				<iso-3166-1-code>GB</iso-3166-1-code>
+			</iso-3166-1-code-list>
+		</area>
+		<begin-area id="c249c30e-88ab-4b2f-a745-96a25bd7afee">
+			<name>Liverpool</name>
+			<sort-name>Liverpool</sort-name>
+			<iso-3166-2-code-list>
+				<iso-3166-2-code>GB-LIV</iso-3166-2-code>
+			</iso-3166-2-code-list>
+		</begin-area>
+		<life-span>
+			<begin>1957-03</begin>
+			<end>1970-04-10</end>
+			<ended>true</ended>
+		</life-span>
+		<alias-list count="14">
+			<alias type-id="1937e404-b981-3cb7-8151-4c86ebfc8d8e" sort-name="B" type="Search hint">B</alias>
+			<alias type-id="1937e404-b981-3cb7-8151-4c86ebfc8d8e" sort-name="Be" type="Search hint">Be</alias>
+			<alias type-id="1937e404-b981-3cb7-8151-4c86ebfc8d8e" type="Search hint" sort-name="Beat">Beat</alias>
+			<alias type-id="894afba6-2816-3c24-8072-eadb66bd04bc" sort-name="Beatles" type="Artist name" locale="en">Beatles</alias>
+			<alias type-id="1937e404-b981-3cb7-8151-4c86ebfc8d8e" sort-name="Beetles" type="Search hint">Beetles</alias>
+			<alias locale="es" primary="primary" sort-name="Los Beatles">Los Beatles</alias>
+			<alias type="Artist name" sort-name="Beatles, The" type-id="894afba6-2816-3c24-8072-eadb66bd04bc" locale="en" primary="primary">The Beatles</alias>
+			<alias sort-name="Savage Young Beatles, The">The Savage Young Beatles</alias>
+			<alias type="Search hint" sort-name="fab four" type-id="1937e404-b981-3cb7-8151-4c86ebfc8d8e">fab four</alias>
+			<alias sort-name="Битлз" primary="primary" locale="ru">Битлз</alias>
+			<alias sort-name="ビートルズ (ザ)" primary="primary" locale="ja">ザ・ビートルズ</alias>
+			<alias sort-name="披头士" primary="primary" locale="zh_Hans">披头士</alias>
+			<alias sort-name="披頭四" primary="primary" locale="zh_Hant">披頭四</alias>
+			<alias locale="ko" primary="primary" sort-name="더 비틀즈">더 비틀즈</alias>
+		</alias-list>
+	</artist>
+</metadata>
