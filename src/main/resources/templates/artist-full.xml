@@ -17,12 +17,12 @@
 	<PeriodList>
 		<Date/>
 	</PeriodList>
-	<ArtistDescriptionList>
-		<ArtistDescription>
+	<DescriptionList>
+		<Description>
 			<SourceUrl/>
 			<Description/>
-		</ArtistDescription>
-	</ArtistDescriptionList>
+		</Description>
+	</DescriptionList>
 	<TagList>
 		<Tag/>
 	</TagList>
@@ -52,8 +52,8 @@
 			</PeriodList>
 		</ArtistCredit>
 	</ArtistCreditList>
-	<FanartList>
-		<Fanart>
+	<ArtList>
+		<Art>
 			<ImageType/>
 			<ImageFileType/>
 			<ImageFileName/>
@@ -66,8 +66,8 @@
 				<YValue/>
 				<Size/>
 			</Resolution>
-		</Fanart>
-	</FanartList>
+		</Art>
+	</ArtList>
 	<DisambiguationList>
 		<Disambiguation/>
 	</DisambiguationList>

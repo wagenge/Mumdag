@@ -4,7 +4,6 @@ package org.mumdag.scraper;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.mumdag.Mumdag;
 import org.mumdag.model.MumdagModel;
 import org.mumdag.model.MumdagModelTest;
 import org.testng.Assert;
@@ -188,25 +187,25 @@ public Object[][] data_writeArtistName_ok() {
     return new Object[][]{
         new Object[]{"01 - group, dissolved, alias with special chars - The Beatles",
                         "./src/test/resources/MusicBrainzScraperTest/writeArtistName/writeArtistName_ok-01.properties",
-                        "./src/test/resources/MusicBrainzScraperTest/writeArtistName/writeArtistName_ok-01-inp.xml",
+                        "./src/test/resources/MusicBrainzScraperTest/_mbInputs/Beatles, The - Artist.xml",
                         "Beatles, The",
                         "./src/test/resources/MusicBrainzScraperTest/writeArtistName/",
                         Arrays.asList("|xml||./src/test/resources/MusicBrainzScraperTest/writeArtistName/writeArtistName_ok-01-exp.xml")},
 		new Object[] {"02 - group, not dissolved - Animal Collective",
 						"./src/test/resources/MusicBrainzScraperTest/writeArtistName/writeArtistName_ok-02.properties",
-						"./src/test/resources/MusicBrainzScraperTest/writeArtistName/writeArtistName_ok-02-inp.xml",
+                        "./src/test/resources/MusicBrainzScraperTest/_mbInputs/Animal Collective - Artist.xml",
 						"Animal Collective",
 						"./src/test/resources/MusicBrainzScraperTest/writeArtistName/",
                         Arrays.asList("|xml||./src/test/resources/MusicBrainzScraperTest/writeArtistName/writeArtistName_ok-02-exp.xml")},
 		new Object[] {"03 - group, not dissolved - Animal Collective - name already existing -> update",
 						"./src/test/resources/MusicBrainzScraperTest/writeArtistName/writeArtistName_ok-03.properties",
-						"./src/test/resources/MusicBrainzScraperTest/writeArtistName/writeArtistName_ok-03-inp.xml",
+                        "./src/test/resources/MusicBrainzScraperTest/_mbInputs/Animal Collective - Artist.xml",
 						"Animal Collective",
 						"./src/test/resources/MusicBrainzScraperTest/writeArtistName/",
                         Arrays.asList("|xml||./src/test/resources/MusicBrainzScraperTest/writeArtistName/writeArtistName_ok-03-exp.xml")},
 		new Object[] {"04 - group, not dissolved - Animal Collective - alias name existing -> add",
 						"./src/test/resources/MusicBrainzScraperTest/writeArtistName/writeArtistName_ok-04.properties",
-						"./src/test/resources/MusicBrainzScraperTest/writeArtistName/writeArtistName_ok-04-inp.xml",
+                        "./src/test/resources/MusicBrainzScraperTest/_mbInputs/Animal Collective - Artist.xml",
 						"Animal Collective",
 						"./src/test/resources/MusicBrainzScraperTest/writeArtistName/",
                         Arrays.asList("|xml||./src/test/resources/MusicBrainzScraperTest/writeArtistName/writeArtistName_ok-04-exp.xml")},
@@ -243,11 +242,10 @@ public Object[][] data_writeArtistAlias_ok() {
 	return new Object[][] {
         new Object[] {"01 - group, dissolved, alias with special chars - The Beatles",
                         "./src/test/resources/MusicBrainzScraperTest/writeArtistAlias/writeArtistAlias_ok-01.properties",
-                        "./src/test/resources/MusicBrainzScraperTest/writeArtistAlias/writeArtistAlias_ok-01-inp.xml",
+                        "./src/test/resources/MusicBrainzScraperTest/_mbInputs/Beatles, The - Artist.xml",
                         "Beatles, The",
                         "./src/test/resources/MusicBrainzScraperTest/writeArtistAlias/",
                         Arrays.asList("|xml||./src/test/resources/MusicBrainzScraperTest/writeArtistAlias/writeArtistAlias_ok-01-exp.xml")},
-
 	};
 }
 
@@ -281,23 +279,146 @@ public Object[][] data_writeArtistTypeAndGender_ok() {
 	return new Object[][] {
 			new Object[] {"01 - group, dissolved, alias with special chars - The Beatles",
 					"./src/test/resources/MusicBrainzScraperTest/writeArtistTypeAndGender/writeArtistTypeAndGender_ok-01.properties",
-					"./src/test/resources/MusicBrainzScraperTest/writeArtistTypeAndGender/writeArtistTypeAndGender_ok-01-inp.xml",
+                    "./src/test/resources/MusicBrainzScraperTest/_mbInputs/Beatles, The - Artist.xml",
 					"Beatles, The",
 					"./src/test/resources/MusicBrainzScraperTest/writeArtistTypeAndGender/",
 					Arrays.asList("|xml||./src/test/resources/MusicBrainzScraperTest/writeArtistTypeAndGender/writeArtistTypeAndGender_ok-01-exp.xml")},
 			new Object[] {"02 - person, female, dead - Joplin, Janis",
 					"./src/test/resources/MusicBrainzScraperTest/writeArtistTypeAndGender/writeArtistTypeAndGender_ok-02.properties",
-					"./src/test/resources/MusicBrainzScraperTest/writeArtistTypeAndGender/writeArtistTypeAndGender_ok-02-inp.xml",
+                    "./src/test/resources/MusicBrainzScraperTest/_mbInputs/Joplin, Janis - Artist.xml",
 					"Joplin, Janis",
 					"./src/test/resources/MusicBrainzScraperTest/writeArtistTypeAndGender/",
 					Arrays.asList("|xml||./src/test/resources/MusicBrainzScraperTest/writeArtistTypeAndGender/writeArtistTypeAndGender_ok-02-exp.xml")},
 			new Object[] {"03 - person, female, dead, type and gender existing - Joplin, Janis",
 					"./src/test/resources/MusicBrainzScraperTest/writeArtistTypeAndGender/writeArtistTypeAndGender_ok-03.properties",
-					"./src/test/resources/MusicBrainzScraperTest/writeArtistTypeAndGender/writeArtistTypeAndGender_ok-03-inp.xml",
+                    "./src/test/resources/MusicBrainzScraperTest/_mbInputs/Joplin, Janis - Artist.xml",
 					"Joplin, Janis",
 					"./src/test/resources/MusicBrainzScraperTest/writeArtistTypeAndGender/",
 					Arrays.asList("|xml||./src/test/resources/MusicBrainzScraperTest/writeArtistTypeAndGender/writeArtistTypeAndGender_ok-03-exp.xml")},
 	};
+}
+
+//-----------------------------------------------------------------------------
+
+//DOC:	nok
+@Test(dataProvider = "data_writeArtistUrls_ok")
+public void test_writeArtistUrls_ok(String testDesc, String configFilePath, String sourceXmlFile, String artistName, String artistPath, List<String> expRes) {
+    log.info("{} ... started", testDesc);
+
+    //prepare test
+    // - generate an empty document with a given template file
+    // - read the xml file and stores it in an object array
+    HashMap<String, Object> prepTestmap = prepareTest(testDesc, configFilePath, sourceXmlFile);
+    MumdagModel mm = (MumdagModel)prepTestmap.get("model");
+    Object[] inputObj = (Object[])prepTestmap.get("input");
+
+    //execute the test
+    executeTest(testDesc, artistName, artistPath, "writeArtistUrls", mm, inputObj);
+
+    //validate test results
+    validateTest(testDesc, mm, expRes);
+
+    log.info("{} ... finished successfully!", testDesc);
+}
+
+//-----------------------------------------------------------------------------
+
+@DataProvider
+public Object[][] data_writeArtistUrls_ok() {
+    return new Object[][] {
+        new Object[] {"01 - group, dissolved, alias with special chars - The Beatles",
+                        "./src/test/resources/MusicBrainzScraperTest/writeArtistUrls/writeArtistUrls_ok-01.properties",
+                        "./src/test/resources/MusicBrainzScraperTest/_mbInputs/Beatles, The - Artist.xml",
+                        "Beatles, The",
+                        "./src/test/resources/MusicBrainzScraperTest/writeArtistUrls/",
+                        Arrays.asList("|xml||./src/test/resources/MusicBrainzScraperTest/writeArtistUrls/writeArtistUrls_ok-01-exp.xml")},
+    };
+}
+
+//-----------------------------------------------------------------------------
+
+//DOC:	nok
+@Test(dataProvider = "data_writeArtistIpiAndIsni_ok")
+public void test_writeArtistIpiAndIsni_ok(String testDesc, String configFilePath, String sourceXmlFile, String artistName, String artistPath, List<String> expRes) {
+    log.info("{} ... started", testDesc);
+
+    //prepare test
+    // - generate an empty document with a given template file
+    // - read the xml file and stores it in an object array
+    HashMap<String, Object> prepTestmap = prepareTest(testDesc, configFilePath, sourceXmlFile);
+    MumdagModel mm = (MumdagModel)prepTestmap.get("model");
+    Object[] inputObj = (Object[])prepTestmap.get("input");
+
+    //execute the test
+    executeTest(testDesc, artistName, artistPath, "writeArtistIpiAndIsni", mm, inputObj);
+
+    //validate test results
+    validateTest(testDesc, mm, expRes);
+
+    log.info("{} ... finished successfully!", testDesc);
+}
+
+//-----------------------------------------------------------------------------
+
+@DataProvider
+public Object[][] data_writeArtistIpiAndIsni_ok() {
+    return new Object[][] {
+        new Object[] {"01 - group, dissolved, alias with special chars - The Beatles",
+                        "./src/test/resources/MusicBrainzScraperTest/writeArtistIpiAndIsni/writeArtistIpiAndIsni_ok-01.properties",
+                        "./src/test/resources/MusicBrainzScraperTest/_mbInputs/Beatles, The - Artist.xml",
+                        "Beatles, The",
+                        "./src/test/resources/MusicBrainzScraperTest/writeArtistIpiAndIsni/",
+                        Arrays.asList("|xml||./src/test/resources/MusicBrainzScraperTest/writeArtistIpiAndIsni/writeArtistIpiAndIsni_ok-01-exp.xml")},
+        new Object[] {"02 - female, alive, multiple isni/ipi - Madonna",
+                        "./src/test/resources/MusicBrainzScraperTest/writeArtistIpiAndIsni/writeArtistIpiAndIsni_ok-02.properties",
+                        "./src/test/resources/MusicBrainzScraperTest/_mbInputs/Madonna - Artist.xml",
+                        "Madonna",
+                        "./src/test/resources/MusicBrainzScraperTest/writeArtistIpiAndIsni/",
+                        Arrays.asList("|xml||./src/test/resources/MusicBrainzScraperTest/writeArtistIpiAndIsni/writeArtistIpiAndIsni_ok-02-exp.xml")},
+    };
+}
+
+//-----------------------------------------------------------------------------
+
+//DOC:	nok
+@Test(dataProvider = "data_writeArtistPeriod_ok")
+public void test_writeArtistPeriod_ok(String testDesc, String configFilePath, String sourceXmlFile, String artistName, String artistPath, List<String> expRes) {
+    log.info("{} ... started", testDesc);
+
+    //prepare test
+    // - generate an empty document with a given template file
+    // - read the xml file and stores it in an object array
+    HashMap<String, Object> prepTestmap = prepareTest(testDesc, configFilePath, sourceXmlFile);
+    MumdagModel mm = (MumdagModel)prepTestmap.get("model");
+    Object[] inputObj = (Object[])prepTestmap.get("input");
+
+    //execute the test
+    executeTest(testDesc, artistName, artistPath, "writeArtistPeriod", mm, inputObj);
+
+    //validate test results
+    validateTest(testDesc, mm, expRes);
+
+    log.info("{} ... finished successfully!", testDesc);
+}
+
+//-----------------------------------------------------------------------------
+
+@DataProvider
+public Object[][] data_writeArtistPeriod_ok() {
+    return new Object[][] {
+        new Object[] {"01 - group, dissolved, alias with special chars - The Beatles",
+                    "./src/test/resources/MusicBrainzScraperTest/writeArtistPeriod/writeArtistPeriod_ok-01.properties",
+                    "./src/test/resources/MusicBrainzScraperTest/_mbInputs/Beatles, The - Artist.xml",
+                    "Beatles, The",
+                    "./src/test/resources/MusicBrainzScraperTest/writeArtistPeriod/",
+                    Arrays.asList("|xml||./src/test/resources/MusicBrainzScraperTest/writeArtistPeriod/writeArtistPeriod_ok-01-exp.xml")},
+        new Object[] {"02 - female, dead - Janis Joplin",
+                    "./src/test/resources/MusicBrainzScraperTest/writeArtistPeriod/writeArtistPeriod_ok-02.properties",
+                "./src/test/resources/MusicBrainzScraperTest/_mbInputs/Joplin, Janis - Artist.xml",
+                    "Janis Joplin",
+                    "./src/test/resources/MusicBrainzScraperTest/writeArtistPeriod/",
+                    Arrays.asList("|xml||./src/test/resources/MusicBrainzScraperTest/writeArtistPeriod/writeArtistPeriod_ok-02-exp.xml")},
+    };
 }
 
 
@@ -355,7 +476,7 @@ private HashMap<String, Object> prepareTest(String testDesc, String configFilePa
 
 	// Generate an empty document with a given template file
 	MumdagModel mm = null;
-	OutputXmlDoc oxd = null;
+	OutputXmlDoc oxd;
 	try {
 		mm = new MumdagModel();
 		oxd = mm.getMmdgModel();
@@ -400,6 +521,15 @@ private void executeTest(String testDesc, String artistName, String artistPath, 
                 break;
             case "writeArtistTypeAndGender":
                 mbs.writeMusicBrainzArtistTypeAndGender(inputObj);
+                break;
+            case "writeArtistUrls":
+                mbs.writeMusicBrainzArtistUrls(inputObj);
+                break;
+            case "writeArtistIpiAndIsni":
+                mbs.writeMusicBrainzArtistIpiIsni(inputObj);
+                break;
+            case "writeArtistPeriod":
+                mbs.writeMusicBrainzArtistPeriod(inputObj);
                 break;
             default:
                 fail("Test for method '" + calledMethod + "' not yet implemented!");

@@ -42,6 +42,15 @@ public MumdagModel() throws Exception {
 // ERROR HANDLING:	nok
 // DOC:				nok
 // TEST:			partly ok, missing properties, parameters and entries of the insertInfo map are not checked
+public void writeArtistUniqueId(HashMap<String, Object> insertInfo, String origArtistId, String copyRule, String origScraperName, String scraperName) throws Exception {
+    mmdgModel.writeArtistUniqueId(insertInfo, origArtistId, copyRule, origScraperName, scraperName);
+}
+
+//-----------------------------------------------------------------------------
+
+// ERROR HANDLING:	nok
+// DOC:				nok
+// TEST:			partly ok, missing properties, parameters and entries of the insertInfo map are not checked
 public void writeArtistName(HashMap<String, Object> insertInfo, String copyRule, String scraperName) throws Exception {
     mmdgModel.writeArtistName(insertInfo, copyRule, scraperName);
 }
@@ -62,6 +71,24 @@ public void writeArtistAlias(HashMap<String, Object> insertInfo, String copyRule
 // TEST:			nok
 public void writeArtistTypeAndGender(HashMap<String, Object> insertInfo, String copyRule, String scraperName) throws Exception {
     mmdgModel.writeArtistTypeAndGender(insertInfo, copyRule, scraperName);
+}
+
+//-----------------------------------------------------------------------------
+
+// ERROR HANDLING:	nok
+// DOC:				nok
+// TEST:			nok
+public void writeArtistPeriod(HashMap<String, Object> insertInfo, String periodType, String copyRule, String scraperName) throws Exception {
+    mmdgModel.writeArtistPeriod(insertInfo, periodType, copyRule, scraperName);
+}
+
+//-----------------------------------------------------------------------------
+
+// ERROR HANDLING:	nok
+// DOC:				nok
+// TEST:			partly ok, missing properties, parameters and entries of the insertInfo map are not checked
+public void writeArtistUrls(HashMap<String, Object> insertInfo, String copyRule, String scraperName) throws Exception {
+    mmdgModel.writeUrls(insertInfo, copyRule, scraperName);
 }
 
 

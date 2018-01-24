@@ -108,6 +108,24 @@ public OutputXmlDoc(String templateFilePath) throws Exception {
 * 	METHODS FOR WRITING/READING ARTIST BLOCK (public)
 */
 
+// ERROR HANDLING:	nok
+// DOC:				nok
+// TEST:			nok
+public void writeArtistUniqueId(HashMap<String, Object> insertInfo, String origAristId, String copyRule, String origScraperName, String scraperName) throws Exception {
+    String origIdAttrName = PropertyHandler.getInstance().getValue(origScraperName + ".Scraper.idAttrName");
+    String origScraperId = PropertyHandler.getInstance().getValue(origScraperName + ".Scraper.id");
+	List<String> resolveInfoList = new ArrayList<>();
+	resolveInfoList.add("_arid_::"+origIdAttrName+"="+origAristId);
+
+	HashMap<String, Object> resolveInfoMap = new HashMap<>();
+	resolveInfoMap.put("placeholder", "_arid_");
+    resolveInfoMap.put("propSubSection", "Artist");
+    resolveInfoMap.put("resolveInfo", resolveInfoList);
+
+    writeUniqueIdInfos(insertInfo, resolveInfoMap, "Artist.UniqueId", copyRule, origScraperId, scraperName);
+}
+
+//-----------------------------------------------------------------------------
 
 // ERROR HANDLING:	nok
 // DOC:				nok
@@ -133,13 +151,140 @@ public void writeArtistTypeAndGender(HashMap<String, Object> insertInfo, String 
     resolveInfoList.add("_arid_::"+idAttrName+"="+idAttrValue);
 
     //put ArtistType to MMDG
-    writeGenderInfo(insertInfo, resolveInfoList, "Artist.Type", copyRule, scraperName);
+    writeTypeAndGenderInfo(insertInfo, resolveInfoList, "Artist.Type", copyRule, scraperName);
+}
+
+//-----------------------------------------------------------------------------
+
+// ERROR HANDLING:	nok
+// DOC:				nok
+// TEST:			partly ok, missing properties, parameters and entries of the insertInfo map are not checked
+public void writeArtistPeriod(HashMap<String, Object> insertInfo, String periodType, String copyRule, String scraperName) throws Exception {
+    String idAttrName = PropertyHandler.getInstance().getValue(scraperName + ".Scraper.idAttrName");
+    String idAttrValue = (String)insertInfo.get("unid");
+    List<String> resolveInfoList = new ArrayList<>();
+    resolveInfoList.add("_arid_::"+idAttrName+"="+idAttrValue);
+
+    HashMap<String, Object> resolveInfoMap = new HashMap<>();
+    resolveInfoMap.put("periodType", periodType);
+    resolveInfoMap.put("resolveInfo", resolveInfoList);
+
+    //put ArtistType to MMDG
+    writePeriodInfo(insertInfo, resolveInfoMap, "Artist.Period", copyRule, scraperName);
+}
+
+//-----------------------------------------------------------------------------
+
+// ERROR HANDLING:	nok
+// DOC:				nok
+// TEST:			partly ok, missing properties, parameters and entries of the insertInfo map are not checked
+public void writeUrls(HashMap<String, Object> insertInfo, String copyRule, String scraperName) throws Exception {
+	String idAttrName = PropertyHandler.getInstance().getValue(scraperName + ".Scraper.idAttrName");
+	String idAttrValue = (String)insertInfo.get("unid");
+	List<String> resolveInfoList = new ArrayList<>();
+	resolveInfoList.add("_arid_::"+idAttrName+"="+idAttrValue);
+
+	//put ArtistType to MMDG
+	writeUrlInfo(insertInfo, resolveInfoList, "Artist.Url", copyRule, scraperName);
 }
 
 //=============================================================================
 /*
- * 	METHODS FOR WRITING/READING GENERAL BLOCKS (public)
+ * 	METHODS FOR WRITING/READING GENERAL BLOCKS (private)
  */
+
+
+//ERROR HANDLING:	nok
+//DOC:				nok
+//TEST:				nok
+@SuppressWarnings("unchecked")
+private void writeUniqueIdInfos(HashMap<String, Object> insertInfos, HashMap<String, Object> resolveInfos, String targetRule, String copyRule, String origScraperId, String scraperName) throws Exception {
+    String uniqueId = (String)insertInfos.get("unid");
+    String url = (String)insertInfos.get("url");
+    String propSubSection = (String)resolveInfos.get("propSubSection");
+    String placeholder = (String)resolveInfos.get("placeholder");
+    List<String> resolveInfoList = (List<String>)resolveInfos.get("resolveInfo");
+    Boolean foundProp = false;
+
+    //retrieve Information for Scraper.Section (e.g., Discogs.Scraper.[Artist].xyz)
+    // 	infos are 	.id, .srcAttrName, .sourceAttrValue, .Base.url,
+    //				.[Artist|ReleaseGroup|Release|Track].url, .[Artist|ReleaseGroup|Release|Track].urlParams
+    String idAttrName = "";
+    String srcAttrName = "";
+    String srcAttrValue = "";
+    String wsUrl = "";
+    try {
+        idAttrName = PropertyHandler.getInstance().getValue(scraperName+".Scraper.idAttrName");
+        srcAttrName = PropertyHandler.getInstance().getValue(scraperName+".Scraper.srcAttrName");
+        srcAttrValue = PropertyHandler.getInstance().getValue(scraperName+".Scraper.srcAttrValue");
+        if(!PropertyHandler.getInstance().containsKey(scraperName+".Scraper.Base.wsUrl")) {
+            wsUrl= "-";
+        }
+        else if(PropertyHandler.getInstance().getValue(scraperName+".Scraper.Base.wsUrl").equals("-")) {
+            wsUrl = PropertyHandler.getInstance().getValue(scraperName+".Scraper.Base.wsUrl");
+        }
+        else {
+            if(PropertyHandler.getInstance().containsKey(scraperName+".Scraper."+propSubSection+".wsUrl")) {
+                wsUrl = (PropertyHandler.getInstance().getValue(scraperName+".Scraper.Base.wsUrl") +
+                        PropertyHandler.getInstance().getValue(scraperName+".Scraper."+propSubSection+".wsUrl")).replaceAll(placeholder, uniqueId);
+            }
+            else {
+                wsUrl = (PropertyHandler.getInstance().getValue(scraperName+".Scraper.Base.wsUrl") +
+                        PropertyHandler.getInstance().getValue(scraperName+".Scraper."+propSubSection+".url")).replaceAll(placeholder, uniqueId);
+            }
+        }
+        if(PropertyHandler.getInstance().containsKey(scraperName+".Scraper."+propSubSection+".url") ||
+                (PropertyHandler.getInstance().containsKey(scraperName+".Scraper.Base.url") && !PropertyHandler.getInstance().getValue(scraperName+".Scraper.Base.url").equals("-"))) {
+            url = (PropertyHandler.getInstance().getValue(scraperName+".Scraper.Base.url") +
+                    PropertyHandler.getInstance().getValue(scraperName+".Scraper."+propSubSection+".url")).replaceAll(placeholder, uniqueId);
+        }
+
+        log.info("idAttrName={}, srcAttrName={}, sourceAttrValue={}, wsUrl={}, url={}", idAttrName, srcAttrName, srcAttrValue, wsUrl, url);
+        foundProp = true;
+    } catch (Exception e) {
+        log.warn("Could not write {} uniqueId for {}, {}", scraperName, propSubSection, e.getMessage());
+    }
+
+    if(foundProp) {
+        // define the behavior of the operation depending on the current node state (for artists' uniqueId and sub-tags)
+        HashMap<NodeStatus, NodeAction> copyBehavior = this.mappingRules.getCopyBehavior(origScraperId, copyRule);
+
+        //prepare information to resolve the xpaths
+        HashMap<String, String> resolveMap = createResolveMap("_idAttr_::"+idAttrName+"="+uniqueId,
+                "_srcAttr_::"+srcAttrName+"="+srcAttrValue,
+                "_unidValue_::"+uniqueId,
+                "_srcUrl_::"+url.replaceAll("=", "%3D"),
+                "_srcWsUrl_::"+wsUrl.replaceAll("=", "%3D"));
+
+        //resolve the base xpath
+        // resolveInfo is converted into a String[]
+        HashMap<String, String> resolveBaseMap = createResolveMap(resolveInfoList.stream().toArray(String[]::new));
+        String resolvedBase = getResolvedBase(targetRule.substring(0, targetRule.indexOf(".")), resolveBaseMap);
+
+
+        //preparing artist type infos (ArtistUniqueIdNode)
+        List<String> artistUniqueId = MapListUtils.createInfoList(idAttrName+"='"+uniqueId+"'", srcAttrName+"='"+srcAttrValue+"'");
+        //put ArtistUniqueIdNode to MMDG
+        writeInfo(artistUniqueId, "UniqueIdNode", resolvedBase, resolveMap, copyBehavior);
+
+        //preparing artist type infos (ArtistUniqueIdValue)
+        List<String> artistUniqueIdValue = MapListUtils.createInfoList(uniqueId);
+        //put ArtistUniqueIdNode to MMDG
+        writeInfo(artistUniqueIdValue, "UniqueIdValue", resolvedBase, resolveMap, copyBehavior);
+
+        //preparing artist type infos (ArtistUniqueIdSource)
+        List<String> artistUniqueIdSource = MapListUtils.createInfoList(url.replaceAll("=", "%3D"));
+        //put ArtistUniqueIdNode to MMDG
+        writeInfo(artistUniqueIdSource, "UniqueIdSourceUrl", resolvedBase, resolveMap, copyBehavior);
+
+        //preparing artist type infos (ArtistUniqueIdWSSource)
+        List<String> artistUniqueIdWSSource = MapListUtils.createInfoList(wsUrl.replaceAll("=", "%3D"));
+        //put ArtistUniqueIdNode to MMDG
+        writeInfo(artistUniqueIdWSSource, "UniqueIdSourceWSUrl", resolvedBase, resolveMap, copyBehavior);
+    }
+}
+
+//-----------------------------------------------------------------------------
 
 //ERROR HANDLING:	nok
 //DOC:				nok
@@ -181,14 +326,14 @@ private void writeNameInfo(HashMap<String, Object> insertInfo, List<String> reso
 
     //prepare information to resolve the xpaths
     HashMap<String, String> resolveMap = createResolveMap("_idAttr_::"+idAttrName+"="+idAttrValue,
-            "_srcAttr_::"+srcAttrName+"="+srcAttrValue,
-            "_ntypeAttr_::"+ntypeAttrName+"="+ntypeAttrValue,
-            "_arname_::"+arNameValue);
+                                                            "_srcAttr_::"+srcAttrName+"="+srcAttrValue,
+                                                            "_ntypeAttr_::"+ntypeAttrName+"="+ntypeAttrValue,
+                                                            "_arname_::"+arNameValue);
 
-    //resolve the base for Artist
+    //resolve the base xpath
     // resolveInfo is converted into a String[]
     HashMap<String, String> resolveBaseMap = createResolveMap(resolveInfoList.stream().toArray(String[]::new));
-    String resolvedBase = getResolvedBase("Artist", resolveBaseMap);
+    String resolvedBase = getResolvedBase(targetRule.substring(0, targetRule.indexOf(".")), resolveBaseMap);
 
     //add idAttr, srcAttr and ntypeAttr to insertInfoList list
     insertInfoList.add(resolveMap.get("_idAttr_"));
@@ -212,7 +357,7 @@ private void writeNameInfo(HashMap<String, Object> insertInfo, List<String> reso
 //DOC:				nok
 //TEST:				nok
 @SuppressWarnings("unchecked")
-private void writeGenderInfo(HashMap<String, Object> insertInfo, List<String> resolveInfoList, String targetRule, String copyRule, String scraperName) throws Exception {
+private void writeTypeAndGenderInfo(HashMap<String, Object> insertInfo, List<String> resolveInfoList, String targetRule, String copyRule, String scraperName) throws Exception {
     //extract information about (scraper)id, source, name and name type
     String scraperId = PropertyHandler.getInstance().getValue(scraperName + ".Scraper.id");
     String idAttrName = PropertyHandler.getInstance().getValue(scraperName + ".Scraper.idAttrName");
@@ -222,13 +367,15 @@ private void writeGenderInfo(HashMap<String, Object> insertInfo, List<String> re
     // define the behavior of the operation depending on the state of the information to be inserted
     HashMap<NodeStatus, NodeAction> copyBehavior = this.mappingRules.getCopyBehavior(scraperId, copyRule);
 
-    //resolve the base for Artist
+    //resolve the base for xpath
     // resolveInfo is converted into a String[]
     HashMap<String, String> resolveBaseMap = createResolveMap(resolveInfoList.stream().toArray(String[]::new));
-    String resolvedBase = getResolvedBase("Artist", resolveBaseMap);
+    String resolvedBase = getResolvedBase(targetRule.substring(0, targetRule.indexOf(".")), resolveBaseMap);
 
     //prepare information to resolve the xpaths
-    HashMap<String, String> resolveMap = createResolveMap("_arid_::"+idAttrName+"="+idAttrValue, "_idAttr_::"+idAttrName+"="+idAttrValue, "_artype_::"+arTypeValue);
+    HashMap<String, String> resolveMap = createResolveMap("_arid_::"+idAttrName+"="+idAttrValue,
+                                                            "_idAttr_::"+idAttrName+"="+idAttrValue,
+                                                            "_artype_::"+arTypeValue);
 
     //prepeare the info to be inserted
     ArrayList<String> insertInfoList = new ArrayList<>();
@@ -243,6 +390,111 @@ private void writeGenderInfo(HashMap<String, Object> insertInfo, List<String> re
 
     //put ArtistType to MMDG
     writeInfo(insertInfoList, targetRule, resolvedBase, resolveMap, copyBehavior);
+}
+
+//-----------------------------------------------------------------------------
+
+//ERROR HANDLING:	nok
+//DOC:				nok
+//TEST:				nok
+//PARATERIZATION:   nok, born/founded/died/dissolved
+@SuppressWarnings("unchecked")
+private void writePeriodInfo(HashMap<String, Object> insertInfo, HashMap<String, Object> resolveInfoMap, String targetRule, String copyRule, String scraperName) throws Exception {
+    //extract information about (scraper)id, source, name and name type
+    String scraperId = PropertyHandler.getInstance().getValue(scraperName + ".Scraper.id");
+    String idAttrName = PropertyHandler.getInstance().getValue(scraperName + ".Scraper.idAttrName");
+    String idAttrValue = (String)insertInfo.get("unid");
+    String arTypeValue = (String)insertInfo.get("type");
+    String periodValue = (String)insertInfo.get("period");
+    String dtypeAttrName = "type";
+
+    String periodType = (String)resolveInfoMap.get("periodType");
+    List<String> resolveInfoList = (List<String>)resolveInfoMap.get("resolveInfo");
+
+    // define the behavior of the operation depending on the current node state (for period begin/end)
+    HashMap<NodeStatus, NodeAction> copyBehavior = this.mappingRules.getCopyBehavior(scraperId, copyRule);
+
+    //resolve the base for xpath
+    // resolveInfo is converted into a String[]
+    HashMap<String, String> resolveBaseMap = createResolveMap(resolveInfoList.stream().toArray(String[]::new));
+    String resolvedBase = getResolvedBase(targetRule.substring(0, targetRule.indexOf(".")), resolveBaseMap);
+
+    //preparing infos for period begin/end
+    String dtypeAttrValue = periodType;
+    if (periodType.equals("begin")) {
+        if (arTypeValue.equals("Person")) {
+            dtypeAttrValue = "born";
+        } else if (arTypeValue.equals("Group")) {
+            dtypeAttrValue = "founded";
+        }
+    } else if (periodType.equals("end")) {
+        if (arTypeValue.equals("Person")) {
+            dtypeAttrValue = "died";
+        } else if (arTypeValue.equals("Group")) {
+            dtypeAttrValue = "dissolved";
+        }
+    }
+
+    //prepare information to resolve the xpaths
+    HashMap<String, String> resolveMap = createResolveMap("_idAttr_::"+idAttrName+"="+idAttrValue,
+            "_dtypeAttr_::"+dtypeAttrName+"="+dtypeAttrValue,
+            "_period_::"+periodValue);
+
+    //prepeare the info to be inserted
+    ArrayList<String> insertInfoList = new ArrayList<>();
+    insertInfoList.add(resolveMap.get("_idAttr_"));
+    insertInfoList.add(resolveMap.get("_dtypeAttr_"));
+    insertInfoList.add(periodValue);
+    if(insertInfo.containsKey("additionalInfo")) {
+        insertInfoList.addAll((List<String>) insertInfo.get("additionalInfo"));
+    }
+
+    //put ArtistPeriod Begin/End to MMDG
+    writeInfo(insertInfoList, targetRule, resolvedBase, resolveMap, copyBehavior);
+}
+
+//-----------------------------------------------------------------------------
+
+//ERROR HANDLING:	nok
+//DOC:				nok
+//TEST:				nok
+@SuppressWarnings("unchecked")
+private void writeUrlInfo(HashMap<String, Object> insertInfo, List<String> resolveInfoList, String targetRule, String copyRule, String scraperName) throws Exception {
+	//extract information about (scraper)id, source, name and name type
+	String scraperId = PropertyHandler.getInstance().getValue(scraperName + ".Scraper.id");
+	String idAttrName = PropertyHandler.getInstance().getValue(scraperName + ".Scraper.idAttrName");
+	String idAttrValue = (String)insertInfo.get("unid");
+    String urlTypeAttrName = "type";
+    String urlTypeValue = "unkown";
+    if(insertInfo.containsKey("type")) {
+        urlTypeValue = (String)insertInfo.get("type");
+    }
+    String urlValue = (String)insertInfo.get("url");
+
+    // define the behavior of the operation depending on the state of the information to be inserted
+    HashMap<NodeStatus, NodeAction> copyBehavior = this.mappingRules.getCopyBehavior(scraperId, copyRule);
+
+    //resolve the base for Artist
+    // resolveInfo is converted into a String[]
+    HashMap<String, String> resolveBaseMap = createResolveMap(resolveInfoList.stream().toArray(String[]::new));
+    String resolvedBase = getResolvedBase(targetRule.substring(0, targetRule.indexOf(".")), resolveBaseMap);
+
+    //prepare information to resolve the xpaths
+    HashMap<String, String> resolveMap = createResolveMap("_idAttr_::"+idAttrName+"="+idAttrValue,
+            "_urlTypeAttr_::"+urlTypeAttrName+"="+urlTypeValue,
+            "_url_::"+urlValue);
+
+    //prepeare the info to be inserted
+    ArrayList<String> insertInfoList = new ArrayList<>();
+    insertInfoList.add(resolveMap.get("_idAttr_"));
+    insertInfoList.add(resolveMap.get("_urlTypeAttr_"));
+    insertInfoList.add(urlValue);
+    if(insertInfo.containsKey("additionalInfo")) {
+        insertInfoList.addAll((List<String>) insertInfo.get("additionalInfo"));
+    }
+
+    //put ArtistUrl to MMDG
+    writeInfo(insertInfoList, "Artist.Url", resolvedBase, resolveMap, copyBehavior);
 }
 
 //-----------------------------------------------------------------------------
@@ -1176,94 +1428,6 @@ public NodeStatus writeTrackAudioInfo(HashMap<String,String> elementValues, Hash
 		updateNodes(nodesText, nodesAttributes, false);
 	}		
 	return nodeState;	
-}
-
-//-----------------------------------------------------------------------------
-
-//ERROR HANDLING:	nok
-//DOC:				nok
-//TEST:				nok
-public void writeUniqueIdInfos(HashMap<String, String> uniqueIdInfos) throws Exception {
-	String uniqueId = uniqueIdInfos.get("uniqueId");
-	String url = uniqueIdInfos.get("url");
-	String scraperId = uniqueIdInfos.get("scraperId");
-	String copyBehaviorRule = uniqueIdInfos.get("copyBehaviorRule");
-	String resolvedBaseXpath = uniqueIdInfos.get("resolvedBaseXpath");
-	String propSection = uniqueIdInfos.get("propSection");
-	String propSubSection = uniqueIdInfos.get("propSubSection");
-	String placeholder = uniqueIdInfos.get("placeholder");
-	
-	Boolean foundProp = false;
-	
-	//retrieve Information for Scraper.Section (e.g., Discogs.Scraper.[Artist].xyz)
-	// 	infos are 	.id, .sourceAttrName, .sourceAttrValue, .Base.url,
-	//				.[Artist|ReleaseGroup|Release|Track].url, .[Artist|ReleaseGroup|Release|Track].urlParams
-	String idAttrName = "";
-	String sourceAttrName = "";
-	String sourceAttrValue = "";
-	String wsUrl = "";
-	try {
-		idAttrName = PropertyHandler.getInstance().getValue(propSection+".Scraper.idAttrName");
-		sourceAttrName = PropertyHandler.getInstance().getValue(propSection+".Scraper.sourceAttrName");
-		sourceAttrValue = PropertyHandler.getInstance().getValue(propSection+".Scraper.sourceAttrValue");
-		if(!PropertyHandler.getInstance().containsKey(propSection+".Scraper.Base.wsUrl")) {
-			wsUrl= "-";
-		}
-		else if(PropertyHandler.getInstance().getValue(propSection+".Scraper.Base.wsUrl").equals("-")) {
-			wsUrl = PropertyHandler.getInstance().getValue(propSection+".Scraper.Base.wsUrl");
-		}
-		else {
-			if(PropertyHandler.getInstance().containsKey(propSection+".Scraper."+propSubSection+".wsUrl")) {
-				wsUrl = (PropertyHandler.getInstance().getValue(propSection+".Scraper.Base.wsUrl") + 
-						PropertyHandler.getInstance().getValue(propSection+".Scraper."+propSubSection+".wsUrl")).replaceAll(placeholder, uniqueId);				
-			}
-			else {
-				wsUrl = (PropertyHandler.getInstance().getValue(propSection+".Scraper.Base.wsUrl") + 
-						PropertyHandler.getInstance().getValue(propSection+".Scraper."+propSubSection+".url")).replaceAll(placeholder, uniqueId);
-			}
-		}
-		if(PropertyHandler.getInstance().containsKey(propSection+".Scraper."+propSubSection+".url") || 
-				(PropertyHandler.getInstance().containsKey(propSection+".Scraper.Base.url") && !PropertyHandler.getInstance().getValue(propSection+".Scraper.Base.url").equals("-"))) {
-			url = (PropertyHandler.getInstance().getValue(propSection+".Scraper.Base.url") + 
-				PropertyHandler.getInstance().getValue(propSection+".Scraper."+propSubSection+".url")).replaceAll(placeholder, uniqueId);
-		}
-		
-		log.info("idAttrName={}, sourceAttrName={}, sourceAttrValue={}, wsUrl={}, url={}", idAttrName, sourceAttrName, sourceAttrValue, wsUrl, url);
-		foundProp = true;
-	} catch (Exception e) {
-		log.warn("Could not write {} uniqueId for {}, {}", propSection, propSubSection, e.getMessage());
-	}
-	
-	if(foundProp) {
-		// define the behavior of the operation depending on the current node state (for artists' uniqueId and sub-tags)
-		HashMap<NodeStatus, NodeAction> copyBehavior = this.mappingRules.getCopyBehavior(scraperId, copyBehaviorRule);
-	
-		//prepare information to resolve the xpaths
-		HashMap<String, String> resolveXpathInfos = MapListUtils.createResolveXpathMap("_arid_", "@"+idAttrName+"='"+uniqueId+"'", "_aridattrname_", "@"+idAttrName,
-				"_unid_", "@"+idAttrName+"='"+uniqueId+"'", "_unidattrname_", "@"+idAttrName, "_unidvalue_", uniqueId, 
-				"_source_", "@"+sourceAttrName+"='"+sourceAttrValue+"'", "_sourceattrname_", "@"+sourceAttrName, 
-				"_sourceurl_", url, "_sourcewsurl_", wsUrl);	
-		
-		//preparing artist type infos (ArtistUniqueIdNode) 
-		List<String> artistUniqueId = MapListUtils.createInfoList(idAttrName+"='"+uniqueId+"'", sourceAttrName+"='"+sourceAttrValue+"'");
-		//put ArtistUniqueIdNode to MMDG
-		writeInfo(artistUniqueId, "UniqueIdNode", resolvedBaseXpath, resolveXpathInfos, copyBehavior);
-		
-		//preparing artist type infos (ArtistUniqueIdValue) 
-		List<String> artistUniqueIdValue = MapListUtils.createInfoList(uniqueId);
-		//put ArtistUniqueIdNode to MMDG
-		writeInfo(artistUniqueIdValue, "UniqueIdValue", resolvedBaseXpath, resolveXpathInfos, copyBehavior);
-		
-		//preparing artist type infos (ArtistUniqueIdSource) 
-		List<String> artistUniqueIdSource = MapListUtils.createInfoList(url.replaceAll("=", "%3D"));
-		//put ArtistUniqueIdNode to MMDG
-		writeInfo(artistUniqueIdSource, "UniqueIdSourceUrl", resolvedBaseXpath, resolveXpathInfos, copyBehavior);
-		
-		//preparing artist type infos (ArtistUniqueIdWSSource) 
-		List<String> artistUniqueIdWSSource = MapListUtils.createInfoList(wsUrl.replaceAll("=", "%3D"));
-		//put ArtistUniqueIdNode to MMDG
-		writeInfo(artistUniqueIdWSSource, "UniqueIdSourceWSUrl", resolvedBaseXpath, resolveXpathInfos, copyBehavior);
-	}
 }
 
 //-----------------------------------------------------------------------------

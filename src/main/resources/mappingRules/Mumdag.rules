@@ -15,32 +15,32 @@ ArtistId.xpathTemplate = /Artist
 UniqueIdNode.xpathRelative = /UniqueIdList/UniqueId[last()]
 UniqueIdNode.subType = node
 UniqueIdNode.xpathCheckNodeEmpty = /UniqueIdList/UniqueId[count(*[.!='']) = 0]
-UniqueIdNode.xpathCheckSameAttrName = /UniqueIdList/UniqueId[_unidattrname_ and _sourceattrname_]
-UniqueIdNode.xpathCheckSameAttrValue = /UniqueIdList/UniqueId[_unid_ and _source_]
+UniqueIdNode.xpathCheckSameAttrName = /UniqueIdList/UniqueId[_idAttrName_ and _srcAttrName_]
+UniqueIdNode.xpathCheckSameAttrValue = /UniqueIdList/UniqueId[_idAttrCheck_ and _srcAttrCheck_]
 UniqueIdNode.xpathTemplate = /UniqueIdList/UniqueId
 
-UniqueIdValue.xpathRelative = /UniqueIdList/UniqueId[_unid_ and _source_]/Value
+UniqueIdValue.xpathRelative = /UniqueIdList/UniqueId[_idAttrCheck_ and _srcAttrCheck_]/Value
 UniqueIdValue.subType = text
-UniqueIdValue.xpathCheckNodeEmpty = /UniqueIdList/UniqueId[_unid_ and _source_]/Value[not(text())]
-UniqueIdValue.xpathCheckSameAttrName = /UniqueIdList/UniqueId[_unidattrname_ and _sourceattrname_]/Value
-UniqueIdValue.xpathCheckSameAttrValue = /UniqueIdList/UniqueId[_unid_ and _source_]/Value
-UniqueIdValue.xpathCheckSameNodeText = /UniqueIdList/UniqueId[_unid_ and _source_]/Value/text() = '_unidvalue_'
+UniqueIdValue.xpathCheckNodeEmpty = /UniqueIdList/UniqueId[_idAttrCheck_ and _srcAttrCheck_]/Value[not(text())]
+UniqueIdValue.xpathCheckSameAttrName = /UniqueIdList/UniqueId[_idAttrName_ and _srcAttrName_]/Value
+UniqueIdValue.xpathCheckSameAttrValue = /UniqueIdList/UniqueId[_idAttrCheck_ and _srcAttrCheck_]/Value
+UniqueIdValue.xpathCheckSameNodeText = /UniqueIdList/UniqueId[_idAttrCheck_ and _srcAttrCheck_]/Value/text() = '_unidValueCheck_'
 UniqueIdValue.xpathTemplate = /UniqueIdList/UniqueId/Value
 
-UniqueIdSourceUrl.xpathRelative = /UniqueIdList/UniqueId[_unid_ and _source_]/SourceUrl
+UniqueIdSourceUrl.xpathRelative = /UniqueIdList/UniqueId[_idAttrCheck_ and _srcAttrCheck_]/SourceUrl
 UniqueIdSourceUrl.subType = text
-UniqueIdSourceUrl.xpathCheckNodeEmpty = /UniqueIdList/UniqueId[_unid_ and _source_]/SourceUrl[not(text())]
-UniqueIdSourceUrl.xpathCheckSameAttrName = /UniqueIdList/UniqueId[_unidattrname_ and _sourceattrname_]/SourceUrl
-UniqueIdSourceUrl.xpathCheckSameAttrValue = /UniqueIdList/UniqueId[_unid_ and _source_]/SourceUrl
-UniqueIdSourceUrl.xpathCheckSameNodeText = /UniqueIdList/UniqueId[_unid_ and _source_]/SourceUrl/text() = '_sourceurl_'
+UniqueIdSourceUrl.xpathCheckNodeEmpty = /UniqueIdList/UniqueId[_idAttrCheck_ and _srcAttrCheck_]/SourceUrl[not(text())]
+UniqueIdSourceUrl.xpathCheckSameAttrName = /UniqueIdList/UniqueId[_idAttrName_ and _srcAttrName_]/SourceUrl
+UniqueIdSourceUrl.xpathCheckSameAttrValue = /UniqueIdList/UniqueId[_idAttrCheck_ and _srcAttrCheck_]/SourceUrl
+UniqueIdSourceUrl.xpathCheckSameNodeText = /UniqueIdList/UniqueId[_idAttrCheck_ and _srcAttrCheck_]/SourceUrl/text() = '_srcUrlCheck_'
 UniqueIdSourceUrl.xpathTemplate = /UniqueIdList/UniqueId/SourceUrl
 
-UniqueIdSourceWSUrl.xpathRelative = /UniqueIdList/UniqueId[_unid_ and _source_]/SourceWSUrl
+UniqueIdSourceWSUrl.xpathRelative = /UniqueIdList/UniqueId[_idAttrCheck_ and _srcAttrCheck_]/SourceWSUrl
 UniqueIdSourceWSUrl.subType = text
-UniqueIdSourceWSUrl.xpathCheckNodeEmpty = /UniqueIdList/UniqueId[_unid_ and _source_]/SourceWSUrl[not(text())]
-UniqueIdSourceWSUrl.xpathCheckSameAttrName = /UniqueIdList/UniqueId[_unidattrname_ and _sourceattrname_]/SourceWSUrl
-UniqueIdSourceWSUrl.xpathCheckSameAttrValue = /UniqueIdList/UniqueId[_unid_ and _source_]/SourceWSUrl
-UniqueIdSourceWSUrl.xpathCheckSameNodeText = /UniqueIdList/UniqueId[_unid_ and _source_]/SourceWSUrl/text() = '_sourcewsurl_'
+UniqueIdSourceWSUrl.xpathCheckNodeEmpty = /UniqueIdList/UniqueId[_idAttrCheck_ and _srcAttrCheck_]/SourceWSUrl[not(text())]
+UniqueIdSourceWSUrl.xpathCheckSameAttrName = /UniqueIdList/UniqueId[_idAttrName_ and _srcAttrName_]/SourceWSUrl
+UniqueIdSourceWSUrl.xpathCheckSameAttrValue = /UniqueIdList/UniqueId[_idAttrCheck_ and _srcAttrCheck_]/SourceWSUrl
+UniqueIdSourceWSUrl.xpathCheckSameNodeText = /UniqueIdList/UniqueId[_idAttrCheck_ and _srcAttrCheck_]/SourceWSUrl/text() = '_srcWsUrlCheck_'
 UniqueIdSourceWSUrl.xpathTemplate = /UniqueIdList/UniqueId/SourceWSUrl
 
 Name.xpathRelative = /NameList/Name[last()]
@@ -73,13 +73,13 @@ Type.xpathCheckNodeEmpty = /Type[not(text())]
 Type.xpathCheckSameNodeText = /Type/text() = '_artypeCheck_'
 Type.xpathTemplate = /Type
 
-PeriodList.xpathRelative = /PeriodList/Date[last()]
-PeriodList.subType = text
-PeriodList.xpathCheckNodeEmpty = /PeriodList/Date[not(text())]
-PeriodList.xpathCheckSameAttrName = /PeriodList/Date[_srcattr_ and _datetypeattr_]
-PeriodList.xpathCheckSameAttrValue = /PeriodList/Date[_arid_ and _datetype_]
-PeriodList.xpathCheckSameNodeText = /PeriodList/Date/text() = '_ardate_'
-PeriodList.xpathTemplate = /PeriodList/Date
+Period.xpathRelative = /PeriodList/Date[last()]
+Period.subType = text
+Period.xpathCheckNodeEmpty = /PeriodList/Date[not(text())]
+Period.xpathCheckSameAttrName = /PeriodList/Date[_idAttrName_ and _dtypeAttrName_]
+Period.xpathCheckSameAttrValue = /PeriodList/Date[_idAttrCheck_ and _dtypeAttrCheck_]
+Period.xpathCheckSameNodeText = /PeriodList/Date/text() = '_periodCheck_'
+Period.xpathTemplate = /PeriodList/Date
 
 ArtistAreaList.xpathAbsolute = /Artist[_arid_]/AreaList/Area[last()]
 ArtistAreaList.subType = text
@@ -89,13 +89,13 @@ ArtistAreaList.xpathCheckSameAttrValue = /Artist[_arid_]/AreaList/Area[_areaid_ 
 ArtistAreaList.xpathCheckSameNodeText = /Artist[_arid_]/AreaList/Area/text() = '_areaname_'
 ArtistAreaList.xpathTemplate = /Artist/AreaList/Area
 
-ArtistUrlList.xpathAbsolute = /Artist[_arid_]/UrlList/Url[last()]
-ArtistUrlList.subType = text
-ArtistUrlList.xpathCheckNodeEmpty = /Artist[_arid_]/UrlList/Url[not(text())]
-ArtistUrlList.xpathCheckSameAttrName = /Artist[_arid_]/UrlList/Url[_scraperattr_ and _urltypeattr_]
-ArtistUrlList.xpathCheckSameAttrValue = /Artist[_arid_]/UrlList/Url[_arid_ and _urltype_]
-ArtistUrlList.xpathCheckSameNodeText = /Artist[_arid_]/UrlList/Url/text() = '_url_'
-ArtistUrlList.xpathTemplate = /Artist/UrlList/Url
+Url.xpathRelative = /UrlList/Url[last()]
+Url.subType = text
+Url.xpathCheckNodeEmpty = /UrlList/Url[not(text())]
+Url.xpathCheckSameAttrName = /UrlList/Url[_idAttrName_ and _urlTypeAttrName_]
+Url.xpathCheckSameAttrValue = /UrlList/Url[_idAttrCheck_ and _urlTypeAttrCheck_]
+Url.xpathCheckSameNodeText = /UrlList/Url/text() = '_urlCheck_'
+Url.xpathTemplate = /UrlList/Url
 
 ArtistTagList.xpathAbsolute = /Artist[_arid_]/TagList/Tag[last()]
 ArtistTagList.subType = text
