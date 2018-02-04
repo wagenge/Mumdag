@@ -1,0 +1,740 @@
+<?xml version="1.0" encoding="UTF-8"?><metadata xmlns="http://musicbrainz.org/ns/mmd-2.0#">
+  <artist type-id="e431f5f6-b5d2-343d-8b36-72607fffb74b" id="5f58803e-8c4c-478e-8b51-477f38483ede" type="Group">
+    <name>Madness</name>
+    <sort-name>Madness</sort-name>
+    <disambiguation>English pop/ska band</disambiguation>
+    <isni-list>
+      <isni>0000000119557755</isni>
+    </isni-list>
+    <country>GB</country>
+    <area id="8a754a16-0027-3a29-b6d7-2b40ea0481ed">
+      <name>United Kingdom</name>
+      <sort-name>United Kingdom</sort-name>
+      <iso-3166-1-code-list>
+        <iso-3166-1-code>GB</iso-3166-1-code>
+      </iso-3166-1-code-list>
+    </area>
+    <begin-area id="72434faa-6321-46d6-b1f4-f052f8fb08d0">
+      <name>Camden Town</name>
+      <sort-name>Camden Town</sort-name>
+    </begin-area>
+    <life-span>
+      <begin>1976</begin>
+    </life-span>
+    <alias-list count="1">
+      <alias locale="lv" sort-name="Mednis">Mednis</alias>
+    </alias-list>
+    <relation-list target-type="artist">
+      <relation type="member of band" type-id="5be4c609-9afa-4ea0-910b-12ffb71e3821">
+        <target>18c62d4c-0ac5-4312-9312-783c14c619fc</target>
+        <direction>backward</direction>
+        <begin>1978</begin>
+        <end>1986</end>
+        <ended>true</ended>
+        <attribute-list>
+          <attribute>drums</attribute>
+          <attribute>percussion</attribute>
+        </attribute-list>
+        <artist id="18c62d4c-0ac5-4312-9312-783c14c619fc">
+          <name>Daniel Woodgate</name>
+          <sort-name>Woodgate, Daniel</sort-name>
+        </artist>
+      </relation>
+      <relation type="member of band" type-id="5be4c609-9afa-4ea0-910b-12ffb71e3821">
+        <target>18c62d4c-0ac5-4312-9312-783c14c619fc</target>
+        <direction>backward</direction>
+        <begin>1992</begin>
+        <attribute-list>
+          <attribute>percussion</attribute>
+        </attribute-list>
+        <artist id="18c62d4c-0ac5-4312-9312-783c14c619fc">
+          <name>Daniel Woodgate</name>
+          <sort-name>Woodgate, Daniel</sort-name>
+        </artist>
+      </relation>
+      <relation type="member of band" type-id="5be4c609-9afa-4ea0-910b-12ffb71e3821">
+        <target>18c62d4c-0ac5-4312-9312-783c14c619fc</target>
+        <direction>backward</direction>
+        <begin>1992</begin>
+        <attribute-list>
+          <attribute>drums</attribute>
+        </attribute-list>
+        <artist id="18c62d4c-0ac5-4312-9312-783c14c619fc">
+          <name>Daniel Woodgate</name>
+          <sort-name>Woodgate, Daniel</sort-name>
+        </artist>
+      </relation>
+      <relation type-id="5be4c609-9afa-4ea0-910b-12ffb71e3821" type="member of band">
+        <target>2220f842-2b3f-4de8-a871-ece04c548a6c</target>
+        <direction>backward</direction>
+        <begin>1986</begin>
+        <end>1986</end>
+        <ended>true</ended>
+        <attribute-list>
+          <attribute>organ</attribute>
+        </attribute-list>
+        <artist id="2220f842-2b3f-4de8-a871-ece04c548a6c">
+          <name>Seamus Beaghen</name>
+          <sort-name>Beaghen, Seamus</sort-name>
+        </artist>
+      </relation>
+      <relation type="member of band" type-id="5be4c609-9afa-4ea0-910b-12ffb71e3821">
+        <target>2220f842-2b3f-4de8-a871-ece04c548a6c</target>
+        <direction>backward</direction>
+        <begin>1986</begin>
+        <end>1986</end>
+        <ended>true</ended>
+        <attribute-list>
+          <attribute>keyboard</attribute>
+        </attribute-list>
+        <artist id="2220f842-2b3f-4de8-a871-ece04c548a6c">
+          <name>Seamus Beaghen</name>
+          <sort-name>Beaghen, Seamus</sort-name>
+        </artist>
+      </relation>
+      <relation type-id="5be4c609-9afa-4ea0-910b-12ffb71e3821" type="member of band">
+        <target>352b5fbd-1926-4817-9006-2ba4b4046adc</target>
+        <direction>backward</direction>
+        <begin>1976</begin>
+        <end>1978</end>
+        <ended>true</ended>
+        <attribute-list>
+          <attribute>drums</attribute>
+          <attribute>lead vocals</attribute>
+          <attribute>original</attribute>
+        </attribute-list>
+        <artist id="352b5fbd-1926-4817-9006-2ba4b4046adc">
+          <name>John Hasler</name>
+          <sort-name>Hasler, John</sort-name>
+        </artist>
+      </relation>
+      <relation type-id="5be4c609-9afa-4ea0-910b-12ffb71e3821" type="member of band">
+        <target>38d14e20-72f4-49d9-9ff0-c1257eec2836</target>
+        <direction>backward</direction>
+        <begin>1976</begin>
+        <end>1977</end>
+        <ended>true</ended>
+        <attribute-list>
+          <attribute>background vocals</attribute>
+          <attribute>original</attribute>
+          <attribute>percussion</attribute>
+          <attribute>saxophone</attribute>
+        </attribute-list>
+        <artist id="38d14e20-72f4-49d9-9ff0-c1257eec2836">
+          <name>Lee “Kix” Thompson</name>
+          <sort-name>Thompson, Lee “Kix”</sort-name>
+        </artist>
+      </relation>
+      <relation type-id="5be4c609-9afa-4ea0-910b-12ffb71e3821" type="member of band">
+        <target>38d14e20-72f4-49d9-9ff0-c1257eec2836</target>
+        <direction>backward</direction>
+        <begin>1978</begin>
+        <end>1988</end>
+        <ended>true</ended>
+        <attribute-list>
+          <attribute>background vocals</attribute>
+        </attribute-list>
+        <artist id="38d14e20-72f4-49d9-9ff0-c1257eec2836">
+          <name>Lee “Kix” Thompson</name>
+          <sort-name>Thompson, Lee “Kix”</sort-name>
+        </artist>
+      </relation>
+      <relation type-id="5be4c609-9afa-4ea0-910b-12ffb71e3821" type="member of band">
+        <target>38d14e20-72f4-49d9-9ff0-c1257eec2836</target>
+        <direction>backward</direction>
+        <begin>1978</begin>
+        <end>1988</end>
+        <ended>true</ended>
+        <attribute-list>
+          <attribute>saxophone</attribute>
+        </attribute-list>
+        <artist id="38d14e20-72f4-49d9-9ff0-c1257eec2836">
+          <name>Lee “Kix” Thompson</name>
+          <sort-name>Thompson, Lee “Kix”</sort-name>
+        </artist>
+      </relation>
+      <relation type="member of band" type-id="5be4c609-9afa-4ea0-910b-12ffb71e3821">
+        <target>38d14e20-72f4-49d9-9ff0-c1257eec2836</target>
+        <direction>backward</direction>
+        <begin>1978</begin>
+        <end>1988</end>
+        <ended>true</ended>
+        <attribute-list>
+          <attribute>percussion</attribute>
+        </attribute-list>
+        <artist id="38d14e20-72f4-49d9-9ff0-c1257eec2836">
+          <name>Lee “Kix” Thompson</name>
+          <sort-name>Thompson, Lee “Kix”</sort-name>
+        </artist>
+      </relation>
+      <relation type="member of band" type-id="5be4c609-9afa-4ea0-910b-12ffb71e3821">
+        <target>38d14e20-72f4-49d9-9ff0-c1257eec2836</target>
+        <direction>backward</direction>
+        <begin>1992</begin>
+        <attribute-list>
+          <attribute>background vocals</attribute>
+        </attribute-list>
+        <artist id="38d14e20-72f4-49d9-9ff0-c1257eec2836">
+          <name>Lee “Kix” Thompson</name>
+          <sort-name>Thompson, Lee “Kix”</sort-name>
+        </artist>
+      </relation>
+      <relation type="member of band" type-id="5be4c609-9afa-4ea0-910b-12ffb71e3821">
+        <target>38d14e20-72f4-49d9-9ff0-c1257eec2836</target>
+        <direction>backward</direction>
+        <begin>1992</begin>
+        <attribute-list>
+          <attribute>percussion</attribute>
+        </attribute-list>
+        <artist id="38d14e20-72f4-49d9-9ff0-c1257eec2836">
+          <name>Lee “Kix” Thompson</name>
+          <sort-name>Thompson, Lee “Kix”</sort-name>
+        </artist>
+      </relation>
+      <relation type-id="5be4c609-9afa-4ea0-910b-12ffb71e3821" type="member of band">
+        <target>38d14e20-72f4-49d9-9ff0-c1257eec2836</target>
+        <direction>backward</direction>
+        <begin>1992</begin>
+        <attribute-list>
+          <attribute>saxophone</attribute>
+        </attribute-list>
+        <artist id="38d14e20-72f4-49d9-9ff0-c1257eec2836">
+          <name>Lee “Kix” Thompson</name>
+          <sort-name>Thompson, Lee “Kix”</sort-name>
+        </artist>
+      </relation>
+      <relation type="member of band" type-id="5be4c609-9afa-4ea0-910b-12ffb71e3821">
+        <target>42adb8ca-8484-4901-a429-fc8ecd3a4327</target>
+        <direction>backward</direction>
+        <begin>1976</begin>
+        <end>1984</end>
+        <ended>true</ended>
+        <attribute-list>
+          <attribute>background vocals</attribute>
+          <attribute>keyboard</attribute>
+          <attribute>original</attribute>
+          <attribute>piano</attribute>
+          <attribute>vibraphone</attribute>
+        </attribute-list>
+        <artist id="42adb8ca-8484-4901-a429-fc8ecd3a4327">
+          <name>Mike Barson</name>
+          <sort-name>Barson, Mike</sort-name>
+        </artist>
+      </relation>
+      <relation type-id="5be4c609-9afa-4ea0-910b-12ffb71e3821" type="member of band">
+        <target>42adb8ca-8484-4901-a429-fc8ecd3a4327</target>
+        <direction>backward</direction>
+        <begin>1992</begin>
+        <attribute-list>
+          <attribute>background vocals</attribute>
+          <attribute>keyboard</attribute>
+          <attribute>piano</attribute>
+          <attribute>vibraphone</attribute>
+        </attribute-list>
+        <artist id="42adb8ca-8484-4901-a429-fc8ecd3a4327">
+          <name>Mike Barson</name>
+          <sort-name>Barson, Mike</sort-name>
+        </artist>
+      </relation>
+      <relation type="tribute" type-id="a6f62641-2f58-470e-b02b-88d7b984dc9f">
+        <target>47ac89b9-e8ba-4358-b9c3-b750c36e1726</target>
+        <direction>backward</direction>
+        <artist id="47ac89b9-e8ba-4358-b9c3-b750c36e1726">
+          <name>One Step Behind</name>
+          <sort-name>One Step Behind</sort-name>
+          <disambiguation>Madness tribute group</disambiguation>
+        </artist>
+      </relation>
+      <relation type="member of band" type-id="5be4c609-9afa-4ea0-910b-12ffb71e3821">
+        <target>50f2046e-eb82-47c3-9820-f7705f5d7e2b</target>
+        <direction>backward</direction>
+        <begin>1977</begin>
+        <end>1978</end>
+        <ended>true</ended>
+        <attribute-list>
+          <attribute>drums</attribute>
+        </attribute-list>
+        <artist id="50f2046e-eb82-47c3-9820-f7705f5d7e2b">
+          <name>Garry Dovey</name>
+          <sort-name>Dovey, Garry</sort-name>
+        </artist>
+      </relation>
+      <relation type-id="5be4c609-9afa-4ea0-910b-12ffb71e3821" type="member of band">
+        <target>62767f8e-a33b-45da-bb20-b1ccf1f11452</target>
+        <direction>backward</direction>
+        <begin>2005</begin>
+        <end>2006</end>
+        <ended>true</ended>
+        <attribute-list>
+          <attribute>guitar</attribute>
+        </attribute-list>
+        <artist id="62767f8e-a33b-45da-bb20-b1ccf1f11452">
+          <name>Kevin Burdette</name>
+          <sort-name>Burdette, Kevin</sort-name>
+          <disambiguation>UK guitarist</disambiguation>
+        </artist>
+      </relation>
+      <relation type-id="5be4c609-9afa-4ea0-910b-12ffb71e3821" type="member of band">
+        <target>69bf8866-4bca-4677-ba89-39562987e08a</target>
+        <direction>backward</direction>
+        <begin>2009</begin>
+        <end>2013</end>
+        <ended>true</ended>
+        <attribute-list>
+          <attribute>bass guitar</attribute>
+        </attribute-list>
+        <artist id="69bf8866-4bca-4677-ba89-39562987e08a">
+          <name>Graham Bush</name>
+          <sort-name>Bush, Graham</sort-name>
+        </artist>
+      </relation>
+      <relation type="instrumental supporting musician" type-id="ed6a7891-ce70-4e08-9839-1f2f62270497">
+        <target>82e09d67-5d46-45fd-bfbf-2231dc2e4951</target>
+        <direction>backward</direction>
+        <begin>1986</begin>
+        <end>1986</end>
+        <ended>true</ended>
+        <attribute-list>
+          <attribute>keyboard</attribute>
+        </attribute-list>
+        <artist id="82e09d67-5d46-45fd-bfbf-2231dc2e4951">
+          <name>Terry Disley</name>
+          <sort-name>Disley, Terry</sort-name>
+        </artist>
+      </relation>
+      <relation type-id="5be4c609-9afa-4ea0-910b-12ffb71e3821" type="member of band">
+        <target>88bd07d1-f760-49aa-9990-1fb3ce34a35e</target>
+        <direction>backward</direction>
+        <begin>1977</begin>
+        <end>1978</end>
+        <ended>true</ended>
+        <attribute-list>
+          <attribute>bass guitar</attribute>
+        </attribute-list>
+        <artist id="88bd07d1-f760-49aa-9990-1fb3ce34a35e">
+          <name>Gavin Rodgers</name>
+          <sort-name>Rodgers, Gavin</sort-name>
+        </artist>
+      </relation>
+      <relation type="instrumental supporting musician" type-id="ed6a7891-ce70-4e08-9839-1f2f62270497">
+        <target>8b490cea-ca72-4a1f-8a9a-b98046bf9d1a</target>
+        <direction>backward</direction>
+        <begin>1994</begin>
+        <end>1996</end>
+        <ended>true</ended>
+        <attribute-list>
+          <attribute>bass guitar</attribute>
+        </attribute-list>
+        <artist id="8b490cea-ca72-4a1f-8a9a-b98046bf9d1a">
+          <name>Norman Watt-Roy</name>
+          <sort-name>Watt-Roy, Norman</sort-name>
+        </artist>
+      </relation>
+      <relation type="member of band" type-id="5be4c609-9afa-4ea0-910b-12ffb71e3821">
+        <target>93a66d57-aa4c-4e40-98d4-64f76a34932e</target>
+        <direction>backward</direction>
+        <begin>1976</begin>
+        <end>1977</end>
+        <ended>true</ended>
+        <attribute-list>
+          <attribute>bass guitar</attribute>
+          <attribute>original</attribute>
+        </attribute-list>
+        <artist id="93a66d57-aa4c-4e40-98d4-64f76a34932e">
+          <name>Chas Smash</name>
+          <sort-name>Smash, Chas</sort-name>
+        </artist>
+      </relation>
+      <relation type="member of band" type-id="5be4c609-9afa-4ea0-910b-12ffb71e3821">
+        <target>93a66d57-aa4c-4e40-98d4-64f76a34932e</target>
+        <direction>backward</direction>
+        <begin>1976</begin>
+        <end>1977</end>
+        <ended>true</ended>
+        <attribute-list>
+          <attribute>original</attribute>
+          <attribute>trumpet</attribute>
+        </attribute-list>
+        <artist id="93a66d57-aa4c-4e40-98d4-64f76a34932e">
+          <name>Chas Smash</name>
+          <sort-name>Smash, Chas</sort-name>
+        </artist>
+      </relation>
+      <relation type-id="5be4c609-9afa-4ea0-910b-12ffb71e3821" type="member of band">
+        <target>93a66d57-aa4c-4e40-98d4-64f76a34932e</target>
+        <direction>backward</direction>
+        <begin>1976</begin>
+        <end>1977</end>
+        <ended>true</ended>
+        <attribute-list>
+          <attribute>harmonica</attribute>
+          <attribute>original</attribute>
+        </attribute-list>
+        <artist id="93a66d57-aa4c-4e40-98d4-64f76a34932e">
+          <name>Chas Smash</name>
+          <sort-name>Smash, Chas</sort-name>
+        </artist>
+      </relation>
+      <relation type-id="5be4c609-9afa-4ea0-910b-12ffb71e3821" type="member of band">
+        <target>93a66d57-aa4c-4e40-98d4-64f76a34932e</target>
+        <direction>backward</direction>
+        <begin>1976</begin>
+        <end>1977</end>
+        <ended>true</ended>
+        <attribute-list>
+          <attribute>acoustic guitar</attribute>
+          <attribute>original</attribute>
+        </attribute-list>
+        <artist id="93a66d57-aa4c-4e40-98d4-64f76a34932e">
+          <name>Chas Smash</name>
+          <sort-name>Smash, Chas</sort-name>
+        </artist>
+      </relation>
+      <relation type="member of band" type-id="5be4c609-9afa-4ea0-910b-12ffb71e3821">
+        <target>93a66d57-aa4c-4e40-98d4-64f76a34932e</target>
+        <direction>backward</direction>
+        <begin>1976</begin>
+        <end>1977</end>
+        <ended>true</ended>
+        <attribute-list>
+          <attribute>background vocals</attribute>
+          <attribute>original</attribute>
+        </attribute-list>
+        <artist id="93a66d57-aa4c-4e40-98d4-64f76a34932e">
+          <name>Chas Smash</name>
+          <sort-name>Smash, Chas</sort-name>
+        </artist>
+      </relation>
+      <relation type="member of band" type-id="5be4c609-9afa-4ea0-910b-12ffb71e3821">
+        <target>93a66d57-aa4c-4e40-98d4-64f76a34932e</target>
+        <direction>backward</direction>
+        <begin>1979</begin>
+        <end>1988</end>
+        <ended>true</ended>
+        <attribute-list>
+          <attribute>acoustic guitar</attribute>
+          <attribute>background vocals</attribute>
+          <attribute>bass guitar</attribute>
+          <attribute>harmonica</attribute>
+          <attribute>trumpet</attribute>
+        </attribute-list>
+        <artist id="93a66d57-aa4c-4e40-98d4-64f76a34932e">
+          <name>Chas Smash</name>
+          <sort-name>Smash, Chas</sort-name>
+        </artist>
+      </relation>
+      <relation type="member of band" type-id="5be4c609-9afa-4ea0-910b-12ffb71e3821">
+        <target>93a66d57-aa4c-4e40-98d4-64f76a34932e</target>
+        <direction>backward</direction>
+        <begin>1992</begin>
+        <attribute-list>
+          <attribute>acoustic guitar</attribute>
+          <attribute>background vocals</attribute>
+          <attribute>bass guitar</attribute>
+          <attribute>harmonica</attribute>
+          <attribute>trumpet</attribute>
+        </attribute-list>
+        <artist id="93a66d57-aa4c-4e40-98d4-64f76a34932e">
+          <name>Chas Smash</name>
+          <sort-name>Smash, Chas</sort-name>
+        </artist>
+      </relation>
+      <relation type="instrumental supporting musician" type-id="ed6a7891-ce70-4e08-9839-1f2f62270497">
+        <target>b7fb3c45-e1e0-4401-9ab3-e4f1d1a45d99</target>
+        <direction>backward</direction>
+        <begin>1984</begin>
+        <end>1984</end>
+        <ended>true</ended>
+        <attribute-list>
+          <attribute>keyboard</attribute>
+        </attribute-list>
+        <artist id="b7fb3c45-e1e0-4401-9ab3-e4f1d1a45d99">
+          <name>James Mackie</name>
+          <sort-name>Mackie, James</sort-name>
+        </artist>
+      </relation>
+      <relation type="member of band" type-id="5be4c609-9afa-4ea0-910b-12ffb71e3821">
+        <target>bf00865a-5e2e-4568-9eca-750695502ab7</target>
+        <direction>backward</direction>
+        <begin>1978</begin>
+        <end>1986</end>
+        <ended>true</ended>
+        <attribute-list>
+          <attribute>bass guitar</attribute>
+        </attribute-list>
+        <artist id="bf00865a-5e2e-4568-9eca-750695502ab7">
+          <name>Mark Bedford</name>
+          <sort-name>Bedford, Mark</sort-name>
+        </artist>
+      </relation>
+      <relation type-id="5be4c609-9afa-4ea0-910b-12ffb71e3821" type="member of band">
+        <target>bf00865a-5e2e-4568-9eca-750695502ab7</target>
+        <direction>backward</direction>
+        <begin>1992</begin>
+        <end>2009</end>
+        <ended>true</ended>
+        <attribute-list>
+          <attribute>bass guitar</attribute>
+        </attribute-list>
+        <artist id="bf00865a-5e2e-4568-9eca-750695502ab7">
+          <name>Mark Bedford</name>
+          <sort-name>Bedford, Mark</sort-name>
+        </artist>
+      </relation>
+      <relation type-id="5be4c609-9afa-4ea0-910b-12ffb71e3821" type="member of band">
+        <target>bf00865a-5e2e-4568-9eca-750695502ab7</target>
+        <direction>backward</direction>
+        <begin>2012</begin>
+        <attribute-list>
+          <attribute>bass guitar</attribute>
+        </attribute-list>
+        <artist id="bf00865a-5e2e-4568-9eca-750695502ab7">
+          <name>Mark Bedford</name>
+          <sort-name>Bedford, Mark</sort-name>
+        </artist>
+      </relation>
+      <relation type-id="5be4c609-9afa-4ea0-910b-12ffb71e3821" type="member of band">
+        <target>c304ac23-276d-4137-8b2c-ae38f624acaa</target>
+        <direction>backward</direction>
+        <begin>1984</begin>
+        <end>1986</end>
+        <ended>true</ended>
+        <attribute-list>
+          <attribute>synthesizer</attribute>
+        </attribute-list>
+        <artist id="c304ac23-276d-4137-8b2c-ae38f624acaa">
+          <name>Steve Nieve</name>
+          <sort-name>Nieve, Steve</sort-name>
+        </artist>
+      </relation>
+      <relation type="member of band" type-id="5be4c609-9afa-4ea0-910b-12ffb71e3821">
+        <target>c304ac23-276d-4137-8b2c-ae38f624acaa</target>
+        <direction>backward</direction>
+        <begin>1984</begin>
+        <end>1986</end>
+        <ended>true</ended>
+        <attribute-list>
+          <attribute>keyboard</attribute>
+        </attribute-list>
+        <artist id="c304ac23-276d-4137-8b2c-ae38f624acaa">
+          <name>Steve Nieve</name>
+          <sort-name>Nieve, Steve</sort-name>
+        </artist>
+      </relation>
+      <relation type-id="5be4c609-9afa-4ea0-910b-12ffb71e3821" type="member of band">
+        <target>dd9bb9ef-a559-4f52-ab27-c711de96bcfe</target>
+        <direction>backward</direction>
+        <begin>1976</begin>
+        <end>1977</end>
+        <ended>true</ended>
+        <attribute-list>
+          <attribute>lead vocals</attribute>
+          <attribute>original</attribute>
+        </attribute-list>
+        <artist id="dd9bb9ef-a559-4f52-ab27-c711de96bcfe">
+          <name>Dikron Tulane</name>
+          <sort-name>Tulane, Dikron</sort-name>
+        </artist>
+      </relation>
+      <relation type-id="5be4c609-9afa-4ea0-910b-12ffb71e3821" type="member of band">
+        <target>e312102c-e0a2-4893-9809-f4a5d1b9dd7a</target>
+        <direction>backward</direction>
+        <begin>1976</begin>
+        <end>1978</end>
+        <ended>true</ended>
+        <attribute-list>
+          <attribute>guitar</attribute>
+          <attribute>original</attribute>
+        </attribute-list>
+        <artist id="e312102c-e0a2-4893-9809-f4a5d1b9dd7a">
+          <name>Chris Foreman</name>
+          <sort-name>Foreman, Chris</sort-name>
+        </artist>
+      </relation>
+      <relation type-id="5be4c609-9afa-4ea0-910b-12ffb71e3821" type="member of band">
+        <target>e312102c-e0a2-4893-9809-f4a5d1b9dd7a</target>
+        <direction>backward</direction>
+        <begin>1992</begin>
+        <end>2005</end>
+        <ended>true</ended>
+        <attribute-list>
+          <attribute>guitar</attribute>
+        </attribute-list>
+        <artist id="e312102c-e0a2-4893-9809-f4a5d1b9dd7a">
+          <name>Chris Foreman</name>
+          <sort-name>Foreman, Chris</sort-name>
+        </artist>
+      </relation>
+      <relation type="member of band" type-id="5be4c609-9afa-4ea0-910b-12ffb71e3821">
+        <target>e312102c-e0a2-4893-9809-f4a5d1b9dd7a</target>
+        <direction>backward</direction>
+        <begin>2006</begin>
+        <attribute-list>
+          <attribute>guitar</attribute>
+        </attribute-list>
+        <artist id="e312102c-e0a2-4893-9809-f4a5d1b9dd7a">
+          <name>Chris Foreman</name>
+          <sort-name>Foreman, Chris</sort-name>
+        </artist>
+      </relation>
+      <relation type="instrumental supporting musician" type-id="ed6a7891-ce70-4e08-9839-1f2f62270497">
+        <target>fe4658a6-bb37-473d-b6f0-f075dda8d31c</target>
+        <direction>backward</direction>
+        <begin>1984</begin>
+        <end>1984</end>
+        <ended>true</ended>
+        <attribute-list>
+          <attribute>keyboard</attribute>
+        </attribute-list>
+        <artist id="fe4658a6-bb37-473d-b6f0-f075dda8d31c">
+          <name>Paul Carrack</name>
+          <sort-name>Carrack, Paul</sort-name>
+        </artist>
+      </relation>
+      <relation type-id="5be4c609-9afa-4ea0-910b-12ffb71e3821" type="member of band">
+        <target>ff84e1f5-258c-45a3-8da5-11b3eeddcb7a</target>
+        <direction>backward</direction>
+        <begin>1977</begin>
+        <end>1977</end>
+        <ended>true</ended>
+        <attribute-list>
+          <attribute>lead vocals</attribute>
+        </attribute-list>
+        <artist id="ff84e1f5-258c-45a3-8da5-11b3eeddcb7a">
+          <name>Suggs</name>
+          <sort-name>Suggs</sort-name>
+        </artist>
+      </relation>
+      <relation type="member of band" type-id="5be4c609-9afa-4ea0-910b-12ffb71e3821">
+        <target>ff84e1f5-258c-45a3-8da5-11b3eeddcb7a</target>
+        <direction>backward</direction>
+        <begin>1978</begin>
+        <end>1988</end>
+        <ended>true</ended>
+        <attribute-list>
+          <attribute>lead vocals</attribute>
+        </attribute-list>
+        <artist id="ff84e1f5-258c-45a3-8da5-11b3eeddcb7a">
+          <name>Suggs</name>
+          <sort-name>Suggs</sort-name>
+        </artist>
+      </relation>
+      <relation type-id="5be4c609-9afa-4ea0-910b-12ffb71e3821" type="member of band">
+        <target>ff84e1f5-258c-45a3-8da5-11b3eeddcb7a</target>
+        <direction>backward</direction>
+        <begin>1992</begin>
+        <attribute-list>
+          <attribute>lead vocals</attribute>
+        </attribute-list>
+        <artist id="ff84e1f5-258c-45a3-8da5-11b3eeddcb7a">
+          <name>Suggs</name>
+          <sort-name>Suggs</sort-name>
+        </artist>
+      </relation>
+    </relation-list>
+    <relation-list target-type="url">
+      <relation type="lyrics" type-id="e4d73442-3762-45a8-905c-401da65544ed">
+        <target id="64d591c6-41f4-465d-be69-99cc375a6d5c">http://lyrics.wikia.com/Madness</target>
+      </relation>
+      <relation type-id="d94fb61c-fa20-4e3c-a19a-71a949fb2c55" type="other databases">
+        <target id="1e6c65ab-05eb-41de-8208-d1ecaeec12b2">http://musicmoz.org/Bands_and_Artists/M/Madness/</target>
+      </relation>
+      <relation type-id="e4d73442-3762-45a8-905c-401da65544ed" type="lyrics">
+        <target id="234b9c4e-fa24-4478-9744-0568fb04e184">http://muzikum.eu/en/122-5794/madness/lyrics.html</target>
+      </relation>
+      <relation type="other databases" type-id="d94fb61c-fa20-4e3c-a19a-71a949fb2c55">
+        <target id="acee5739-4c8b-42aa-a43d-9410908bb824">http://rateyourmusic.com/artist/madness</target>
+      </relation>
+      <relation type="VIAF" type-id="e8571dcc-35d4-4e91-a577-a3382fd84460">
+        <target id="16accf79-d5f2-4a78-bb0a-aefdd0782db2">http://viaf.org/viaf/125179578</target>
+      </relation>
+      <relation type="allmusic" type-id="6b3e3c85-0002-4f34-aca6-80ace0d7e846">
+        <target id="fcffb88b-ab61-486c-90eb-f64a85d38248">http://www.allmusic.com/artist/mn0000195874</target>
+      </relation>
+      <relation type-id="d028a975-000c-4525-9333-d3c8425e4b54" type="BBC Music page">
+        <target id="0177d7f0-b4d6-492e-a761-9e1e210c0bfb">http://www.bbc.co.uk/music/artists/5f58803e-8c4c-478e-8b51-477f38483ede</target>
+      </relation>
+      <relation type="IMDb" type-id="94c8b0cc-4477-4106-932c-da60e63de61c">
+        <target id="18b6e2e3-baf0-43c6-9e13-fd5dc5b313e5">http://www.imdb.com/name/nm3994606/</target>
+      </relation>
+      <relation type="last.fm" type-id="08db8098-c0df-4b78-82c3-c8697b4bba7f">
+        <target id="b2c0c980-1898-4521-98f6-a39da34ec88f">http://www.last.fm/music/Madness</target>
+      </relation>
+      <relation type="official homepage" type-id="fe33d22f-c3b0-4d68-bd53-a856badf2b15">
+        <target id="e25c6dd3-2d72-431c-beda-f6a3e7830286">http://www.madness.co.uk/</target>
+      </relation>
+      <relation type-id="d94fb61c-fa20-4e3c-a19a-71a949fb2c55" type="other databases">
+        <target id="44392434-1e1f-45ee-8cfb-466701d82af3">http://www.musik-sammler.de/artist/2205</target>
+      </relation>
+      <relation type="secondhandsongs" type-id="79c5b84d-a206-4f4c-9832-78c028c312c3">
+        <target id="39dc27da-fb7d-47e0-9655-d035cfb19c8f">http://www.secondhandsongs.com/artist/1952</target>
+      </relation>
+      <relation type="streaming music" type-id="769085a1-c2f7-4c24-a532-2375a77693bd">
+        <target id="b8489c51-bbb7-41f0-b5ea-0b38dd54536a">http://www.staimusic.com/en/bands/madness_2800.html</target>
+      </relation>
+      <relation type="image" type-id="221132e9-e30e-43f2-a741-15afc4c5fa7c">
+        <target id="b12045c4-1007-4be1-a881-52cb311e678c">https://commons.wikimedia.org/wiki/File:Madness-19-07-2005.jpg</target>
+      </relation>
+      <relation type-id="29651736-fa6d-48e4-aadc-a557c6add1cb" type="wikipedia">
+        <target id="2b039663-320e-49af-8a29-6d6ffbad6990">https://en.wikipedia.org/wiki/Madness_(band)</target>
+      </relation>
+      <relation type="myspace" type-id="bac47923-ecde-4b59-822e-d08f0cd10156">
+        <target id="fd345fcb-7c90-4c01-a298-266368a4d70a">https://myspace.com/madnessofficial</target>
+      </relation>
+      <relation type-id="99429741-f3f6-484b-84f8-23af51991770" type="social network">
+        <target id="9160cf70-ce3e-4db4-bbc3-afaa65885005">https://twitter.com/madnessnews</target>
+      </relation>
+      <relation type-id="04a5b104-a4c2-4bac-99a1-7b837c37d9e4" type="discogs">
+        <target id="34313c22-ffa4-4f84-bb69-bfea6d039ba8">https://www.discogs.com/artist/10388</target>
+      </relation>
+      <relation type="social network" type-id="99429741-f3f6-484b-84f8-23af51991770">
+        <target id="6cf9cbb6-c9c8-4da3-9d1e-82ef2996106e">https://www.facebook.com/madnessofficial</target>
+      </relation>
+      <relation type="wikidata" type-id="689870a4-a1e4-4912-b17f-7b2664215698">
+        <target id="492bcdb0-338b-45c2-94b7-300a1f4cdc01">https://www.wikidata.org/wiki/Q745741</target>
+      </relation>
+      <relation type-id="6a540e5b-58c6-4192-b6ba-dbc71ec8fcf0" type="youtube">
+        <target id="8968ea30-25ea-43aa-b380-18f5d6497e3b">https://www.youtube.com/user/MadtubeMTV</target>
+      </relation>
+    </relation-list>
+    <tag-list>
+      <tag count="0">
+        <name>2 tone</name>
+      </tag>
+      <tag count="1">
+        <name>british</name>
+      </tag>
+      <tag count="0">
+        <name>england</name>
+      </tag>
+      <tag count="0">
+        <name>english</name>
+      </tag>
+      <tag count="0">
+        <name>london</name>
+      </tag>
+      <tag count="3">
+        <name>new wave</name>
+      </tag>
+      <tag count="1">
+        <name>pop</name>
+      </tag>
+      <tag count="1">
+        <name>pop rock</name>
+      </tag>
+      <tag count="0">
+        <name>rock and indie</name>
+      </tag>
+      <tag count="5">
+        <name>ska</name>
+      </tag>
+      <tag count="1">
+        <name>sophisti-pop</name>
+      </tag>
+      <tag count="0">
+        <name>uk</name>
+      </tag>
+    </tag-list>
+    <rating votes-count="5">4.8</rating>
+  </artist>
+</metadata>

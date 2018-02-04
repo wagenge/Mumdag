@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?><metadata xmlns="http://musicbrainz.org/ns/mmd-2.0#">
+  <artist id="0c751690-c784-4a4f-b1e4-c1de27d47581" type-id="e431f5f6-b5d2-343d-8b36-72607fffb74b" type="Group">
+    <name>Animal Collective</name>
+    <sort-name>Animal Collective</sort-name>
+    <country>US</country>
+    <area id="489ce91b-6658-3307-9877-795b68554c98">
+      <name>United States</name>
+      <sort-name>United States</sort-name>
+      <iso-3166-1-code-list>
+        <iso-3166-1-code>US</iso-3166-1-code>
+      </iso-3166-1-code-list>
+    </area>
+    <begin-area id="2fb5445d-3987-49fe-957a-f730a7acc4a2">
+      <name>Baltimore</name>
+      <sort-name>Baltimore</sort-name>
+    </begin-area>
+    <life-span>
+      <begin>2000</begin>
+    </life-span>
+    <alias-list count="2">
+      <alias sort-name="Campfire Songs">Campfire Songs</alias>
+      <alias sort-name="The Animal Collective">The Animal Collective</alias>
+    </alias-list>
+    <relation-list target-type="artist">
+      <relation type="member of band" type-id="5be4c609-9afa-4ea0-910b-12ffb71e3821">
+        <target>22568c9d-8ef3-4224-b994-8e0658e1082a</target>
+        <direction>backward</direction>
+        <artist id="22568c9d-8ef3-4224-b994-8e0658e1082a">
+          <name>Avey Tare</name>
+          <sort-name>Tare, Avey</sort-name>
+        </artist>
+      </relation>
+      <relation type="member of band" type-id="5be4c609-9afa-4ea0-910b-12ffb71e3821">
+        <target>7d0ae15c-d82a-46af-8bee-a14a4f8d2f95</target>
+        <direction>backward</direction>
+        <artist id="7d0ae15c-d82a-46af-8bee-a14a4f8d2f95">
+          <name>Deakin</name>
+          <sort-name>Deakin</sort-name>
+        </artist>
+      </relation>
+      <relation type="member of band" type-id="5be4c609-9afa-4ea0-910b-12ffb71e3821">
+        <target>c836703d-f5e2-4e54-92c3-1792ef4d0d6f</target>
+        <direction>backward</direction>
+        <artist id="c836703d-f5e2-4e54-92c3-1792ef4d0d6f">
+          <name>Geologist</name>
+          <sort-name>Geologist</sort-name>
+          <disambiguation>founding member of Animal Collective</disambiguation>
+        </artist>
+      </relation>
+      <relation type="member of band" type-id="5be4c609-9afa-4ea0-910b-12ffb71e3821">
+        <target>fd3c3f9f-a471-498e-ab3a-940ac20b6bbd</target>
+        <direction>backward</direction>
+        <artist id="fd3c3f9f-a471-498e-ab3a-940ac20b6bbd">
+          <name>Panda Bear</name>
+          <sort-name>Panda Bear</sort-name>
+        </artist>
+      </relation>
+    </relation-list>
+    <relation-list target-type="url">
+      <relation type-id="c550166e-0548-4a18-b1d4-e2ae423a3e88" type="bandcamp">
+        <target id="8c9d34d4-c8a4-486f-b168-513d33db38c7">http://anmlcollectve.bandcamp.com/</target>
+      </relation>
+      <relation type="lyrics" type-id="e4d73442-3762-45a8-905c-401da65544ed">
+        <target id="269b107a-1501-4175-8661-4c58d7af482e">http://decoda.com/animal-collective-lyrics</target>
+      </relation>
+      <relation type-id="e4d73442-3762-45a8-905c-401da65544ed" type="lyrics">
+        <target id="0bdeae2c-5841-4cdd-a0ba-37a34b996aff">http://genius.com/artists/Animal-collective</target>
+      </relation>
+      <relation type="other databases" type-id="d94fb61c-fa20-4e3c-a19a-71a949fb2c55">
+        <target id="42eacfff-e3d5-48a8-a7d7-6787d67d03d4">http://imvdb.com/n/animal-collective</target>
+      </relation>
+      <relation type="lyrics" type-id="e4d73442-3762-45a8-905c-401da65544ed">
+        <target id="3bb04f7d-44b4-4081-9bd6-c760a608729a">http://muzikum.eu/en/122-6652/animal-collective/lyrics.html</target>
+      </relation>
+      <relation type="allmusic" type-id="6b3e3c85-0002-4f34-aca6-80ace0d7e846">
+        <target id="ffab0121-3dba-4250-b2f7-f30b019f96bc">http://www.allmusic.com/artist/mn0000919603</target>
+      </relation>
+      <relation type="BBC Music page" type-id="d028a975-000c-4525-9333-d3c8425e4b54">
+        <target id="e0d9e013-8e30-42dc-9240-8b795fdef3a4">http://www.bbc.co.uk/music/artists/0c751690-c784-4a4f-b1e4-c1de27d47581</target>
+      </relation>
+      <relation type-id="fe33d22f-c3b0-4d68-bd53-a856badf2b15" type="official homepage">
+        <target id="a156dd6c-af8b-447a-bbe9-fc9a5af939be">http://www.dominorecordco.com/artists/animal-collective/</target>
+      </relation>
+      <relation type="last.fm" type-id="08db8098-c0df-4b78-82c3-c8697b4bba7f">
+        <target id="4297f37b-d91f-4dbb-8b15-d78e032cabba">http://www.last.fm/music/Animal+Collective</target>
+      </relation>
+      <relation type="official homepage" type-id="fe33d22f-c3b0-4d68-bd53-a856badf2b15">
+        <target id="9be3fa9a-1039-498c-94c0-170cf368b9c6">http://www.myanimalhome.net/</target>
+      </relation>
+      <relation type="other databases" type-id="d94fb61c-fa20-4e3c-a19a-71a949fb2c55">
+        <target id="e380ff31-1248-455c-9e9e-2624ed9fd054">http://www.residentadvisor.net/dj/animalcollective</target>
+      </relation>
+      <relation type-id="769085a1-c2f7-4c24-a532-2375a77693bd" type="streaming music">
+        <target id="b037deca-7c75-46dd-8c13-a10fdfe1925f">http://www.staimusic.com/en/bands/animal-collective_228.html</target>
+      </relation>
+      <relation type="wikipedia" type-id="29651736-fa6d-48e4-aadc-a557c6add1cb">
+        <target id="dffe4ef9-f3b3-4382-a1e8-5dabc06c97c0">https://en.wikipedia.org/wiki/Animal_Collective</target>
+      </relation>
+      <relation type-id="f8319a2f-f824-4617-81c8-be6560b3b203" type="purchase for download">
+        <target id="494959be-a632-4668-ac34-d5c8dc319f5f">https://itunes.apple.com/artist/id5664621</target>
+      </relation>
+      <relation type="myspace" type-id="bac47923-ecde-4b59-822e-d08f0cd10156">
+        <target id="021d880d-1e5b-42f5-800a-24759b0bba2f">https://myspace.com/animalcollective</target>
+      </relation>
+      <relation type="streaming music" type-id="769085a1-c2f7-4c24-a532-2375a77693bd">
+        <target id="61fe2d73-69ed-4584-bf7e-5d3dd7c29ac6">https://open.spotify.com/artist/4kwxTgCKMipBKhSnEstNKj</target>
+      </relation>
+      <relation type-id="f8319a2f-f824-4617-81c8-be6560b3b203" type="purchase for download">
+        <target id="cdca32fa-47d6-4a3d-8f3e-28fbfd695ed5">https://play.google.com/music/m/Aaggrqtw32ik45icdugnnke4kei?t=Animal_Collective</target>
+      </relation>
+      <relation type-id="d94fb61c-fa20-4e3c-a19a-71a949fb2c55" type="other databases">
+        <target id="cfc3a981-9562-4801-b5b8-93f89beb355c">https://rateyourmusic.com/artist/animal_collective</target>
+      </relation>
+      <relation type="soundcloud" type-id="89e4a949-0976-440d-bda1-5f772c1e5710">
+        <target id="b93cdf8b-594f-4eb8-b3c5-a942b0d0cd04">https://soundcloud.com/anmlcollective</target>
+      </relation>
+      <relation type-id="99429741-f3f6-484b-84f8-23af51991770" type="social network">
+        <target id="b80b0af7-a220-4e1f-87ef-835af9755194">https://twitter.com/anmlcollective</target>
+      </relation>
+      <relation type-id="f8319a2f-f824-4617-81c8-be6560b3b203" type="purchase for download">
+        <target id="df0259f2-f84f-4a2d-99a1-4f8195e5b8b6">https://www.beatport.com/artist/animal-collective/26940</target>
+      </relation>
+      <relation type-id="04a5b104-a4c2-4bac-99a1-7b837c37d9e4" type="discogs">
+        <target id="e1255f12-5999-46cb-bd42-7f529cc2d4ea">https://www.discogs.com/artist/207958</target>
+      </relation>
+      <relation type="social network" type-id="99429741-f3f6-484b-84f8-23af51991770">
+        <target id="64a29c37-7d03-42b4-9590-00d3d1ff015d">https://www.facebook.com/anmlcollective</target>
+      </relation>
+      <relation type-id="99429741-f3f6-484b-84f8-23af51991770" type="social network">
+        <target id="c1341a88-6bdb-463e-b0a1-2b3e6f4d7601">https://www.instagram.com/anmlcollective/</target>
+      </relation>
+      <relation type-id="aac9c4bc-a5b9-30b8-9839-e3ac314c6e58" type="songkick">
+        <target id="6cea7be9-bfe1-4e41-b728-1c9bebb7bba9">https://www.songkick.com/artists/137427</target>
+      </relation>
+      <relation type-id="689870a4-a1e4-4912-b17f-7b2664215698" type="wikidata">
+        <target id="32ac7f2f-3184-49e4-92eb-46809da003a1">https://www.wikidata.org/wiki/Q547272</target>
+      </relation>
+      <relation type="youtube" type-id="6a540e5b-58c6-4192-b6ba-dbc71ec8fcf0">
+        <target id="745b8ec6-4a6f-48ca-a397-426a9468473b">https://www.youtube.com/user/AnimalCollectiveVEVO</target>
+      </relation>
+      <relation type="youtube" type-id="6a540e5b-58c6-4192-b6ba-dbc71ec8fcf0">
+        <target id="067c963c-800e-4279-af78-3424c6838d85">https://www.youtube.com/user/anmlcollective</target>
+      </relation>
+    </relation-list>
+    <tag-list>
+      <tag count="1">
+        <name>experimental</name>
+      </tag>
+      <tag count="2">
+        <name>freak folk</name>
+      </tag>
+      <tag count="0">
+        <name>indie</name>
+      </tag>
+      <tag count="2">
+        <name>neo-psychedelia</name>
+      </tag>
+      <tag count="1">
+        <name>noise pop</name>
+      </tag>
+      <tag count="1">
+        <name>psychedelic folk</name>
+      </tag>
+      <tag count="2">
+        <name>psychedelic pop</name>
+      </tag>
+      <tag count="0">
+        <name>rock and indie</name>
+      </tag>
+    </tag-list>
+    <rating votes-count="6">4.85</rating>
+  </artist>
+</metadata>

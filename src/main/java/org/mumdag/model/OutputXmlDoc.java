@@ -30,13 +30,13 @@ import javax.xml.xpath.XPathExpression;
 import javax.xml.xpath.XPathExpressionException;
 import javax.xml.xpath.XPathFactory;
 
+import org.apache.commons.lang3.StringUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.mumdag.core.MappingRules;
 import org.mumdag.utils.MapListUtils;
 import org.mumdag.utils.PropertyHandler;
 import org.mumdag.utils.XmlUtils;
-//import org.mumdag.utils.XpathString;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
@@ -55,9 +55,8 @@ private static final Logger log = LogManager.getLogger(OutputXmlDoc.class);
 private Document outputXmlDoc = null;
 private Document templateXmlDoc = null;
 private String templateFilePath = "";
+private String filePath = "";
 private String scraperId;
-private String mappingRulesFilePath;
-private String mappingRulesType;
 private MappingRules mappingRules;
 
 public enum NodeStatus 	{ 	A_EMPTY_NODE_EXISTS,
@@ -79,7 +78,7 @@ public enum NodeAction 	{ 	UPDATE,
 /*
 * 	CONSTRUCTOR METHODS (public)
 */		
-	
+/*
 // ERROR HANDLING:	ok
 // DOC:				nok
 // TEST:			ok
@@ -97,11 +96,49 @@ public OutputXmlDoc(String templateFilePath) throws Exception {
 	
 	this.mappingRules = MappingRules.getInstance();
 	this.scraperId = PropertyHandler.getInstance().getValue("Mumdag.scraperId");
-	this.mappingRulesFilePath = PropertyHandler.getInstance().getValue("Mumdag.mappingRulesFilePath");
-	this.mappingRulesType = PropertyHandler.getInstance().getValue("Mumdag.mappingRulesType");
-	this.mappingRules.updateMappingRules(this.mappingRulesFilePath, this.scraperId, this.mappingRulesType);
+	String mappingRulesFilePath = PropertyHandler.getInstance().getValue("Mumdag.mappingRulesFilePath");
+	String mappingRulesType = PropertyHandler.getInstance().getValue("Mumdag.mappingRulesType");
+	this.mappingRules.updateMappingRules(mappingRulesFilePath, this.scraperId, mappingRulesType);
 }
-	
+*/
+
+
+// ERROR HANDLING:	ok
+// DOC:				nok
+// TEST:			ok
+public OutputXmlDoc(String filePath) throws Exception {
+    Path path = Paths.get(filePath);
+    if(Files.exists(path) && Files.isRegularFile(path)) {
+        this.filePath = filePath;
+    }
+    else {
+        if(!Files.exists(path))
+            throw new FileNotFoundException("File '" + filePath + "' not found!");
+        else if(!Files.isRegularFile(path))
+            throw new FileNotFoundException("File '" + filePath + "' is not a regular file!");
+    }
+
+    String templateFilePath = PropertyHandler.getInstance().getValue("OutputXmlDoc.templatePath");
+    Path templatePath = Paths.get(templateFilePath);
+    if(Files.exists(templatePath) && Files.isRegularFile(templatePath)) {
+        this.templateFilePath = templateFilePath;
+    }
+    else {
+        if(!Files.exists(templatePath))
+            throw new FileNotFoundException("Template file '" + templateFilePath + "' not found!");
+        else if(!Files.isRegularFile(templatePath))
+            throw new FileNotFoundException("Template file '" + templateFilePath + "' is not a regular file!");
+    }
+
+    createOutputXmlDoc();
+
+    this.mappingRules = MappingRules.getInstance();
+    this.scraperId = PropertyHandler.getInstance().getValue("Mumdag.scraperId");
+    String mappingRulesFilePath = PropertyHandler.getInstance().getValue("Mumdag.mappingRulesFilePath");
+    String mappingRulesType = PropertyHandler.getInstance().getValue("Mumdag.mappingRulesType");
+    this.mappingRules.updateMappingRules(mappingRulesFilePath, this.scraperId, mappingRulesType);
+}
+
 
 //=============================================================================	
 /*
@@ -159,6 +196,19 @@ public void writeArtistTypeAndGender(HashMap<String, Object> insertInfo, String 
 // ERROR HANDLING:	nok
 // DOC:				nok
 // TEST:			partly ok, missing properties, parameters and entries of the insertInfo map are not checked
+public void writeArtistArea(HashMap<String, Object> insertInfo, String origArtistId, String copyRule, String scraperName) throws Exception {
+    String idAttrName = PropertyHandler.getInstance().getValue(scraperName + ".Scraper.idAttrName");
+    List<String> resolveInfoList = new ArrayList<>();
+    resolveInfoList.add("_arid_::"+idAttrName+"="+origArtistId);
+
+    writeAreaInfo(insertInfo, resolveInfoList, "Artist.Area", copyRule, scraperName);
+}
+
+//-----------------------------------------------------------------------------
+
+// ERROR HANDLING:	nok
+// DOC:				nok
+// TEST:			partly ok, missing properties, parameters and entries of the insertInfo map are not checked
 public void writeArtistPeriod(HashMap<String, Object> insertInfo, String periodType, String copyRule, String scraperName) throws Exception {
     String idAttrName = PropertyHandler.getInstance().getValue(scraperName + ".Scraper.idAttrName");
     String idAttrValue = (String)insertInfo.get("unid");
@@ -178,6 +228,90 @@ public void writeArtistPeriod(HashMap<String, Object> insertInfo, String periodT
 // ERROR HANDLING:	nok
 // DOC:				nok
 // TEST:			partly ok, missing properties, parameters and entries of the insertInfo map are not checked
+public void writeArtistCredit(String aristCreditId, String origAristId, String copyRule, String scraperName) throws Exception {
+	String idAttrName = PropertyHandler.getInstance().getValue(scraperName + ".Scraper.idAttrName");
+	List<String> resolveInfoList = new ArrayList<>();
+	resolveInfoList.add("_arid_::"+idAttrName+"="+origAristId);
+
+	//put ArtistType to MMDG
+	writeArtistCreditNode(aristCreditId, resolveInfoList, "Artist.ArtistCreditNode", copyRule, scraperName);
+}
+
+//-----------------------------------------------------------------------------
+
+// ERROR HANDLING:	nok
+// DOC:				nok
+// TEST:			nok
+public void writeArtistCreditUniqueId(HashMap<String, Object> insertInfo, String origArtistId, String copyRule, String scraperName) throws Exception {
+    String scraperId = PropertyHandler.getInstance().getValue(scraperName + ".Scraper.id");
+    String idAttrName = PropertyHandler.getInstance().getValue(scraperName + ".Scraper.idAttrName");
+    String idAttrValue = (String)insertInfo.get("unid");
+    List<String> resolveInfoList = new ArrayList<>();
+    resolveInfoList.add("_arid_::"+idAttrName+"="+origArtistId);
+    resolveInfoList.add("_acid_::"+idAttrName+"="+idAttrValue);
+
+    HashMap<String, Object> resolveInfoMap = new HashMap<>();
+    resolveInfoMap.put("placeholder", "_arid_");
+    resolveInfoMap.put("propSubSection", "Artist");
+    resolveInfoMap.put("resolveInfo", resolveInfoList);
+
+    writeUniqueIdInfos(insertInfo, resolveInfoMap, "ArtistCredit.UniqueId", copyRule, scraperId, scraperName);
+}
+
+//-----------------------------------------------------------------------------
+
+// ERROR HANDLING:	nok
+// DOC:				nok
+// TEST:			partly ok, missing properties, parameters and entries of the insertInfo map are not checked
+public void writeArtistCreditName(HashMap<String, Object> insertInfo, String origArtistId, String copyRule, String scraperName) throws Exception {
+    String idAttrName = PropertyHandler.getInstance().getValue(scraperName + ".Scraper.idAttrName");
+    String idAttrValue = (String)insertInfo.get("unid");
+    List<String> resolveInfoList = new ArrayList<>();
+    resolveInfoList.add("_arid_::"+idAttrName+"="+origArtistId);
+    resolveInfoList.add("_acid_::"+idAttrName+"="+idAttrValue);
+
+    writeNameInfo(insertInfo, resolveInfoList, "ArtistCredit.Name", copyRule, scraperName);
+}
+
+//-----------------------------------------------------------------------------
+
+// ERROR HANDLING:	nok
+// DOC:				nok
+// TEST:			partly ok, missing properties, parameters and entries of the insertInfo map are not checked
+public void writeArtistCreditPeriod(HashMap<String, Object> insertInfo, String periodType, String origArtistId, String copyRule, String scraperName) throws Exception {
+    String idAttrName = PropertyHandler.getInstance().getValue(scraperName + ".Scraper.idAttrName");
+    String idAttrValue = (String)insertInfo.get("unid");
+    List<String> resolveInfoList = new ArrayList<>();
+    resolveInfoList.add("_arid_::"+idAttrName+"="+origArtistId);
+    resolveInfoList.add("_acid_::"+idAttrName+"="+idAttrValue);
+
+    HashMap<String, Object> resolveInfoMap = new HashMap<>();
+    resolveInfoMap.put("periodType", periodType);
+    resolveInfoMap.put("resolveInfo", resolveInfoList);
+
+    writePeriodInfo(insertInfo, resolveInfoMap, "ArtistCredit.Period", copyRule, scraperName);
+}
+
+//-----------------------------------------------------------------------------
+
+// ERROR HANDLING:	nok
+// DOC:				nok
+// TEST:			partly ok, missing properties, parameters and entries of the insertInfo map are not checked
+public void writeArtistCreditRole(HashMap<String, Object> insertInfo, String origArtistId, String copyRule, String scraperName) throws Exception {
+    String idAttrName = PropertyHandler.getInstance().getValue(scraperName + ".Scraper.idAttrName");
+    String idAttrValue = (String)insertInfo.get("unid");
+    List<String> resolveInfoList = new ArrayList<>();
+    resolveInfoList.add("_arid_::"+idAttrName+"="+origArtistId);
+    resolveInfoList.add("_acid_::"+idAttrName+"="+idAttrValue);
+
+    writeRoleInfo(insertInfo, resolveInfoList, "ArtistCredit.Role", copyRule, scraperName);
+}
+
+//-----------------------------------------------------------------------------
+
+// ERROR HANDLING:	nok
+// DOC:				nok
+// TEST:			partly ok, missing properties, parameters and entries of the insertInfo map are not checked
 public void writeUrls(HashMap<String, Object> insertInfo, String copyRule, String scraperName) throws Exception {
 	String idAttrName = PropertyHandler.getInstance().getValue(scraperName + ".Scraper.idAttrName");
 	String idAttrValue = (String)insertInfo.get("unid");
@@ -188,11 +322,67 @@ public void writeUrls(HashMap<String, Object> insertInfo, String copyRule, Strin
 	writeUrlInfo(insertInfo, resolveInfoList, "Artist.Url", copyRule, scraperName);
 }
 
+//-----------------------------------------------------------------------------
+
+// ERROR HANDLING:	nok
+// DOC:				nok
+// TEST:			partly ok, missing properties, parameters and entries of the insertInfo map are not checked
+public void writeArtistTag(HashMap<String, Object> insertInfo, String copyRule, String scraperName) throws Exception {
+    String idAttrName = PropertyHandler.getInstance().getValue(scraperName + ".Scraper.idAttrName");
+    String idAttrValue = (String)insertInfo.get("unid");
+    List<String> resolveInfoList = new ArrayList<>();
+    resolveInfoList.add("_arid_::"+idAttrName+"="+idAttrValue);
+
+    writeTagInfo(insertInfo, resolveInfoList, "Artist.Tag", copyRule, scraperName);
+}
+
+//-----------------------------------------------------------------------------
+
+// ERROR HANDLING:	nok
+// DOC:				nok
+// TEST:			partly ok, missing properties, parameters and entries of the insertInfo map are not checked
+public void writeArtistRating(HashMap<String, Object> insertInfo, String copyRule, String scraperName) throws Exception {
+    String idAttrName = PropertyHandler.getInstance().getValue(scraperName + ".Scraper.idAttrName");
+    String idAttrValue = (String)insertInfo.get("unid");
+    List<String> resolveInfoList = new ArrayList<>();
+    resolveInfoList.add("_arid_::"+idAttrName+"="+idAttrValue);
+
+    writeRatingInfo(insertInfo, resolveInfoList, "Artist.Rating", copyRule, scraperName);
+}
+
+//-----------------------------------------------------------------------------
+
+// ERROR HANDLING:	nok
+// DOC:				nok
+// TEST:			partly ok, missing properties, parameters and entries of the insertInfo map are not checked
+public void writeArtistAnnotation(HashMap<String, Object> insertInfo, String copyRule, String scraperName) throws Exception {
+    String idAttrName = PropertyHandler.getInstance().getValue(scraperName + ".Scraper.idAttrName");
+    String idAttrValue = (String)insertInfo.get("unid");
+    List<String> resolveInfoList = new ArrayList<>();
+    resolveInfoList.add("_arid_::"+idAttrName+"="+idAttrValue);
+
+    writeAnnotationInfo(insertInfo, resolveInfoList, "Artist.Annotation", copyRule, scraperName);
+}
+
+//-----------------------------------------------------------------------------
+
+// ERROR HANDLING:	nok
+// DOC:				nok
+// TEST:			partly ok, missing properties, parameters and entries of the insertInfo map are not checked
+public void writeArtistDisambiguation(HashMap<String, Object> insertInfo, String copyRule, String scraperName) throws Exception {
+    String idAttrName = PropertyHandler.getInstance().getValue(scraperName + ".Scraper.idAttrName");
+    String idAttrValue = (String)insertInfo.get("unid");
+    List<String> resolveInfoList = new ArrayList<>();
+    resolveInfoList.add("_arid_::"+idAttrName+"="+idAttrValue);
+
+    writeDisambiguationInfo(insertInfo, resolveInfoList, "Artist.Disambiguation", copyRule, scraperName);
+}
+
+
 //=============================================================================
 /*
  * 	METHODS FOR WRITING/READING GENERAL BLOCKS (private)
  */
-
 
 //ERROR HANDLING:	nok
 //DOC:				nok
@@ -258,9 +448,8 @@ private void writeUniqueIdInfos(HashMap<String, Object> insertInfos, HashMap<Str
 
         //resolve the base xpath
         // resolveInfo is converted into a String[]
-        HashMap<String, String> resolveBaseMap = createResolveMap(resolveInfoList.stream().toArray(String[]::new));
+        HashMap<String, String> resolveBaseMap = createResolveMap(resolveInfoList.toArray(new String[resolveInfoList.size()]));
         String resolvedBase = getResolvedBase(targetRule.substring(0, targetRule.indexOf(".")), resolveBaseMap);
-
 
         //preparing artist type infos (ArtistUniqueIdNode)
         List<String> artistUniqueId = MapListUtils.createInfoList(idAttrName+"='"+uniqueId+"'", srcAttrName+"='"+srcAttrValue+"'");
@@ -312,9 +501,9 @@ private void writeNameInfo(HashMap<String, Object> insertInfo, List<String> reso
     // if the name type is set in the additionalInfo list, take it from these list
     ArrayList<String> insertInfoList = new ArrayList<>();
     if(insertInfo.containsKey("additionalInfo")) {
-        insertInfoList.addAll((List<String>)insertInfo.get("additionalInfo"));
-        for(String nameInfoStr: insertInfoList) {
-            if(nameInfoStr.contains("type=")) {
+        insertInfoList.addAll((List<String>) insertInfo.get("additionalInfo"));
+        for (String nameInfoStr : insertInfoList) {
+            if (nameInfoStr.contains("type=")) {
                 String[] nameTypeInfos = nameInfoStr.split("=");
                 ntypeAttrValue = nameTypeInfos[1];
             }
@@ -332,7 +521,7 @@ private void writeNameInfo(HashMap<String, Object> insertInfo, List<String> reso
 
     //resolve the base xpath
     // resolveInfo is converted into a String[]
-    HashMap<String, String> resolveBaseMap = createResolveMap(resolveInfoList.stream().toArray(String[]::new));
+    HashMap<String, String> resolveBaseMap = createResolveMap(resolveInfoList.toArray(new String[resolveInfoList.size()]));
     String resolvedBase = getResolvedBase(targetRule.substring(0, targetRule.indexOf(".")), resolveBaseMap);
 
     //add idAttr, srcAttr and ntypeAttr to insertInfoList list
@@ -369,7 +558,7 @@ private void writeTypeAndGenderInfo(HashMap<String, Object> insertInfo, List<Str
 
     //resolve the base for xpath
     // resolveInfo is converted into a String[]
-    HashMap<String, String> resolveBaseMap = createResolveMap(resolveInfoList.stream().toArray(String[]::new));
+    HashMap<String, String> resolveBaseMap = createResolveMap(resolveInfoList.toArray(new String[resolveInfoList.size()]));
     String resolvedBase = getResolvedBase(targetRule.substring(0, targetRule.indexOf(".")), resolveBaseMap);
 
     //prepare information to resolve the xpaths
@@ -399,6 +588,59 @@ private void writeTypeAndGenderInfo(HashMap<String, Object> insertInfo, List<Str
 //TEST:				nok
 //PARATERIZATION:   nok, born/founded/died/dissolved
 @SuppressWarnings("unchecked")
+private void writeAreaInfo(HashMap<String, Object> insertInfo, List<String> resolveInfoList, String targetRule, String copyRule, String scraperName) throws Exception {
+    //extract information about (scraper)id, source, name and name type
+    String scraperId = PropertyHandler.getInstance().getValue(scraperName + ".Scraper.id");
+    String srcAttrName = PropertyHandler.getInstance().getValue(scraperName + ".Scraper.srcAttrName");
+    String srcAttrValue = PropertyHandler.getInstance().getValue(scraperName + ".Scraper.srcAttrValue");
+    String areaIdAttrName = PropertyHandler.getInstance().getValue(scraperName + ".Scraper.idAttrName");
+    String areaIdAttrValue = (String)insertInfo.get("unid");
+    String areaTypeAttrName = "type";
+    String areaTypeAttrValue = (String)insertInfo.get("type");
+    String areaEventAttrName = "event";
+    String areaEventAttrValue = (String)insertInfo.get("event");
+    String areaValue = (String)insertInfo.get("name");
+
+    // define the behavior of the operation depending on the current node state (for period begin/end)
+    HashMap<NodeStatus, NodeAction> copyBehavior = this.mappingRules.getCopyBehavior(scraperId, copyRule);
+
+    //resolve the base for xpath
+    // resolveInfo is converted into a String[]
+    HashMap<String, String> resolveBaseMap = createResolveMap(resolveInfoList.toArray(new String[resolveInfoList.size()]));
+    String resolvedBase = getResolvedBase(targetRule.substring(0, targetRule.indexOf(".")), resolveBaseMap);
+
+    //prepare information to resolve the xpaths
+    HashMap<String, String> resolveMap = createResolveMap("_areaIdAttr_::"+areaIdAttrName+"="+areaIdAttrValue,
+            "_areaEventAttr_::"+areaEventAttrName+"="+areaEventAttrValue,
+            "_areaTypeAttr_::"+areaTypeAttrName+"="+areaTypeAttrValue,
+            "_area_::"+areaValue);
+
+    //prepeare the info to be inserted
+    ArrayList<String> insertInfoList = new ArrayList<>();
+    insertInfoList.add(resolveMap.get("_areaIdAttr_"));
+    insertInfoList.add(resolveMap.get("_areaEventAttr_"));
+    insertInfoList.add(resolveMap.get("_areaTypeAttr_"));
+    insertInfoList.add(srcAttrName+"="+srcAttrValue);
+    insertInfoList.add(areaValue);
+    insertInfoList.add("seq="+insertInfo.get("seq"));
+    if(insertInfo.containsKey("code")) {
+        insertInfoList.add("code=" + insertInfo.get("code"));
+    }
+    if(insertInfo.containsKey("additionalInfo")) {
+        insertInfoList.addAll((List<String>)insertInfo.get("additionalInfo"));
+    }
+
+    //put ArtistPeriod Begin/End to MMDG
+    writeInfo(insertInfoList, targetRule, resolvedBase, resolveMap, copyBehavior);
+}
+
+//-----------------------------------------------------------------------------
+
+//ERROR HANDLING:	nok
+//DOC:				nok
+//TEST:				nok
+//PARATERIZATION:   nok, born/founded/died/dissolved
+@SuppressWarnings("unchecked")
 private void writePeriodInfo(HashMap<String, Object> insertInfo, HashMap<String, Object> resolveInfoMap, String targetRule, String copyRule, String scraperName) throws Exception {
     //extract information about (scraper)id, source, name and name type
     String scraperId = PropertyHandler.getInstance().getValue(scraperName + ".Scraper.id");
@@ -416,21 +658,21 @@ private void writePeriodInfo(HashMap<String, Object> insertInfo, HashMap<String,
 
     //resolve the base for xpath
     // resolveInfo is converted into a String[]
-    HashMap<String, String> resolveBaseMap = createResolveMap(resolveInfoList.stream().toArray(String[]::new));
+    HashMap<String, String> resolveBaseMap = createResolveMap(resolveInfoList.toArray(new String[resolveInfoList.size()]));
     String resolvedBase = getResolvedBase(targetRule.substring(0, targetRule.indexOf(".")), resolveBaseMap);
 
     //preparing infos for period begin/end
     String dtypeAttrValue = periodType;
     if (periodType.equals("begin")) {
-        if (arTypeValue.equals("Person")) {
+        if(StringUtils.isNotEmpty(arTypeValue) && arTypeValue.equals("Person")) {
             dtypeAttrValue = "born";
-        } else if (arTypeValue.equals("Group")) {
+        } else if(StringUtils.isNotEmpty(arTypeValue) && arTypeValue.equals("Group")) {
             dtypeAttrValue = "founded";
         }
     } else if (periodType.equals("end")) {
-        if (arTypeValue.equals("Person")) {
+        if(StringUtils.isNotEmpty(arTypeValue) && arTypeValue.equals("Person")) {
             dtypeAttrValue = "died";
-        } else if (arTypeValue.equals("Group")) {
+        } else if(StringUtils.isNotEmpty(arTypeValue) && arTypeValue.equals("Group")) {
             dtypeAttrValue = "dissolved";
         }
     }
@@ -459,6 +701,247 @@ private void writePeriodInfo(HashMap<String, Object> insertInfo, HashMap<String,
 //DOC:				nok
 //TEST:				nok
 @SuppressWarnings("unchecked")
+private void writeArtistCreditNode(String artistCreditId, List<String> resolveInfoList, String targetRule, String copyRule, String scraperName) throws Exception {
+    //extract information about (scraper)id, source, name and name type
+    String scraperId = PropertyHandler.getInstance().getValue(scraperName + ".Scraper.id");
+    String idAttrName = PropertyHandler.getInstance().getValue(scraperName + ".Scraper.idAttrName");
+
+    // define the behavior of the operation depending on the state of the information to be inserted
+    HashMap<NodeStatus, NodeAction> copyBehavior = this.mappingRules.getCopyBehavior(scraperId, copyRule);
+
+    //prepare information to resolve the xpaths
+    HashMap<String, String> resolveMap = createResolveMap("_acidAttr_::"+idAttrName+"="+artistCreditId);
+
+    //resolve the base xpath
+    // resolveInfo is converted into a String[]
+    HashMap<String, String> resolveBaseMap = createResolveMap(resolveInfoList.toArray(new String[resolveInfoList.size()]));
+    String resolvedBase = getResolvedBase(targetRule.substring(0, targetRule.indexOf(".")), resolveBaseMap);
+
+    //put ArtistCreditNode to MMDG
+    writeInfo(idAttrName+"="+artistCreditId, targetRule, resolvedBase, resolveMap, copyBehavior);
+}
+
+//-----------------------------------------------------------------------------
+
+//ERROR HANDLING:	nok
+//DOC:				nok
+//TEST:				nok
+@SuppressWarnings("unchecked")
+private void writeRoleInfo(HashMap<String, Object> insertInfo, List<String> resolveInfoList, String targetRule, String copyRule, String scraperName) throws Exception {
+    //extract information about (scraper)id, source, name and name type
+    String scraperId = PropertyHandler.getInstance().getValue(scraperName + ".Scraper.id");
+    String idAttrName = PropertyHandler.getInstance().getValue(scraperName + ".Scraper.idAttrName");
+    String idAttrValue = (String)insertInfo.get("unid");
+    String role = (String)insertInfo.get("role");
+    String roleTypeAttrName = "type";
+    String roleTypeAttrValue = (String)insertInfo.get("roleType");
+	String originalAttr = "";
+    if(role.equals("member of band") && insertInfo.containsKey("original") && insertInfo.get("original").equals("true")) {
+        originalAttr = "original"+"="+"true";
+    }
+    else if(role.equals("member of band")) {
+        originalAttr = "original"+"="+"false";
+    }
+
+    // define the behavior of the operation depending on the current node state (for period begin/end)
+    HashMap<NodeStatus, NodeAction> copyBehavior = this.mappingRules.getCopyBehavior(scraperId, copyRule);
+
+    //resolve the base for xpath
+    // resolveInfo is converted into a String[]
+    HashMap<String, String> resolveBaseMap = createResolveMap(resolveInfoList.toArray(new String[resolveInfoList.size()]));
+    String resolvedBase = getResolvedBase(targetRule.substring(0, targetRule.indexOf(".")), resolveBaseMap);
+
+    //prepare information to resolve the xpaths
+    HashMap<String, String> resolveMap = createResolveMap("_idAttr_::"+idAttrName+"="+idAttrValue,
+                                                            "_roleTypeAttr_::"+roleTypeAttrName+"="+roleTypeAttrValue,
+                                                            "_role_::"+role);
+
+    //prepeare the info to be inserted
+    ArrayList<String> insertInfoList = new ArrayList<>();
+    insertInfoList.add(resolveMap.get("_idAttr_"));
+    insertInfoList.add(resolveMap.get("_roleTypeAttr_"));
+    insertInfoList.add(role);
+    if(StringUtils.isNotEmpty(originalAttr)) {
+        insertInfoList.add(originalAttr);
+    }
+    if(insertInfo.containsKey("additionalInfo")) {
+        insertInfoList.addAll((List<String>) insertInfo.get("additionalInfo"));
+    }
+
+	//put Name to MMDG
+	writeInfo(insertInfoList, targetRule, resolvedBase, resolveMap, copyBehavior);
+}
+
+//-----------------------------------------------------------------------------
+
+//ERROR HANDLING:	nok
+//DOC:				nok
+//TEST:				nok
+@SuppressWarnings("unchecked")
+private void writeTagInfo(HashMap<String, Object> insertInfo, List<String> resolveInfoList, String targetRule, String copyRule, String scraperName) throws Exception {
+    //extract information about (scraper)id, source, name and name type
+    String scraperId = PropertyHandler.getInstance().getValue(scraperName + ".Scraper.id");
+    String idAttrName = PropertyHandler.getInstance().getValue(scraperName + ".Scraper.idAttrName");
+    String idAttrValue = (String)insertInfo.get("unid");
+    String srcAttrName = PropertyHandler.getInstance().getValue(scraperName + ".Scraper.srcAttrName");
+    String srcAttrValue = PropertyHandler.getInstance().getValue(scraperName + ".Scraper.srcAttrValue");
+    String tagValue = (String)insertInfo.get("tag");
+
+    // define the behavior of the operation depending on the state of the information to be inserted
+    HashMap<NodeStatus, NodeAction> copyBehavior = this.mappingRules.getCopyBehavior(scraperId, copyRule);
+
+    //resolve the base for Artist
+    // resolveInfo is converted into a String[]
+    HashMap<String, String> resolveBaseMap = createResolveMap(resolveInfoList.toArray(new String[resolveInfoList.size()]));
+    String resolvedBase = getResolvedBase(targetRule.substring(0, targetRule.indexOf(".")), resolveBaseMap);
+
+    //prepare information to resolve the xpaths
+    HashMap<String, String> resolveMap = createResolveMap("_idAttr_::"+idAttrName+"="+idAttrValue,
+            "_srcAttr_::"+srcAttrName+"="+srcAttrValue,
+            "_tag_::"+tagValue);
+
+    //prepeare the info to be inserted
+    ArrayList<String> insertInfoList = new ArrayList<>();
+    insertInfoList.add(resolveMap.get("_idAttr_"));
+    insertInfoList.add(resolveMap.get("_srcAttr_"));
+    insertInfoList.add(tagValue);
+    if(insertInfo.containsKey("additionalInfo")) {
+        insertInfoList.addAll((List<String>) insertInfo.get("additionalInfo"));
+    }
+
+    //put ArtistUrl to MMDG
+    writeInfo(insertInfoList, targetRule, resolvedBase, resolveMap, copyBehavior);
+}
+
+//-----------------------------------------------------------------------------
+
+//ERROR HANDLING:	nok
+//DOC:				nok
+//TEST:				nok
+@SuppressWarnings("unchecked")
+private void writeRatingInfo(HashMap<String, Object> insertInfo, List<String> resolveInfoList, String targetRule, String copyRule, String scraperName) throws Exception {
+    //extract information about (scraper)id, source, name and name type
+    String scraperId = PropertyHandler.getInstance().getValue(scraperName + ".Scraper.id");
+    String idAttrName = PropertyHandler.getInstance().getValue(scraperName + ".Scraper.idAttrName");
+    String idAttrValue = (String)insertInfo.get("unid");
+    String srcAttrName = PropertyHandler.getInstance().getValue(scraperName + ".Scraper.srcAttrName");
+    String srcAttrValue = PropertyHandler.getInstance().getValue(scraperName + ".Scraper.srcAttrValue");
+    String ratingValue = (String)insertInfo.get("rating");
+
+    // define the behavior of the operation depending on the state of the information to be inserted
+    HashMap<NodeStatus, NodeAction> copyBehavior = this.mappingRules.getCopyBehavior(scraperId, copyRule);
+
+    //resolve the base for Artist
+    // resolveInfo is converted into a String[]
+    HashMap<String, String> resolveBaseMap = createResolveMap(resolveInfoList.toArray(new String[resolveInfoList.size()]));
+    String resolvedBase = getResolvedBase(targetRule.substring(0, targetRule.indexOf(".")), resolveBaseMap);
+
+    //prepare information to resolve the xpaths
+    HashMap<String, String> resolveMap = createResolveMap("_idAttr_::"+idAttrName+"="+idAttrValue,
+            "_srcAttr_::"+srcAttrName+"="+srcAttrValue,
+            "_rating_::"+ratingValue);
+
+    //prepeare the info to be inserted
+    ArrayList<String> insertInfoList = new ArrayList<>();
+    insertInfoList.add(resolveMap.get("_idAttr_"));
+    insertInfoList.add(resolveMap.get("_srcAttr_"));
+    insertInfoList.add(ratingValue);
+    if(insertInfo.containsKey("additionalInfo")) {
+        insertInfoList.addAll((List<String>) insertInfo.get("additionalInfo"));
+    }
+
+    //put ArtistUrl to MMDG
+    writeInfo(insertInfoList, targetRule, resolvedBase, resolveMap, copyBehavior);
+}
+
+//-----------------------------------------------------------------------------
+
+//ERROR HANDLING:	nok
+//DOC:				nok
+//TEST:				nok
+@SuppressWarnings("unchecked")
+private void writeAnnotationInfo(HashMap<String, Object> insertInfo, List<String> resolveInfoList, String targetRule, String copyRule, String scraperName) throws Exception {
+    //extract information about (scraper)id, source, name and name type
+    String scraperId = PropertyHandler.getInstance().getValue(scraperName + ".Scraper.id");
+    String idAttrName = PropertyHandler.getInstance().getValue(scraperName + ".Scraper.idAttrName");
+    String idAttrValue = (String)insertInfo.get("unid");
+    String srcAttrName = PropertyHandler.getInstance().getValue(scraperName + ".Scraper.srcAttrName");
+    String srcAttrValue = PropertyHandler.getInstance().getValue(scraperName + ".Scraper.srcAttrValue");
+    String annotationValue = (String)insertInfo.get("annotation");
+
+    // define the behavior of the operation depending on the state of the information to be inserted
+    HashMap<NodeStatus, NodeAction> copyBehavior = this.mappingRules.getCopyBehavior(scraperId, copyRule);
+
+    //resolve the base for Artist
+    // resolveInfo is converted into a String[]
+    HashMap<String, String> resolveBaseMap = createResolveMap(resolveInfoList.toArray(new String[resolveInfoList.size()]));
+    String resolvedBase = getResolvedBase(targetRule.substring(0, targetRule.indexOf(".")), resolveBaseMap);
+
+    //prepare information to resolve the xpaths
+    HashMap<String, String> resolveMap = createResolveMap("_idAttr_::"+idAttrName+"="+idAttrValue,
+            "_srcAttr_::"+srcAttrName+"="+srcAttrValue,
+            "_annotation_::"+annotationValue);
+
+    //prepeare the info to be inserted
+    ArrayList<String> insertInfoList = new ArrayList<>();
+    insertInfoList.add(resolveMap.get("_idAttr_"));
+    insertInfoList.add(resolveMap.get("_srcAttr_"));
+    insertInfoList.add(annotationValue);
+    if(insertInfo.containsKey("additionalInfo")) {
+        insertInfoList.addAll((List<String>) insertInfo.get("additionalInfo"));
+    }
+
+    //put ArtistUrl to MMDG
+    writeInfo(insertInfoList, targetRule, resolvedBase, resolveMap, copyBehavior);
+}
+
+//-----------------------------------------------------------------------------
+
+//ERROR HANDLING:	nok
+//DOC:				nok
+//TEST:				nok
+@SuppressWarnings("unchecked")
+private void writeDisambiguationInfo(HashMap<String, Object> insertInfo, List<String> resolveInfoList, String targetRule, String copyRule, String scraperName) throws Exception {
+    //extract information about (scraper)id, source, name and name type
+    String scraperId = PropertyHandler.getInstance().getValue(scraperName + ".Scraper.id");
+    String idAttrName = PropertyHandler.getInstance().getValue(scraperName + ".Scraper.idAttrName");
+    String idAttrValue = (String)insertInfo.get("unid");
+    String srcAttrName = PropertyHandler.getInstance().getValue(scraperName + ".Scraper.srcAttrName");
+    String srcAttrValue = PropertyHandler.getInstance().getValue(scraperName + ".Scraper.srcAttrValue");
+    String disambiguationValue = (String)insertInfo.get("disambiguation");
+
+    // define the behavior of the operation depending on the state of the information to be inserted
+    HashMap<NodeStatus, NodeAction> copyBehavior = this.mappingRules.getCopyBehavior(scraperId, copyRule);
+
+    //resolve the base for Artist
+    // resolveInfo is converted into a String[]
+    HashMap<String, String> resolveBaseMap = createResolveMap(resolveInfoList.toArray(new String[resolveInfoList.size()]));
+    String resolvedBase = getResolvedBase(targetRule.substring(0, targetRule.indexOf(".")), resolveBaseMap);
+
+    //prepare information to resolve the xpaths
+    HashMap<String, String> resolveMap = createResolveMap("_idAttr_::"+idAttrName+"="+idAttrValue,
+            "_srcAttr_::"+srcAttrName+"="+srcAttrValue,
+            "disambiguation::"+disambiguationValue);
+
+    //prepeare the info to be inserted
+    ArrayList<String> insertInfoList = new ArrayList<>();
+    insertInfoList.add(resolveMap.get("_idAttr_"));
+    insertInfoList.add(resolveMap.get("_srcAttr_"));
+    insertInfoList.add(disambiguationValue);
+    if(insertInfo.containsKey("additionalInfo")) {
+        insertInfoList.addAll((List<String>) insertInfo.get("additionalInfo"));
+    }
+
+    //put ArtistUrl to MMDG
+    writeInfo(insertInfoList, targetRule, resolvedBase, resolveMap, copyBehavior);
+}
+
+//-----------------------------------------------------------------------------
+
+//ERROR HANDLING:	nok
+//DOC:				nok
+//TEST:				nok
+@SuppressWarnings("unchecked")
 private void writeUrlInfo(HashMap<String, Object> insertInfo, List<String> resolveInfoList, String targetRule, String copyRule, String scraperName) throws Exception {
 	//extract information about (scraper)id, source, name and name type
 	String scraperId = PropertyHandler.getInstance().getValue(scraperName + ".Scraper.id");
@@ -476,7 +959,7 @@ private void writeUrlInfo(HashMap<String, Object> insertInfo, List<String> resol
 
     //resolve the base for Artist
     // resolveInfo is converted into a String[]
-    HashMap<String, String> resolveBaseMap = createResolveMap(resolveInfoList.stream().toArray(String[]::new));
+    HashMap<String, String> resolveBaseMap = createResolveMap(resolveInfoList.toArray(new String[resolveInfoList.size()]));
     String resolvedBase = getResolvedBase(targetRule.substring(0, targetRule.indexOf(".")), resolveBaseMap);
 
     //prepare information to resolve the xpaths
@@ -1622,7 +2105,7 @@ public NodeStatus mapInfo(List<String> valuesToAdd, String targetXpath, String s
 //ERROR HANDLING:	nok
 //DOC:				nok
 //TEST:				nok
-public String getResolvedBase(String ruleName, HashMap<String, String> resolveXpathInfos) throws Exception {
+private String getResolvedBase(String ruleName, HashMap<String, String> resolveXpathInfos) {
 	HashMap<String, String> artistBaseRule = this.mappingRules.getMappingRule(this.scraperId, ruleName);
 	String baseXpathUnresolved = artistBaseRule.get("xpathAbsolute");
 	
@@ -1864,11 +2347,12 @@ private String resolveXpath(String xpath, String... replacementStrings) {
 //DOC:				nok
 //TEST:				ok
 public void createOutputXmlDoc() throws Exception {
-	File fXmlTemplateFile = new File(templateFilePath);
+	File fXmlTemplateFile = new File(this.templateFilePath);
+    File fXmlOxdFile = new File(this.filePath);
 	
 	DocumentBuilder dBuilder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
-	this.setTemplateXmlDoc(dBuilder.parse(fXmlTemplateFile));
-	this.setOutputXmlDoc(dBuilder.parse(fXmlTemplateFile));
+	setTemplateXmlDoc(dBuilder.parse(fXmlTemplateFile));
+	setOutputXmlDoc(dBuilder.parse(fXmlOxdFile));
 }
 
 //-----------------------------------------------------------------------------

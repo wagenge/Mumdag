@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><Artist mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d">
+	<UniqueIdList/>
+	<NameList>
+		<Name mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" sort-name="Beatles, The" source="MusicBrainz" type="Name">The Beatles</Name>
+	</NameList>
+	<Type/>
+	<AreaList/>
+	<PeriodList/>
+	<DescriptionList/>
+	<TagList/>
+	<UrlList/>
+	<RatingList/>
+	<ArtistCreditList><ArtistCredit mbid="0d4ab0f9-bbda-4ab1-ae2c-f772ffcfbea9">
+			<UniqueIdList>
+				<UniqueId mbid="0d4ab0f9-bbda-4ab1-ae2c-f772ffcfbea9" source="MusicBrainz">
+					<SourceUrl>https://musicbrainz.org/artist/0d4ab0f9-bbda-4ab1-ae2c-f772ffcfbea9</SourceUrl>
+					<SourceWSUrl>https://musicbrainz.org/ws/2/artist/0d4ab0f9-bbda-4ab1-ae2c-f772ffcfbea9?inc=aliases+artist-rels+url-rels</SourceWSUrl>
+					<Value>0d4ab0f9-bbda-4ab1-ae2c-f772ffcfbea9</Value>
+				</UniqueId>
+			</UniqueIdList>
+			<NameList>
+				<Name mbid="0d4ab0f9-bbda-4ab1-ae2c-f772ffcfbea9" sort-name="Best, Pete" source="MusicBrainz" type="Name">Pete Best</Name>
+			</NameList>
+			<RoleList>
+				<Role mbid="0d4ab0f9-bbda-4ab1-ae2c-f772ffcfbea9" type="instrument">drums</Role>
+			<Role mbid="0d4ab0f9-bbda-4ab1-ae2c-f772ffcfbea9" original="false" type="membership">member of band</Role></RoleList>
+			<PeriodList>
+				<Date mbid="0d4ab0f9-bbda-4ab1-ae2c-f772ffcfbea9" type="begin">1960-08-12</Date>
+			<Date mbid="0d4ab0f9-bbda-4ab1-ae2c-f772ffcfbea9" type="end">1962-08-16</Date></PeriodList>
+		</ArtistCredit><ArtistCredit mbid="300c4c73-33ac-4255-9d57-4e32627f5e13">
+			<UniqueIdList>
+				<UniqueId mbid="300c4c73-33ac-4255-9d57-4e32627f5e13" source="MusicBrainz">
+					<SourceUrl>https://musicbrainz.org/artist/300c4c73-33ac-4255-9d57-4e32627f5e13</SourceUrl>
+					<SourceWSUrl>https://musicbrainz.org/ws/2/artist/300c4c73-33ac-4255-9d57-4e32627f5e13?inc=aliases+artist-rels+url-rels</SourceWSUrl>
+					<Value>300c4c73-33ac-4255-9d57-4e32627f5e13</Value>
+				</UniqueId>
+			</UniqueIdList>
+			<NameList>
+				<Name mbid="300c4c73-33ac-4255-9d57-4e32627f5e13" sort-name="Starr, Ringo" source="MusicBrainz" type="Name">Ringo Starr</Name>
+			</NameList>
+			<RoleList>
+				<Role mbid="300c4c73-33ac-4255-9d57-4e32627f5e13" type="instrument">drums</Role>
+			<Role mbid="300c4c73-33ac-4255-9d57-4e32627f5e13" original="false" type="membership">member of band</Role></RoleList>
+			<PeriodList>
+				<Date mbid="300c4c73-33ac-4255-9d57-4e32627f5e13" type="begin">1962-08</Date>
+			<Date mbid="300c4c73-33ac-4255-9d57-4e32627f5e13" type="end">1970-04-10</Date></PeriodList>
+		</ArtistCredit><ArtistCredit mbid="42a8f507-8412-4611-854f-926571049fa0">
+			<UniqueIdList>
+				<UniqueId mbid="42a8f507-8412-4611-854f-926571049fa0" source="MusicBrainz">
+					<SourceUrl>https://musicbrainz.org/artist/42a8f507-8412-4611-854f-926571049fa0</SourceUrl>
+					<SourceWSUrl>https://musicbrainz.org/ws/2/artist/42a8f507-8412-4611-854f-926571049fa0?inc=aliases+artist-rels+url-rels</SourceWSUrl>
+					<Value>42a8f507-8412-4611-854f-926571049fa0</Value>
+				</UniqueId>
+			</UniqueIdList>
+			<NameList>
+				<Name mbid="42a8f507-8412-4611-854f-926571049fa0" sort-name="Harrison, George" source="MusicBrainz" type="Name">George Harrison</Name>
+			</NameList>
+			<RoleList>
+				<Role mbid="42a8f507-8412-4611-854f-926571049fa0" type="instrument">guitar</Role>
+			<Role mbid="42a8f507-8412-4611-854f-926571049fa0" type="instrument">lead vocals</Role><Role mbid="42a8f507-8412-4611-854f-926571049fa0" original="true" type="membership">member of band</Role></RoleList>
+			<PeriodList>
+				<Date mbid="42a8f507-8412-4611-854f-926571049fa0" type="begin">1958-04</Date>
+			<Date mbid="42a8f507-8412-4611-854f-926571049fa0" type="end">1970-04-10</Date></PeriodList>
+		</ArtistCredit><ArtistCredit mbid="49a51491-650e-44b3-8085-2f07ac2986dd">
+			<UniqueIdList>
+				<UniqueId mbid="49a51491-650e-44b3-8085-2f07ac2986dd" source="MusicBrainz">
+					<SourceUrl>https://musicbrainz.org/artist/49a51491-650e-44b3-8085-2f07ac2986dd</SourceUrl>
+					<SourceWSUrl>https://musicbrainz.org/ws/2/artist/49a51491-650e-44b3-8085-2f07ac2986dd?inc=aliases+artist-rels+url-rels</SourceWSUrl>
+					<Value>49a51491-650e-44b3-8085-2f07ac2986dd</Value>
+				</UniqueId>
+			</UniqueIdList>
+			<NameList>
+				<Name mbid="49a51491-650e-44b3-8085-2f07ac2986dd" sort-name="Sutcliffe, Stuart" source="MusicBrainz" type="Name">Stuart Sutcliffe</Name>
+			</NameList>
+			<RoleList>
+				<Role mbid="49a51491-650e-44b3-8085-2f07ac2986dd" type="instrument">bass guitar</Role>
+			<Role mbid="49a51491-650e-44b3-8085-2f07ac2986dd" original="false" type="membership">member of band</Role></RoleList>
+			<PeriodList>
+				<Date mbid="49a51491-650e-44b3-8085-2f07ac2986dd" type="begin">1960-01</Date>
+			<Date mbid="49a51491-650e-44b3-8085-2f07ac2986dd" type="end">1962</Date></PeriodList>
+		</ArtistCredit><ArtistCredit mbid="4d5447d7-c61c-4120-ba1b-d7f471d385b9">
+			<UniqueIdList>
+				<UniqueId mbid="4d5447d7-c61c-4120-ba1b-d7f471d385b9" source="MusicBrainz">
+					<SourceUrl>https://musicbrainz.org/artist/4d5447d7-c61c-4120-ba1b-d7f471d385b9</SourceUrl>
+					<SourceWSUrl>https://musicbrainz.org/ws/2/artist/4d5447d7-c61c-4120-ba1b-d7f471d385b9?inc=aliases+artist-rels+url-rels</SourceWSUrl>
+					<Value>4d5447d7-c61c-4120-ba1b-d7f471d385b9</Value>
+				</UniqueId>
+			</UniqueIdList>
+			<NameList>
+				<Name mbid="4d5447d7-c61c-4120-ba1b-d7f471d385b9" sort-name="Lennon, John" source="MusicBrainz" type="Name">John Lennon</Name>
+			</NameList>
+			<RoleList>
+				<Role mbid="4d5447d7-c61c-4120-ba1b-d7f471d385b9" type="instrument">guitar</Role>
+			<Role mbid="4d5447d7-c61c-4120-ba1b-d7f471d385b9" type="instrument">lead vocals</Role><Role mbid="4d5447d7-c61c-4120-ba1b-d7f471d385b9" original="true" type="membership">member of band</Role></RoleList>
+			<PeriodList>
+				<Date mbid="4d5447d7-c61c-4120-ba1b-d7f471d385b9" type="end">1970-04-10</Date>
+			</PeriodList>
+		</ArtistCredit><ArtistCredit mbid="ba550d0e-adac-4864-b88b-407cab5e76af">
+			<UniqueIdList>
+				<UniqueId mbid="ba550d0e-adac-4864-b88b-407cab5e76af" source="MusicBrainz">
+					<SourceUrl>https://musicbrainz.org/artist/ba550d0e-adac-4864-b88b-407cab5e76af</SourceUrl>
+					<SourceWSUrl>https://musicbrainz.org/ws/2/artist/ba550d0e-adac-4864-b88b-407cab5e76af?inc=aliases+artist-rels+url-rels</SourceWSUrl>
+					<Value>ba550d0e-adac-4864-b88b-407cab5e76af</Value>
+				</UniqueId>
+			</UniqueIdList>
+			<NameList>
+				<Name mbid="ba550d0e-adac-4864-b88b-407cab5e76af" sort-name="McCartney, Paul" source="MusicBrainz" type="Name">Paul McCartney</Name>
+			</NameList>
+			<RoleList>
+				<Role mbid="ba550d0e-adac-4864-b88b-407cab5e76af" type="instrument">bass guitar</Role>
+			<Role mbid="ba550d0e-adac-4864-b88b-407cab5e76af" type="instrument">lead vocals</Role><Role mbid="ba550d0e-adac-4864-b88b-407cab5e76af" original="true" type="membership">member of band</Role></RoleList>
+			<PeriodList>
+				<Date mbid="ba550d0e-adac-4864-b88b-407cab5e76af" type="begin">1957-07</Date>
+			<Date mbid="ba550d0e-adac-4864-b88b-407cab5e76af" type="end">1970-04-10</Date></PeriodList>
+		</ArtistCredit></ArtistCreditList>
+	<ArtList/>
+	<DisambiguationList/>
+	<AnnotationList/>
+	<Discography>
+		<ReleaseGroupList/>
+	</Discography>
+</Artist>

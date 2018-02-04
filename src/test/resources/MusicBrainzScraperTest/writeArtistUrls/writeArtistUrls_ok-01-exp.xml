@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Artist mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d">
+	<UniqueIdList>
+		<UniqueId source="VIAF" viafid="141205608">
+			<SourceUrl>http://viaf.org/viaf/141205608</SourceUrl>
+			<SourceWSUrl>http://viaf.org/viaf/141205608/rdf.xml</SourceWSUrl>
+			<Value>141205608</Value>
+		</UniqueId>
+		<UniqueId rmid="mn0000754032" source="Allmusic">
+			<SourceUrl>http://www.allmusic.com/artist/mn0000754032</SourceUrl>
+			<SourceWSUrl>-</SourceWSUrl>
+			<Value>mn0000754032</Value>
+		</UniqueId>
+		<UniqueId mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" source="BBC">
+			<SourceUrl>http://www.bbc.co.uk/music/artists/b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d</SourceUrl>
+			<SourceWSUrl>-</SourceWSUrl>
+			<Value>b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d</Value>
+		</UniqueId>
+		<UniqueId imdbid="nm1397313" source="IMDB">
+			<SourceUrl>http://www.imdb.com/name/nm1397313/</SourceUrl>
+			<SourceWSUrl>http://www.omdbapi.com/?i=nm1397313&amp;plot=full&amp;r=xml</SourceWSUrl>
+			<Value>nm1397313</Value>
+		</UniqueId>
+		<UniqueId mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" source="LastFM">
+			<SourceUrl>http://www.last.fm/music/The+Beatles</SourceUrl>
+			<SourceWSUrl>http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&amp;mbid=b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d&amp;api_key=YOUR_API_KEY</SourceWSUrl>
+			<Value>b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d</Value>
+		</UniqueId>
+		<UniqueId amid="id136975" source="AppleMusic">
+			<SourceUrl>https://itunes.apple.com/artist/id136975</SourceUrl>
+			<SourceWSUrl>https://api.music.apple.com/v1/catalog/_storefront_/artists/id136975</SourceWSUrl>
+			<Value>id136975</Value>
+		</UniqueId>
+		<UniqueId source="Spotify" spid="3WrFJ7ztbogyGnTHbHJFl2">
+			<SourceUrl>https://open.spotify.com/artist/3WrFJ7ztbogyGnTHbHJFl2</SourceUrl>
+			<SourceWSUrl>https://api.spotify.com/v1/artists/3WrFJ7ztbogyGnTHbHJFl2</SourceWSUrl>
+			<Value>3WrFJ7ztbogyGnTHbHJFl2</Value>
+		</UniqueId>
+		<UniqueId dcid="82730" source="Discogs">
+			<SourceUrl>https://www.discogs.com/artist/82730</SourceUrl>
+			<SourceWSUrl>https://api.discogs.com/artist/82730</SourceWSUrl>
+			<Value>82730</Value>
+		</UniqueId>
+		<UniqueId mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" source="SetlistFM">
+			<SourceUrl>https://www.setlist.fm/setlists/the-beatles-23d6a88b.html</SourceUrl>
+			<SourceWSUrl>http://api.setlist.fm/rest/1.0/b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d</SourceWSUrl>
+			<Value>b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d</Value>
+		</UniqueId>
+		<UniqueId source="Wikidata" wdid="Q1299">
+			<SourceUrl>https://www.wikidata.org/wiki/Q1299</SourceUrl>
+			<SourceWSUrl>https://www.wikidata.org/w/api.php?action=wbgetentities&amp;format=xml&amp;ids=Q1299</SourceWSUrl>
+			<Value>Q1299</Value>
+		</UniqueId>
+	</UniqueIdList>
+	<NameList>
+		<Name mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" sort-name="Beatles, The" source="MusicBrainz" type="Name">The Beatles</Name>
+	</NameList>
+	<Type/>
+	<AreaList/>
+	<PeriodList/>
+	<DescriptionList/>
+	<TagList/>
+	<UrlList>
+		<Url mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" type="lyrics">http://decoda.com/the-beatles-lyrics</Url>
+		<Url mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" type="lyrics">http://genius.com/artists/The-beatles</Url>
+		<Url mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" type="lyrics">http://lyrics.wikia.com/The_Beatles</Url>
+		<Url mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" type="other databases">http://musicmoz.org/Bands_and_Artists/B/Beatles,_The/</Url>
+		<Url mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" type="lyrics">http://muzikum.eu/en/122-3389/the-beatles/lyrics.html</Url>
+		<Url mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" type="other databases">http://rateyourmusic.com/artist/the_beatles</Url>
+		<Url mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" type="VIAF">http://viaf.org/viaf/141205608</Url>
+		<Url mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" type="other databases">http://www.45cat.com/artist/the-beatles</Url>
+		<Url mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" type="fanpage">http://www.aboutthebeatles.com/</Url>
+		<Url mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" type="allmusic">http://www.allmusic.com/artist/mn0000754032</Url>
+		<Url mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" type="BBC Music page">http://www.bbc.co.uk/music/artists/b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d</Url>
+		<Url mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" type="fanpage">http://www.beatles.ru/</Url>
+		<Url mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" type="fanpage">http://www.beatlesfanclub.nl/</Url>
+		<Url mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" type="fanpage">http://www.britishbeatlesfanclub.co.uk/</Url>
+		<Url mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" type="fanpage">http://www.dmbeatles.com/</Url>
+		<Url mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" type="IMDb">http://www.imdb.com/name/nm1397313/</Url>
+		<Url mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" type="last.fm">http://www.last.fm/music/The+Beatles</Url>
+		<Url mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" type="streaming music">http://www.pandora.com/beatles</Url>
+		<Url mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" type="secondhandsongs">http://www.secondhandsongs.com/artist/41</Url>
+		<Url mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" type="streaming music">http://www.staimusic.com/en/bands/the-beatles_4309.html</Url>
+		<Url mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" type="official homepage">http://www.thebeatles.com/</Url>
+		<Url mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" type="other databases">http://www.whosampled.com/The-Beatles/</Url>
+		<Url mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" type="image">https://commons.wikimedia.org/wiki/File:The_Fabs.JPG</Url>
+		<Url mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" type="wikipedia">https://en.wikipedia.org/wiki/The_Beatles</Url>
+		<Url mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" type="purchase for download">https://itunes.apple.com/artist/id136975</Url>
+		<Url mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" type="myspace">https://myspace.com/thebeatles</Url>
+		<Url mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" type="streaming music">https://open.spotify.com/artist/3WrFJ7ztbogyGnTHbHJFl2</Url>
+		<Url mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" type="purchase for download">https://play.google.com/store/music/artist?id=Apyx6rt3d2amstq7u3ntxenxhkq</Url>
+		<Url mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" type="social network">https://plus.google.com/111520018934389590684</Url>
+		<Url mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" type="soundcloud">https://soundcloud.com/thebeatles</Url>
+		<Url mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" type="social network">https://twitter.com/thebeatles</Url>
+		<Url mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" type="purchase for mail-order">https://www.amazon.co.uk/-/e/B000APTK6K</Url>
+		<Url mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" type="streaming music">https://www.deezer.com/artist/1</Url>
+		<Url mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" type="discogs">https://www.discogs.com/artist/82730</Url>
+		<Url mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" type="social network">https://www.facebook.com/thebeatles</Url>
+		<Url mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" type="discography">https://www.musicmeter.nl/artist/13409</Url>
+		<Url mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" type="other databases">https://www.musik-sammler.de/artist/the-beatles/</Url>
+		<Url mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" type="setlistfm">https://www.setlist.fm/setlists/the-beatles-23d6a88b.html</Url>
+		<Url mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" type="wikidata">https://www.wikidata.org/wiki/Q1299</Url>
+		<Url mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" type="youtube">https://www.youtube.com/user/thebeatles</Url>
+	</UrlList>
+	<RatingList/>
+	<ArtistCreditList/>
+	<ArtList/>
+	<DisambiguationList/>
+	<AnnotationList/>
+	<Discography>
+		<ReleaseGroupList/>
+	</Discography>
+</Artist>

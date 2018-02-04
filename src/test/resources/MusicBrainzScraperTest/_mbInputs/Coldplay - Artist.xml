@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?><metadata xmlns="http://musicbrainz.org/ns/mmd-2.0#">
+  <artist id="cc197bad-dc9c-440d-a5b5-d52ba2e14234" type="Group" type-id="e431f5f6-b5d2-343d-8b36-72607fffb74b">
+    <name>Coldplay</name>
+    <sort-name>Coldplay</sort-name>
+    <isni-list>
+      <isni>000000011551394X</isni>
+    </isni-list>
+    <country>GB</country>
+    <area id="8a754a16-0027-3a29-b6d7-2b40ea0481ed">
+      <name>United Kingdom</name>
+      <sort-name>United Kingdom</sort-name>
+      <iso-3166-1-code-list>
+        <iso-3166-1-code>GB</iso-3166-1-code>
+      </iso-3166-1-code-list>
+    </area>
+    <begin-area id="f03d09b3-39dc-4083-afd6-159e3f0d462f">
+      <name>London</name>
+      <sort-name>London</sort-name>
+    </begin-area>
+    <life-span>
+      <begin>1996-09</begin>
+    </life-span>
+    <alias-list count="2">
+      <alias type-id="1937e404-b981-3cb7-8151-4c86ebfc8d8e" type="Search hint" sort-name="Cold Play">Cold Play</alias>
+      <alias sort-name="Coldplay, The" type="Artist name" type-id="894afba6-2816-3c24-8072-eadb66bd04bc" end-date="1998">The Coldplay</alias>
+    </alias-list>
+    <relation-list target-type="artist">
+      <relation type="member of band" type-id="5be4c609-9afa-4ea0-910b-12ffb71e3821">
+        <target>18690715-59fa-4e4d-bcf3-8025cf1c23e0</target>
+        <direction>backward</direction>
+        <artist id="18690715-59fa-4e4d-bcf3-8025cf1c23e0">
+          <name>Guy Berryman</name>
+          <sort-name>Berryman, Guy</sort-name>
+        </artist>
+      </relation>
+      <relation type-id="5be4c609-9afa-4ea0-910b-12ffb71e3821" type="member of band">
+        <target>6953c4db-7214-4724-a140-e87550bde420</target>
+        <direction>backward</direction>
+        <artist id="6953c4db-7214-4724-a140-e87550bde420">
+          <name>Will Champion</name>
+          <sort-name>Champion, Will</sort-name>
+        </artist>
+      </relation>
+      <relation type-id="5be4c609-9afa-4ea0-910b-12ffb71e3821" type="member of band">
+        <target>98d1ec5a-dd97-4c0b-9c83-7928aac89bca</target>
+        <direction>backward</direction>
+        <artist id="98d1ec5a-dd97-4c0b-9c83-7928aac89bca">
+          <name>Chris Martin</name>
+          <sort-name>Martin, Chris</sort-name>
+          <disambiguation>lead singer of Coldplay</disambiguation>
+        </artist>
+      </relation>
+      <relation type="member of band" type-id="5be4c609-9afa-4ea0-910b-12ffb71e3821">
+        <target>d156ceb2-fd90-4e82-baea-829bbdf1c127</target>
+        <direction>backward</direction>
+        <artist id="d156ceb2-fd90-4e82-baea-829bbdf1c127">
+          <name>Jon Buckland</name>
+          <sort-name>Buckland, Jon</sort-name>
+        </artist>
+      </relation>
+      <relation type-id="a6f62641-2f58-470e-b02b-88d7b984dc9f" type="tribute">
+        <target>dd38692b-26d9-420b-a2eb-b128122a4648</target>
+        <direction>backward</direction>
+        <artist id="dd38692b-26d9-420b-a2eb-b128122a4648">
+          <name>Coldplace</name>
+          <sort-name>Coldplace</sort-name>
+        </artist>
+      </relation>
+    </relation-list>
+    <relation-list target-type="url">
+      <relation type="blog" type-id="eb535226-f8ca-499d-9b18-6a144df4ae6f">
+        <target id="e71ac1e0-0868-4659-ba96-1bdc17c178c6">http://coldplay.tumblr.com/</target>
+      </relation>
+      <relation type-id="e4d73442-3762-45a8-905c-401da65544ed" type="lyrics">
+        <target id="02f6ec8e-eb6f-44cb-b027-8a7cf7d7ed6c">http://decoda.com/coldplay-lyrics</target>
+      </relation>
+      <relation type="lyrics" type-id="e4d73442-3762-45a8-905c-401da65544ed">
+        <target id="0488c745-49b7-46c1-87eb-3dab86e6bcb6">http://genius.com/artists/Coldplay</target>
+      </relation>
+      <relation type="other databases" type-id="d94fb61c-fa20-4e3c-a19a-71a949fb2c55">
+        <target id="fea2d722-8aa0-4eb6-bb91-f081ef0d49ed">http://imvdb.com/n/coldplay</target>
+      </relation>
+      <relation type-id="e4d73442-3762-45a8-905c-401da65544ed" type="lyrics">
+        <target id="6b03692b-5143-43cf-b39a-9dbf169190c8">http://lyrics.wikia.com/Coldplay</target>
+      </relation>
+      <relation type-id="d94fb61c-fa20-4e3c-a19a-71a949fb2c55" type="other databases">
+        <target id="3c2f02d7-571a-4a6f-8ea6-75e40ddcefa6">http://musicmoz.org/Bands_and_Artists/C/Coldplay/</target>
+      </relation>
+      <relation type="lyrics" type-id="e4d73442-3762-45a8-905c-401da65544ed">
+        <target id="08669f21-ee40-4dc9-8c04-8fbf6d2e6c7b">http://muzikum.eu/en/122-3547/coldplay/lyrics.html</target>
+      </relation>
+      <relation type-id="d94fb61c-fa20-4e3c-a19a-71a949fb2c55" type="other databases">
+        <target id="f90432db-4bad-4d60-b7b8-7205514add8d">http://openlibrary.org/authors/OL2741867A/</target>
+      </relation>
+      <relation type-id="d94fb61c-fa20-4e3c-a19a-71a949fb2c55" type="other databases">
+        <target id="18f231e9-c827-402a-9746-2b9d54b7447d">http://rateyourmusic.com/artist/coldplay</target>
+      </relation>
+      <relation type="VIAF" type-id="e8571dcc-35d4-4e91-a577-a3382fd84460">
+        <target id="1abb80fc-e6a7-4fff-befa-90e79af999e7">http://viaf.org/viaf/157712849</target>
+      </relation>
+      <relation type="discography" type-id="4fb0eeec-a6eb-4ae3-ad52-b55765b94e8f">
+        <target id="826830c8-a5b8-4bca-92e0-012fe84645cd">http://weave.me/app/weave.html?Coldplay</target>
+      </relation>
+      <relation type="allmusic" type-id="6b3e3c85-0002-4f34-aca6-80ace0d7e846">
+        <target id="8d6d2056-a60a-48cd-bac8-cb65e1779898">http://www.allmusic.com/artist/mn0000775877</target>
+      </relation>
+      <relation type-id="d028a975-000c-4525-9333-d3c8425e4b54" type="BBC Music page">
+        <target id="2f430844-6fbf-4146-9910-520e4156f151">http://www.bbc.co.uk/music/artists/cc197bad-dc9c-440d-a5b5-d52ba2e14234</target>
+      </relation>
+      <relation type-id="fe33d22f-c3b0-4d68-bd53-a856badf2b15" type="official homepage">
+        <target id="d72daab6-b690-46fb-8f9c-071d3a562540">http://www.coldplay.com/</target>
+      </relation>
+      <relation type="discography" type-id="4fb0eeec-a6eb-4ae3-ad52-b55765b94e8f">
+        <target id="74b8b36d-7ca3-418d-bf85-da26da53ec18">http://www.discographyworld.com/discography/2/coldplay-discography</target>
+      </relation>
+      <relation type="IMDb" type-id="94c8b0cc-4477-4106-932c-da60e63de61c">
+        <target id="04f81d72-6623-4780-b4fd-f4d2f5ab64ff">http://www.imdb.com/name/nm1095892/</target>
+      </relation>
+      <relation type-id="08db8098-c0df-4b78-82c3-c8697b4bba7f" type="last.fm">
+        <target id="a657b258-ff9d-413a-8921-8b8a7b4f77f6">http://www.last.fm/music/Coldplay</target>
+      </relation>
+      <relation type="other databases" type-id="d94fb61c-fa20-4e3c-a19a-71a949fb2c55">
+        <target id="cada083e-cbbd-46b3-a7c5-33b08f99141c">http://www.musik-sammler.de/artist/3209</target>
+      </relation>
+      <relation type-id="f484f897-81cc-406e-96f9-cd799a04ee24" type="fanpage">
+        <target id="8020cf4d-8e04-4b5e-b868-f6678902d546">http://www.pleasureunit.com/coldplay/index.php</target>
+      </relation>
+      <relation type-id="b6f02157-a9d3-4f24-9057-0675b2dbc581" type="purevolume">
+        <target id="54f08adf-afdd-4013-a11f-d564d54873de">http://www.purevolume.com/coldplay</target>
+      </relation>
+      <relation type="secondhandsongs" type-id="79c5b84d-a206-4f4c-9832-78c028c312c3">
+        <target id="f4806d28-aedb-46fa-8572-618ed0bffa6d">http://www.secondhandsongs.com/artist/10590</target>
+      </relation>
+      <relation type-id="bf5d0d5e-27a1-4e94-9df7-3cdc67b3b207" type="setlistfm">
+        <target id="0b5dea3d-6d69-4e42-bdf5-511dcb281d7e">http://www.setlist.fm/setlists/coldplay-3d6bde3.html</target>
+      </relation>
+      <relation type="streaming music" type-id="769085a1-c2f7-4c24-a532-2375a77693bd">
+        <target id="8b1e803d-0607-4f03-8c66-07d346681279">http://www.staimusic.com/en/bands/coldplay_902.html</target>
+      </relation>
+      <relation type="other databases" type-id="d94fb61c-fa20-4e3c-a19a-71a949fb2c55">
+        <target id="68e3f53b-45b2-49b7-8504-1671d6ec9188">http://www.whosampled.com/Coldplay/</target>
+      </relation>
+      <relation type="fanpage" type-id="f484f897-81cc-406e-96f9-cd799a04ee24">
+        <target id="a55b7171-39b1-4101-8994-e2a026135fa6">http://www.wikicoldplay.com/</target>
+      </relation>
+      <relation type="other databases" type-id="d94fb61c-fa20-4e3c-a19a-71a949fb2c55">
+        <target id="3543c29a-728a-49e2-b25b-6e40d9fd8a60">http://www.worldcat.org/identities/lccn-no99089189/</target>
+      </relation>
+      <relation type="bandsintown" type-id="ea45ed3d-2d5e-456e-8c32-94b6f51426e2">
+        <target id="2069364e-4549-4ddb-96e8-75ae69936623">https://bandsintown.com/coldplay</target>
+      </relation>
+      <relation type-id="221132e9-e30e-43f2-a741-15afc4c5fa7c" type="image">
+        <target id="36dce5ac-11f6-4f04-985d-0c3aa1b76cba">https://commons.wikimedia.org/wiki/File:Coldplay_Viva_La_Vida_Tour_in_Hannover_August_25th_2009.jpg</target>
+      </relation>
+      <relation type-id="4fb0eeec-a6eb-4ae3-ad52-b55765b94e8f" type="discography">
+        <target id="83c62035-d713-412a-8aee-bff226737d6e">https://en.wikipedia.org/wiki/Coldplay_discography</target>
+      </relation>
+      <relation type-id="29651736-fa6d-48e4-aadc-a557c6add1cb" type="wikipedia">
+        <target id="9211f8c1-bb63-4f1e-bc76-e2e45ee699f1">https://en.wikipedia.org/wiki/Coldplay</target>
+      </relation>
+      <relation type-id="99429741-f3f6-484b-84f8-23af51991770" type="social network">
+        <target id="3a7a5c16-9491-46d8-8784-b1d4ad80ee11">https://instagram.com/coldplay/</target>
+      </relation>
+      <relation type="purchase for download" type-id="f8319a2f-f824-4617-81c8-be6560b3b203">
+        <target id="068a465d-4aab-4114-8c25-b1f51e078c37">https://itunes.apple.com/artist/id471744</target>
+      </relation>
+      <relation type-id="bac47923-ecde-4b59-822e-d08f0cd10156" type="myspace">
+        <target id="e4fcef30-79b8-4796-9570-0d0227e0d9a4">https://myspace.com/coldplay</target>
+      </relation>
+      <relation type="streaming music" type-id="769085a1-c2f7-4c24-a532-2375a77693bd">
+        <target id="32a0701e-b889-4db2-99d5-182c5dd0138c">https://open.spotify.com/artist/4gzpq5DPGxSnKTe4SA8HAU</target>
+      </relation>
+      <relation type-id="f8319a2f-f824-4617-81c8-be6560b3b203" type="purchase for download">
+        <target id="d03387ef-5e37-42a9-869b-c03da7ea0919">https://play.google.com/store/music/artist?id=Aroavh4k5ypej6qdhyoo52q7bpm</target>
+      </relation>
+      <relation type="social network" type-id="99429741-f3f6-484b-84f8-23af51991770">
+        <target id="3a6a9c8d-1672-4330-8204-1b9435b3ef74">https://plus.google.com/+Coldplay</target>
+      </relation>
+      <relation type="soundcloud" type-id="89e4a949-0976-440d-bda1-5f772c1e5710">
+        <target id="04e2b065-7d68-4eb7-9d11-d62cdfa9f00c">https://soundcloud.com/coldplayofficial</target>
+      </relation>
+      <relation type-id="89e4a949-0976-440d-bda1-5f772c1e5710" type="soundcloud">
+        <target id="cb4d1926-0254-49b6-83ca-2a124b90a56f">https://soundcloud.com/coldplay</target>
+      </relation>
+      <relation type="social network" type-id="99429741-f3f6-484b-84f8-23af51991770">
+        <target id="70a74e7b-1a30-4fab-9329-5db614b01a70">https://twitter.com/coldplay</target>
+      </relation>
+      <relation type-id="04a5b104-a4c2-4bac-99a1-7b837c37d9e4" type="discogs">
+        <target id="6aa601d8-efe9-4f72-bf1c-8084a95cf523">https://www.discogs.com/artist/29735</target>
+      </relation>
+      <relation type="social network" type-id="99429741-f3f6-484b-84f8-23af51991770">
+        <target id="dc252a24-85bd-4005-8595-730056fb875a">https://www.facebook.com/coldplay</target>
+      </relation>
+      <relation type-id="99429741-f3f6-484b-84f8-23af51991770" type="social network">
+        <target id="6341223e-efd7-4a50-861d-f91de5333bb5">https://www.frogtoon.com/coldplay</target>
+      </relation>
+      <relation type-id="99429741-f3f6-484b-84f8-23af51991770" type="social network">
+        <target id="5963637d-cde7-4c0e-9934-488d53378933">https://www.instagram.com/coldplay/</target>
+      </relation>
+      <relation type-id="689870a4-a1e4-4912-b17f-7b2664215698" type="wikidata">
+        <target id="6ec75d13-b73d-46f7-acb7-8f0df73201f2">https://www.wikidata.org/wiki/Q45188</target>
+      </relation>
+      <relation type-id="6a540e5b-58c6-4192-b6ba-dbc71ec8fcf0" type="youtube">
+        <target id="71b1f729-bd36-47e7-8e26-0f1bb9a10f7f">https://www.youtube.com/user/ColdplayTV</target>
+      </relation>
+      <relation type-id="6a540e5b-58c6-4192-b6ba-dbc71ec8fcf0" type="youtube">
+        <target id="c68a9fff-40a3-42bf-83c8-8913c8f80164">https://www.youtube.com/user/ColdplayVEVO</target>
+      </relation>
+    </relation-list>
+    <tag-list>
+      <tag count="9">
+        <name>alternative rock</name>
+      </tag>
+      <tag count="0">
+        <name>ambient pop</name>
+      </tag>
+      <tag count="0">
+        <name>britannique</name>
+      </tag>
+      <tag count="6">
+        <name>british</name>
+      </tag>
+      <tag count="0">
+        <name>britpop</name>
+      </tag>
+      <tag count="0">
+        <name>chapel</name>
+      </tag>
+      <tag count="0">
+        <name>english</name>
+      </tag>
+      <tag count="0">
+        <name>parlophone</name>
+      </tag>
+      <tag count="0">
+        <name>piano pop</name>
+      </tag>
+      <tag count="2">
+        <name>piano rock</name>
+      </tag>
+      <tag count="4">
+        <name>pop</name>
+      </tag>
+      <tag count="3">
+        <name>pop rock</name>
+      </tag>
+      <tag count="0">
+        <name>pop/rock</name>
+      </tag>
+      <tag count="0">
+        <name>post-britpop</name>
+      </tag>
+      <tag count="3">
+        <name>rock</name>
+      </tag>
+      <tag count="0">
+        <name>rock and indie</name>
+      </tag>
+      <tag count="1">
+        <name>uk</name>
+      </tag>
+    </tag-list>
+    <rating votes-count="26">4.35</rating>
+  </artist>
+</metadata>

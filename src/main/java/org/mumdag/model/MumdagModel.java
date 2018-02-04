@@ -26,12 +26,20 @@ private OutputXmlDoc mmdgModel;
  * 	CONSTRUCTOR METHODS (public)
  */
 
-// ERROR HANDLING:	ok
+// ERROR HANDLING:	nok
 // DOC:				nok
-// TEST:			ok
+// TEST:			nok
 public MumdagModel() throws Exception {
-    this.mmdgModel = new OutputXmlDoc(PropertyHandler.getInstance().getValue("OutputXmlDoc.templatePath"));
-    this.mmdgModel.createOutputXmlDoc();
+    this.mmdgModel = new OutputXmlDoc(PropertyHandler.getInstance().getValue("OutputXmlDoc.artistMinimalPath"));
+}
+
+//-----------------------------------------------------------------------------
+
+// ERROR HANDLING:	nok
+// DOC:				nok
+// TEST:			nok
+public MumdagModel(String filePath) throws Exception {
+    this.mmdgModel = new OutputXmlDoc(filePath);
 }
 
 //=============================================================================
@@ -77,6 +85,15 @@ public void writeArtistTypeAndGender(HashMap<String, Object> insertInfo, String 
 
 // ERROR HANDLING:	nok
 // DOC:				nok
+// TEST:			partly ok, missing properties, parameters and entries of the insertInfo map are not checked
+public void writeArtistArea(HashMap<String, Object> insertInfo, String origArtistId, String copyRule, String scraperName) throws Exception {
+    mmdgModel.writeArtistArea(insertInfo, origArtistId, copyRule, scraperName);
+}
+
+//-----------------------------------------------------------------------------
+
+// ERROR HANDLING:	nok
+// DOC:				nok
 // TEST:			nok
 public void writeArtistPeriod(HashMap<String, Object> insertInfo, String periodType, String copyRule, String scraperName) throws Exception {
     mmdgModel.writeArtistPeriod(insertInfo, periodType, copyRule, scraperName);
@@ -86,9 +103,90 @@ public void writeArtistPeriod(HashMap<String, Object> insertInfo, String periodT
 
 // ERROR HANDLING:	nok
 // DOC:				nok
+// TEST:			nok
+public void writeArtistCredit(String artistCreditId, String origAristId, String copyRule, String scraperName) throws Exception {
+    mmdgModel.writeArtistCredit(artistCreditId, origAristId, copyRule, scraperName);
+}
+
+//-----------------------------------------------------------------------------
+
+// ERROR HANDLING:	nok
+// DOC:				nok
+// TEST:			partly ok, missing properties, parameters and entries of the insertInfo map are not checked
+public void writeArtistCreditUniqueId(HashMap<String, Object> insertInfo, String origArtistId, String copyRule, String scraperName) throws Exception {
+    mmdgModel.writeArtistCreditUniqueId(insertInfo, origArtistId, copyRule, scraperName);
+}
+
+//-----------------------------------------------------------------------------
+
+// ERROR HANDLING:	nok
+// DOC:				nok
+// TEST:			partly ok, missing properties, parameters and entries of the insertInfo map are not checked
+public void writeArtistCreditName(HashMap<String, Object> insertInfo, String origArtistId, String copyRule, String scraperName) throws Exception {
+    mmdgModel.writeArtistCreditName(insertInfo, origArtistId, copyRule, scraperName);
+}
+
+//-----------------------------------------------------------------------------
+
+// ERROR HANDLING:	nok
+// DOC:				nok
+// TEST:			partly ok, missing properties, parameters and entries of the insertInfo map are not checked
+public void writeArtistCreditPeriod(HashMap<String, Object> insertInfo, String periodType, String origArtistId, String copyRule, String scraperName) throws Exception {
+    mmdgModel.writeArtistCreditPeriod(insertInfo, periodType, origArtistId, copyRule, scraperName);
+}
+
+//-----------------------------------------------------------------------------
+
+// ERROR HANDLING:	nok
+// DOC:				nok
+// TEST:			partly ok, missing properties, parameters and entries of the insertInfo map are not checked
+public void writeArtistCreditRole(HashMap<String, Object> insertInfo, String origArtistId, String copyRule, String scraperName) throws Exception {
+    mmdgModel.writeArtistCreditRole(insertInfo, origArtistId, copyRule, scraperName);
+}
+
+//-----------------------------------------------------------------------------
+
+// ERROR HANDLING:	nok
+// DOC:				nok
 // TEST:			partly ok, missing properties, parameters and entries of the insertInfo map are not checked
 public void writeArtistUrls(HashMap<String, Object> insertInfo, String copyRule, String scraperName) throws Exception {
     mmdgModel.writeUrls(insertInfo, copyRule, scraperName);
+}
+
+//-----------------------------------------------------------------------------
+
+// ERROR HANDLING:	nok
+// DOC:				nok
+// TEST:			partly ok, missing properties, parameters and entries of the insertInfo map are not checked
+public void writeArtistTag(HashMap<String, Object> insertInfo, String copyRule, String scraperName) throws Exception {
+    mmdgModel.writeArtistTag(insertInfo, copyRule, scraperName);
+}
+
+//-----------------------------------------------------------------------------
+
+// ERROR HANDLING:	nok
+// DOC:				nok
+// TEST:			partly ok, missing properties, parameters and entries of the insertInfo map are not checked
+public void writeArtistRating(HashMap<String, Object> insertInfo, String copyRule, String scraperName) throws Exception {
+    mmdgModel.writeArtistRating(insertInfo, copyRule, scraperName);
+}
+
+//-----------------------------------------------------------------------------
+
+// ERROR HANDLING:	nok
+// DOC:				nok
+// TEST:			partly ok, missing properties, parameters and entries of the insertInfo map are not checked
+public void writeArtistDisambiguation(HashMap<String, Object> insertInfo, String copyRule, String scraperName) throws Exception {
+    mmdgModel.writeArtistDisambiguation(insertInfo, copyRule, scraperName);
+}
+
+//-----------------------------------------------------------------------------
+
+// ERROR HANDLING:	nok
+// DOC:				nok
+// TEST:			partly ok, missing properties, parameters and entries of the insertInfo map are not checked
+public void writeArtistAnnotation(HashMap<String, Object> insertInfo, String copyRule, String scraperName) throws Exception {
+    mmdgModel.writeArtistAnnotation(insertInfo, copyRule, scraperName);
 }
 
 

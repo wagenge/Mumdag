@@ -14,16 +14,13 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
+import org.apache.commons.lang3.StringUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import org.mumdag.core.MappingRules;
-//import org.mumdag.core.OutputXmlDoc;
-//import org.mumdag.core.OutputXmlDoc.NodeAction;
-//import org.mumdag.core.OutputXmlDoc.NodeStatus;
-//import org.mumdag.scraper.helper.ScraperHttpClient;
+import org.mumdag.scraper.utils.ScraperHttpClient;
 import org.mumdag.model.MumdagModel;
-import org.mumdag.utils.MapListUtils;
 import org.mumdag.utils.PropertyHandler;
 import org.mumdag.utils.XmlUtils;
 
@@ -42,9 +39,7 @@ private String artistName;
 private String artistPath;
 private String scraperId;
 private String scraperName;
-private String mappingRulesFilePath;
-private String mappingRulesType;
-//private ScraperHttpClient scraperHttpClient;
+private ScraperHttpClient scraperHttpClient;
 private MappingRules mappingRules;
 private HashMap<String, String> urlToUniqueIdsRules;
 	
@@ -63,13 +58,13 @@ public MusicBrainzScraper(String artistName, String artistPath, MumdagModel mdm)
 	this.artistName = artistName;
 	this.artistPath = artistPath;
 	this.mdm = mdm;
-	//this.scraperHttpClient = ScraperHttpClient.getInstance();
+	this.scraperHttpClient = ScraperHttpClient.getInstance();
 	this.scraperId = PropertyHandler.getInstance().getValue("MusicBrainz.Scraper.id");
 	this.scraperName = "MusicBrainz";
-	this.mappingRulesFilePath = PropertyHandler.getInstance().getValue("MusicBrainz.mappingRulesFilePath");
-	this.mappingRulesType = PropertyHandler.getInstance().getValue("MusicBrainz.mappingRulesType");
+    String mappingRulesFilePath = PropertyHandler.getInstance().getValue("MusicBrainz.mappingRulesFilePath");
+    String mappingRulesType = PropertyHandler.getInstance().getValue("MusicBrainz.mappingRulesType");
 	this.mappingRules = MappingRules.getInstance();
-	this.mappingRules.updateMappingRules(this.mappingRulesFilePath, this.scraperId, this.mappingRulesType);
+	this.mappingRules.updateMappingRules(mappingRulesFilePath, this.scraperId, mappingRulesType);
 	this.urlToUniqueIdsRules = new HashMap<>();
 }
 
@@ -111,14 +106,14 @@ public void writeMusicBrainzArtistInfo(Object[] input) throws Exception {
 	writeMusicBrainzArtistAlias(input);
 	writeMusicBrainzArtistTypeAndGender(input);
 	writeMusicBrainzArtistPeriod(input);
-//	writeMusicBrainzArtistAreaList(input);
+	writeMusicBrainzArtistAreaList(input);
 	writeMusicBrainzArtistUrls(input);
-/*	writeMusicBrainzArtistTags(input);
-	writeMusicBrainzArtistRating(input);*/
+	writeMusicBrainzArtistTags(input);
+	writeMusicBrainzArtistRating(input);
 	writeMusicBrainzArtistIpiIsni(input);
-/*	writeMusicBrainzArtistAnnotation(input);
+	writeMusicBrainzArtistAnnotation(input);
 	writeMusicBrainzArtistDisambiguation(input);
-	writeMusicBrainzArtistCredits(input);*/
+	writeMusicBrainzArtistCredits(input);
 }
 
 //-----------------------------------------------------------------------------
@@ -127,22 +122,38 @@ public void writeMusicBrainzArtistInfo(Object[] input) throws Exception {
 //DOC:				nok
 //TEST:				nok
 //PARAMETRIZATION:	nok (sortName, source, 
-public void writeMusicBrainzArtistName(Object[] input) throws Exception {
-	String artistInfoXml = (String)input[0];
-    HashMap<String, Object> insertInfo = new HashMap<>();
+public void writeMusicBrainzArtistName(Object[] input) {
+    if(input == null || input.length < 2 || input[0] == null || input[1] == null) {
+        log.error("input arguments not correct. expecting input[0] = artistId and input[1]=inputXml");
+        return;
+    }
 
-	//get ArtistId from MUBZ
-	String artistId = getMusicBrainzArtistId(input);
+    HashMap<String, Object> insertInfo = new HashMap<>();
+    String artistId = (String)input[0];
+	String artistInfoXml = (String)input[1];
+
+	if(StringUtils.isEmpty(artistId) || StringUtils.isEmpty(artistInfoXml)) {
+        log.error("artistId or inputXml are empty");
+        return;
+    }
+
+	//put artistId and nameType to insertInfo
     insertInfo.put("unid", artistId);
     insertInfo.put("nameType", "Name");
 	
     //get ArtistName from MUBZ
-	HashMap<String, String> artistNameRule = this.mappingRules.getMappingRule(this.scraperId, "ArtistName");
-	String artistNameXpath = XmlUtils.resolveXpathString(artistNameRule.get("xpathAbsolute"), "_arid_::@id='"+artistId+"'");
-	artistNameRule.put("xpathAbsolute", artistNameXpath);
-	List<String> artistNameList = getInfoFromXml(artistInfoXml, artistNameRule);
-    insertInfo.put("name", artistNameList.get(0));
-	
+    try {
+        HashMap<String, String> artistNameRule = this.mappingRules.getMappingRule(this.scraperId, "ArtistName");
+        String artistNameXpath = XmlUtils.resolveXpathString(artistNameRule.get("xpathAbsolute"), "_arid_::@id='"+artistId+"'");
+        artistNameRule.put("xpathAbsolute", artistNameXpath);
+        List<String> artistNameList = getInfoFromXml(artistInfoXml, artistNameRule);
+        insertInfo.put("name", artistNameList.get(0));
+    }
+    catch (Exception ex) {
+        log.error("Error while resolving artist name from musicbrainz response!\nError:", ex.getMessage());
+        return;
+    }
+
 	//get ArtistSortName from MUBZ
 	HashMap<String, String> artistSortNameRule = this.mappingRules.getMappingRule(this.scraperId, "ArtistSortName");
 	String artistSortNameXpath = XmlUtils.resolveXpathString(artistSortNameRule.get("xpathAbsolute"), "_arid_::@id='"+artistId+"'");
@@ -151,7 +162,12 @@ public void writeMusicBrainzArtistName(Object[] input) throws Exception {
     insertInfo.put("sortName", artistSortNameList.get(0));
 	
 	//put ArtistName to MMDG
-    mdm.writeArtistName(insertInfo, "ArtistName", this.scraperName);
+    try {
+        mdm.writeArtistName(insertInfo, "ArtistName", this.scraperName);
+    }
+    catch (Exception ex) {
+        log.error("Error while executing 'writeArtistName'!\nError:", ex.getMessage());
+    }
 }
 
 //-----------------------------------------------------------------------------
@@ -161,11 +177,11 @@ public void writeMusicBrainzArtistName(Object[] input) throws Exception {
 //TEST:				nok
 //PARAMETRIZATION:	nok (sortName, source, 
 public void writeMusicBrainzArtistAlias(Object[] input) throws Exception {
-	String artistInfoXml = (String)input[0];
-	HashMap<String, Object> insertInfo = new HashMap<>();
+    HashMap<String, Object> insertInfo = new HashMap<>();
+    String artistId = (String)input[0];
+    String artistInfoXml = (String)input[1];
 
-	//get ArtistId from MUBZ
-	String artistId = getMusicBrainzArtistId(input);
+    //put artistId and nameType to insertInfo
 	insertInfo.put("unid", artistId);
 	insertInfo.put("nameType", "Alias");
 
@@ -199,11 +215,11 @@ public void writeMusicBrainzArtistAlias(Object[] input) throws Exception {
 //TEST:				nok
 //PARAMETRIZATION:	nok (sortName, source, 
 public void writeMusicBrainzArtistTypeAndGender(Object[] input) throws Exception {
-	String artistInfoXml = (String)input[0];
     HashMap<String, Object> insertInfo = new HashMap<>();
+    String artistId = (String)input[0];
+    String artistInfoXml = (String)input[1];
 
-    //get ArtistId from MUBZ
-    String artistId = getMusicBrainzArtistId(input);
+    //put artistId and nameType to insertInfo
     insertInfo.put("unid", artistId);
 	
 	//get ArtistType from MUBZ
@@ -237,11 +253,11 @@ public void writeMusicBrainzArtistTypeAndGender(Object[] input) throws Exception
 //PARAMETRIZATION:	nok (sortName, source, 
 public void writeMusicBrainzArtistPeriod(Object[] input) throws Exception {
 // GENERAL THINGS ...
-	String artistInfoXml = (String)input[0];
     HashMap<String, Object> insertInfo = new HashMap<>();
+    String artistId = (String)input[0];
+    String artistInfoXml = (String)input[1];
 
-    //get ArtistId from MUBZ
-    String artistId = getMusicBrainzArtistId(input);
+    //put artistId and nameType to insertInfo
     insertInfo.put("unid", artistId);
 
 	//get ArtistType from MUBZ
@@ -275,22 +291,16 @@ public void writeMusicBrainzArtistPeriod(Object[] input) throws Exception {
 }
 
 //-----------------------------------------------------------------------------
-/*
+
 //ERROR HANDLING:	nok
 //DOC:				nok
 //TEST:				nok
 //PARAMETRIZATION:	nok (sortName, source, 
 public void writeMusicBrainzArtistAreaList(Object[] input) throws Exception {
 //GENERAL THINGS ...
-	String artistInfoXml = (String)input[0];
-	
-	// define the behavior of the operation depending on the current node state (for artists' area)
-	HashMap<NodeStatus, NodeAction> copyBehavior = this.mappingRules.getCopyBehavior(this.scraperId, "ArtistArea");
+    String artistId = (String)input[0];
+    String artistInfoXml = (String)input[1];
 
-	//get ArtistId from MUBZ
-	String artistId = getMusicBrainzArtistId(input);
-	String artistIdAttrCheck = "@"+this.mbIdAttrName+"='"+artistId+"'";
-	
 	//get ArtistType from MUBZ
 	HashMap<String, String> artistTypeRule = this.mappingRules.getMappingRule(this.scraperId, "ArtistType");
 	String artistTypeXpath = XmlUtils.resolveXpathString(artistTypeRule.get("xpathAbsolute"), "_arid_::@id='"+artistId+"'", "_artype_::type");
@@ -321,28 +331,18 @@ public void writeMusicBrainzArtistAreaList(Object[] input) throws Exception {
 		artistAreaEndId = artistAreaEndIdList.get(0);
 	}
 	log.info("ArtistAreaEndId ='{}'", artistAreaEndId);
-	
 
 //RESOLVE AREA CHAINS BEGIN/END	
-	HashMap<Integer, HashMap<String, String>> areaInfos = new HashMap<Integer, HashMap<String, String>>();
+	HashMap<Integer, HashMap<String, Object>> areaInfos;
 	areaInfos = requestMusicBrainAreaInfo(artistAreaBeginId, artistType, true);
 	areaInfos.putAll(requestMusicBrainAreaInfo(artistAreaEndId, artistType, false));
 	
-	for (HashMap<String, String> areaInfo : areaInfos.values()) {
-		//prepare information to resolve the xpaths
-		HashMap<String, String> resolveXpathInfos = MapListUtils.createResolveXpathMap("_arid_", artistIdAttrCheck, "_areaidattr_", "@mbid", 
-				"_areaid_", "@mbid='"+areaInfo.get("areaId").split("=")[1]+"'", "_areaseqattr_", "@seq", 
-				"_areaseq_", "@seq='"+areaInfo.get("areaSeq").split("=")[1]+"'", "_areaeventattr_", "@event", 
-				"_areaevent_", "@event='"+areaInfo.get("areaEvent").split("=")[1]+"'", "_areatypeattr_", "@type", 
-				"_areatype_", "@type='"+areaInfo.get("areaType").split("=")[1]+"'", "_areasortnameattr_", "@sort-name", 
-				"_areasortname_", "@sort-name='"+areaInfo.get("areaSortName").split("=")[1]+"'", "_areaname_", areaInfo.get("areaName"));
-		
-		List<String> areaInfoValues = new ArrayList<String>(areaInfo.values());
-		mdm.writeInfo(areaInfoValues, "ArtistAreaList", resolveXpathInfos, copyBehavior);
-	};
+	for (HashMap<String, Object> insertInfo : areaInfos.values()) {
+		mdm.writeArtistArea(insertInfo, artistId,"ArtistArea", this.scraperName);
+	}
 	
 }
-*/
+
 //-----------------------------------------------------------------------------
 
 //ERROR HANDLING:	nok
@@ -351,11 +351,9 @@ public void writeMusicBrainzArtistAreaList(Object[] input) throws Exception {
 //PARAMETRIZATION:	nok (sortName, source, 
 public void writeMusicBrainzArtistUrls(Object[] input) throws Exception {
 //GENERAL THINGS ...
-	String artistInfoXml = (String)input[0];
     HashMap<String, Object> insertInfo = new HashMap<>();
-
-    //get ArtistId from MUBZ
-    String artistId = getMusicBrainzArtistId(input);
+    String artistId = (String)input[0];
+    String artistInfoXml = (String)input[1];
 
 	//read UniqueId-Url-Filter
 	String ruleFileName = PropertyHandler.getInstance().getValue("MusicBrainz.Scraper.Artist.urlToUniqueIdFilterFile");
@@ -391,29 +389,26 @@ public void writeMusicBrainzArtistUrls(Object[] input) throws Exception {
 }
 
 //-----------------------------------------------------------------------------
-/*
+
 //ERROR HANDLING:	nok
 //DOC:				nok
 //TEST:				nok
 //PARAMETRIZATION:	nok (sortName, source, 
 public void writeMusicBrainzArtistTags(Object[] input) throws Exception {
-	String artistInfoXml = (String)input[0];
+    HashMap<String, Object> insertInfo = new HashMap<>();
+    String artistId = (String)input[0];
+    String artistInfoXml = (String)input[1];
 
-	//get ArtistId from MUBZ
-	String artistId = getMusicBrainzArtistId(input);
-	String artistIdAttr = this.mbIdAttrName+"="+artistId;
-	String artistIdAttrCheck = "@"+this.mbIdAttrName+"='"+artistId+"'";
-
-	// define the behavior of the operation depending on the current node state (artists' tags)
-	HashMap<NodeStatus, NodeAction> copyBehavior = this.mappingRules.getCopyBehavior(this.scraperId, "ArtistTags");
+    //put artistId and nameType to insertInfo
+    insertInfo.put("unid", artistId);
 	
 	//get ArtistTag plus according attribute 'count' from MUBZ
 	HashMap<String, String> artistTagsRule = this.mappingRules.getMappingRule(this.scraperId, "ArtistTags");
 	HashMap<String, String> artistTagsCountRule = this.mappingRules.getMappingRule(this.scraperId, "ArtistTagsCount");
 	String artistTagsCountXpathUnresolved = artistTagsCountRule.get("xpathAbsolute");
 	List<String> artistTagsList = getInfoFromXml(artistInfoXml, artistTagsRule);
-	for(int i = 0; i < artistTagsList.size(); i++) {
-		String artistTag = artistTagsList.get(i);
+	for(String artistTag : artistTagsList) {
+        insertInfo.put("tag", artistTag);
 		
 		String artistTagsCountXpath = XmlUtils.resolveXpathString(artistTagsCountXpathUnresolved, "_tag_::"+artistTag);
 		artistTagsCountRule.put("xpathAbsolute", artistTagsCountXpath);
@@ -421,18 +416,13 @@ public void writeMusicBrainzArtistTags(Object[] input) throws Exception {
 		String artistTagCount = "";
 		if(artistTagCountList.size() > 0) {
 			artistTagCount = artistTagCountList.get(0);
+			List<String> additionalInfoList = new ArrayList<>();
+			additionalInfoList.add("count="+artistTagCount);
+            insertInfo.put("additionalInfo", additionalInfoList);
 		}
 		log.info("tag: '{}' and count: {}",  artistTag, artistTagCount);
-		
-		//preparing artist tag infos (ArtistTag) 
-		List<String> artistTagInfo = MapListUtils.createInfoList(artistIdAttr, artistTag, "count="+artistTagCount);
-		
-		//prepare information to resolve the xpaths
-		HashMap<String, String> resolveXpathInfos = MapListUtils.createResolveXpathMap("_arid_", artistIdAttrCheck, "_scraperattr_", "@"+this.mbIdAttrName, 
-				"_scraperattr_", "@"+this.mbIdAttrName, "_countattr_", "@"+"count", "_count_", "@"+"count"+"='"+artistTagCount+"'", "_tag_", artistTag);
 
-		//put ArtistTag to MMDG
-		mdm.writeInfo(artistTagInfo, "ArtistTagList", resolveXpathInfos, copyBehavior);	
+        mdm.writeArtistTag(insertInfo, "ArtistTags", this.scraperName);
 	}
 }
 
@@ -443,51 +433,40 @@ public void writeMusicBrainzArtistTags(Object[] input) throws Exception {
 //TEST:				nok
 //PARAMETRIZATION:	nok (sortName, source, 
 public void writeMusicBrainzArtistRating(Object[] input) throws Exception {
-	String artistInfoXml = (String)input[0];
+    HashMap<String, Object> insertInfo = new HashMap<>();
+    String artistId = (String)input[0];
+    String artistInfoXml = (String)input[1];
 
-	//get ArtistId from MUBZ
-	String artistId = getMusicBrainzArtistId(input);
-	String artistIdAttr = this.mbIdAttrName+"="+artistId;
-	String artistIdAttrCheck = "@"+this.mbIdAttrName+"='"+artistId+"'";
+    //put artistId and nameType to insertInfo
+    insertInfo.put("unid", artistId);
 
-	//preparing info of artists' rating
-	String artistRatingSourceAttr = this.sourceAttrName+"="+this.sourceAttrValue;
-	String artistRatingSourceAttrCheck = "@"+this.sourceAttrName+"='"+this.sourceAttrValue+"'";
-
-	// define the behavior of the operation depending on the current node state (artists' tags)
-	HashMap<NodeStatus, NodeAction> copyBehavior = this.mappingRules.getCopyBehavior(this.scraperId, "ArtistRating");
-	
 	//get ArtistRating plus according attribute 'votes-count' from MUBZ
 	HashMap<String, String> artistRatingRule = this.mappingRules.getMappingRule(this.scraperId, "ArtistRating");
 	List<String> artistRatingList = getInfoFromXml(artistInfoXml, artistRatingRule);
-	String artistRating = artistRatingList.get(0);
-	HashMap<String, String> artistRatingVotesCountRule = this.mappingRules.getMappingRule(this.scraperId, "ArtistRatingVotesCount");
-	List<String> artistRatingVotesCountList = getInfoFromXml(artistInfoXml, artistRatingVotesCountRule);
-	String artistRatingVotesCount = artistRatingVotesCountList.get(0);
-	
-	//preparing artist rating infos (ArtistRating) 
-	List<String> artistRatingInfo = MapListUtils.createInfoList(artistIdAttr, artistRatingSourceAttr, "votes="+artistRatingVotesCount, artistRating);
-	
-	//prepare information to resolve the xpaths
-	HashMap<String, String> resolveXpathInfos = MapListUtils.createResolveXpathMap("_scraperattr_", "@"+this.mbIdAttrName, "_arid_", artistIdAttrCheck,  
-						"_sourceattr_", this.sourceAttrName, "_source_", artistRatingSourceAttrCheck,
-						"_votescountattr_", "@"+"votes", "_votescount_", "@"+"votes"+"='"+artistRatingVotesCount+"'", "_rating_", artistRating);
+    if(artistRatingList.size() > 0) {
+        insertInfo.put("rating", artistRatingList.get(0));
 
-	//put ArtistRating to MMDG
-	mdm.writeInfo(artistRatingInfo, "ArtistRatingList", resolveXpathInfos, copyBehavior);	
+        HashMap<String, String> artistRatingVotesCountRule = this.mappingRules.getMappingRule(this.scraperId, "ArtistRatingVotesCount");
+        List<String> artistRatingVotesCountList = getInfoFromXml(artistInfoXml, artistRatingVotesCountRule);
+        if(artistRatingVotesCountList.size() > 0) {
+            List<String> additionalInfoList = new ArrayList<>();
+            additionalInfoList.add("votes="+artistRatingVotesCountList.get(0));
+            insertInfo.put("additionalInfo", additionalInfoList);
+        }
+
+        mdm.writeArtistRating(insertInfo, "ArtistRating", this.scraperName);
+    }
 }
-*/
+
 //-----------------------------------------------------------------------------
 
 //ERROR HANDLING:	nok
 //DOC:				nok
 //TEST:				nok
 public void writeMusicBrainzArtistIpiIsni(Object[] input) throws Exception {
-	String artistInfoXml = (String)input[0];
-	
-	//get ArtistId from MUBZ
-	String artistId = getMusicBrainzArtistId(input);
-	
+    String artistId = (String)input[0];
+    String artistInfoXml = (String)input[1];
+
 	//get ArtistIPIs from MUBZ and put them to MMDG using method 'writeArtistUniqueId'
 	HashMap<String, String> artistIpiRule = this.mappingRules.getMappingRule(this.scraperId, "ArtistIPI");
 	List<String> artistIpiList = getInfoFromXml(artistInfoXml, artistIpiRule);
@@ -510,46 +489,28 @@ public void writeMusicBrainzArtistIpiIsni(Object[] input) throws Exception {
 }
 
 //-----------------------------------------------------------------------------
-/*
+
 //ERROR HANDLING:	nok
 //DOC:				nok
 //TEST:				nok
 //PARAMETRIZATION:	nok (sortName, source, 
 public void writeMusicBrainzArtistAnnotation(Object[] input) throws Exception {
-	String artistInfoXml = (String)input[0];
-	
-	//get ArtistId from MUBZ
-	String artistId = getMusicBrainzArtistId(input);
-	String artistIdAttr = this.mbIdAttrName+"="+artistId;
-	String artistIdAttrCheck = "@"+this.mbIdAttrName+"='"+artistId+"'";
+    HashMap<String, Object> insertInfo = new HashMap<>();
+    String artistId = (String)input[0];
+    String artistInfoXml = (String)input[1];
 
-	//preparing info of artists' annotation
-	String artistAnnotationSourceAttr = this.sourceAttrName+"="+this.sourceAttrValue;
-	String artistAnnotationSourceAttrCheck = "@"+this.sourceAttrName+"='"+this.sourceAttrValue+"'";
-	
-	// define the behavior of the operation depending on the current node state (artists' annotation)
-	HashMap<NodeStatus, NodeAction> copyBehavior = this.mappingRules.getCopyBehavior(this.scraperId, "ArtistAnnotation");
-	
+    //put artistId and nameType to insertInfo
+    insertInfo.put("unid", artistId);
+
 	//get ArtistAnnotations from MUBZ split them according splitregExp and put them to MMDG
 	HashMap<String, String> artistAnnotationRule = this.mappingRules.getMappingRule(this.scraperId, "ArtistAnnotation");
 	String splitRegEx = artistAnnotationRule.get("splitRegEx");
 	List<String> artistAnnotationList = getInfoFromXml(artistInfoXml, artistAnnotationRule);
-	for(int i = 0; i < artistAnnotationList.size(); i++) {
-		String annotationsText = artistAnnotationList.get(i); 
-		String[] annotations = annotationsText.split(splitRegEx);
-		for(int j = 0; j < annotations.length; j++) {
-			String artistAnnotation = annotations[j];
+	for(String annotationsText : artistAnnotationList) {
+		for(String artistAnnotation: annotationsText.split(splitRegEx)) {
 			log.info("artistAnnotation '{}'",  artistAnnotation);
-			
-			//preparing artist annotation infos (ArtistAnnotation) 
-			List<String> artistAnnotationInfo = MapListUtils.createInfoList(artistIdAttr, artistAnnotationSourceAttr, artistAnnotation);
-			
-			//prepare information to resolve the xpaths
-			HashMap<String, String> resolveXpathInfos = MapListUtils.createResolveXpathMap("_scraperattr_", "@"+this.mbIdAttrName, "_arid_", artistIdAttrCheck,  
-								"_sourceattr_", this.sourceAttrName, "_source_", artistAnnotationSourceAttrCheck, "_annotation_", artistAnnotation);
-			
-			//put ArtistAnnotation to MMDG
-			mdm.writeInfo(artistAnnotationInfo, "ArtistAnnotationList", resolveXpathInfos, copyBehavior);	
+            insertInfo.put("annotation", artistAnnotation);
+            mdm.writeArtistAnnotation(insertInfo, "ArtistAnnotation", this.scraperName);
 		}
 	}
 }
@@ -561,36 +522,20 @@ public void writeMusicBrainzArtistAnnotation(Object[] input) throws Exception {
 //TEST:				nok
 //PARAMETRIZATION:	nok (sortName, source, 
 public void writeMusicBrainzArtistDisambiguation(Object[] input) throws Exception {
-	String artistInfoXml = (String)input[0];
-	
-	//get ArtistId from MUBZ
-	String artistId = getMusicBrainzArtistId(input);
-	String artistIdAttr = this.mbIdAttrName+"="+artistId;
-	String artistIdAttrCheck = "@"+this.mbIdAttrName+"='"+artistId+"'";
+    HashMap<String, Object> insertInfo = new HashMap<>();
+    String artistId = (String)input[0];
+    String artistInfoXml = (String)input[1];
 
-	//preparing info of artists' disambiguation
-	String artistDisambiguationSourceAttr = this.sourceAttrName+"="+this.sourceAttrValue;
-	String artistDisambiguationSourceAttrCheck = "@"+this.sourceAttrName+"='"+this.sourceAttrValue+"'";
-	
-	// define the behavior of the operation depending on the current node state (artists' disambiguation)
-	HashMap<NodeStatus, NodeAction> copyBehavior = this.mappingRules.getCopyBehavior(this.scraperId, "ArtistDisambiguation");
-	
+    //put artistId and nameType to insertInfo
+    insertInfo.put("unid", artistId);
+
 	//get ArtistDisambigaution from MUBZ and put them to MMDG
 	HashMap<String, String> artistDisambiguationRule = this.mappingRules.getMappingRule(this.scraperId, "ArtistDisambiguation");
 	List<String> artistDisambiguationList = getInfoFromXml(artistInfoXml, artistDisambiguationRule);
-	for(int i = 0; i < artistDisambiguationList.size(); i++) {
-		String artistDisambiguation = artistDisambiguationList.get(i); 
+	for(String artistDisambiguation : artistDisambiguationList) {
 		log.info("ArtistDisambiguation '{}'",  artistDisambiguation);
-			
-		//preparing artist disambiguation infos (ArtistDisambiguation) 
-		List<String> artistDisambiguationInfo = MapListUtils.createInfoList(artistIdAttr, artistDisambiguationSourceAttr, artistDisambiguation);
-		
-		//prepare information to resolve the xpaths
-		HashMap<String, String> resolveXpathInfos = MapListUtils.createResolveXpathMap("_scraperattr_", "@"+this.mbIdAttrName, "_arid_", artistIdAttrCheck,  
-							"_sourceattr_", this.sourceAttrName, "_source_", artistDisambiguationSourceAttrCheck, "_disambiguation_", artistDisambiguation);
-		
-		//put ArtistDisambiguation to MMDG
-		mdm.writeInfo(artistDisambiguationInfo, "ArtistDisambiguationList", resolveXpathInfos, copyBehavior);	
+        insertInfo.put("disambiguation", artistDisambiguation);
+        mdm.writeArtistDisambiguation(insertInfo, "ArtistDisambiguation", this.scraperName);
 	}
 }
 
@@ -601,19 +546,8 @@ public void writeMusicBrainzArtistDisambiguation(Object[] input) throws Exceptio
 //TEST:				nok
 //PARAMETRIZATION:	nok (sortName, source, 
 public void writeMusicBrainzArtistCredits(Object[] input) throws Exception {
-	String artistInfoXml = (String)input[0];
-	
-	//get ArtistId from MUBZ
-	String artistId = getMusicBrainzArtistId(input);
-	HashMap<String, String> additionalInfo = new HashMap<String, String>();
-	additionalInfo.put("artistId", artistId);
-	additionalInfo.put("artistNameType", "Name");
-	
-	//String artistIdAttr = this.mbIdAttrName+"="+artistId;
-	String artistIdAttrCheck = "@"+this.mbIdAttrName+"='"+artistId+"'";
-	
-	// define the behavior of the operation depending on the current node state (artists' credit list)
-	HashMap<NodeStatus, NodeAction> copyBehavior = this.mappingRules.getCopyBehavior(this.scraperId, "ArtistCreditIds");
+    String artistId = (String)input[0];
+    String artistInfoXml = (String)input[1];
 	
 	//get ArtistCredits from MUBZ and put them to MMDG
 	HashMap<String, String> artistCreditIdsRule = this.mappingRules.getMappingRule(this.scraperId, "ArtistCreditIds");
@@ -624,41 +558,23 @@ public void writeMusicBrainzArtistCredits(Object[] input) throws Exception {
 	HashMap<String, String> artistCreditTypeRule = this.mappingRules.getMappingRule(this.scraperId, "ArtistCreditType");
 	String artistCreditsTypeXpathUnresolved = artistCreditTypeRule.get("xpathAbsolute");
 	HashMap<String, String> artistCreditAttributesRule = this.mappingRules.getMappingRule(this.scraperId, "ArtistCreditAttributes");
-	String artistCreditAttributesXpathUnresolved = artistCreditAttributesRule.get("xpathAbsolute");	
+	String artistCreditAttributesXpathUnresolved = artistCreditAttributesRule.get("xpathAbsolute");
 	HashMap<String, String> artistCreditPeriodsRule = this.mappingRules.getMappingRule(this.scraperId, "ArtistCreditPeriods");
 	String artistCreditPeriodsXpathUnresolved = artistCreditPeriodsRule.get("xpathAbsolute");
 
 	List<String> artistCreditIdsList = getInfoFromXml(artistInfoXml, artistCreditIdsRule);
 	artistCreditIdsList = artistCreditIdsList.stream().distinct().collect(Collectors.toList());
-	for(int i = 0; i < artistCreditIdsList.size(); i++) {
-		String artistCreditId = artistCreditIdsList.get(i);
+	for(String artistCreditId : artistCreditIdsList) {
 		log.info("artist credit ids {}", artistCreditId);
-		additionalInfo.put("artistCreditId", artistCreditId);
-		
-		//prepare information to resolve the xpaths
-		HashMap<String, String> resolveXpathInfos = MapListUtils.createResolveXpathMap("_arid_", artistIdAttrCheck,
-							"_acid_", "@"+this.mbIdAttrName+"='"+artistCreditId+"'", "_unidattrname_", "@"+this.mbIdAttrName);
-		
-		//put ArtistCreditNode to MMDG
-		mdm.writeInfo(this.mbIdAttrName+"="+artistCreditId, "ArtistCreditNode", resolveXpathInfos, copyBehavior);
-		
-		//get ArtistCredit base xpath from MMDG (used for writeUniqueIdInfos, writeNameInfos)
-		HashMap<String, String> resolveBaseXpathInfos = MapListUtils.createResolveXpathMap("_arid_", artistIdAttrCheck,
-																				"_acid_", "@"+this.mbIdAttrName+"='"+artistCreditId+"'");
-		String artistCreditBaseXpathResolved = mdm.getResolvedBaseXpath("ArtistCreditBase", resolveBaseXpathInfos);
 
-		//write the uniqueID node within the ArtistCreditNode
-		HashMap<String, String> uniqueIdInfos = new HashMap<String, String>();
-		uniqueIdInfos.put("uniqueId", artistCreditId);
-		uniqueIdInfos.put("url", "-");
-		uniqueIdInfos.put("placeholder", "_arid_");
-		uniqueIdInfos.put("scraperId", this.scraperId);
-		uniqueIdInfos.put("copyBehaviorRule", "ArtistId");
-		uniqueIdInfos.put("resolvedBaseXpath", artistCreditBaseXpathResolved);
-		uniqueIdInfos.put("propSection", "MusicBrainz");
-		uniqueIdInfos.put("propSubSection", "Artist");
-		mdm.writeUniqueIdInfos(uniqueIdInfos);
-		
+		//put ArtistCreditNode to MMDG
+		mdm.writeArtistCredit(artistCreditId, artistId, "ArtistCreditIds", this.scraperName);
+
+        HashMap<String, Object> insertInfoUniqueId = new HashMap<>();
+        insertInfoUniqueId.put("unid", artistCreditId);
+        insertInfoUniqueId.put("url", "-");
+        mdm.writeArtistCreditUniqueId(insertInfoUniqueId, artistId, "ArtistCreditIds", this.scraperName);
+
 		//get ArtistCreditName
 		String artistCreditsNameXpath = XmlUtils.resolveXpathString(artistCreditsNameXpathUnresolved, "_acid_::"+artistCreditId);
 		artistCreditNameRule.put("xpathAbsolute", artistCreditsNameXpath);
@@ -675,23 +591,34 @@ public void writeMusicBrainzArtistCredits(Object[] input) throws Exception {
 		String artistCreditSortName = artistCreditSortNameList.get(0);
 		log.info("\tsort-name {}", artistCreditSortName);
 		
-		//put ArtistCreditName to MMDG
-		writeNameInfos(artistCreditName, artistCreditSortName, additionalInfo, "Name", "ArtistCreditName", artistCreditBaseXpathResolved);
-		
-		//get ArtistCreditAttributes
+        HashMap<String, Object> insertInfoName = new HashMap<>();
+        insertInfoName.put("unid", artistCreditId);
+        insertInfoName.put("nameType", "Name");
+        insertInfoName.put("name", artistCreditName);
+        insertInfoName.put("sortName", artistCreditSortName);
+
+        //put ArtistName to MMDG
+        mdm.writeArtistCreditName(insertInfoName, artistId, "ArtistCreditName", this.scraperName);
+
+		//get ArtistCreditAttributes (e.g. instruments)
+		HashMap<String, Object> insertInfoRoleMember = new HashMap<>();
+		insertInfoRoleMember.put("unid", artistCreditId);
 		String artistCreditAttributesXpath = XmlUtils.resolveXpathString(artistCreditAttributesXpathUnresolved, "_acid_::"+artistCreditId);
 		artistCreditAttributesRule.put("xpathAbsolute", artistCreditAttributesXpath);
 		List<String> artistCreditAttributesList = getInfoFromXml(artistInfoXml, artistCreditAttributesRule);
 		artistCreditAttributesList = artistCreditAttributesList.stream().distinct().collect(Collectors.toList());
 		if(artistCreditAttributesList.contains("original")) {
 			artistCreditAttributesList.remove("original");
-			additionalInfo.put("original", "true");
+			insertInfoRoleMember.put("original", "true");
 		}
 		log.info("\t number of attributes {}", artistCreditAttributesList.size());
-		for(int n = 0; n < artistCreditAttributesList.size(); n++) {
-			String instrument = artistCreditAttributesList.get(n);
+		for(String instrument  : artistCreditAttributesList) {
 			log.info("\t\t{}", instrument);
-			writeArtistRoleInfos(instrument, "instrument", additionalInfo, "RoleList", "ArtistCreditRole", artistCreditBaseXpathResolved); // alle anderen instrument attribute
+			HashMap<String, Object> insertInfoRoleInstrument = new HashMap<>();
+			insertInfoRoleInstrument.put("unid", artistCreditId);
+			insertInfoRoleInstrument.put("role", instrument);
+            insertInfoRoleInstrument.put("roleType", "instrument");
+			mdm.writeArtistCreditRole(insertInfoRoleInstrument, artistId, "ArtistCreditRole", this.scraperName);
 		}
 		
 		//get ArtistCreditType
@@ -701,25 +628,29 @@ public void writeMusicBrainzArtistCredits(Object[] input) throws Exception {
 		artistCreditTypeList = artistCreditTypeList.stream().distinct().collect(Collectors.toList());
 		String membership = artistCreditTypeList.get(0);
 		log.info("\ttype {}", membership);
-		writeArtistRoleInfos(membership, "membership", additionalInfo, "RoleList", "ArtistCreditRole", artistCreditBaseXpathResolved); //mit original
-		additionalInfo.remove("original");
-		
+		insertInfoRoleMember.put("role", membership);
+        insertInfoRoleMember.put("roleType", "membership");
+        mdm.writeArtistCreditRole(insertInfoRoleMember, artistId, "ArtistCreditRole", this.scraperName);
+
 		//get ArtistCreditPeriods
 		String artistCreditsPeriodsXpath = XmlUtils.resolveXpathString(artistCreditPeriodsXpathUnresolved, "_acid_::"+artistCreditId);
 		artistCreditPeriodsRule.put("xpathAbsolute", artistCreditsPeriodsXpath);
 		List<String> artistCreditPeriodsList = getInfoFromXml(artistInfoXml, artistCreditPeriodsRule);
 		artistCreditPeriodsList = artistCreditPeriodsList.stream().distinct().collect(Collectors.toList());
-		for(int k = 0; k < artistCreditPeriodsList.size(); k++) {
-			String artistCreditPeriodsStr = artistCreditPeriodsList.get(k);
+
+		HashMap<String, Object> insertInfoPeriod = new HashMap<>();
+        insertInfoPeriod.put("unid", artistCreditId);
+		for(String artistCreditPeriodsStr : artistCreditPeriodsList) {
 			log.info("\tperiod {}", artistCreditPeriodsStr);
 			
 			String[] artistCreditPeriodsArr = artistCreditPeriodsStr.split(",");
-			for(int l = 0; l < artistCreditPeriodsArr.length; l++) {
-				String[] artistCreditPeriodArr = artistCreditPeriodsArr[l].split("=");
+			for(String artistCreditPeriods : artistCreditPeriodsArr) {
+				String[] artistCreditPeriodArr = artistCreditPeriods.split("=");
 				if(artistCreditPeriodArr.length == 2) {
 					String periodType = artistCreditPeriodArr[0];
 					String period = artistCreditPeriodArr[1];
-					writePeriodInfos(period, periodType, additionalInfo, "PeriodList", "ArtistCreditPeriods", artistCreditBaseXpathResolved);
+                    insertInfoPeriod.put("period", period);
+                    mdm.writeArtistCreditPeriod(insertInfoPeriod, periodType, artistId, "ArtistCreditPeriods", this.scraperName);
 				}
 			}		
 		}
@@ -731,8 +662,8 @@ public void writeMusicBrainzArtistCredits(Object[] input) throws Exception {
 //ERROR HANDLING:	nok
 //DOC:				nok
 //TEST:				nok
-HashMap<Integer, HashMap<String, String>> requestMusicBrainAreaInfo(String areaid, String artistType, Boolean begin) throws Exception {
-	HashMap<Integer, HashMap<String, String>> retAreaInfos = new HashMap<Integer, HashMap<String, String>>();
+private HashMap<Integer, HashMap<String, Object>> requestMusicBrainAreaInfo(String areaid, String artistType, Boolean begin) throws Exception {
+	HashMap<Integer, HashMap<String, Object>> retAreaInfos = new HashMap<>();
 	
 	String baseUrl = PropertyHandler.getInstance().getValue("MusicBrainz.Scraper.Base.wsUrl");
 	String areaUrl = PropertyHandler.getInstance().getValue("MusicBrainz.Scraper.Area.url");
@@ -741,74 +672,69 @@ HashMap<Integer, HashMap<String, String>> requestMusicBrainAreaInfo(String areai
 	int i = 1;
 	int j = (begin) ? 1 : 11;
 	while(areaid.length() > 0) {
-		HashMap<String, String> areaInfo = new HashMap<String, String>();
-		String areaXml = requestScraper(baseUrl + areaUrl + areaid + areaUrlParams);
-		
-		//get area name from MUBZ
-		HashMap<String, String> areaNameRule = this.mappingRules.getMappingRule(this.scraperId, "AreaName");
-		List<String> areaNameList = getInfoFromXml(areaXml, areaNameRule);
-		if(areaNameList.size() > 0) {
-			areaInfo.put("areaName", areaNameList.get(0));
-		}
-		
-		//get area sort name from MUBZ
-		HashMap<String, String> areaSortNameRule = this.mappingRules.getMappingRule(this.scraperId, "AreaSortName");
-		List<String> areaSortNameList = getInfoFromXml(areaXml, areaSortNameRule);
-		if(areaSortNameList.size() > 0) {
-			areaInfo.put("areaSortName", "sort-name="+areaSortNameList.get(0));
-		}
-		//get area type from MUBZ
-		HashMap<String, String> areaTypeRule = this.mappingRules.getMappingRule(this.scraperId, "AreaType");
-		String areaTypeXpath = XmlUtils.resolveXpathString(areaTypeRule.get("xpathAbsolute"), "_areatype_::type");
-		areaTypeRule.put("xpathAbsolute", areaTypeXpath);
-		List<String> areaTypeList = getInfoFromXml(areaXml, areaTypeRule);
-		if(areaTypeList.size() > 0) {
-			areaInfo.put("areaType", "type="+areaTypeList.get(0));
-		}
-		//get area code 1 from MUBZ
-		HashMap<String, String> areaCode1Rule = this.mappingRules.getMappingRule(this.scraperId, "AreaCode1");
-		List<String> areaCode1List = getInfoFromXml(areaXml, areaCode1Rule);
-		if(areaCode1List.size() > 0) {
-			areaInfo.put("areaCode", "code="+areaCode1List.get(0));
-		}
-		//get area code 1 from MUBZ
-		HashMap<String, String> areaCode2Rule = this.mappingRules.getMappingRule(this.scraperId, "AreaCode2");
-		List<String> areaCode2List = getInfoFromXml(areaXml, areaCode2Rule);
-		if(areaCode2List.size() > 0) {
-			areaInfo.put("areaCode", "code="+areaCode2List.get(0));
-		}
-		areaInfo.put("areaId", "mbid="+areaid);
-		areaInfo.put("areaSeq", "seq="+String.valueOf(i));
-		if(begin && artistType.equals("Person")) {
-			areaInfo.put("areaEvent", "event="+"born in");
-		}
-		else if(!begin && artistType.equals("Person")) {
-			areaInfo.put("areaEvent", "event="+"died in");
-		}
-		else if(begin && !artistType.equals("Person")) {
-			areaInfo.put("areaEvent", "event="+"founded in");
-		}
-		else if(!begin && !artistType.equals("Person")) {
-			areaInfo.put("areaEvent", "event="+"dissolved in");
-		}
-		retAreaInfos.put(j, areaInfo);
-		i++;
-		j++;
-		
-		//get area relation backwards from MUBZ
-		HashMap<String, String> areaRelationBackwardRule = this.mappingRules.getMappingRule(this.scraperId, "AreaRelationBackward");
-		List<String> areaRelationBackwardList = getInfoFromXml(areaXml, areaRelationBackwardRule);
-		if(areaRelationBackwardList.size() > 0) {
-			areaid = areaRelationBackwardList.get(0);
-		}
-		else {
-			areaid = "";
-		}
-	}
-	
+        HashMap<String, Object> areaInfo = new HashMap<>();
+        String areaXml = requestScraper(baseUrl + areaUrl + areaid + areaUrlParams);
+
+        //get area name from MUBZ
+        HashMap<String, String> areaNameRule = this.mappingRules.getMappingRule(this.scraperId, "AreaName");
+        List<String> areaNameList = getInfoFromXml(areaXml, areaNameRule);
+        if (areaNameList.size() > 0) {
+            areaInfo.put("name", areaNameList.get(0));
+        }
+
+        //get area sort name from MUBZ
+        HashMap<String, String> areaSortNameRule = this.mappingRules.getMappingRule(this.scraperId, "AreaSortName");
+        List<String> areaSortNameList = getInfoFromXml(areaXml, areaSortNameRule);
+        if (areaSortNameList.size() > 0) {
+            areaInfo.put("sortName", areaSortNameList.get(0));
+        }
+        //get area type from MUBZ
+        HashMap<String, String> areaTypeRule = this.mappingRules.getMappingRule(this.scraperId, "AreaType");
+        String areaTypeXpath = XmlUtils.resolveXpathString(areaTypeRule.get("xpathAbsolute"), "_areatype_::type");
+        areaTypeRule.put("xpathAbsolute", areaTypeXpath);
+        List<String> areaTypeList = getInfoFromXml(areaXml, areaTypeRule);
+        if (areaTypeList.size() > 0) {
+            areaInfo.put("type", areaTypeList.get(0));
+        }
+        //get area code 1 from MUBZ
+        HashMap<String, String> areaCode1Rule = this.mappingRules.getMappingRule(this.scraperId, "AreaCode1");
+        List<String> areaCode1List = getInfoFromXml(areaXml, areaCode1Rule);
+        if (areaCode1List.size() > 0) {
+            areaInfo.put("code", areaCode1List.get(0));
+        }
+        //get area code 1 from MUBZ
+        HashMap<String, String> areaCode2Rule = this.mappingRules.getMappingRule(this.scraperId, "AreaCode2");
+        List<String> areaCode2List = getInfoFromXml(areaXml, areaCode2Rule);
+        if (areaCode2List.size() > 0) {
+            areaInfo.put("code", areaCode2List.get(0));
+        }
+        areaInfo.put("unid", areaid);
+        areaInfo.put("seq", String.valueOf(i));
+        if (begin && artistType.equals("Person")) {
+            areaInfo.put("event", "born in");
+        } else if (!begin && artistType.equals("Person")) {
+            areaInfo.put("event", "died in");
+        } else if (begin && !artistType.equals("Person")) {
+            areaInfo.put("event", "founded in");
+        } else if (!begin && !artistType.equals("Person")) {
+            areaInfo.put("event", "dissolved in");
+        }
+        retAreaInfos.put(j, areaInfo);
+        i++;
+        j++;
+
+        //get area relation backwards from MUBZ
+        HashMap<String, String> areaRelationBackwardRule = this.mappingRules.getMappingRule(this.scraperId, "AreaRelationBackward");
+        List<String> areaRelationBackwardList = getInfoFromXml(areaXml, areaRelationBackwardRule);
+        if (areaRelationBackwardList.size() > 0) {
+            areaid = areaRelationBackwardList.get(0);
+        } else {
+            areaid = "";
+        }
+    }
 	return retAreaInfos;
 }
-*/
+
 
 //=============================================================================	
 /*
@@ -836,13 +762,12 @@ private List<String> getInfoFromXml(String xmlString, HashMap<String, String> ru
 }
 
 //-----------------------------------------------------------------------------
-/*
+
 //ERROR HANDLING:	nok
 //DOC:				nok
 //TEST:				nok
-public String requestScraper(String url) throws Exception {
-	HashMap<String, String> scraperResponse = new HashMap<String, String>(); 
-	scraperResponse = this.scraperHttpClient.run(url);
+private String requestScraper(String url) throws Exception {
+	HashMap<String, String> scraperResponse = this.scraperHttpClient.run(url);
 	if(scraperResponse.get("rspCode").equals("200")) {
 		return scraperResponse.get("rspBody");
 	}
@@ -851,181 +776,7 @@ public String requestScraper(String url) throws Exception {
 		return "";
 	}
 }
-*/
-//-----------------------------------------------------------------------------
-/*
-//ERROR HANDLING:	nok
-//DOC:				nok
-//TEST:				nok
-public void writeNameInfos(String name, String sortName, HashMap<String, String> additionalInfo, String targetRule, String copyBehaviorRule, String resolvedBaseXpath) throws Exception {
-	writeNameInfos(name, sortName, null, additionalInfo, targetRule, copyBehaviorRule, resolvedBaseXpath);
-}
 
-//-----------------------------------------------------------------------------
-
-//ERROR HANDLING:	nok
-//DOC:				nok
-//TEST:				nok
-public void writeNameInfos(String name, List<String> nameInfo, HashMap<String, String> additionalInfo, String targetRule, String copyBehaviorRule, String resolvedBaseXpath) throws Exception {
-	writeNameInfos(name, "", nameInfo, additionalInfo, targetRule, copyBehaviorRule, resolvedBaseXpath);
-}
-*/
-//-----------------------------------------------------------------------------
-/*
-//ERROR HANDLING:	nok
-//DOC:				nok
-//TEST:				nok
-public void writeNameInfos(String name, String sortName, List<String> nameInfo, HashMap<String, String> additionalInfo, String targetRule, String copyBehaviorRule, String resolvedBaseXpath) throws Exception {
-		
-	//preparing infos of the artists' name (id, source, type)
-	String artistIdAttr = this.mbIdAttrName+"="+additionalInfo.get("artistId");
-	String artistIdAttrCheck = "@"+this.mbIdAttrName+"='"+additionalInfo.get("artistId")+"'";
-	if(additionalInfo.containsKey("artistCreditId")) {
-		artistIdAttr = this.mbIdAttrName+"="+additionalInfo.get("artistCreditId");
-		artistIdAttrCheck = "@"+this.mbIdAttrName+"='"+additionalInfo.get("artistCreditId")+"'";
-	}
-	String artistNameSourceAttr = this.sourceAttrName+"="+this.sourceAttrValue;
-	String artistNameSourceAttrCheck = "@"+this.sourceAttrName+"='"+this.sourceAttrValue+"'";
-	
-	String artistNameTypeAttr = "type"+"="+additionalInfo.get("artistNameType");
-	String artistNameTypeAttrCheck = "@"+"type"+"="+"'"+additionalInfo.get("artistNameType")+"'";
-	if(nameInfo != null) {
-		for(int i = 0; i < nameInfo.size(); i++) {
-			String nameInfoStr = nameInfo.get(i);
-			if(nameInfoStr.contains("type=")) {
-				String[] nameInfoArr = nameInfoStr.split("=");
-				String typeVal = nameInfoArr[1];
-				artistNameTypeAttr = nameInfoStr;
-				artistNameTypeAttrCheck = "@"+"type"+"="+"'"+typeVal+"'";
-			}
-		}
-	}
-	
-	// define the behavior of the operation depending on the current node state (artists' aliases)
-	HashMap<NodeStatus, NodeAction> copyBehavior = this.mappingRules.getCopyBehavior(this.scraperId, copyBehaviorRule);		
-	
-	//prepare information to resolve the xpaths
-	HashMap<String, String> resolveXpathInfos = MapListUtils.createResolveXpathMap("_arid_", artistIdAttrCheck, "_scraperattr_", "@"+this.mbIdAttrName, 
-			"_arname_", name, "_src_", artistNameSourceAttrCheck, "_srcattr_", "@"+this.sourceAttrName, 
-			"_ntype_", artistNameTypeAttrCheck, "_ntypeattr_", "@"+"type");
-
-	//preparing artist' name info list
-	if(nameInfo == null) {
-		nameInfo = new ArrayList<String>();
-	}
-	nameInfo = MapListUtils.createInfoList(nameInfo, artistIdAttr, name, artistNameSourceAttr, artistNameTypeAttr);
-	if(sortName != null && sortName.length() > 0) {
-		String artistSortNameAttr = "sort-name"+"="+sortName;
-		nameInfo = MapListUtils.createInfoList(nameInfo,  artistSortNameAttr);
-	}
-	
-	//put Name to MMDG
-	mdm.writeInfo(nameInfo, targetRule, resolvedBaseXpath, resolveXpathInfos, copyBehavior);
-}
-*/
-//-----------------------------------------------------------------------------
-/*
-//ERROR HANDLING:	nok
-//DOC:				nok
-//TEST:				nok
-public void writeArtistRoleInfos(String role, String roleType, HashMap<String, String> additionalInfo, String targetRule, String copyBehaviorRule, String resolvedBaseXpath) throws Exception {
-		
-	//preparing infos of the artists' name (id, source, type)
-	String artistIdAttr = this.mbIdAttrName+"="+additionalInfo.get("artistId");
-	String artistIdAttrCheck = "@"+this.mbIdAttrName+"='"+additionalInfo.get("artistId")+"'";
-	if(additionalInfo.containsKey("artistCreditId")) {
-		artistIdAttr = this.mbIdAttrName+"="+additionalInfo.get("artistCreditId");
-		artistIdAttrCheck = "@"+this.mbIdAttrName+"='"+additionalInfo.get("artistCreditId")+"'";
-	}
-	String roleTypeAttr = "type"+"="+roleType;
-	String roleTypeAttrCheck = "@"+"type"+"='"+roleType+"'";
-	String originalAttr = "";
-
-	
-	// define the behavior of the operation depending on the current node state (artists' aliases)
-	HashMap<NodeStatus, NodeAction> copyBehavior = this.mappingRules.getCopyBehavior(this.scraperId, copyBehaviorRule);	
-	
-	//preparing artists' role  
-	if(role.equals("member of band") && additionalInfo.containsKey("original") && additionalInfo.get("original").equals("true")) {
-		originalAttr = "original"+"="+"true";
-	}
-	else if(role.equals("member of band")) {
-		originalAttr = "original"+"="+"false";
-	}
-	
-	List<String> roleInfo = new ArrayList<String>(); 
-	if(originalAttr.length() > 0) {
-		roleInfo = MapListUtils.createInfoList(artistIdAttr, role, roleTypeAttr, originalAttr);
-	}
-	else {
-		roleInfo = MapListUtils.createInfoList(artistIdAttr, role, roleTypeAttr);
-	}
-
-	//prepare information to resolve the xpaths
-	HashMap<String, String> resolveXpathInfos = MapListUtils.createResolveXpathMap("_arid_", artistIdAttrCheck, "_role_", role, 
-			"_roletype_", roleTypeAttrCheck, "_srcattr_", "@"+"mbid", "_roletypeattr_", "@"+"type");
-	
-	//put Name to MMDG
-	mdm.writeInfo(roleInfo, targetRule, resolvedBaseXpath, resolveXpathInfos, copyBehavior);	
-}
-
-//-----------------------------------------------------------------------------
-
-//ERROR HANDLING:	nok
-//DOC:				nok
-//TEST:				nok
-public void writePeriodInfos(String period, String periodType, HashMap<String, String> additionalInfo, String targetRule, String copyBehaviorRule, String resolvedBaseXpath) throws Exception {
-	
-	//preparing infos of the artists' name (id, source, type)
-	String artistIdAttr = this.mbIdAttrName+"="+additionalInfo.get("artistId");
-	String artistIdAttrCheck = "@"+this.mbIdAttrName+"='"+additionalInfo.get("artistId")+"'";
-	if(additionalInfo.containsKey("artistCreditId")) {
-		artistIdAttr = this.mbIdAttrName+"="+additionalInfo.get("artistCreditId");
-		artistIdAttrCheck = "@"+this.mbIdAttrName+"='"+additionalInfo.get("artistCreditId")+"'";
-	}
-	String artistType = "";
-	if(additionalInfo.containsKey("artistType")) {
-		artistType = additionalInfo.get("artistType");
-	}
-
-	// define the behavior of the operation depending on the current node state (for period begin/end)
-	HashMap<NodeStatus, NodeAction> copyBehavior = this.mappingRules.getCopyBehavior(this.scraperId, copyBehaviorRule);
-	
-	//preparing infos for period begin/end
-	String dateTypeAttr = "type"+"="+periodType;	
-	String dateTypeAttrCheck = "@"+"type"+"='"+periodType+"'";
-	if(periodType.equals("begin")) {
-		if(artistType.equals("Person")) {
-			dateTypeAttr = "type"+"="+"born";
-			dateTypeAttrCheck = "@"+"type"+"='"+"born"+"'";
-		}
-		else if(artistType.equals("Group")) {
-			dateTypeAttr = "type"+"="+"founded";	
-			dateTypeAttrCheck = "@"+"type"+"='"+"founded"+"'";
-		}
-	}
-	else if (periodType.equals("end")) {
-		if(artistType.equals("Person")) {
-			dateTypeAttr = "type"+"="+"died";
-			dateTypeAttrCheck = "@"+"type"+"='"+"died"+"'";
-		}
-		else if(artistType.equals("Group")) {
-			dateTypeAttr = "type"+"="+"dissolved";	
-			dateTypeAttrCheck = "@"+"type"+"='"+"dissolved"+"'";
-		}
-	}
-	
-	//preparing artists' period begin infos (year, type) 
-	List<String> periodInfo = MapListUtils.createInfoList(artistIdAttr, period, dateTypeAttr);
-	
-	//prepare information to resolve the xpaths
-	HashMap<String, String> resolveXpathInfosPeriod = MapListUtils.createResolveXpathMap("_arid_", artistIdAttrCheck, "_ardate_", period, 
-			"_datetype_", dateTypeAttrCheck, "_srcattr_", "@"+"mbid", "_datetypeattr_", "@"+"type");
-
-	//put ArtistPeriod Begin/End to MMDG
-	mdm.writeInfo(periodInfo, targetRule, resolvedBaseXpath, resolveXpathInfosPeriod, copyBehavior);
-}
-*/
 //-----------------------------------------------------------------------------
 
 //ERROR HANDLING:	nok

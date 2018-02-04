@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Artist mbid="5f58803e-8c4c-478e-8b51-477f38483ede">
+	<UniqueIdList/>
+	<NameList>
+		<Name mbid="5f58803e-8c4c-478e-8b51-477f38483ede" sort-name="Madness" source="MusicBrainz" type="Name">Madness</Name>
+	</NameList>
+	<Type/>
+	<AreaList/>
+	<PeriodList/>
+	<DescriptionList/>
+	<TagList/>	
+	<UrlList/>
+	<RatingList/>	
+	<ArtistCreditList/>
+	<ArtList/>
+	<DisambiguationList/>
+	<AnnotationList/>
+	<Discography>
+		<ReleaseGroupList/>
+	</Discography>
+</Artist>

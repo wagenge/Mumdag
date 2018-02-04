@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Artist mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d">
+	<UniqueIdList/>
+	<NameList>
+		<Name mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" sort-name="Beatles, The" source="MusicBrainz" type="Name">The Beatles</Name>
+	</NameList>
+	<Type/>
+	<AreaList/>
+	<PeriodList/>
+	<DescriptionList/>
+	<TagList>
+		<Tag count="1" mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" source="MusicBrainz">art pop</Tag>
+		<Tag count="1" mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" source="MusicBrainz">art rock</Tag>
+		<Tag count="1" mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" source="MusicBrainz">beat music</Tag>
+		<Tag count="1" mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" source="MusicBrainz">blues rock</Tag>
+		<Tag count="1" mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" source="MusicBrainz">boys band</Tag>
+		<Tag count="7" mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" source="MusicBrainz">british</Tag>
+		<Tag count="1" mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" source="MusicBrainz">british invasion</Tag>
+		<Tag count="1" mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" source="MusicBrainz">british rhythm &amp; blues</Tag>
+		<Tag count="1" mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" source="MusicBrainz">classical pop</Tag>
+		<Tag count="2" mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" source="MusicBrainz">experimental</Tag>
+		<Tag count="1" mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" source="MusicBrainz">folk pop</Tag>
+		<Tag count="1" mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" source="MusicBrainz">folk rock</Tag>
+		<Tag count="2" mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" source="MusicBrainz">hard rock</Tag>
+		<Tag count="1" mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" source="MusicBrainz">liverpool</Tag>
+		<Tag count="2" mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" source="MusicBrainz">merseybeat</Tag>
+		<Tag count="10" mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" source="MusicBrainz">pop</Tag>
+		<Tag count="4" mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" source="MusicBrainz">pop rock</Tag>
+		<Tag count="2" mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" source="MusicBrainz">psychedelic pop</Tag>
+		<Tag count="2" mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" source="MusicBrainz">psychedelic rock</Tag>
+		<Tag count="1" mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" source="MusicBrainz">rhythm &amp; blues</Tag>
+		<Tag count="11" mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" source="MusicBrainz">rock</Tag>
+		<Tag count="2" mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" source="MusicBrainz">rock &amp; roll</Tag>
+		<Tag count="1" mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" source="MusicBrainz">sunshine pop</Tag>
+		<Tag count="1" mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" source="MusicBrainz">uk</Tag>
+	</TagList>
+	<UrlList/>
+	<RatingList/>
+	<ArtistCreditList/>
+	<ArtList/>
+	<DisambiguationList/>
+	<AnnotationList/>
+	<Discography>
+		<ReleaseGroupList/>
+	</Discography>
+</Artist>

@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?><metadata xmlns="http://musicbrainz.org/ns/mmd-2.0#">
+  <artist type-id="b6e035f4-3ce9-331c-97df-83397230b0df" type="Person" id="76c9a186-75bd-436a-85c0-823e3efddb7f">
+    <name>Janis Joplin</name>
+    <sort-name>Joplin, Janis</sort-name>
+    <annotation>
+      <text>Janis' first two albums '''Big Brother &amp; the Holding Company''' and '''Cheap Thrills''' can be found under '''[http://musicbrainz.org/artist/3cf5a3be-25ef-4408-98fe-e66fee536be1.html|Big Brother &amp; the Holding Company]'''.</text>
+    </annotation>
+    <ipi>00034520807</ipi>
+    <ipi-list>
+      <ipi>00034520807</ipi>
+    </ipi-list>
+    <isni-list>
+      <isni>0000000080869937</isni>
+    </isni-list>
+    <gender id="93452b5a-a947-30c8-934f-6a4056b151c2">Female</gender>
+    <country>US</country>
+    <area id="489ce91b-6658-3307-9877-795b68554c98">
+      <name>United States</name>
+      <sort-name>United States</sort-name>
+      <iso-3166-1-code-list>
+        <iso-3166-1-code>US</iso-3166-1-code>
+      </iso-3166-1-code-list>
+    </area>
+    <begin-area id="5a9b37e6-927d-4674-852b-9f472408b47e">
+      <name>Port Arthur</name>
+      <sort-name>Port Arthur</sort-name>
+    </begin-area>
+    <end-area id="1f40c6e1-47ba-4e35-996f-fe6ee5840e62">
+      <name>Los Angeles</name>
+      <sort-name>Los Angeles</sort-name>
+    </end-area>
+    <life-span>
+      <begin>1943-01-19</begin>
+      <end>1970-10-04</end>
+      <ended>true</ended>
+    </life-span>
+    <alias-list count="3">
+      <alias sort-name="Janis Joplin (w">Janis Joplin (w</alias>
+      <alias type-id="d4dcd0c0-b341-3612-a332-c0ce797b25cf" sort-name="Joplin, Janis Lyn" type="Legal name">Janis Lyn Joplin</alias>
+      <alias sort-name="Joplin, Janis">Joplin, Janis</alias>
+    </alias-list>
+    <relation-list target-type="artist">
+      <relation type-id="5be4c609-9afa-4ea0-910b-12ffb71e3821" type="member of band">
+        <target>3cf5a3be-25ef-4408-98fe-e66fee536be1</target>
+        <artist id="3cf5a3be-25ef-4408-98fe-e66fee536be1">
+          <name>Big Brother &amp; the Holding Company</name>
+          <sort-name>Big Brother &amp; Holding Company, The</sort-name>
+        </artist>
+      </relation>
+      <relation type="involved with" type-id="fd3927ba-fd51-4fa9-bcc2-e83637896fe8">
+        <target>473fec09-277c-4b68-9d9a-f5d354b9901a</target>
+        <artist id="473fec09-277c-4b68-9d9a-f5d354b9901a">
+          <name>James Gurley</name>
+          <sort-name>Gurley, James</sort-name>
+        </artist>
+      </relation>
+      <relation type="member of band" type-id="5be4c609-9afa-4ea0-910b-12ffb71e3821">
+        <target>667972a5-a87e-44b7-bc0e-fd65ed66111f</target>
+        <artist id="667972a5-a87e-44b7-bc0e-fd65ed66111f">
+          <name>Kozmic Blues Band</name>
+          <sort-name>Kozmic Blues Band</sort-name>
+        </artist>
+      </relation>
+      <relation type-id="5be4c609-9afa-4ea0-910b-12ffb71e3821" type="member of band">
+        <target>da22392b-7060-4ec0-b736-d1347e14a72f</target>
+        <artist id="da22392b-7060-4ec0-b736-d1347e14a72f">
+          <name>Full Tilt Boogie Band</name>
+          <sort-name>Full Tilt Boogie Band</sort-name>
+        </artist>
+      </relation>
+    </relation-list>
+    <relation-list target-type="url">
+      <relation type="lyrics" type-id="e4d73442-3762-45a8-905c-401da65544ed">
+        <target id="c260830c-4560-4f88-8535-ed28557610fb">http://lyrics.wikia.com/Janis_Joplin</target>
+      </relation>
+      <relation type-id="e4d73442-3762-45a8-905c-401da65544ed" type="lyrics">
+        <target id="f817f7a3-8927-4044-a207-6a211b8b45e3">http://muzikum.eu/en/122-4189/janis-joplin/lyrics.html</target>
+      </relation>
+      <relation type-id="78f75830-94e1-4138-8f8a-643e3bb21ce5" type="biography">
+        <target id="5f3a973e-e126-499d-b22e-aba75052b301">http://rockhall.com/inductees/janis-joplin/bio/</target>
+      </relation>
+      <relation type-id="e8571dcc-35d4-4e91-a577-a3382fd84460" type="VIAF">
+        <target id="1905920a-89f8-435f-a438-1c77321f20f0">http://viaf.org/viaf/7574301</target>
+      </relation>
+      <relation type="allmusic" type-id="6b3e3c85-0002-4f34-aca6-80ace0d7e846">
+        <target id="79018f79-0b46-4495-87f0-2e1dc8380501">http://www.allmusic.com/artist/mn0000177060</target>
+      </relation>
+      <relation type-id="d028a975-000c-4525-9333-d3c8425e4b54" type="BBC Music page">
+        <target id="76a5eac9-f878-4913-9329-f6334a098cf5">http://www.bbc.co.uk/music/artists/76c9a186-75bd-436a-85c0-823e3efddb7f</target>
+      </relation>
+      <relation type="biography" type-id="78f75830-94e1-4138-8f8a-643e3bb21ce5">
+        <target id="c4d83f37-3c7d-4ee7-a9f0-13bdc23a96a0">http://www.findagrave.com/cgi-bin/fg.cgi?page=gr&amp;GRid=555</target>
+      </relation>
+      <relation type="IMDb" type-id="94c8b0cc-4477-4106-932c-da60e63de61c">
+        <target id="db52eac4-b275-46b2-8083-69c084b4d302">http://www.imdb.com/name/nm0429767/</target>
+      </relation>
+      <relation type-id="fe33d22f-c3b0-4d68-bd53-a856badf2b15" type="official homepage">
+        <target id="24ad54fa-7df3-4df7-b3b9-ea422052f9b2">http://www.janisjoplin.com/</target>
+      </relation>
+      <relation type="last.fm" type-id="08db8098-c0df-4b78-82c3-c8697b4bba7f">
+        <target id="588dd676-9994-4687-90b4-73afac4c39ed">http://www.last.fm/music/Janis+Joplin</target>
+      </relation>
+      <relation type="discography" type-id="4fb0eeec-a6eb-4ae3-ad52-b55765b94e8f">
+        <target id="61eb02a4-8381-44e6-9c21-bbf562b54099">http://www.officialjanis.com/disco_boutique.html</target>
+      </relation>
+      <relation type-id="79c5b84d-a206-4f4c-9832-78c028c312c3" type="secondhandsongs">
+        <target id="688a1471-199b-4cc8-baa2-008710bb53e3">http://www.secondhandsongs.com/artist/2661</target>
+      </relation>
+      <relation type="streaming music" type-id="769085a1-c2f7-4c24-a532-2375a77693bd">
+        <target id="c33926a4-288d-4660-b876-635a53ad287a">http://www.staimusic.com/en/bands/janis-joplin_2196.html</target>
+      </relation>
+      <relation type-id="221132e9-e30e-43f2-a741-15afc4c5fa7c" type="image">
+        <target id="b484e1cb-2887-4df8-93d1-d5c5439f7a35">https://commons.wikimedia.org/wiki/File:Janis_Joplin_1970.JPG</target>
+      </relation>
+      <relation type-id="29651736-fa6d-48e4-aadc-a557c6add1cb" type="wikipedia">
+        <target id="34c4471f-2efd-498d-91c8-234215f4dbcd">https://en.wikipedia.org/wiki/Janis_Joplin</target>
+      </relation>
+      <relation type="myspace" type-id="bac47923-ecde-4b59-822e-d08f0cd10156">
+        <target id="c2b9a7b8-0c7b-43ff-8181-81d9cbfe6b08">https://myspace.com/janisjoplin</target>
+      </relation>
+      <relation type="other databases" type-id="d94fb61c-fa20-4e3c-a19a-71a949fb2c55">
+        <target id="7f3f8643-dbdb-4497-bb31-7af87f623af2">https://rateyourmusic.com/artist/janis_joplin</target>
+      </relation>
+      <relation type="social network" type-id="99429741-f3f6-484b-84f8-23af51991770">
+        <target id="6434d495-c1fb-41c2-8d8d-12fb91bda595">https://twitter.com/janisjoplin</target>
+      </relation>
+      <relation type-id="04a5b104-a4c2-4bac-99a1-7b837c37d9e4" type="discogs">
+        <target id="3bddc462-5d42-49ed-a71b-c6950543d26b">https://www.discogs.com/artist/120232</target>
+      </relation>
+      <relation type="social network" type-id="99429741-f3f6-484b-84f8-23af51991770">
+        <target id="186f979e-4bfa-4629-89f9-716a974d8702">https://www.facebook.com/janisjoplin</target>
+      </relation>
+      <relation type="other databases" type-id="d94fb61c-fa20-4e3c-a19a-71a949fb2c55">
+        <target id="906f56e7-78eb-4111-b43c-9a1f1b146b34">https://www.musik-sammler.de/artist/janis-joplin/</target>
+      </relation>
+      <relation type="wikidata" type-id="689870a4-a1e4-4912-b17f-7b2664215698">
+        <target id="994c7920-9aad-4661-af38-01813dc38408">https://www.wikidata.org/wiki/Q1514</target>
+      </relation>
+      <relation type="youtube" type-id="6a540e5b-58c6-4192-b6ba-dbc71ec8fcf0">
+        <target id="930a376f-b707-4a76-9109-ee8cc6459ed0">https://www.youtube.com/janisjoplin</target>
+      </relation>
+    </relation-list>
+    <tag-list>
+      <tag count="0">
+        <name>27 club</name>
+      </tag>
+      <tag count="2">
+        <name>acid rock</name>
+      </tag>
+      <tag count="1">
+        <name>acoustic blues</name>
+      </tag>
+      <tag count="0">
+        <name>american</name>
+      </tag>
+      <tag count="1">
+        <name>blues</name>
+      </tag>
+      <tag count="4">
+        <name>blues rock</name>
+      </tag>
+      <tag count="0">
+        <name>classic pop and rock</name>
+      </tag>
+      <tag count="-1">
+        <name>death by heroin</name>
+      </tag>
+      <tag count="-1">
+        <name>death by overdose</name>
+      </tag>
+      <tag count="1">
+        <name>female vocalists</name>
+      </tag>
+      <tag count="1">
+        <name>folk</name>
+      </tag>
+      <tag count="1">
+        <name>gospel</name>
+      </tag>
+      <tag count="0">
+        <name>hard rock</name>
+      </tag>
+      <tag count="4">
+        <name>psychedelic rock</name>
+      </tag>
+      <tag count="4">
+        <name>rock</name>
+      </tag>
+      <tag count="1">
+        <name>soul</name>
+      </tag>
+    </tag-list>
+    <rating votes-count="7">4.55</rating>
+  </artist>
+</metadata>

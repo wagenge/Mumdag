@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Artist mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d">
+	<UniqueIdList/>
+	<NameList>
+		<Name mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" sort-name="Beatles, The" source="MusicBrainz" type="Name">The Beatles</Name>
+	</NameList>
+	<Type/>
+	<AreaList>
+		<Area code="GB-LIV" event="founded in" mbid="c249c30e-88ab-4b2f-a745-96a25bd7afee" seq="1" source="MusicBrainz" type="City">Liverpool</Area>
+		<Area event="founded in" mbid="dbcfe24c-1c0b-4722-addf-28b8696e32f8" seq="2" source="MusicBrainz" type="Subdivision">Merseyside</Area>
+		<Area code="GB-ENG" event="founded in" mbid="9d5dd675-3cf4-4296-9e39-67865ebee758" seq="3" source="MusicBrainz" type="Subdivision">England</Area>
+		<Area code="GB" event="founded in" mbid="8a754a16-0027-3a29-b6d7-2b40ea0481ed" seq="4" source="MusicBrainz" type="Country">United Kingdom</Area>
+	</AreaList>
+	<PeriodList/>
+	<DescriptionList/>
+	<TagList/>
+	<UrlList/>
+	<RatingList/>
+	<ArtistCreditList/>
+	<ArtList/>
+	<DisambiguationList/>
+	<AnnotationList/>
+	<Discography>
+		<ReleaseGroupList/>
+	</Discography>
+</Artist>

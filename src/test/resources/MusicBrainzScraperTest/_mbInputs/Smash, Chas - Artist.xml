@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?><metadata xmlns="http://musicbrainz.org/ns/mmd-2.0#">
+  <artist type="Person" type-id="b6e035f4-3ce9-331c-97df-83397230b0df" id="93a66d57-aa4c-4e40-98d4-64f76a34932e">
+    <name>Chas Smash</name>
+    <sort-name>Smash, Chas</sort-name>
+    <ipi>00085147956</ipi>
+    <ipi-list>
+      <ipi>00085147956</ipi>
+    </ipi-list>
+    <isni-list>
+      <isni>0000000114560437</isni>
+    </isni-list>
+    <gender id="36d3d30a-839d-3eda-8cb3-29be4384e4a9">Male</gender>
+    <country>GB</country>
+    <area id="8a754a16-0027-3a29-b6d7-2b40ea0481ed">
+      <name>United Kingdom</name>
+      <sort-name>United Kingdom</sort-name>
+      <iso-3166-1-code-list>
+        <iso-3166-1-code>GB</iso-3166-1-code>
+      </iso-3166-1-code-list>
+    </area>
+    <begin-area id="f03d09b3-39dc-4083-afd6-159e3f0d462f">
+      <name>London</name>
+      <sort-name>London</sort-name>
+    </begin-area>
+    <life-span>
+      <begin>1959-01-14</begin>
+    </life-span>
+    <relation-list target-type="artist">
+      <relation type="is person" type-id="dd9886f2-1dfe-4270-97db-283f6839a666">
+        <target>4a038747-ab97-403c-bd14-a89c573a5fb5</target>
+        <direction>backward</direction>
+        <begin>1978</begin>
+        <artist id="4a038747-ab97-403c-bd14-a89c573a5fb5">
+          <name>Carl Smyth</name>
+          <sort-name>Smyth, Carl</sort-name>
+        </artist>
+      </relation>
+      <relation type="member of band" type-id="5be4c609-9afa-4ea0-910b-12ffb71e3821">
+        <target>5f58803e-8c4c-478e-8b51-477f38483ede</target>
+        <begin>1976</begin>
+        <end>1977</end>
+        <ended>true</ended>
+        <attribute-list>
+          <attribute>background vocals</attribute>
+          <attribute>original</attribute>
+        </attribute-list>
+        <artist id="5f58803e-8c4c-478e-8b51-477f38483ede">
+          <name>Madness</name>
+          <sort-name>Madness</sort-name>
+          <disambiguation>English pop/ska band</disambiguation>
+        </artist>
+      </relation>
+      <relation type-id="5be4c609-9afa-4ea0-910b-12ffb71e3821" type="member of band">
+        <target>5f58803e-8c4c-478e-8b51-477f38483ede</target>
+        <begin>1976</begin>
+        <end>1977</end>
+        <ended>true</ended>
+        <attribute-list>
+          <attribute>original</attribute>
+          <attribute>trumpet</attribute>
+        </attribute-list>
+        <artist id="5f58803e-8c4c-478e-8b51-477f38483ede">
+          <name>Madness</name>
+          <sort-name>Madness</sort-name>
+          <disambiguation>English pop/ska band</disambiguation>
+        </artist>
+      </relation>
+      <relation type="member of band" type-id="5be4c609-9afa-4ea0-910b-12ffb71e3821">
+        <target>5f58803e-8c4c-478e-8b51-477f38483ede</target>
+        <begin>1976</begin>
+        <end>1977</end>
+        <ended>true</ended>
+        <attribute-list>
+          <attribute>harmonica</attribute>
+          <attribute>original</attribute>
+        </attribute-list>
+        <artist id="5f58803e-8c4c-478e-8b51-477f38483ede">
+          <name>Madness</name>
+          <sort-name>Madness</sort-name>
+          <disambiguation>English pop/ska band</disambiguation>
+        </artist>
+      </relation>
+      <relation type="member of band" type-id="5be4c609-9afa-4ea0-910b-12ffb71e3821">
+        <target>5f58803e-8c4c-478e-8b51-477f38483ede</target>
+        <begin>1976</begin>
+        <end>1977</end>
+        <ended>true</ended>
+        <attribute-list>
+          <attribute>acoustic guitar</attribute>
+          <attribute>original</attribute>
+        </attribute-list>
+        <artist id="5f58803e-8c4c-478e-8b51-477f38483ede">
+          <name>Madness</name>
+          <sort-name>Madness</sort-name>
+          <disambiguation>English pop/ska band</disambiguation>
+        </artist>
+      </relation>
+      <relation type-id="5be4c609-9afa-4ea0-910b-12ffb71e3821" type="member of band">
+        <target>5f58803e-8c4c-478e-8b51-477f38483ede</target>
+        <begin>1976</begin>
+        <end>1977</end>
+        <ended>true</ended>
+        <attribute-list>
+          <attribute>bass guitar</attribute>
+          <attribute>original</attribute>
+        </attribute-list>
+        <artist id="5f58803e-8c4c-478e-8b51-477f38483ede">
+          <name>Madness</name>
+          <sort-name>Madness</sort-name>
+          <disambiguation>English pop/ska band</disambiguation>
+        </artist>
+      </relation>
+      <relation type-id="5be4c609-9afa-4ea0-910b-12ffb71e3821" type="member of band">
+        <target>5f58803e-8c4c-478e-8b51-477f38483ede</target>
+        <begin>1979</begin>
+        <end>1988</end>
+        <ended>true</ended>
+        <attribute-list>
+          <attribute>acoustic guitar</attribute>
+          <attribute>background vocals</attribute>
+          <attribute>bass guitar</attribute>
+          <attribute>harmonica</attribute>
+          <attribute>trumpet</attribute>
+        </attribute-list>
+        <artist id="5f58803e-8c4c-478e-8b51-477f38483ede">
+          <name>Madness</name>
+          <sort-name>Madness</sort-name>
+          <disambiguation>English pop/ska band</disambiguation>
+        </artist>
+      </relation>
+      <relation type-id="5be4c609-9afa-4ea0-910b-12ffb71e3821" type="member of band">
+        <target>5f58803e-8c4c-478e-8b51-477f38483ede</target>
+        <begin>1992</begin>
+        <attribute-list>
+          <attribute>acoustic guitar</attribute>
+          <attribute>background vocals</attribute>
+          <attribute>bass guitar</attribute>
+          <attribute>harmonica</attribute>
+          <attribute>trumpet</attribute>
+        </attribute-list>
+        <artist id="5f58803e-8c4c-478e-8b51-477f38483ede">
+          <name>Madness</name>
+          <sort-name>Madness</sort-name>
+          <disambiguation>English pop/ska band</disambiguation>
+        </artist>
+      </relation>
+      <relation type="collaboration" type-id="75c09861-6857-4ec0-9729-84eefde7fc86">
+        <target>d1a20389-a2b7-4b83-8003-f68ca996a30e</target>
+        <artist id="d1a20389-a2b7-4b83-8003-f68ca996a30e">
+          <name>CAGE AGAINST THE MACHINE</name>
+          <sort-name>CAGE AGAINST THE MACHINE</sort-name>
+        </artist>
+      </relation>
+    </relation-list>
+    <relation-list target-type="url">
+      <relation type-id="e8571dcc-35d4-4e91-a577-a3382fd84460" type="VIAF">
+        <target id="24c88647-60a4-4384-85e0-2ddc4c09657e">http://viaf.org/viaf/119540438</target>
+      </relation>
+      <relation type-id="6b3e3c85-0002-4f34-aca6-80ace0d7e846" type="allmusic">
+        <target id="7f883d30-35ac-4d59-b2fb-04da05137064">http://www.allmusic.com/artist/mn0000085078</target>
+      </relation>
+      <relation type-id="29651736-fa6d-48e4-aadc-a557c6add1cb" type="wikipedia">
+        <target id="7eec20d9-8de7-439e-a815-b9f0b9e55242">https://en.wikipedia.org/wiki/Chas_Smash</target>
+      </relation>
+      <relation type-id="d94fb61c-fa20-4e3c-a19a-71a949fb2c55" type="other databases">
+        <target id="d6751de3-1419-4c4a-a6f7-eedf863300ae">https://rateyourmusic.com/artist/chas_smash</target>
+      </relation>
+      <relation type="discogs" type-id="04a5b104-a4c2-4bac-99a1-7b837c37d9e4">
+        <target id="07cab9b4-7b38-40b1-b6cd-1f9beeb20cc2">https://www.discogs.com/artist/684107</target>
+      </relation>
+      <relation type="wikidata" type-id="689870a4-a1e4-4912-b17f-7b2664215698">
+        <target id="38e8bd55-ed1a-4b1a-8ade-7463e072d6e4">https://www.wikidata.org/wiki/Q3496468</target>
+      </relation>
+    </relation-list>
+    <tag-list>
+      <tag count="1">
+        <name>english</name>
+      </tag>
+    </tag-list>
+  </artist>
+</metadata>

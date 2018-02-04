@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<MappingRules>
+	<RuleSet name="ErTestScraper">
+		<Rule no="1" name="Artist">
+			<Action no="1">
+				<Method>setArtistInfo</Method>
+				<ReturnVar/>
+				<ParamList>-</ParamList>
+			</Action>
+		</Rule>
+		<Rule no="2" name="Album">
+			<Action no="1">
+				<Method>setReleaseGroupInfo</Method>
+				<ReturnVar/>
+				<ParamList>-</ParamList>
+			</Action>
+			<Action no="2">
+				<Method>setReleaseInfo</Method>
+				<ReturnVar/>
+				<ParamList>-</ParamList>
+			</Action>
+		</Rule>
+		<Rule no="3" name="Medium">
+			<Action no="1">
+				<Method>setMediumInfo</Method>
+				<ReturnVar/>
+				<ParamList>-</ParamList>
+			</Action>
+		</Rule>
+		<Rule no="4" name="Track">
+			<Action no="1">
+				<Method>setTrackInfo</Method>
+				<ReturnVar/>
+				<ParamList>-</ParamList>
+			</Action>
+		</Rule>
+	</RuleSet>
+</MappingRules>

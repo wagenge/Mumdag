@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Artist mbid="79239441-bfd5-4981-a70c-55c3f15c1287">
+	<UniqueIdList/>
+	<NameList>
+		<Name mbid="79239441-bfd5-4981-a70c-55c3f15c1287" sort-name="Madonna" source="MusicBrainz" type="Name">Madonna</Name>
+	</NameList>
+	<Type/>
+	<AreaList/>
+	<PeriodList/>
+	<DescriptionList/>
+	<TagList/>
+	<UrlList/>
+	<RatingList/>
+	<ArtistCreditList/>
+	<ArtList/>
+	<DisambiguationList/>
+	<AnnotationList/>
+	<Discography>
+		<ReleaseGroupList/>
+	</Discography>
+</Artist>

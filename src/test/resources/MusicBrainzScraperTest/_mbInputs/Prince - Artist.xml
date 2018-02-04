@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="UTF-8"?><metadata xmlns="http://musicbrainz.org/ns/mmd-2.0#">
+  <artist type-id="b6e035f4-3ce9-331c-97df-83397230b0df" type="Person" id="070d193a-845c-479f-980e-bef15710653e">
+    <name>Prince</name>
+    <sort-name>Prince</sort-name>
+    <disambiguation>“The Artist Formerly Known as…”</disambiguation>
+    <ipi>00045620792</ipi>
+    <ipi-list>
+      <ipi>00045620792</ipi>
+      <ipi>00052210040</ipi>
+      <ipi>00334284961</ipi>
+    </ipi-list>
+    <isni-list>
+      <isni>0000000120964892</isni>
+    </isni-list>
+    <gender id="36d3d30a-839d-3eda-8cb3-29be4384e4a9">Male</gender>
+    <country>US</country>
+    <area id="489ce91b-6658-3307-9877-795b68554c98">
+      <name>United States</name>
+      <sort-name>United States</sort-name>
+      <iso-3166-1-code-list>
+        <iso-3166-1-code>US</iso-3166-1-code>
+      </iso-3166-1-code-list>
+    </area>
+    <begin-area id="3e80aaa7-9b71-450f-8147-0ecf101d8f1a">
+      <name>Minneapolis</name>
+      <sort-name>Minneapolis</sort-name>
+    </begin-area>
+    <end-area id="cac242a2-9fa1-476a-a160-0812e08aec4f">
+      <name>Chanhassen</name>
+      <sort-name>Chanhassen</sort-name>
+    </end-area>
+    <life-span>
+      <begin>1958-06-07</begin>
+      <end>2016-04-21</end>
+      <ended>true</ended>
+    </life-span>
+    <alias-list count="13">
+      <alias type="Search hint" sort-name="(us 1) PRINCE" type-id="1937e404-b981-3cb7-8151-4c86ebfc8d8e">(us 1) PRINCE</alias>
+      <alias sort-name="Formerly Prince" type="Search hint" type-id="1937e404-b981-3cb7-8151-4c86ebfc8d8e">Formerly Prince</alias>
+      <alias end-date="1987" sort-name="Coco, Joey" begin-date="1985">Joey Coco</alias>
+      <alias type-id="1937e404-b981-3cb7-8151-4c86ebfc8d8e" type="Search hint" sort-name="O(+&gt;">O(+&gt;</alias>
+      <alias type="Search hint" sort-name="O(+&gt;)" type-id="1937e404-b981-3cb7-8151-4c86ebfc8d8e">O(+&gt;)</alias>
+      <alias type="Artist name" sort-name="Prince" type-id="894afba6-2816-3c24-8072-eadb66bd04bc" locale="en" primary="primary">Prince</alias>
+      <alias locale="en" type-id="d4dcd0c0-b341-3612-a332-c0ce797b25cf" type="Legal name" sort-name="Nelson, Prince Rogers">Prince Rogers Nelson</alias>
+      <alias sort-name="Symbol" type="Search hint" type-id="1937e404-b981-3cb7-8151-4c86ebfc8d8e">Symbol</alias>
+      <alias type-id="1937e404-b981-3cb7-8151-4c86ebfc8d8e" sort-name="T.A.F.K.A.P." type="Search hint">T.A.F.K.A.P.</alias>
+      <alias sort-name="The Artist Formerly Known as Prince" type="Search hint" type-id="1937e404-b981-3cb7-8151-4c86ebfc8d8e">The Artist Formerly Known as Prince</alias>
+      <alias type="Search hint" sort-name="The Love Symbol" type-id="1937e404-b981-3cb7-8151-4c86ebfc8d8e">The Love Symbol</alias>
+      <alias type-id="1937e404-b981-3cb7-8151-4c86ebfc8d8e" sort-name="Ƭ̵̬̊" type="Search hint">Ƭ̵̬̊</alias>
+      <alias type="Search hint" sort-name="♀♂" type-id="1937e404-b981-3cb7-8151-4c86ebfc8d8e">♀♂</alias>
+    </alias-list>
+    <relation-list target-type="artist">
+      <relation type="married" type-id="b2bf7a5d-2da6-4742-baf4-e38d8a7ad029">
+        <target>03b5bb79-82c4-4e51-a9e1-1e4300535a63</target>
+        <direction>backward</direction>
+        <end>2000</end>
+        <ended>true</ended>
+        <artist id="03b5bb79-82c4-4e51-a9e1-1e4300535a63">
+          <name>Mayte</name>
+          <sort-name>Mayte</sort-name>
+        </artist>
+      </relation>
+      <relation type-id="dd9886f2-1dfe-4270-97db-283f6839a666" type="is person">
+        <target>092199a4-e3df-4844-818e-212e71cb0619</target>
+        <artist id="092199a4-e3df-4844-818e-212e71cb0619">
+          <name>Alexander Nevermind</name>
+          <sort-name>Nevermind, Alexander</sort-name>
+        </artist>
+        <source-credit>Prince Rogers Nelson</source-credit>
+      </relation>
+      <relation type-id="5be4c609-9afa-4ea0-910b-12ffb71e3821" type="member of band">
+        <target>0c111654-2eb9-4729-8a27-7397d3db63e3</target>
+        <attribute-list>
+          <attribute>original</attribute>
+        </attribute-list>
+        <artist id="0c111654-2eb9-4729-8a27-7397d3db63e3">
+          <name>3rdEyeGirl</name>
+          <sort-name>3rdEyeGirl</sort-name>
+        </artist>
+      </relation>
+      <relation type="member of band" type-id="5be4c609-9afa-4ea0-910b-12ffb71e3821">
+        <target>21c0fd52-4234-4407-bc4e-9870b0a48a3d</target>
+        <artist id="21c0fd52-4234-4407-bc4e-9870b0a48a3d">
+          <name>94 East</name>
+          <sort-name>94 East</sort-name>
+        </artist>
+      </relation>
+      <relation type-id="a6f62641-2f58-470e-b02b-88d7b984dc9f" type="tribute">
+        <target>358da239-d3a1-414e-92b3-8427b75f1f3c</target>
+        <direction>backward</direction>
+        <artist id="358da239-d3a1-414e-92b3-8427b75f1f3c">
+          <name>Purple Reign</name>
+          <sort-name>Purple Reign</sort-name>
+        </artist>
+      </relation>
+      <relation type-id="5be4c609-9afa-4ea0-910b-12ffb71e3821" type="member of band">
+        <target>4c8ead39-b9df-4c56-a27c-51bc049cfd48</target>
+        <attribute-list>
+          <attribute>original</attribute>
+        </attribute-list>
+        <artist id="4c8ead39-b9df-4c56-a27c-51bc049cfd48">
+          <name>The Revolution</name>
+          <sort-name>Revolution, The</sort-name>
+          <disambiguation>founded by Prince</disambiguation>
+        </artist>
+      </relation>
+      <relation type="is person" type-id="dd9886f2-1dfe-4270-97db-283f6839a666">
+        <target>56f2a1d3-f129-4818-a015-eac9cc2c7d44</target>
+        <artist id="56f2a1d3-f129-4818-a015-eac9cc2c7d44">
+          <name>Paisley Park</name>
+          <sort-name>Park, Paisley</sort-name>
+        </artist>
+        <source-credit>Prince Rogers Nelson</source-credit>
+      </relation>
+      <relation type="tribute" type-id="a6f62641-2f58-470e-b02b-88d7b984dc9f">
+        <target>7f28fe45-234e-4f3c-a082-9be1e0042fba</target>
+        <direction>backward</direction>
+        <artist id="7f28fe45-234e-4f3c-a082-9be1e0042fba">
+          <name>Gabriel Sanchez and the Prince Experience</name>
+          <sort-name>Sanchez, Gabriel and Prince Experience, The</sort-name>
+        </artist>
+      </relation>
+      <relation type="member of band" type-id="5be4c609-9afa-4ea0-910b-12ffb71e3821">
+        <target>9b2d12b0-49f1-4d1a-8ca6-f552beb4aa6d</target>
+        <artist id="9b2d12b0-49f1-4d1a-8ca6-f552beb4aa6d">
+          <name>Madhouse</name>
+          <sort-name>Madhouse</sort-name>
+          <disambiguation>80s jazz-fusion band formed by Prince</disambiguation>
+        </artist>
+      </relation>
+      <relation type="member of band" type-id="5be4c609-9afa-4ea0-910b-12ffb71e3821">
+        <target>9eaac218-880e-4826-b76e-2d4b4bb2ce8d</target>
+        <attribute-list>
+          <attribute>keyboard</attribute>
+          <attribute>original</attribute>
+        </attribute-list>
+        <artist id="9eaac218-880e-4826-b76e-2d4b4bb2ce8d">
+          <name>The Flesh</name>
+          <sort-name>Flesh, The</sort-name>
+          <disambiguation>Prince &amp; Eric Leeds band</disambiguation>
+        </artist>
+      </relation>
+      <relation type="member of band" type-id="5be4c609-9afa-4ea0-910b-12ffb71e3821">
+        <target>9eaac218-880e-4826-b76e-2d4b4bb2ce8d</target>
+        <attribute-list>
+          <attribute>drums</attribute>
+          <attribute>original</attribute>
+        </attribute-list>
+        <artist id="9eaac218-880e-4826-b76e-2d4b4bb2ce8d">
+          <name>The Flesh</name>
+          <sort-name>Flesh, The</sort-name>
+          <disambiguation>Prince &amp; Eric Leeds band</disambiguation>
+        </artist>
+      </relation>
+      <relation type="member of band" type-id="5be4c609-9afa-4ea0-910b-12ffb71e3821">
+        <target>9eaac218-880e-4826-b76e-2d4b4bb2ce8d</target>
+        <attribute-list>
+          <attribute>original</attribute>
+          <attribute>percussion</attribute>
+        </attribute-list>
+        <artist id="9eaac218-880e-4826-b76e-2d4b4bb2ce8d">
+          <name>The Flesh</name>
+          <sort-name>Flesh, The</sort-name>
+          <disambiguation>Prince &amp; Eric Leeds band</disambiguation>
+        </artist>
+      </relation>
+      <relation type="member of band" type-id="5be4c609-9afa-4ea0-910b-12ffb71e3821">
+        <target>9eaac218-880e-4826-b76e-2d4b4bb2ce8d</target>
+        <attribute-list>
+          <attribute>guitar</attribute>
+          <attribute>original</attribute>
+        </attribute-list>
+        <artist id="9eaac218-880e-4826-b76e-2d4b4bb2ce8d">
+          <name>The Flesh</name>
+          <sort-name>Flesh, The</sort-name>
+          <disambiguation>Prince &amp; Eric Leeds band</disambiguation>
+        </artist>
+      </relation>
+      <relation type="involved with" type-id="fd3927ba-fd51-4fa9-bcc2-e83637896fe8">
+        <target>b02d3739-af33-4a8d-94a6-13a093414d08</target>
+        <direction>backward</direction>
+        <artist id="b02d3739-af33-4a8d-94a6-13a093414d08">
+          <name>Susannah Melvoin</name>
+          <sort-name>Melvoin, Susannah</sort-name>
+        </artist>
+      </relation>
+      <relation type="involved with" type-id="fd3927ba-fd51-4fa9-bcc2-e83637896fe8">
+        <target>c476d437-0a95-4819-86c8-fd63b93b5f55</target>
+        <direction>backward</direction>
+        <ended>true</ended>
+        <artist id="c476d437-0a95-4819-86c8-fd63b93b5f55">
+          <name>Kim Basinger</name>
+          <sort-name>Basinger, Kim</sort-name>
+        </artist>
+      </relation>
+      <relation type="is person" type-id="dd9886f2-1dfe-4270-97db-283f6839a666">
+        <target>d651d80e-6137-4440-81da-fff5a27a79c4</target>
+        <artist id="d651d80e-6137-4440-81da-fff5a27a79c4">
+          <name>Camille</name>
+          <sort-name>Camille</sort-name>
+          <disambiguation>alter ego of Prince</disambiguation>
+        </artist>
+        <source-credit>Prince Rogers Nelson</source-credit>
+      </relation>
+      <relation type-id="9421ca84-934f-49fe-9e66-dea242430406" type="parent">
+        <target>dd428a20-ea1c-4dfa-ab60-52c064d6ef80</target>
+        <direction>backward</direction>
+        <artist id="dd428a20-ea1c-4dfa-ab60-52c064d6ef80">
+          <name>John L. Nelson</name>
+          <sort-name>Nelson, John L.</sort-name>
+        </artist>
+      </relation>
+    </relation-list>
+    <relation-list target-type="url">
+      <relation type-id="e4d73442-3762-45a8-905c-401da65544ed" type="lyrics">
+        <target id="56948654-4c57-4233-9de8-d657ebc9a363">http://decoda.com/prince-lyrics</target>
+      </relation>
+      <relation type-id="e4d73442-3762-45a8-905c-401da65544ed" type="lyrics">
+        <target id="ececda42-dd6d-4883-9812-437a2360e40a">http://genius.com/artists/Prince</target>
+      </relation>
+      <relation type-id="e4d73442-3762-45a8-905c-401da65544ed" type="lyrics">
+        <target id="0f4d0165-aab8-4fd5-8a1c-bd61edb603a3">http://lyrics.wikia.com/wiki/Prince</target>
+      </relation>
+      <relation type="other databases" type-id="d94fb61c-fa20-4e3c-a19a-71a949fb2c55">
+        <target id="ad899c06-e55d-443a-8baf-2bb6153d58a5">http://musicmoz.org/Bands_and_Artists/P/Prince/</target>
+      </relation>
+      <relation type="lyrics" type-id="e4d73442-3762-45a8-905c-401da65544ed">
+        <target id="876b0598-76ca-4934-b925-3f7ef643c34d">http://muzikum.eu/en/122-5250/prince/lyrics.html</target>
+      </relation>
+      <relation type-id="f484f897-81cc-406e-96f9-cd799a04ee24" type="fanpage">
+        <target id="f2e27d56-6d11-4942-9acb-5d6b7d6eaab0">http://prince.org/</target>
+      </relation>
+      <relation type-id="d94fb61c-fa20-4e3c-a19a-71a949fb2c55" type="other databases">
+        <target id="cb5ecb3a-8111-4e0e-9abc-3dd0f53edbc2">http://rateyourmusic.com/artist/prince</target>
+      </relation>
+      <relation type-id="e8571dcc-35d4-4e91-a577-a3382fd84460" type="VIAF">
+        <target id="d11de9aa-d189-496b-989a-ae57f9a7b37c">http://viaf.org/viaf/256968961</target>
+      </relation>
+      <relation type-id="d94fb61c-fa20-4e3c-a19a-71a949fb2c55" type="other databases">
+        <target id="977b72b7-8c82-4fed-8922-c841be611457">http://www.45cat.com/artist/prince</target>
+      </relation>
+      <relation type-id="6b3e3c85-0002-4f34-aca6-80ace0d7e846" type="allmusic">
+        <target id="91795fd9-efaa-418e-9e40-9af353eff5df">http://www.allmusic.com/artist/mn0000361393</target>
+      </relation>
+      <relation type-id="d028a975-000c-4525-9333-d3c8425e4b54" type="BBC Music page">
+        <target id="21171c6f-d6ea-4570-9d96-b986706ff19a">http://www.bbc.co.uk/music/artists/070d193a-845c-479f-980e-bef15710653e</target>
+      </relation>
+      <relation type="IMDb" type-id="94c8b0cc-4477-4106-932c-da60e63de61c">
+        <target id="13daf52b-822d-4348-ba3c-2608ce776261">http://www.imdb.com/name/nm0002239/</target>
+      </relation>
+      <relation type-id="08db8098-c0df-4b78-82c3-c8697b4bba7f" type="last.fm">
+        <target id="81966210-85f0-4f66-a4bf-4a8e467ec438">http://www.last.fm/music/Prince</target>
+      </relation>
+      <relation type="official homepage" type-id="fe33d22f-c3b0-4d68-bd53-a856badf2b15">
+        <target id="ee5fe9c5-2dc2-4286-9f24-771f03c35c20">http://www.officialprincemusic.com/</target>
+      </relation>
+      <relation type-id="769085a1-c2f7-4c24-a532-2375a77693bd" type="streaming music">
+        <target id="a02d9369-18e2-41ef-b453-aa21a7eedf3f">http://www.pandora.com/prince</target>
+      </relation>
+      <relation type="secondhandsongs" type-id="79c5b84d-a206-4f4c-9832-78c028c312c3">
+        <target id="7093ca32-9f5f-4260-b268-6cc3226cf2ac">http://www.secondhandsongs.com/artist/437</target>
+      </relation>
+      <relation type="streaming music" type-id="769085a1-c2f7-4c24-a532-2375a77693bd">
+        <target id="7d836430-1573-4081-858d-009e35044b0b">http://www.staimusic.com/en/bands/prince_3545.html</target>
+      </relation>
+      <relation type="other databases" type-id="d94fb61c-fa20-4e3c-a19a-71a949fb2c55">
+        <target id="f0bcdbe6-6cf4-405d-83b0-cd54ac718ab8">http://www.whosampled.com/Prince/</target>
+      </relation>
+      <relation type-id="221132e9-e30e-43f2-a741-15afc4c5fa7c" type="image">
+        <target id="5ee4ae24-9729-4ece-8db8-abdbf32c4fad">https://commons.wikimedia.org/wiki/File:Prince_at_Coachella_001.jpg</target>
+      </relation>
+      <relation type="other databases" type-id="d94fb61c-fa20-4e3c-a19a-71a949fb2c55">
+        <target id="da1c6cdd-197c-4519-ae78-d463ba2219f5">https://d-nb.info/gnd/118866060</target>
+      </relation>
+      <relation type="wikipedia" type-id="29651736-fa6d-48e4-aadc-a557c6add1cb">
+        <target id="9e91a820-f4d2-47ae-a96f-07d751d1beae">https://en.wikipedia.org/wiki/Prince_(musician)</target>
+        <source-credit>Prince Rogers Nelson</source-credit>
+      </relation>
+      <relation type-id="d94fb61c-fa20-4e3c-a19a-71a949fb2c55" type="other databases">
+        <target id="cf504b36-455d-421b-a7e6-7319084c4d23">https://imvdb.com/n/prince</target>
+      </relation>
+      <relation type="purchase for download" type-id="f8319a2f-f824-4617-81c8-be6560b3b203">
+        <target id="8d38a13f-0158-4c58-b3a0-4d9776eabcca">https://itunes.apple.com/gb/artist/id155814</target>
+      </relation>
+      <relation type="streaming music" type-id="769085a1-c2f7-4c24-a532-2375a77693bd">
+        <target id="74919941-d99b-440b-80f5-af35eab1cd5c">https://open.spotify.com/artist/5a2EaR3hamoenG9rDuVn8j</target>
+      </relation>
+      <relation type-id="89e4a949-0976-440d-bda1-5f772c1e5710" type="soundcloud">
+        <target id="e4f87db3-f677-4140-9241-ea76fde48ec1">https://soundcloud.com/prince3eg</target>
+      </relation>
+      <relation type="discogs" type-id="04a5b104-a4c2-4bac-99a1-7b837c37d9e4">
+        <target id="b277da8f-d807-4285-8de8-bfba0fa48988">https://www.discogs.com/artist/28795</target>
+      </relation>
+      <relation type="discogs" type-id="04a5b104-a4c2-4bac-99a1-7b837c37d9e4">
+        <target id="d3892c3a-297c-4b9c-8af2-159d7b676b10">https://www.discogs.com/artist/293637</target>
+      </relation>
+      <relation type="discogs" type-id="04a5b104-a4c2-4bac-99a1-7b837c37d9e4">
+        <target id="e0e9a413-08c9-4043-80c4-27da6ec9bf1d">https://www.discogs.com/artist/342899</target>
+        <source-credit>Prince Rogers Nelson</source-credit>
+      </relation>
+      <relation type="social network" type-id="99429741-f3f6-484b-84f8-23af51991770">
+        <target id="dbde2e47-ebb6-45e0-87d9-93d974df378e">https://www.facebook.com/pages/Prince/103754739663042?rf=401280843384729</target>
+      </relation>
+      <relation type-id="99429741-f3f6-484b-84f8-23af51991770" type="social network">
+        <target id="696979a3-c76e-411b-94b4-e647d2ba1c1a">https://www.facebook.com/princeofficial</target>
+      </relation>
+      <relation type="wikidata" type-id="689870a4-a1e4-4912-b17f-7b2664215698">
+        <target id="dd339d91-854f-4895-afce-4e83fc46f215">https://www.wikidata.org/wiki/Q7542</target>
+      </relation>
+      <relation type="youtube" type-id="6a540e5b-58c6-4192-b6ba-dbc71ec8fcf0">
+        <target id="8d229f7c-0a95-4868-a6be-6788a43f0965">https://www.youtube.com/user/prince</target>
+        <begin>2014-03-05</begin>
+      </relation>
+    </relation-list>
+    <tag-list>
+      <tag count="0">
+        <name>00s</name>
+      </tag>
+      <tag count="0">
+        <name>70s</name>
+      </tag>
+      <tag count="0">
+        <name>80s</name>
+      </tag>
+      <tag count="0">
+        <name>90s</name>
+      </tag>
+      <tag count="0">
+        <name>american</name>
+      </tag>
+      <tag count="0">
+        <name>américain</name>
+      </tag>
+      <tag count="4">
+        <name>contemporary r&amp;b</name>
+      </tag>
+      <tag count="1">
+        <name>dance</name>
+      </tag>
+      <tag count="3">
+        <name>dance-pop</name>
+      </tag>
+      <tag count="1">
+        <name>dance-rock</name>
+      </tag>
+      <tag count="2">
+        <name>film soundtrack</name>
+      </tag>
+      <tag count="7">
+        <name>funk</name>
+      </tag>
+      <tag count="4">
+        <name>funk rock</name>
+      </tag>
+      <tag count="0">
+        <name>minneapolis sound</name>
+      </tag>
+      <tag count="2">
+        <name>neo-psychedelia</name>
+      </tag>
+      <tag count="5">
+        <name>pop</name>
+      </tag>
+      <tag count="0">
+        <name>pop and chart</name>
+      </tag>
+      <tag count="2">
+        <name>pop rock</name>
+      </tag>
+      <tag count="0">
+        <name>pop/rock</name>
+      </tag>
+      <tag count="0">
+        <name>pretzelbodylogic</name>
+      </tag>
+      <tag count="0">
+        <name>prince revolution</name>
+      </tag>
+      <tag count="2">
+        <name>psychedelic pop</name>
+      </tag>
+      <tag count="3">
+        <name>psychedelic soul</name>
+      </tag>
+      <tag count="0">
+        <name>punk</name>
+      </tag>
+      <tag count="0">
+        <name>robin</name>
+      </tag>
+      <tag count="2">
+        <name>rock</name>
+      </tag>
+      <tag count="1">
+        <name>soul</name>
+      </tag>
+      <tag count="3">
+        <name>synth funk</name>
+      </tag>
+      <tag count="2">
+        <name>usa</name>
+      </tag>
+    </tag-list>
+    <rating votes-count="10">4.5</rating>
+  </artist>
+</metadata>

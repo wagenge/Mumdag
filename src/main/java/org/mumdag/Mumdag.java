@@ -2,10 +2,12 @@ package org.mumdag;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.mumdag.core.LocalArtistIndex;
+import org.mumdag.core.LocalMusicIndexer;
+import org.mumdag.model.index.MusicIndex;
 import org.mumdag.utils.PropertyHandler;
 
-import java.util.Map;
+import java.util.HashMap;
+import java.util.TreeMap;
 
 
 public class Mumdag {
@@ -45,39 +47,63 @@ public class Mumdag {
 		// Extract the artists-(folders) for a given starting path.
 		//	The depth of the artist folder is configured in the config.properties   
 		String startPath;
-		Map<String, String> artistList = null;
-		Integer artistListSize = 0;
+		//Map<String, String> artistList = null;
+		//Integer artistListSize = 0;
 		try {
-			startPath = PropertyHandler.getInstance().getValue("LocalArtistIndex.startPath");
+			startPath = PropertyHandler.getInstance().getValue("LocalMusicIndexer.startPath");
 			log.info("Building artist index started ...  start reading at {}", startPath);
-			LocalArtistIndex lai = new LocalArtistIndex(startPath);
-			artistList = lai.getArtistList();
+			//LocalArtistIndex lai = new LocalArtistIndex(startPath);
+			LocalMusicIndexer lmi = new LocalMusicIndexer(startPath);
+			lmi.buildIndex();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		if(artistList != null) {
-			artistListSize = artistList.size();
-		}
-		log.info("Building artist index finsihed ... {} artists found", artistListSize);
+        MusicIndex mi = MusicIndex.getInstance();
+        log.info("Building music index finished ... {} artists and {} tracks found", mi.getNumOfArtists(), mi.getNumOfTracks());
+
+		TreeMap<Long, HashMap<String, Object>> fmi =  mi.getFlatMusicIndex();
+
+		//if(artistList != null) {
+		//	artistListSize = artistList.size();
+		//}
+
 			
 /*		int i = 1;
-		for (Map.Entry<String, String> artist : artistList.entrySet()) {			
-		    String artistName = artist.getKey();
-		    String artistCanonicalPath = artist.getValue();
+		for (Map.Entry<Long, HashMap<String, Object>> entry : fmi.entrySet()) {
+		    Long entryKey = entry.getKey();
+		    HashMap<String, Object> entryValue = entry.getValue();
 
-		    log.info("#{}: {} ({}) ... start executing rules", i, artistName, artistCanonicalPath);
+		    String entryName = "";
+		    switch ((String)entryValue.get("type")) {
+                case "artist":
+                    entryName = (String)entryValue.get("artistFolderName");
+                    break;
+                case "album":
+                    entryName = (String)entryValue.get("albumFolderName");
+                    break;
+                case "medium":
+                    entryName = String.valueOf(entryValue.get("mediumNumber"));
+                    break;
+                case "track":
+                    entryName = (String)entryValue.get("trackFileName");
+                    break;
+		    }
+
+            log.info("#{}: {} ({}) => {} ... start executing rules", i, String.valueOf(entryKey), entryValue.get("type"), entryName);
+
+		    //log.info("#{}: {} ({}) ... start executing rules", i, artistName, artistCanonicalPath);
 			
-		    try {
-		    	oxd.createOutputXmlDoc();
-				oxd = er.executeRules(artistName, artistCanonicalPath, oxd);
-			} catch (Exception e) {
-				e.printStackTrace();
-			}
-		    oxd.writeOutputDocToFile(artistCanonicalPath + "/.metadata/", "test.xml");
-		    log.info("#{}: {} ({}) ... executing rules finished", i, artistName, artistCanonicalPath);
+		    //try {
+		    //	oxd.createOutputXmlDoc();
+			//	oxd = er.executeRules(artistName, artistCanonicalPath, oxd);
+			//} catch (Exception e) {
+			//	e.printStackTrace();
+			//}
+		    //oxd.writeOutputDocToFile(artistCanonicalPath + "/.metadata/", "test.xml");
+		    //log.info("#{}: {} ({}) ... executing rules finished", i, artistName, artistCanonicalPath);
 		    i++;
-		}
-*/
+		}*/
+
 		log.info(" Mumdag finished");
 	}
 

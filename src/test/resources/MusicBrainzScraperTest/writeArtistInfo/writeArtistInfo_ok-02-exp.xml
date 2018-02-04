@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Artist mbid="0c751690-c784-4a4f-b1e4-c1de27d47581">
+	<UniqueIdList>
+		<UniqueId rmid="mn0000919603" source="Allmusic">
+			<SourceUrl>http://www.allmusic.com/artist/mn0000919603</SourceUrl>
+			<SourceWSUrl>-</SourceWSUrl>
+			<Value>mn0000919603</Value>
+		</UniqueId>
+		<UniqueId mbid="0c751690-c784-4a4f-b1e4-c1de27d47581" source="BBC">
+			<SourceUrl>http://www.bbc.co.uk/music/artists/0c751690-c784-4a4f-b1e4-c1de27d47581</SourceUrl>
+			<SourceWSUrl>-</SourceWSUrl>
+			<Value>0c751690-c784-4a4f-b1e4-c1de27d47581</Value>
+		</UniqueId>
+		<UniqueId mbid="0c751690-c784-4a4f-b1e4-c1de27d47581" source="LastFM">
+			<SourceUrl>http://www.last.fm/music/Animal+Collective</SourceUrl>
+			<SourceWSUrl>http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&amp;mbid=0c751690-c784-4a4f-b1e4-c1de27d47581&amp;api_key=YOUR_API_KEY</SourceWSUrl>
+			<Value>0c751690-c784-4a4f-b1e4-c1de27d47581</Value>
+		</UniqueId>
+		<UniqueId amid="id5664621" source="AppleMusic">
+			<SourceUrl>https://itunes.apple.com/artist/id5664621</SourceUrl>
+			<SourceWSUrl>https://api.music.apple.com/v1/catalog/_storefront_/artists/id5664621</SourceWSUrl>
+			<Value>id5664621</Value>
+		</UniqueId>
+		<UniqueId source="Spotify" spid="4kwxTgCKMipBKhSnEstNKj">
+			<SourceUrl>https://open.spotify.com/artist/4kwxTgCKMipBKhSnEstNKj</SourceUrl>
+			<SourceWSUrl>https://api.spotify.com/v1/artists/4kwxTgCKMipBKhSnEstNKj</SourceWSUrl>
+			<Value>4kwxTgCKMipBKhSnEstNKj</Value>
+		</UniqueId>
+		<UniqueId dcid="207958" source="Discogs">
+			<SourceUrl>https://www.discogs.com/artist/207958</SourceUrl>
+			<SourceWSUrl>https://api.discogs.com/artist/207958</SourceWSUrl>
+			<Value>207958</Value>
+		</UniqueId>
+		<UniqueId source="Wikidata" wdid="Q547272">
+			<SourceUrl>https://www.wikidata.org/wiki/Q547272</SourceUrl>
+			<SourceWSUrl>https://www.wikidata.org/w/api.php?action=wbgetentities&amp;format=xml&amp;ids=Q547272</SourceWSUrl>
+			<Value>Q547272</Value>
+		</UniqueId>
+	</UniqueIdList>
+	<NameList>
+		<Name mbid="0c751690-c784-4a4f-b1e4-c1de27d47581" sort-name="Animal Collective" source="MusicBrainz" type="Name">Animal Collective</Name>
+		<Name mbid="0c751690-c784-4a4f-b1e4-c1de27d47581" sort-name="Campfire Songs" source="MusicBrainz" type="Alias">Campfire Songs</Name>
+		<Name mbid="0c751690-c784-4a4f-b1e4-c1de27d47581" sort-name="The Animal Collective" source="MusicBrainz" type="Alias">The Animal Collective</Name>
+	</NameList>
+	<Type mbid="0c751690-c784-4a4f-b1e4-c1de27d47581">Group</Type>
+	<AreaList>
+		<Area event="founded in" mbid="2fb5445d-3987-49fe-957a-f730a7acc4a2" seq="1" source="MusicBrainz" type="City">Baltimore</Area>
+		<Area code="US-MD" event="founded in" mbid="1ed51cbe-4272-4df9-9b18-44b0d4714086" seq="2" source="MusicBrainz" type="Subdivision">Maryland</Area>
+		<Area code="US" event="founded in" mbid="489ce91b-6658-3307-9877-795b68554c98" seq="3" source="MusicBrainz" type="Country">United States</Area>
+	</AreaList>
+	<PeriodList>
+		<Date mbid="0c751690-c784-4a4f-b1e4-c1de27d47581" type="founded">2000</Date>
+	</PeriodList>
+	<DescriptionList/>
+	<TagList>
+		<Tag count="1" mbid="0c751690-c784-4a4f-b1e4-c1de27d47581" source="MusicBrainz">experimental</Tag>
+		<Tag count="2" mbid="0c751690-c784-4a4f-b1e4-c1de27d47581" source="MusicBrainz">freak folk</Tag>
+		<Tag count="2" mbid="0c751690-c784-4a4f-b1e4-c1de27d47581" source="MusicBrainz">neo-psychedelia</Tag>
+		<Tag count="1" mbid="0c751690-c784-4a4f-b1e4-c1de27d47581" source="MusicBrainz">noise pop</Tag>
+		<Tag count="1" mbid="0c751690-c784-4a4f-b1e4-c1de27d47581" source="MusicBrainz">psychedelic folk</Tag>
+		<Tag count="2" mbid="0c751690-c784-4a4f-b1e4-c1de27d47581" source="MusicBrainz">psychedelic pop</Tag>
+	</TagList>
+	<UrlList>
+		<Url mbid="0c751690-c784-4a4f-b1e4-c1de27d47581" type="bandcamp">http://anmlcollectve.bandcamp.com/</Url>
+		<Url mbid="0c751690-c784-4a4f-b1e4-c1de27d47581" type="lyrics">http://decoda.com/animal-collective-lyrics</Url>
+		<Url mbid="0c751690-c784-4a4f-b1e4-c1de27d47581" type="lyrics">http://genius.com/artists/Animal-collective</Url>
+		<Url mbid="0c751690-c784-4a4f-b1e4-c1de27d47581" type="other databases">http://imvdb.com/n/animal-collective</Url>
+		<Url mbid="0c751690-c784-4a4f-b1e4-c1de27d47581" type="lyrics">http://muzikum.eu/en/122-6652/animal-collective/lyrics.html</Url>
+		<Url mbid="0c751690-c784-4a4f-b1e4-c1de27d47581" type="allmusic">http://www.allmusic.com/artist/mn0000919603</Url>
+		<Url mbid="0c751690-c784-4a4f-b1e4-c1de27d47581" type="BBC Music page">http://www.bbc.co.uk/music/artists/0c751690-c784-4a4f-b1e4-c1de27d47581</Url>
+		<Url mbid="0c751690-c784-4a4f-b1e4-c1de27d47581" type="official homepage">http://www.dominorecordco.com/artists/animal-collective/</Url>
+		<Url mbid="0c751690-c784-4a4f-b1e4-c1de27d47581" type="last.fm">http://www.last.fm/music/Animal+Collective</Url>
+		<Url mbid="0c751690-c784-4a4f-b1e4-c1de27d47581" type="official homepage">http://www.myanimalhome.net/</Url>
+		<Url mbid="0c751690-c784-4a4f-b1e4-c1de27d47581" type="other databases">http://www.residentadvisor.net/dj/animalcollective</Url>
+		<Url mbid="0c751690-c784-4a4f-b1e4-c1de27d47581" type="streaming music">http://www.staimusic.com/en/bands/animal-collective_228.html</Url>
+		<Url mbid="0c751690-c784-4a4f-b1e4-c1de27d47581" type="wikipedia">https://en.wikipedia.org/wiki/Animal_Collective</Url>
+		<Url mbid="0c751690-c784-4a4f-b1e4-c1de27d47581" type="purchase for download">https://itunes.apple.com/artist/id5664621</Url>
+		<Url mbid="0c751690-c784-4a4f-b1e4-c1de27d47581" type="myspace">https://myspace.com/animalcollective</Url>
+		<Url mbid="0c751690-c784-4a4f-b1e4-c1de27d47581" type="streaming music">https://open.spotify.com/artist/4kwxTgCKMipBKhSnEstNKj</Url>
+		<Url mbid="0c751690-c784-4a4f-b1e4-c1de27d47581" type="purchase for download">https://play.google.com/music/m/Aaggrqtw32ik45icdugnnke4kei?t=Animal_Collective</Url>
+		<Url mbid="0c751690-c784-4a4f-b1e4-c1de27d47581" type="other databases">https://rateyourmusic.com/artist/animal_collective</Url>
+		<Url mbid="0c751690-c784-4a4f-b1e4-c1de27d47581" type="soundcloud">https://soundcloud.com/anmlcollective</Url>
+		<Url mbid="0c751690-c784-4a4f-b1e4-c1de27d47581" type="social network">https://twitter.com/anmlcollective</Url>
+		<Url mbid="0c751690-c784-4a4f-b1e4-c1de27d47581" type="purchase for download">https://www.beatport.com/artist/animal-collective/26940</Url>
+		<Url mbid="0c751690-c784-4a4f-b1e4-c1de27d47581" type="discogs">https://www.discogs.com/artist/207958</Url>
+		<Url mbid="0c751690-c784-4a4f-b1e4-c1de27d47581" type="social network">https://www.facebook.com/anmlcollective</Url>
+		<Url mbid="0c751690-c784-4a4f-b1e4-c1de27d47581" type="social network">https://www.instagram.com/anmlcollective/</Url>
+		<Url mbid="0c751690-c784-4a4f-b1e4-c1de27d47581" type="songkick">https://www.songkick.com/artists/137427</Url>
+		<Url mbid="0c751690-c784-4a4f-b1e4-c1de27d47581" type="wikidata">https://www.wikidata.org/wiki/Q547272</Url>
+		<Url mbid="0c751690-c784-4a4f-b1e4-c1de27d47581" type="youtube">https://www.youtube.com/user/AnimalCollectiveVEVO</Url>
+		<Url mbid="0c751690-c784-4a4f-b1e4-c1de27d47581" type="youtube">https://www.youtube.com/user/anmlcollective</Url>
+	</UrlList>
+	<RatingList>
+		<Rating mbid="0c751690-c784-4a4f-b1e4-c1de27d47581" source="MusicBrainz" votes="6">4.85</Rating>
+	</RatingList>	
+	<ArtistCreditList>
+		<ArtistCredit mbid="22568c9d-8ef3-4224-b994-8e0658e1082a">
+			<UniqueIdList>
+				<UniqueId mbid="22568c9d-8ef3-4224-b994-8e0658e1082a" source="MusicBrainz">
+					<SourceUrl>https://musicbrainz.org/artist/22568c9d-8ef3-4224-b994-8e0658e1082a</SourceUrl>
+					<SourceWSUrl>https://musicbrainz.org/ws/2/artist/22568c9d-8ef3-4224-b994-8e0658e1082a?inc=aliases+artist-rels+url-rels</SourceWSUrl>
+					<Value>22568c9d-8ef3-4224-b994-8e0658e1082a</Value>
+				</UniqueId>
+			</UniqueIdList>
+			<NameList>
+				<Name mbid="22568c9d-8ef3-4224-b994-8e0658e1082a" sort-name="Tare, Avey" source="MusicBrainz" type="Name">Avey Tare</Name>
+			</NameList>
+			<RoleList>
+				<Role mbid="22568c9d-8ef3-4224-b994-8e0658e1082a" original="false" type="membership">member of band</Role>
+			</RoleList>
+			<PeriodList>
+				<Date/>
+			</PeriodList>
+		</ArtistCredit>
+		<ArtistCredit mbid="7d0ae15c-d82a-46af-8bee-a14a4f8d2f95">
+			<UniqueIdList>
+				<UniqueId mbid="7d0ae15c-d82a-46af-8bee-a14a4f8d2f95" source="MusicBrainz">
+					<SourceUrl>https://musicbrainz.org/artist/7d0ae15c-d82a-46af-8bee-a14a4f8d2f95</SourceUrl>
+					<SourceWSUrl>https://musicbrainz.org/ws/2/artist/7d0ae15c-d82a-46af-8bee-a14a4f8d2f95?inc=aliases+artist-rels+url-rels</SourceWSUrl>
+					<Value>7d0ae15c-d82a-46af-8bee-a14a4f8d2f95</Value>
+				</UniqueId>
+			</UniqueIdList>
+			<NameList>
+				<Name mbid="7d0ae15c-d82a-46af-8bee-a14a4f8d2f95" sort-name="Deakin" source="MusicBrainz" type="Name">Deakin</Name>
+			</NameList>
+			<RoleList>
+				<Role mbid="7d0ae15c-d82a-46af-8bee-a14a4f8d2f95" original="false" type="membership">member of band</Role>
+			</RoleList>
+			<PeriodList>
+				<Date/>
+			</PeriodList>
+		</ArtistCredit>
+		<ArtistCredit mbid="c836703d-f5e2-4e54-92c3-1792ef4d0d6f">
+			<UniqueIdList>
+				<UniqueId mbid="c836703d-f5e2-4e54-92c3-1792ef4d0d6f" source="MusicBrainz">
+					<SourceUrl>https://musicbrainz.org/artist/c836703d-f5e2-4e54-92c3-1792ef4d0d6f</SourceUrl>
+					<SourceWSUrl>https://musicbrainz.org/ws/2/artist/c836703d-f5e2-4e54-92c3-1792ef4d0d6f?inc=aliases+artist-rels+url-rels</SourceWSUrl>
+					<Value>c836703d-f5e2-4e54-92c3-1792ef4d0d6f</Value>
+				</UniqueId>
+			</UniqueIdList>
+			<NameList>
+				<Name mbid="c836703d-f5e2-4e54-92c3-1792ef4d0d6f" sort-name="Geologist" source="MusicBrainz" type="Name">Geologist</Name>
+			</NameList>
+			<RoleList>
+				<Role mbid="c836703d-f5e2-4e54-92c3-1792ef4d0d6f" original="false" type="membership">member of band</Role>
+			</RoleList>
+			<PeriodList>
+				<Date/>
+			</PeriodList>
+		</ArtistCredit>
+		<ArtistCredit mbid="fd3c3f9f-a471-498e-ab3a-940ac20b6bbd">
+			<UniqueIdList>
+				<UniqueId mbid="fd3c3f9f-a471-498e-ab3a-940ac20b6bbd" source="MusicBrainz">
+					<SourceUrl>https://musicbrainz.org/artist/fd3c3f9f-a471-498e-ab3a-940ac20b6bbd</SourceUrl>
+					<SourceWSUrl>https://musicbrainz.org/ws/2/artist/fd3c3f9f-a471-498e-ab3a-940ac20b6bbd?inc=aliases+artist-rels+url-rels</SourceWSUrl>
+					<Value>fd3c3f9f-a471-498e-ab3a-940ac20b6bbd</Value>
+				</UniqueId>
+			</UniqueIdList>
+			<NameList>
+				<Name mbid="fd3c3f9f-a471-498e-ab3a-940ac20b6bbd" sort-name="Panda Bear" source="MusicBrainz" type="Name">Panda Bear</Name>
+			</NameList>
+			<RoleList>
+				<Role mbid="fd3c3f9f-a471-498e-ab3a-940ac20b6bbd" original="false" type="membership">member of band</Role>
+			</RoleList>
+			<PeriodList>
+				<Date/>
+			</PeriodList>
+		</ArtistCredit>
+	</ArtistCreditList>
+	<ArtList/>
+	<DisambiguationList/>
+	<AnnotationList/>
+	<Discography>
+		<ReleaseGroupList/>
+	</Discography>
+</Artist>

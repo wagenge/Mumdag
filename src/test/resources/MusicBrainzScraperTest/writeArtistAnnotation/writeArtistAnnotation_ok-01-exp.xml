@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Artist mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d">
+	<UniqueIdList/>
+	<NameList>
+		<Name mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" sort-name="Beatles, The" source="MusicBrainz" type="Name">The Beatles</Name>
+	</NameList>
+	<Type/>
+	<AreaList/>
+	<PeriodList/>
+	<DescriptionList/>
+	<TagList/>
+	<UrlList/>
+	<RatingList/>
+	<ArtistCreditList/>
+	<ArtList/>
+	<DisambiguationList/>
+	<AnnotationList>
+		<Annotation mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" source="MusicBrainz">The official name of “The White Album” is “The Beatles”; please do not add incorrectly titled releases to the database!</Annotation>
+		<Annotation mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" source="MusicBrainz">Please do not re-add individual mono remaster releases to their individual release groups. The mono remasters were never released separately, and are all already in the database as 13 mediums of the release the name "The Beatles in Mono".</Annotation>
+	</AnnotationList>
+	<Discography>
+		<ReleaseGroupList/>
+	</Discography>
+</Artist>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><Artist mbid="070d193a-845c-479f-980e-bef15710653e">
+	<UniqueIdList/>
+	<NameList>
+		<Name mbid="070d193a-845c-479f-980e-bef15710653e" sort-name="Prince" source="MusicBrainz" type="Name">Prince</Name>
+	</NameList>
+	<Type/>
+	<AreaList/>
+	<PeriodList/>
+	<DescriptionList/>
+	<TagList/>
+	<UrlList/>
+	<RatingList/>
+	<ArtistCreditList/>
+	<ArtList/>
+	<DisambiguationList><Disambiguation mbid="070d193a-845c-479f-980e-bef15710653e" source="MusicBrainz">“The Artist Formerly Known as…”</Disambiguation></DisambiguationList>
+	<AnnotationList/>
+	<Discography>
+		<ReleaseGroupList/>
+	</Discography>
+</Artist>

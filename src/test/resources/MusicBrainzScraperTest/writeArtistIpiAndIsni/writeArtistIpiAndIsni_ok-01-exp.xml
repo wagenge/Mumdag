@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Artist mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d">
+	<UniqueIdList>
+		<UniqueId isni="0000000121707484" source="ISNI">
+			<SourceUrl>http://www.isni.org/isni/0000000121707484</SourceUrl>
+			<SourceWSUrl>http://isni.oclc.org/sru/?query=pica.isn+%3D+0000000121707484&amp;operation=searchRetrieve&amp;recordSchema=isni-b</SourceWSUrl>
+			<Value>0000000121707484</Value>
+		</UniqueId>
+	</UniqueIdList>
+	<NameList>
+		<Name mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" sort-name="Beatles, The" source="MusicBrainz" type="Name">The Beatles</Name>
+	</NameList>
+	<Type/>
+	<AreaList/>
+	<PeriodList/>
+	<DescriptionList/>
+	<TagList/>
+	<UrlList/>
+	<RatingList/>
+	<ArtistCreditList/>
+	<ArtList/>
+	<DisambiguationList/>
+	<AnnotationList/>
+	<Discography>
+		<ReleaseGroupList/>
+	</Discography>
+</Artist>

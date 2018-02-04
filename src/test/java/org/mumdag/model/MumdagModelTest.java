@@ -30,7 +30,7 @@ private static Logger log = null;
 /*
  * 	TEST METHODS INCLUDING DATAPROVIDER (public)
  */
-
+/*
 //DOC:			nok
 //ASSERTION:	ok
 @Test(dataProvider = "data_writeArtistNames_ok")
@@ -115,9 +115,9 @@ public void test_writeArtistNames_ok(String testDesc, String calledMethod, Strin
     }
     log.info("{} ... finished successfully!", testDesc);
 }
-
+*/
 //-----------------------------------------------------------------------------
-
+/*
 //DOC:	nok
 @DataProvider
 public Object[][] data_writeArtistNames_ok() {
@@ -142,7 +142,7 @@ public Object[][] data_writeArtistNames_ok() {
                         Arrays.asList("|xml||./src/test/resources/MumdagModelTest/writeArtistNames/writeArtistNames_ok-11-exp.xml")},
     };
 }
-
+*/
 
 //=============================================================================
 /*

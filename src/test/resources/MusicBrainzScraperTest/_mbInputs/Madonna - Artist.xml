@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8"?><metadata xmlns="http://musicbrainz.org/ns/mmd-2.0#">
+  <artist id="79239441-bfd5-4981-a70c-55c3f15c1287" type-id="b6e035f4-3ce9-331c-97df-83397230b0df" type="Person">
+    <name>Madonna</name>
+    <sort-name>Madonna</sort-name>
+    <annotation>
+      <text>If you're looking for ''Greatest Hits Vol. 2'' or something similar, it is already listed under the correct name ''[https://musicbrainz.org/release-group/a0aa8b0a-5e10-3627-afde-7235b86042f6|GHV2]''. 
+Please '''do not''' add it again.
+
+Release labels according to date: (all releases should follow this*)
+WMG parent (1982-2009) as Sire (1982–1995), Maverick (1992–2004), Warner Bros. (2004–2010), Live Nation Artists (2009-)-------Born in Bay City, Michigan, USA, as Madonna Louise Ciccone, Madonna had the extra middle name Veronica added in childhood as confirmation of her family's Catholicism.
+Her music career took off in the early 1980's under the performance name [http://musicbrainz.org/artist/79239441-bfd5-4981-a70c-55c3f15c1287.html|Madonna].
+
+It is believed her legal name has changed due to marriage to first Sean Penn, and then Guy Ritchie.</text>
+    </annotation>
+    <ipi>00125053706</ipi>
+    <ipi-list>
+      <ipi>00125053706</ipi>
+      <ipi>00128246872</ipi>
+      <ipi>00211854787</ipi>
+    </ipi-list>
+    <isni-list>
+      <isni>000000010782262X</isni>
+    </isni-list>
+    <gender id="93452b5a-a947-30c8-934f-6a4056b151c2">Female</gender>
+    <country>US</country>
+    <area id="489ce91b-6658-3307-9877-795b68554c98">
+      <name>United States</name>
+      <sort-name>United States</sort-name>
+      <iso-3166-1-code-list>
+        <iso-3166-1-code>US</iso-3166-1-code>
+      </iso-3166-1-code-list>
+    </area>
+    <begin-area id="903111d9-9dc2-4129-b08a-3cf52bc72757">
+      <name>Bay City</name>
+      <sort-name>Bay City</sort-name>
+    </begin-area>
+    <life-span>
+      <begin>1958-08-16</begin>
+    </life-span>
+    <alias-list count="5">
+      <alias sort-name="M. Ciccone" type="Search hint" type-id="1937e404-b981-3cb7-8151-4c86ebfc8d8e">M. Ciccone</alias>
+      <alias sort-name="Madonna">Madonna</alias>
+      <alias sort-name="Ciccone-Ritchie, Madonna">Madonna Ciccone-Ritchie</alias>
+      <alias type="Legal name" sort-name="Ciccone, Madonna Louise" type-id="d4dcd0c0-b341-3612-a332-c0ce797b25cf">Madonna Louise Ciccone</alias>
+      <alias sort-name="Ciccone, Madonna Louise Veronica">Madonna Louise Veronica Ciccone</alias>
+    </alias-list>
+    <relation-list target-type="artist">
+      <relation type="vocal supporting musician" type-id="610d39a4-3fa0-4848-a8c9-f46d7b5cc02e">
+        <target>3515a9df-7986-4c5f-8e42-d27a082077f6</target>
+        <direction>backward</direction>
+        <begin>1987</begin>
+        <end>2007</end>
+        <ended>true</ended>
+        <attribute-list>
+          <attribute>background vocals</attribute>
+        </attribute-list>
+        <artist id="3515a9df-7986-4c5f-8e42-d27a082077f6">
+          <name>Donna De Lory</name>
+          <sort-name>De Lory, Donna</sort-name>
+        </artist>
+      </relation>
+      <relation type="married" type-id="b2bf7a5d-2da6-4742-baf4-e38d8a7ad029">
+        <target>96b8233a-c035-4df5-98e4-faa886389783</target>
+        <begin>2000-12-22</begin>
+        <end>2008-11-21</end>
+        <ended>true</ended>
+        <artist id="96b8233a-c035-4df5-98e4-faa886389783">
+          <name>Guy Ritchie</name>
+          <sort-name>Ritchie, Guy</sort-name>
+        </artist>
+      </relation>
+      <relation type="involved with" type-id="fd3927ba-fd51-4fa9-bcc2-e83637896fe8">
+        <target>9dd2b5f1-13e4-41a1-a6fe-f18b1c884024</target>
+        <direction>backward</direction>
+        <begin>1990</begin>
+        <end>1991</end>
+        <ended>true</ended>
+        <artist id="9dd2b5f1-13e4-41a1-a6fe-f18b1c884024">
+          <name>Tony Ward</name>
+          <sort-name>Ward, Tony</sort-name>
+          <disambiguation>US model &amp; actor</disambiguation>
+        </artist>
+      </relation>
+      <relation type="parent" type-id="9421ca84-934f-49fe-9e66-dea242430406">
+        <target>a14e12cd-fd56-41ba-8a95-0dd942c65c92</target>
+        <artist id="a14e12cd-fd56-41ba-8a95-0dd942c65c92">
+          <name>Lourdes Maria Ciccone Leon</name>
+          <sort-name>Leon, Lourdes Maria Ciccone</sort-name>
+        </artist>
+      </relation>
+    </relation-list>
+    <relation-list target-type="url">
+      <relation type-id="f484f897-81cc-406e-96f9-cd799a04ee24" type="fanpage">
+        <target id="1f9920ee-3dbd-4d14-8b4d-f5aac1813bb3">http://allaboutmadonna.com/</target>
+      </relation>
+      <relation type-id="e4d73442-3762-45a8-905c-401da65544ed" type="lyrics">
+        <target id="f32e66c7-be62-4f11-993a-9b5919507880">http://decoda.com/madonna-lyrics</target>
+      </relation>
+      <relation type-id="e4d73442-3762-45a8-905c-401da65544ed" type="lyrics">
+        <target id="2b21d805-959f-4c08-b9f4-69690a31b36b">http://genius.com/artists/Madonna</target>
+      </relation>
+      <relation type-id="e4d73442-3762-45a8-905c-401da65544ed" type="lyrics">
+        <target id="9d69898e-84ac-4db3-a74f-cdedc29da335">http://lyrics.wikia.com/Madonna</target>
+      </relation>
+      <relation type-id="eb535226-f8ca-499d-9b18-6a144df4ae6f" type="blog">
+        <target id="f0427135-e959-40c1-961b-263c07f9558b">http://madonna.tumblr.com/</target>
+      </relation>
+      <relation type-id="f484f897-81cc-406e-96f9-cd799a04ee24" type="fanpage">
+        <target id="d7bc43ea-bbc3-4155-8a06-3fd20a9b0a5e">http://madonnaonline.com.br/</target>
+      </relation>
+      <relation type-id="fe33d22f-c3b0-4d68-bd53-a856badf2b15" type="official homepage">
+        <target id="f51caff1-ff53-45d4-8bdf-c2eb1c906558">http://mouskni.com/artists/madonna/</target>
+      </relation>
+      <relation type="other databases" type-id="d94fb61c-fa20-4e3c-a19a-71a949fb2c55">
+        <target id="d4239af4-6b2b-430c-8b15-4e4a6a924114">http://musicmoz.org/Bands_and_Artists/M/Madonna/</target>
+      </relation>
+      <relation type="lyrics" type-id="e4d73442-3762-45a8-905c-401da65544ed">
+        <target id="6d718ec8-2978-4ba4-a33c-9036943ef927">http://muzikum.eu/en/122-3752/madonna/lyrics.html</target>
+      </relation>
+      <relation type-id="d94fb61c-fa20-4e3c-a19a-71a949fb2c55" type="other databases">
+        <target id="6d4e20d2-5089-46e6-97fe-fad3a6644c44">http://rateyourmusic.com/artist/madonna</target>
+      </relation>
+      <relation type-id="d94fb61c-fa20-4e3c-a19a-71a949fb2c55" type="other databases">
+        <target id="1e6d6c25-93c5-499a-8a15-e9f995d286d3">http://soundtrackcollector.com/composer/3583/</target>
+      </relation>
+      <relation type-id="e8571dcc-35d4-4e91-a577-a3382fd84460" type="VIAF">
+        <target id="e9d050d3-62cd-4a9f-9801-be6eef061666">http://viaf.org/viaf/59270244</target>
+      </relation>
+      <relation type-id="6b3e3c85-0002-4f34-aca6-80ace0d7e846" type="allmusic">
+        <target id="9a354289-a9d6-4479-9794-91b5d9fd6c8d">http://www.allmusic.com/artist/mn0000237205</target>
+      </relation>
+      <relation type="bandsintown" type-id="ea45ed3d-2d5e-456e-8c32-94b6f51426e2">
+        <target id="0379576d-ab13-42db-a2bc-cfe8ad6eb988">http://www.bandsintown.com/Madonna</target>
+      </relation>
+      <relation type-id="d028a975-000c-4525-9333-d3c8425e4b54" type="BBC Music page">
+        <target id="2572cbf9-1cbd-4cb1-bbb4-05f688e6bc7e">http://www.bbc.co.uk/music/artists/79239441-bfd5-4981-a70c-55c3f15c1287</target>
+      </relation>
+      <relation type-id="e4d73442-3762-45a8-905c-401da65544ed" type="lyrics">
+        <target id="aa731bd0-24d5-4a4a-8cef-03c9a168ff95">http://www.directlyrics.com/madonna-artist.html</target>
+      </relation>
+      <relation type-id="99429741-f3f6-484b-84f8-23af51991770" type="social network">
+        <target id="8f832ffa-4f4e-4787-80c4-1ed7007baecd">http://www.flickr.com/photos/madonnaphotos/</target>
+      </relation>
+      <relation type-id="94c8b0cc-4477-4106-932c-da60e63de61c" type="IMDb">
+        <target id="d3055ea0-01dd-4193-b4b2-7fac79a27318">http://www.imdb.com/name/nm0000187/</target>
+      </relation>
+      <relation type-id="08db8098-c0df-4b78-82c3-c8697b4bba7f" type="last.fm">
+        <target id="b87cd447-8c20-48e8-a33c-4878f69049e3">http://www.last.fm/music/Madonna</target>
+      </relation>
+      <relation type="fanpage" type-id="f484f897-81cc-406e-96f9-cd799a04ee24">
+        <target id="5de76555-5cca-4467-aada-2b9fde0138ad">http://www.mad-eyes.net/</target>
+      </relation>
+      <relation type-id="fe33d22f-c3b0-4d68-bd53-a856badf2b15" type="official homepage">
+        <target id="b663423b-9b54-4067-9674-fffaecf68851">http://www.madonna.com/</target>
+      </relation>
+      <relation type-id="4fb0eeec-a6eb-4ae3-ad52-b55765b94e8f" type="discography">
+        <target id="d1406f15-a8b2-4f00-8058-a011f87df2a5">http://www.madonnadiscography.pl/</target>
+      </relation>
+      <relation type-id="f484f897-81cc-406e-96f9-cd799a04ee24" type="fanpage">
+        <target id="3060b9df-4170-4500-8bfc-aeec12b5d10a">http://www.madonnalicious.com/</target>
+      </relation>
+      <relation type="discography" type-id="4fb0eeec-a6eb-4ae3-ad52-b55765b94e8f">
+        <target id="48239353-75ed-4535-a1c1-a399bb8af157">http://www.madonnarecords.com/</target>
+      </relation>
+      <relation type="fanpage" type-id="f484f897-81cc-406e-96f9-cd799a04ee24">
+        <target id="df7e01a5-f850-40af-8dde-d7ed80db8204">http://www.minsane.com.br/</target>
+      </relation>
+      <relation type="secondhandsongs" type-id="79c5b84d-a206-4f4c-9832-78c028c312c3">
+        <target id="35d5fd9c-62ed-473c-a08c-719c92ada313">http://www.secondhandsongs.com/artist/84</target>
+      </relation>
+      <relation type-id="bf5d0d5e-27a1-4e94-9df7-3cdc67b3b207" type="setlistfm">
+        <target id="6667f272-20d0-44b4-8982-3b3c115961c6">http://www.setlist.fm/setlists/madonna-bd6bdbe.html</target>
+      </relation>
+      <relation type-id="769085a1-c2f7-4c24-a532-2375a77693bd" type="streaming music">
+        <target id="057a9cc6-8ba7-47ea-adf2-5591c6247da0">http://www.staimusic.com/en/bands/madonna_2801.html</target>
+      </relation>
+      <relation type="other databases" type-id="d94fb61c-fa20-4e3c-a19a-71a949fb2c55">
+        <target id="c146d136-811f-4d5f-a049-d4f9036ea950">http://www.worldcat.org/identities/lccn-n84156128/</target>
+      </relation>
+      <relation type="image" type-id="221132e9-e30e-43f2-a741-15afc4c5fa7c">
+        <target id="d673957a-c98a-436d-835e-42cd2843c165">https://commons.wikimedia.org/wiki/File:Madonna_%C3%A0_Nice_17_edit.jpg</target>
+      </relation>
+      <relation type-id="29651736-fa6d-48e4-aadc-a557c6add1cb" type="wikipedia">
+        <target id="d7c3c3f4-107f-488a-8871-67163b1b8a2d">https://en.wikipedia.org/wiki/Madonna_(entertainer)</target>
+        <source-credit>Madonna Louise Veronica Ciccone</source-credit>
+      </relation>
+      <relation type="social network" type-id="99429741-f3f6-484b-84f8-23af51991770">
+        <target id="53f73ddc-f047-4f05-8dc4-9623cfc7e763">https://instagram.com/madonna/</target>
+      </relation>
+      <relation type-id="f8319a2f-f824-4617-81c8-be6560b3b203" type="purchase for download">
+        <target id="bf5581f1-4b1f-42b7-9536-a3e8d550347b">https://itunes.apple.com/us/artist/id20044</target>
+      </relation>
+      <relation type="myspace" type-id="bac47923-ecde-4b59-822e-d08f0cd10156">
+        <target id="a28cc02f-79f9-4955-b5e5-08b804fe8d82">https://myspace.com/madonna</target>
+      </relation>
+      <relation type="streaming music" type-id="769085a1-c2f7-4c24-a532-2375a77693bd">
+        <target id="8011b3fc-06ce-495c-9c84-65d892fafd4e">https://open.spotify.com/artist/6tbjWDEIzxoDsBA1FuhfPW</target>
+      </relation>
+      <relation type-id="99429741-f3f6-484b-84f8-23af51991770" type="social network">
+        <target id="4f4068cb-7001-47a3-a2fe-9146eb6b5d16">https://plus.google.com/+Madonna</target>
+      </relation>
+      <relation type="soundcloud" type-id="89e4a949-0976-440d-bda1-5f772c1e5710">
+        <target id="a63ac985-4c03-4ec7-bb57-a79723f54eba">https://soundcloud.com/madonna</target>
+      </relation>
+      <relation type-id="99429741-f3f6-484b-84f8-23af51991770" type="social network">
+        <target id="a59f0a2a-81d2-4413-a4a1-8b03c9db7e0d">https://twitter.com/Madonna</target>
+      </relation>
+      <relation type="purchase for mail-order" type-id="611b1862-67af-4253-a64f-34adba305d1d">
+        <target id="3b89a8ae-f37f-4cb4-8c2d-45afa1b78576">https://www.amazon.com/-/e/B000APIQE2</target>
+      </relation>
+      <relation type="discogs" type-id="04a5b104-a4c2-4bac-99a1-7b837c37d9e4">
+        <target id="9e61bad9-4c91-4aee-b84e-86efbc62bfd2">https://www.discogs.com/artist/8760</target>
+      </relation>
+      <relation type-id="99429741-f3f6-484b-84f8-23af51991770" type="social network">
+        <target id="1dc9e14d-ebfb-448c-a005-e3481d320595">https://www.facebook.com/madonna</target>
+      </relation>
+      <relation type-id="689870a4-a1e4-4912-b17f-7b2664215698" type="wikidata">
+        <target id="92d3c5ea-489e-4a58-95ea-d6c514a923ab">https://www.wikidata.org/wiki/Q1744</target>
+      </relation>
+      <relation type-id="6a540e5b-58c6-4192-b6ba-dbc71ec8fcf0" type="youtube">
+        <target id="68d76017-1134-44fa-b86d-9565ae654ce1">https://www.youtube.com/user/MADONNAVEVO</target>
+      </relation>
+      <relation type-id="6a540e5b-58c6-4192-b6ba-dbc71ec8fcf0" type="youtube">
+        <target id="1a852cf4-ca8e-41ba-9feb-cd4fb8b4fc8d">https://www.youtube.com/user/madonna</target>
+      </relation>
+    </relation-list>
+    <tag-list>
+      <tag count="0">
+        <name>american</name>
+      </tag>
+      <tag count="0">
+        <name>américain</name>
+      </tag>
+      <tag count="0">
+        <name>arabic</name>
+      </tag>
+      <tag count="1">
+        <name>art pop</name>
+      </tag>
+      <tag count="0">
+        <name>chanteur</name>
+      </tag>
+      <tag count="0">
+        <name>dance</name>
+      </tag>
+      <tag count="2">
+        <name>dance-pop</name>
+      </tag>
+      <tag count="1">
+        <name>downtempo</name>
+      </tag>
+      <tag count="0">
+        <name>electronic</name>
+      </tag>
+      <tag count="2">
+        <name>electropop</name>
+      </tag>
+      <tag count="0">
+        <name>greatest hits</name>
+      </tag>
+      <tag count="0">
+        <name>multiple ipi</name>
+      </tag>
+      <tag count="8">
+        <name>pop</name>
+      </tag>
+      <tag count="0">
+        <name>pop and chart</name>
+      </tag>
+      <tag count="0">
+        <name>singer</name>
+      </tag>
+      <tag count="0">
+        <name>tell me</name>
+      </tag>
+      <tag count="0">
+        <name>usa</name>
+      </tag>
+    </tag-list>
+    <rating votes-count="29">4.45</rating>
+  </artist>
+</metadata>
