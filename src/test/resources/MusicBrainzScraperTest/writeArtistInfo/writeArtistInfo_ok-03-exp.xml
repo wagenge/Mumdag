@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<Artist mbid="79239441-bfd5-4981-a70c-55c3f15c1287">
+<Artist amid="id20044" dcid="8760" mbid="79239441-bfd5-4981-a70c-55c3f15c1287" path="./src/test/resources/MusicBrainzScraperTest/_fileInput/M/Madonna/" rmid="mn0000237205" spid="6tbjWDEIzxoDsBA1FuhfPW" wdid="Q1744">
 	<UniqueIdList>
 		<UniqueId source="VIAF" viafid="59270244">
 			<SourceUrl>http://viaf.org/viaf/59270244</SourceUrl>
@@ -30,6 +30,11 @@
 			<SourceUrl>http://www.setlist.fm/setlists/madonna-bd6bdbe.html</SourceUrl>
 			<SourceWSUrl>http://api.setlist.fm/rest/1.0/79239441-bfd5-4981-a70c-55c3f15c1287</SourceWSUrl>
 			<Value>79239441-bfd5-4981-a70c-55c3f15c1287</Value>
+		</UniqueId>
+		<UniqueId amid="id20044" source="AppleMusic">
+			<SourceUrl>https://itunes.apple.com/us/artist/id20044</SourceUrl>
+			<SourceWSUrl>https://api.music.apple.com/v1/catalog/_storefront_/artists/id20044</SourceWSUrl>
+			<Value>id20044</Value>
 		</UniqueId>
 		<UniqueId source="Spotify" spid="6tbjWDEIzxoDsBA1FuhfPW">
 			<SourceUrl>https://open.spotify.com/artist/6tbjWDEIzxoDsBA1FuhfPW</SourceUrl>
@@ -75,16 +80,19 @@
 		<Name mbid="79239441-bfd5-4981-a70c-55c3f15c1287" sort-name="Ciccone, Madonna Louise" source="MusicBrainz" type="Legal name" type-id="d4dcd0c0-b341-3612-a332-c0ce797b25cf">Madonna Louise Ciccone</Name>
 		<Name mbid="79239441-bfd5-4981-a70c-55c3f15c1287" sort-name="Ciccone, Madonna Louise Veronica" source="MusicBrainz" type="Alias">Madonna Louise Veronica Ciccone</Name>
 	</NameList>
-	<Type gender="Female" mbid="79239441-bfd5-4981-a70c-55c3f15c1287">Person</Type>
-	<AreaList>
-		<Area event="born in" mbid="903111d9-9dc2-4129-b08a-3cf52bc72757" seq="1" source="MusicBrainz" type="City">Bay City</Area>
-		<Area event="born in" mbid="c4ec0775-a31c-48eb-a0f0-18779d1ee748" seq="2" source="MusicBrainz" type="County">Bay County</Area>
-		<Area code="US-MI" event="born in" mbid="29fa065f-a568-418c-98b9-5023f64d9312" seq="3" source="MusicBrainz" type="Subdivision">Michigan</Area>
-		<Area code="US" event="born in" mbid="489ce91b-6658-3307-9877-795b68554c98" seq="4" source="MusicBrainz" type="Country">United States</Area>
-	</AreaList>
-	<PeriodList>
+	<TypeList>
+		<Type mbid="79239441-bfd5-4981-a70c-55c3f15c1287" source="MusicBrainz" type="ArtistType">Person</Type>
+		<Type mbid="79239441-bfd5-4981-a70c-55c3f15c1287" source="MusicBrainz" type="Gender">Female</Type>
+	</TypeList>
+	<PlaceList>
+		<Place event="born" mbid="903111d9-9dc2-4129-b08a-3cf52bc72757" seq="1" source="MusicBrainz" type="City">Bay City</Place>
+		<Place event="born" mbid="c4ec0775-a31c-48eb-a0f0-18779d1ee748" seq="2" source="MusicBrainz" type="County">Bay County</Place>
+		<Place code="US-MI" event="born" mbid="29fa065f-a568-418c-98b9-5023f64d9312" seq="3" source="MusicBrainz" type="Subdivision">Michigan</Place>
+		<Place code="US" event="born" mbid="489ce91b-6658-3307-9877-795b68554c98" seq="4" source="MusicBrainz" type="Country">United States</Place>
+	</PlaceList>
+	<DateList>
 		<Date mbid="79239441-bfd5-4981-a70c-55c3f15c1287" type="born">1958-08-16</Date>
-	</PeriodList>
+	</DateList>
 	<DescriptionList/>
 	<TagList>
 		<Tag count="1" mbid="79239441-bfd5-4981-a70c-55c3f15c1287" source="MusicBrainz">art pop</Tag>
@@ -92,7 +100,7 @@
 		<Tag count="1" mbid="79239441-bfd5-4981-a70c-55c3f15c1287" source="MusicBrainz">downtempo</Tag>
 		<Tag count="2" mbid="79239441-bfd5-4981-a70c-55c3f15c1287" source="MusicBrainz">electropop</Tag>
 		<Tag count="8" mbid="79239441-bfd5-4981-a70c-55c3f15c1287" source="MusicBrainz">pop</Tag>
-	</TagList>	
+	</TagList>
 	<UrlList>
 		<Url mbid="79239441-bfd5-4981-a70c-55c3f15c1287" type="fanpage">http://allaboutmadonna.com/</Url>
 		<Url mbid="79239441-bfd5-4981-a70c-55c3f15c1287" type="lyrics">http://decoda.com/madonna-lyrics</Url>
@@ -141,8 +149,8 @@
 	</UrlList>
 	<RatingList>
 		<Rating mbid="79239441-bfd5-4981-a70c-55c3f15c1287" source="MusicBrainz" votes="29">4.45</Rating>
-	</RatingList>	
-	<ArtistCreditList/>
+	</RatingList>
+	<CreditList/>
 	<ArtList/>
 	<DisambiguationList/>
 	<AnnotationList>
@@ -155,6 +163,241 @@ Her music career took off in the early 1980's under the performance name [http:/
 		<Annotation mbid="79239441-bfd5-4981-a70c-55c3f15c1287" source="MusicBrainz">It is believed her legal name has changed due to marriage to first Sean Penn, and then Guy Ritchie.</Annotation>
 	</AnnotationList>
 	<Discography>
-		<ReleaseGroupList/>
+		<ReleaseGroupList>
+			<ReleaseGroup path="./src/test/resources/MusicBrainzScraperTest/_fileInput/M/Madonna/1984 - Like A Virgin/">
+				<UniqueIdList/>
+				<NameList/>
+				<TypeList/>
+				<DateList/>
+				<AwardList/>
+				<ChartList/>
+				<DescriptionList/>
+				<TagList/>
+				<UrlList/>
+				<RatingList/>
+				<CreditList/>
+				<ArtList/>
+				<DisambiguationList/>
+				<AnnotationList/>
+				<ReleaseList>
+					<Release path="./src/test/resources/MusicBrainzScraperTest/_fileInput/M/Madonna/1984 - Like A Virgin/">
+						<UniqueIdList/>
+						<NameList/>
+						<TypeList/>
+						<DateList/>
+						<PlaceList/>
+						<LabelList/>
+						<LengthList/>
+						<DescriptionList/>
+						<CopyrightList/>
+						<TagList/>
+						<UrlList/>
+						<CreditList/>			
+						<ArtList/>
+						<DisambiguationList/>
+						<AnnotationList/>
+						<MediumList>
+							<Medium discNo="1" path="./src/test/resources/MusicBrainzScraperTest/_fileInput/M/Madonna/1984 - Like A Virgin/">
+								<UniqueIdList/>
+								<NameList/>
+								<TypeList/>
+								<LengthList/>
+								<TrackList>
+									<Track>
+										<UniqueIdList/>
+										<NameList/>
+										<TypeList/>
+										<DateList/>
+										<PlaceList/>
+										<FileInfo/>
+										<AudioInfo/>
+										<Position/>
+										<LabelList/>
+										<DescriptionList/>
+										<LyricsList/>
+										<CopyrightList/>
+										<CopyrightCollectiveList/>
+										<TagList/>
+										<RatingList/>
+										<UrlList/>
+										<CreditList/>
+										<DisambiguationList/>
+										<AnnotationList/>
+									</Track>
+									<Track>
+										<UniqueIdList/>
+										<NameList/>
+										<TypeList/>
+										<DateList/>
+										<PlaceList/>
+										<FileInfo/>
+										<AudioInfo/>
+										<Position/>
+										<LabelList/>
+										<DescriptionList/>
+										<LyricsList/>
+										<CopyrightList/>
+										<CopyrightCollectiveList/>
+										<TagList/>
+										<RatingList/>
+										<UrlList/>
+										<CreditList/>
+										<DisambiguationList/>
+										<AnnotationList/>
+									</Track>
+									<Track>
+										<UniqueIdList/>
+										<NameList/>
+										<TypeList/>
+										<DateList/>
+										<PlaceList/>
+										<FileInfo/>
+										<AudioInfo/>
+										<Position/>
+										<LabelList/>
+										<DescriptionList/>
+										<LyricsList/>
+										<CopyrightList/>
+										<CopyrightCollectiveList/>
+										<TagList/>
+										<RatingList/>
+										<UrlList/>
+										<CreditList/>
+										<DisambiguationList/>
+										<AnnotationList/>
+									</Track>
+									<Track>
+										<UniqueIdList/>
+										<NameList/>
+										<TypeList/>
+										<DateList/>
+										<PlaceList/>
+										<FileInfo/>
+										<AudioInfo/>
+										<Position/>
+										<LabelList/>
+										<DescriptionList/>
+										<LyricsList/>
+										<CopyrightList/>
+										<CopyrightCollectiveList/>
+										<TagList/>
+										<RatingList/>
+										<UrlList/>
+										<CreditList/>
+										<DisambiguationList/>
+										<AnnotationList/>
+									</Track>
+									<Track>
+										<UniqueIdList/>
+										<NameList/>
+										<TypeList/>
+										<DateList/>
+										<PlaceList/>
+										<FileInfo/>
+										<AudioInfo/>
+										<Position/>
+										<LabelList/>
+										<DescriptionList/>
+										<LyricsList/>
+										<CopyrightList/>
+										<CopyrightCollectiveList/>
+										<TagList/>
+										<RatingList/>
+										<UrlList/>
+										<CreditList/>
+										<DisambiguationList/>
+										<AnnotationList/>
+									</Track>
+									<Track>
+										<UniqueIdList/>
+										<NameList/>
+										<TypeList/>
+										<DateList/>
+										<PlaceList/>
+										<FileInfo/>
+										<AudioInfo/>
+										<Position/>
+										<LabelList/>
+										<DescriptionList/>
+										<LyricsList/>
+										<CopyrightList/>
+										<CopyrightCollectiveList/>
+										<TagList/>
+										<RatingList/>
+										<UrlList/>
+										<CreditList/>
+										<DisambiguationList/>
+										<AnnotationList/>
+									</Track>
+									<Track>
+										<UniqueIdList/>
+										<NameList/>
+										<TypeList/>
+										<DateList/>
+										<PlaceList/>
+										<FileInfo/>
+										<AudioInfo/>
+										<Position/>
+										<LabelList/>
+										<DescriptionList/>
+										<LyricsList/>
+										<CopyrightList/>
+										<CopyrightCollectiveList/>
+										<TagList/>
+										<RatingList/>
+										<UrlList/>
+										<CreditList/>
+										<DisambiguationList/>
+										<AnnotationList/>
+									</Track>
+									<Track>
+										<UniqueIdList/>
+										<NameList/>
+										<TypeList/>
+										<DateList/>
+										<PlaceList/>
+										<FileInfo/>
+										<AudioInfo/>
+										<Position/>
+										<LabelList/>
+										<DescriptionList/>
+										<LyricsList/>
+										<CopyrightList/>
+										<CopyrightCollectiveList/>
+										<TagList/>
+										<RatingList/>
+										<UrlList/>
+										<CreditList/>
+										<DisambiguationList/>
+										<AnnotationList/>
+									</Track>
+									<Track>
+										<UniqueIdList/>
+										<NameList/>
+										<TypeList/>
+										<DateList/>
+										<PlaceList/>
+										<FileInfo/>
+										<AudioInfo/>
+										<Position/>
+										<LabelList/>
+										<DescriptionList/>
+										<LyricsList/>
+										<CopyrightList/>
+										<CopyrightCollectiveList/>
+										<TagList/>
+										<RatingList/>
+										<UrlList/>
+										<CreditList/>
+										<DisambiguationList/>
+										<AnnotationList/>
+									</Track>
+								</TrackList>
+							</Medium>
+						</MediumList>
+					</Release>
+				</ReleaseList>
+			</ReleaseGroup>
+		</ReleaseGroupList>
 	</Discography>
 </Artist>

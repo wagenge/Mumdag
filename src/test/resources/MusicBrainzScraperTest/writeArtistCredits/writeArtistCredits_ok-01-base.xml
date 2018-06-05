@@ -1,17 +1,17 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <Artist mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d">
 	<UniqueIdList/>
 	<NameList>
-		<Name mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" sort-name="Beatles, The" source="MusicBrainz" type="Name">The Beatles</Name>
+		<Name locale="en" mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" primary="primary" sort-name="Beatles, The" source="MusicBrainz" type="Artist name" type-id="894afba6-2816-3c24-8072-eadb66bd04bc">The Beatles</Name>
 	</NameList>
-	<Type/>
-	<AreaList/>
-	<PeriodList/>
+	<TypeList/>
+	<PlaceList/>
+	<DateList/>
 	<DescriptionList/>
 	<TagList/>
 	<UrlList/>
 	<RatingList/>
-	<ArtistCreditList/>
+	<CreditList/>
 	<ArtList/>
 	<DisambiguationList/>
 	<AnnotationList/>

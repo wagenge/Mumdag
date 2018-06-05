@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Artist mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d">
+		<UniqueIdList>
+		<UniqueId mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" source="MusicBrainz">
+			<SourceUrl>https://musicbrainz.org/artist/b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d</SourceUrl>
+			<SourceWSUrl>https://musicbrainz.org/ws/2/artist/b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d?inc=aliases+tags+annotation+ratings+artist-rels+url-rels</SourceWSUrl>
+			<Value>b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d</Value>
+		</UniqueId>
+	</UniqueIdList>
+	<NameList/>
+	<Type/>
+	<AreaList/>
+	<PeriodList/>
+	<DescriptionList/>
+	<TagList/>
+	<UrlList/>
+	<RatingList/>
+	<ArtistCreditList/>
+	<ArtList/>
+	<DisambiguationList/>
+	<AnnotationList/>
+	<Discography>
+		<ReleaseGroupList/>
+	</Discography>
+</Artist>

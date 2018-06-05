@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Artist mbid="cc197bad-dc9c-440d-a5b5-d52ba2e14234">
+	<UniqueIdList/>
+	<NameList>
+		<Name locale="en" mbid="cc197bad-dc9c-440d-a5b5-d52ba2e14234" primary="primary" sort-name="Coldplay" source="MusicBrainz" type="Artist name" type-id="894afba6-2816-3c24-8072-eadb66bd04bc">Coldplay</Name>
+	</NameList>
+	<TypeList/>
+	<PlaceList/>
+	<DateList/>
+	<DescriptionList/>
+	<TagList/>
+	<UrlList/>
+	<RatingList/>
+	<CreditList/>
+	<ArtList/>
+	<DisambiguationList/>
+	<AnnotationList/>
+	<Discography>
+		<ReleaseGroupList/>
+	</Discography>
+</Artist>

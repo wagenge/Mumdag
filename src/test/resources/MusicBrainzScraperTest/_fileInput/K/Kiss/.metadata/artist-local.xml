@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Artist mbid="e1f1e33e-2e4c-4d43-b91b-7064068d3283">
+	<UniqueIdList/>
+	<NameList>
+		<Name mbid="e1f1e33e-2e4c-4d43-b91b-7064068d3283" sort-name="KISS" source="MusicBrainz" type="Name">KISS</Name>
+	</NameList>
+	<TypeList/>
+	<PlaceList/>
+	<DateList/>
+	<DescriptionList/>
+	<TagList/>
+	<UrlList/>
+	<RatingList/>
+	<CreditList/>
+	<ArtList/>
+	<DisambiguationList/>
+	<AnnotationList/>
+	<Discography>
+		<ReleaseGroupList/>
+	</Discography>
+</Artist>

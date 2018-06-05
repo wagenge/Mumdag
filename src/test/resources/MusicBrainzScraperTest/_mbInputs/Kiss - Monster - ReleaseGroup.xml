@@ -1,0 +1,62 @@
+<metadata xmlns="http://musicbrainz.org/ns/mmd-2.0#">
+	<release-group id="28c5684e-59e1-400c-81fb-1ceb3d0fdd18" type="Album" type-id="f529b476-6e62-324f-b0aa-1f3e33d313fc">
+		<title>Monster</title>
+		<first-release-date>2012-10-05</first-release-date>
+		<primary-type id="f529b476-6e62-324f-b0aa-1f3e33d313fc">Album</primary-type>
+		<relation-list target-type="artist">
+			<relation type="artists and repertoire" type-id="25dd0db4-189f-436c-a610-aacb979f13e2">
+				<target>1322ca88-d20c-445c-aab2-0804eb163000</target>
+				<direction>backward</direction>
+				<artist id="1322ca88-d20c-445c-aab2-0804eb163000">
+					<name>Jeff Fura</name>
+					<sort-name>Fura, Jeff</sort-name>
+				</artist>
+			</relation>
+		</relation-list>
+		<relation-list target-type="release_group">
+			<relation type-id="fcf680a9-6871-4519-8c4b-8c6549575b35" type="single from">
+				<target>4f8b461a-fc3f-41ee-aa7a-3d11b502b710</target>
+				<direction>backward</direction>
+				<release-group id="4f8b461a-fc3f-41ee-aa7a-3d11b502b710">
+					<title>Hell or Hallelujah</title>
+					<first-release-date>2012-07-03</first-release-date>
+				</release-group>
+			</relation>
+			<relation type="included in" type-id="589447ea-be2c-46cc-b9e9-469e1d06e18a">
+				<target>dbd910d6-1216-4124-ab53-174a8946bc90</target>
+				<release-group id="dbd910d6-1216-4124-ab53-174a8946bc90">
+					<title>KISSTERIA: The Ultimate Vinyl Road Case</title>
+					<first-release-date>2014-08-17</first-release-date>
+				</release-group>
+			</relation>
+		</relation-list>
+		<relation-list target-type="series">
+			<relation type="tour in support of" type-id="72e1f4d8-011b-49ab-bba4-6990981c972e">
+				<target>32b94e41-6057-4868-ad92-13bb1fa879e7</target>
+				<series type="Tour" type-id="8ff6df0e-3dce-3bdf-bd57-d386c51b0060" id="32b94e41-6057-4868-ad92-13bb1fa879e7">
+					<name>Monster World Tour</name>
+				</series>
+			</relation>
+		</relation-list>
+		<relation-list target-type="url">
+			<relation type="other databases" type-id="38320e40-9f4a-3ae7-8cb2-3f3c9c5d856d">
+				<target id="5a771a6d-4e7b-4695-b6bf-9e19899c1640">http://rateyourmusic.com/release/album/kiss/monster/</target>
+			</relation>
+			<relation type-id="6578f0e9-1ace-4095-9de8-6e517ddb1ceb" type="wikipedia">
+				<target id="0256b239-4328-4b13-b087-cb2db02c533a">https://en.wikipedia.org/wiki/Monster_(Kiss_album)</target>
+			</relation>
+			<relation type="discogs" type-id="99e550f3-5ab4-3110-b5b9-fe01d970b126">
+				<target id="b518e00b-9afa-4519-bd04-5f74f16607c5">https://www.discogs.com/master/477379</target>
+			</relation>
+			<relation type-id="b988d08c-5d86-4a57-9557-c83b399e3580" type="wikidata">
+				<target id="cb2d0168-18b7-4849-b144-649293ac4eb5">https://www.wikidata.org/wiki/Q1508231</target>
+			</relation>
+		</relation-list>
+		<tag-list>
+			<tag count="1">
+				<name>hard rock</name>
+			</tag>
+		</tag-list>
+		<rating votes-count="1">5</rating>
+	</release-group>
+</metadata>

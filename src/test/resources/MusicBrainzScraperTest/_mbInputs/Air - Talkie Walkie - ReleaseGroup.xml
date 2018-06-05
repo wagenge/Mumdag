@@ -1,0 +1,157 @@
+<metadata xmlns="http://musicbrainz.org/ns/mmd-2.0#">
+	<release-group type-id="f529b476-6e62-324f-b0aa-1f3e33d313fc" type="Album" id="c636f6e8-0fe6-3470-b5af-b31a0ebed0bb">
+		<title>Talkie Walkie</title>
+		<first-release-date>2004-01-21</first-release-date>
+		<primary-type id="f529b476-6e62-324f-b0aa-1f3e33d313fc">Album</primary-type>
+		<relation-list target-type="artist">
+			<relation type="artists and repertoire" type-id="25dd0db4-189f-436c-a610-aacb979f13e2">
+				<target>0c7cddf9-520d-4fb7-a14c-942ab30689fa</target>
+				<direction>backward</direction>
+				<artist id="0c7cddf9-520d-4fb7-a14c-942ab30689fa">
+					<name>Stéphane Elfassi</name>
+					<sort-name>Elfassi, Stéphane</sort-name>
+				</artist>
+			</relation>
+			<relation type="artists and repertoire" type-id="25dd0db4-189f-436c-a610-aacb979f13e2">
+				<target>fcee9f37-f2a6-46f3-9f53-a7f61130e7cc</target>
+				<direction>backward</direction>
+				<artist id="fcee9f37-f2a6-46f3-9f53-a7f61130e7cc">
+					<name>Marc Tessier du Cros</name>
+					<sort-name>Tessier du Cros, Marc</sort-name>
+				</artist>
+			</relation>
+		</relation-list>
+		<relation-list target-type="release_group">
+			<relation type="single from" type-id="fcf680a9-6871-4519-8c4b-8c6549575b35">
+				<target>17c544aa-a537-3b89-b96e-1a0a3cf11adb</target>
+				<direction>backward</direction>
+				<release-group id="17c544aa-a537-3b89-b96e-1a0a3cf11adb">
+					<title>Surfing on a Rocket EP</title>
+					<first-release-date>2004-10-19</first-release-date>
+				</release-group>
+			</relation>
+			<relation type="single from" type-id="fcf680a9-6871-4519-8c4b-8c6549575b35">
+				<target>77d4e823-f08f-3614-9ec3-bde634d104a9</target>
+				<direction>backward</direction>
+				<release-group id="77d4e823-f08f-3614-9ec3-bde634d104a9">
+					<title>Cherry Blossom Girl</title>
+					<first-release-date>2003</first-release-date>
+				</release-group>
+			</relation>
+			<relation type-id="fcf680a9-6871-4519-8c4b-8c6549575b35" type="single from">
+				<target>c208db01-42f6-34a2-bcef-19687c4ce6f9</target>
+				<direction>backward</direction>
+				<release-group id="c208db01-42f6-34a2-bcef-19687c4ce6f9">
+					<title>Alpha Beta Gaga</title>
+					<first-release-date>2004-08-02</first-release-date>
+				</release-group>
+			</relation>
+			<relation type-id="fcf680a9-6871-4519-8c4b-8c6549575b35" type="single from">
+				<target>d4d57932-258d-3a3e-a8f1-83d1be331c75</target>
+				<direction>backward</direction>
+				<release-group id="d4d57932-258d-3a3e-a8f1-83d1be331c75">
+					<title>Surfing on a Rocket</title>
+					<first-release-date>2004-04-13</first-release-date>
+				</release-group>
+			</relation>
+		</relation-list>
+		<relation-list target-type="series">
+			<relation type-id="01018437-91d8-36b9-bf89-3f885d53b5bd" type="part of">
+				<target>71f51c56-6cd5-4796-87f8-573ddf950fec</target>
+				<ordering-key>31</ordering-key>
+				<attribute-list>
+					<attribute value="2004">number</attribute>
+				</attribute-list>
+				<series id="71f51c56-6cd5-4796-87f8-573ddf950fec" type="Release group" type-id="4c1c4949-7b6c-3a2d-9d54-a50a27e4fa77">
+					<name>Shortlist Music Prize Nominees</name>
+				</series>
+			</relation>
+		</relation-list>
+		<relation-list target-type="url">
+			<relation type="lyrics" type-id="156344d3-da8b-40c6-8b10-7b1c22727124">
+				<target id="270e9401-aebb-4db8-8050-0d4d0d46afd5">http://lyrics.wikia.com/Air:Talkie_Walkie_(2004)</target>
+			</relation>
+			<relation type-id="c3ac9c3b-f546-4d15-873f-b294d2c1b708" type="review">
+				<target id="bf02a9e7-b117-41eb-8729-0590545dc96b">http://pitchfork.com/reviews/albums/81-talkie-walkie/</target>
+			</relation>
+			<relation type="review" type-id="c3ac9c3b-f546-4d15-873f-b294d2c1b708">
+				<target id="ddd6b358-637b-456a-a65b-8fc5d40fde49">http://web.archive.org/web/20070526234613/http://www.rollingstone.com/artists/air/albums/album/4938065/review/6067978/talkie_walkie</target>
+			</relation>
+			<relation type-id="a50a1d20-2b20-4d2c-9a29-eb771dd78386" type="allmusic">
+				<target id="879b5b3c-aea7-4d81-83df-0f1e3af46840">http://www.allmusic.com/album/mw0000695593</target>
+			</relation>
+			<relation type-id="c3ac9c3b-f546-4d15-873f-b294d2c1b708" type="review">
+				<target id="3cac7163-4de5-40fe-9fe4-20203e9c7fdd">http://www.bbc.co.uk/music/reviews/32rg</target>
+			</relation>
+			<relation type="review" type-id="c3ac9c3b-f546-4d15-873f-b294d2c1b708">
+				<target id="5de342c9-8878-4252-ac37-35baddc3adf9">http://www.ew.com/article/2004/01/23/talkie-walkie</target>
+			</relation>
+			<relation type-id="38320e40-9f4a-3ae7-8cb2-3f3c9c5d856d" type="other databases">
+				<target id="c9224b22-4ff9-4d76-8186-272a3ea4ca44">http://www.musik-sammler.de/album/74679</target>
+			</relation>
+			<relation type="wikipedia" type-id="6578f0e9-1ace-4095-9de8-6e517ddb1ceb">
+				<target id="426067e5-7b2e-4774-b77a-b0d38b3758d6">https://en.wikipedia.org/wiki/Talkie_Walkie</target>
+			</relation>
+			<relation type="other databases" type-id="38320e40-9f4a-3ae7-8cb2-3f3c9c5d856d">
+				<target id="88d0e46c-8f0f-4867-99aa-f8da8bd9b154">https://rateyourmusic.com/release/album/air/talkie_walkie/</target>
+			</relation>
+			<relation type="discogs" type-id="99e550f3-5ab4-3110-b5b9-fe01d970b126">
+				<target id="c53e6ea1-0fd7-443b-bd2d-4f5eb79adcf7">https://www.discogs.com/master/59087</target>
+			</relation>
+			<relation type-id="c3ac9c3b-f546-4d15-873f-b294d2c1b708" type="review">
+				<target id="43226100-c77b-4939-82e6-293a0a5cc5f8">https://www.theguardian.com/music/2004/jan/16/popandrock.shopping5</target>
+			</relation>
+			<relation type="wikidata" type-id="b988d08c-5d86-4a57-9557-c83b399e3580">
+				<target id="61a0e46d-636d-4566-8bd2-fc74cbbaff1e">https://www.wikidata.org/wiki/Q516527</target>
+			</relation>
+		</relation-list>
+		<tag-list>
+			<tag count="1">
+				<name>2004</name>
+			</tag>
+			<tag count="1">
+				<name>alternative</name>
+			</tag>
+			<tag count="1">
+				<name>ambient</name>
+			</tag>
+			<tag count="0">
+				<name>dance and electronica</name>
+			</tag>
+			<tag count="4">
+				<name>downtempo</name>
+			</tag>
+			<tag count="5">
+				<name>electronic</name>
+			</tag>
+			<tag count="5">
+				<name>electronica</name>
+			</tag>
+			<tag count="1">
+				<name>experimental</name>
+			</tag>
+			<tag count="1">
+				<name>fran ais</name>
+			</tag>
+			<tag count="2">
+				<name>france</name>
+			</tag>
+			<tag count="2">
+				<name>français</name>
+			</tag>
+			<tag count="2">
+				<name>french</name>
+			</tag>
+			<tag count="0">
+				<name>owned</name>
+			</tag>
+			<tag count="0">
+				<name>synth-pop</name>
+			</tag>
+			<tag count="1">
+				<name>synthpop</name>
+			</tag>
+		</tag-list>
+		<rating votes-count="4">4</rating>
+	</release-group>
+</metadata>

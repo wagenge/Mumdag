@@ -1,0 +1,656 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Artist mbid="0c751690-c784-4a4f-b1e4-c1de27d47581" path="./src/test/resources/LocalMusicScraperTest/_fileInput/A/Animal Collective/">
+	<UniqueIdList>
+		<UniqueId mbid="0c751690-c784-4a4f-b1e4-c1de27d47581" source="MusicBrainz">
+			<SourceUrl>https://musicbrainz.org/artist/0c751690-c784-4a4f-b1e4-c1de27d47581</SourceUrl>
+			<SourceWSUrl>https://musicbrainz.org/ws/2/artist/0c751690-c784-4a4f-b1e4-c1de27d47581?inc=aliases+tags+annotation+ratings+artist-rels+url-rels</SourceWSUrl>
+			<Value>0c751690-c784-4a4f-b1e4-c1de27d47581</Value>
+		</UniqueId>
+	</UniqueIdList>
+	<NameList/>
+	<TypeList/>
+	<PlaceList/>
+	<DateList/>
+	<DescriptionList/>
+	<TagList/>
+	<UrlList/>
+	<RatingList/>
+	<CreditList/>
+	<ArtList/>
+	<DisambiguationList/>
+	<AnnotationList/>
+	<Discography>
+		<ReleaseGroupList>
+			<ReleaseGroup mbid="bb5426ab-6924-321a-8504-dc6f3cdf852b" path="./src/test/resources/LocalMusicScraperTest/_fileInput/A/Animal Collective/2003 - Spirit They're Gone, Spirit They've Vanished ¦ Danse Manatee/">
+				<UniqueIdList>
+					<UniqueId mbid="bb5426ab-6924-321a-8504-dc6f3cdf852b" source="MusicBrainz">
+						<SourceUrl>https://musicbrainz.org/release-group/bb5426ab-6924-321a-8504-dc6f3cdf852b</SourceUrl>
+						<SourceWSUrl>https://musicbrainz.org/ws/2/release-group/bb5426ab-6924-321a-8504-dc6f3cdf852b?inc=aliases+tags+annotation+ratings+artist-rels+release-group-rels+series-rels+url-rels</SourceWSUrl>
+						<Value>bb5426ab-6924-321a-8504-dc6f3cdf852b</Value>
+					</UniqueId>
+				</UniqueIdList>
+				<NameList/>
+				<TypeList/>
+				<DateList/>
+				<AwardList/>
+				<ChartList/>
+				<DescriptionList/>
+				<TagList/>
+				<UrlList/>
+				<RatingList/>
+				<CreditList/>
+				<ArtList/>
+				<DisambiguationList/>
+				<AnnotationList/>
+				<ReleaseList>
+					<Release mbid="27f3a5d1-97ff-4deb-847a-d9ce9ccd76ab" path="./src/test/resources/LocalMusicScraperTest/_fileInput/A/Animal Collective/2003 - Spirit They're Gone, Spirit They've Vanished ¦ Danse Manatee/">
+						<UniqueIdList>
+							<UniqueId mbid="27f3a5d1-97ff-4deb-847a-d9ce9ccd76ab" source="MusicBrainz">
+								<SourceUrl>https://musicbrainz.org/release/27f3a5d1-97ff-4deb-847a-d9ce9ccd76ab</SourceUrl>
+								<SourceWSUrl>https://musicbrainz.org/ws/2/release/27f3a5d1-97ff-4deb-847a-d9ce9ccd76ab?inc=labels+aliases+tags+annotation+media+discids+artist-rels+release-rels+label-rels+area-rels+place-rels+url-rels+event-rels</SourceWSUrl>
+								<Value>27f3a5d1-97ff-4deb-847a-d9ce9ccd76ab</Value>
+							</UniqueId>
+						</UniqueIdList>
+						<NameList/>
+						<TypeList/>
+						<DateList/>
+						<PlaceList/>
+						<LabelList/>
+						<LengthList/>
+						<DescriptionList/>
+						<CopyrightList/>
+						<TagList/>
+						<UrlList/>
+						<CreditList/>			
+						<ArtList/>
+						<DisambiguationList/>
+						<AnnotationList/>
+						<MediumList>
+							<Medium discNo="1" discTotal="2" path="./src/test/resources/LocalMusicScraperTest/_fileInput/A/Animal Collective/2003 - Spirit They're Gone, Spirit They've Vanished ¦ Danse Manatee/">
+								<UniqueIdList/>
+								<NameList/>
+								<TypeList/>
+								<LengthList/>
+								<TrackList>
+									<Track mbid="eceb6a40-6336-41b5-9082-83649215a9ba" path="./src/test/resources/LocalMusicScraperTest/_fileInput/A/Animal Collective/2003 - Spirit They're Gone, Spirit They've Vanished ¦ Danse Manatee/1-01 - Spirit They've Vanished.mp3" trackNo="01" trackPos="1">
+										<UniqueIdList>
+											<UniqueId mbid="eceb6a40-6336-41b5-9082-83649215a9ba" source="MusicBrainz">
+												<SourceUrl>https://musicbrainz.org/recording/eceb6a40-6336-41b5-9082-83649215a9ba</SourceUrl>
+												<SourceWSUrl>https://musicbrainz.org/ws/2/recording/eceb6a40-6336-41b5-9082-83649215a9ba?inc=aliases+annotation+tags+ratings+isrcs+artist-rels+work-rels+place-rels+label-rels+url-rels</SourceWSUrl>
+												<Value>eceb6a40-6336-41b5-9082-83649215a9ba</Value>
+											</UniqueId>
+										</UniqueIdList>
+										<NameList/>
+										<TypeList/>
+										<DateList/>
+										<PlaceList/>
+										<FileInfo>
+											<AbsolutePath>./src/test/resources/LocalMusicScraperTest/_fileInput/A/Animal Collective/2003 - Spirit They're Gone, Spirit They've Vanished ¦ Danse Manatee/1-01 - Spirit They've Vanished.mp3</AbsolutePath>
+											<RelativePath>./2003 - Spirit They're Gone, Spirit They've Vanished ¦ Danse Manatee/1-01 - Spirit They've Vanished.mp3</RelativePath>
+											<Name>1-01 - Spirit They've Vanished.mp3</Name>
+											<Extension>mp3</Extension>
+											<Size>12589283</Size>
+										</FileInfo>
+										<AudioInfo>
+											<Emphasis source="MP3AudioHeader">None</Emphasis>
+											<MpegVersion source="MP3AudioHeader">MPEG-1</MpegVersion>
+											<MpegLayer source="MP3AudioHeader">Layer 3</MpegLayer>
+											<BitRate lossless="false" source="MP3AudioHeader" variable="true">~299</BitRate>
+											<IntellectualProperty copyright="false" original="true"/>
+											<EncodingType source="MP3AudioHeader">mp3</EncodingType>
+											<LengthList>
+												<Length source="MP3AudioHeader" type="ms">333714</Length>
+												<Length source="MP3AudioHeader" type="ss">333</Length>
+												<Length pattern="hh:mm:ss" source="MP3AudioHeader" type="hhmmss">00:05:33</Length>
+											</LengthList>
+											<BitsPerSample source="MP3AudioHeader">16</BitsPerSample>
+											<Channels source="MP3AudioHeader">Joint Stereo</Channels>
+											<SampleRate source="MP3AudioHeader">44100</SampleRate>
+											<Encoder source="MP3AudioHeader">LAME3.98r</Encoder>
+										</AudioInfo>
+										<Position number="01">1</Position>
+										<LabelList/>
+										<DescriptionList/>
+										<LyricsList/>
+										<CopyrightList/>
+										<CopyrightCollectiveList/>
+										<TagList>
+											<Tag fieldName="TPE1" source="ID3Tag" tagName="ARTIST">Animal Collective</Tag>
+											<Tag fieldName="TCON" source="ID3Tag" tagName="GENRE">Noise</Tag>
+											<Tag fieldName="TCON" source="ID3Tag" tagName="GENRE">Electronic</Tag>
+											<Tag fieldName="TCON" source="ID3Tag" tagName="GENRE">Experimental</Tag>
+											<Tag fieldName="TCON" source="ID3Tag" tagName="GENRE">Psychedelic</Tag>
+										</TagList>
+										<RatingList/>
+										<UrlList/>
+										<CreditList/>
+										<DisambiguationList/>
+										<AnnotationList/>
+									</Track>
+									<Track>
+										<UniqueIdList/>
+										<NameList/>
+										<TypeList/>
+										<DateList/>
+										<PlaceList/>
+										<FileInfo/>
+										<AudioInfo/>
+										<Position/>
+										<LabelList/>
+										<DescriptionList/>
+										<LyricsList/>
+										<CopyrightList/>
+										<CopyrightCollectiveList/>
+										<TagList/>
+										<RatingList/>
+										<UrlList/>
+										<CreditList/>
+										<DisambiguationList/>
+										<AnnotationList/>
+									</Track>
+									<Track>
+										<UniqueIdList/>
+										<NameList/>
+										<TypeList/>
+										<DateList/>
+										<PlaceList/>
+										<FileInfo/>
+										<AudioInfo/>
+										<Position/>
+										<LabelList/>
+										<DescriptionList/>
+										<LyricsList/>
+										<CopyrightList/>
+										<CopyrightCollectiveList/>
+										<TagList/>
+										<RatingList/>
+										<UrlList/>
+										<CreditList/>
+										<DisambiguationList/>
+										<AnnotationList/>
+									</Track>
+									<Track>
+										<UniqueIdList/>
+										<NameList/>
+										<TypeList/>
+										<DateList/>
+										<PlaceList/>
+										<FileInfo/>
+										<AudioInfo/>
+										<Position/>
+										<LabelList/>
+										<DescriptionList/>
+										<LyricsList/>
+										<CopyrightList/>
+										<CopyrightCollectiveList/>
+										<TagList/>
+										<RatingList/>
+										<UrlList/>
+										<CreditList/>
+										<DisambiguationList/>
+										<AnnotationList/>
+									</Track>
+									<Track>
+										<UniqueIdList/>
+										<NameList/>
+										<TypeList/>
+										<DateList/>
+										<PlaceList/>
+										<FileInfo/>
+										<AudioInfo/>
+										<Position/>
+										<LabelList/>
+										<DescriptionList/>
+										<LyricsList/>
+										<CopyrightList/>
+										<CopyrightCollectiveList/>
+										<TagList/>
+										<RatingList/>
+										<UrlList/>
+										<CreditList/>
+										<DisambiguationList/>
+										<AnnotationList/>
+									</Track>
+									<Track>
+										<UniqueIdList/>
+										<NameList/>
+										<TypeList/>
+										<DateList/>
+										<PlaceList/>
+										<FileInfo/>
+										<AudioInfo/>
+										<Position/>
+										<LabelList/>
+										<DescriptionList/>
+										<LyricsList/>
+										<CopyrightList/>
+										<CopyrightCollectiveList/>
+										<TagList/>
+										<RatingList/>
+										<UrlList/>
+										<CreditList/>
+										<DisambiguationList/>
+										<AnnotationList/>
+									</Track>
+									<Track>
+										<UniqueIdList/>
+										<NameList/>
+										<TypeList/>
+										<DateList/>
+										<PlaceList/>
+										<FileInfo/>
+										<AudioInfo/>
+										<Position/>
+										<LabelList/>
+										<DescriptionList/>
+										<LyricsList/>
+										<CopyrightList/>
+										<CopyrightCollectiveList/>
+										<TagList/>
+										<RatingList/>
+										<UrlList/>
+										<CreditList/>
+										<DisambiguationList/>
+										<AnnotationList/>
+									</Track>
+									<Track>
+										<UniqueIdList/>
+										<NameList/>
+										<TypeList/>
+										<DateList/>
+										<PlaceList/>
+										<FileInfo/>
+										<AudioInfo/>
+										<Position/>
+										<LabelList/>
+										<DescriptionList/>
+										<LyricsList/>
+										<CopyrightList/>
+										<CopyrightCollectiveList/>
+										<TagList/>
+										<RatingList/>
+										<UrlList/>
+										<CreditList/>
+										<DisambiguationList/>
+										<AnnotationList/>
+									</Track>
+									<Track>
+										<UniqueIdList/>
+										<NameList/>
+										<TypeList/>
+										<DateList/>
+										<PlaceList/>
+										<FileInfo/>
+										<AudioInfo/>
+										<Position/>
+										<LabelList/>
+										<DescriptionList/>
+										<LyricsList/>
+										<CopyrightList/>
+										<CopyrightCollectiveList/>
+										<TagList/>
+										<RatingList/>
+										<UrlList/>
+										<CreditList/>
+										<DisambiguationList/>
+										<AnnotationList/>
+									</Track>
+									<Track>
+										<UniqueIdList/>
+										<NameList/>
+										<TypeList/>
+										<DateList/>
+										<PlaceList/>
+										<FileInfo/>
+										<AudioInfo/>
+										<Position/>
+										<LabelList/>
+										<DescriptionList/>
+										<LyricsList/>
+										<CopyrightList/>
+										<CopyrightCollectiveList/>
+										<TagList/>
+										<RatingList/>
+										<UrlList/>
+										<CreditList/>
+										<DisambiguationList/>
+										<AnnotationList/>
+									</Track>
+								</TrackList>
+							</Medium>
+							<Medium discNo="2" path="./src/test/resources/LocalMusicScraperTest/_fileInput/A/Animal Collective/2003 - Spirit They're Gone, Spirit They've Vanished ¦ Danse Manatee/">
+								<UniqueIdList/>
+								<NameList/>
+								<TypeList/>
+								<LengthList/>
+								<TrackList>
+									<Track mbid="9c97ae69-b351-45a4-ac7a-041b289bb705" path="./src/test/resources/LocalMusicScraperTest/_fileInput/A/Animal Collective/2003 - Spirit They're Gone, Spirit They've Vanished ¦ Danse Manatee/2-01 - A Manatee Dance.mp3" trackNo="01" trackPos="1">
+										<UniqueIdList>
+											<UniqueId mbid="9c97ae69-b351-45a4-ac7a-041b289bb705" source="MusicBrainz">
+												<SourceUrl>https://musicbrainz.org/recording/9c97ae69-b351-45a4-ac7a-041b289bb705</SourceUrl>
+												<SourceWSUrl>https://musicbrainz.org/ws/2/recording/9c97ae69-b351-45a4-ac7a-041b289bb705?inc=aliases+annotation+tags+ratings+isrcs+artist-rels+work-rels+place-rels+label-rels+url-rels</SourceWSUrl>
+												<Value>9c97ae69-b351-45a4-ac7a-041b289bb705</Value>
+											</UniqueId>
+										</UniqueIdList>
+										<NameList/>
+										<TypeList/>
+										<DateList/>
+										<PlaceList/>
+										<FileInfo>
+											<AbsolutePath>./src/test/resources/LocalMusicScraperTest/_fileInput/A/Animal Collective/2003 - Spirit They're Gone, Spirit They've Vanished ¦ Danse Manatee/2-01 - A Manatee Dance.mp3</AbsolutePath>
+											<RelativePath>./2003 - Spirit They're Gone, Spirit They've Vanished ¦ Danse Manatee/2-01 - A Manatee Dance.mp3</RelativePath>
+											<Name>2-01 - A Manatee Dance.mp3</Name>
+											<Extension>mp3</Extension>
+											<Size>1947338</Size>
+										</FileInfo>
+										<AudioInfo>
+											<Emphasis source="MP3AudioHeader">None</Emphasis>
+											<MpegVersion source="MP3AudioHeader">MPEG-1</MpegVersion>
+											<MpegLayer source="MP3AudioHeader">Layer 3</MpegLayer>
+											<BitRate lossless="false" source="MP3AudioHeader" variable="true">~234</BitRate>
+											<IntellectualProperty copyright="false" original="true"/>
+											<EncodingType source="MP3AudioHeader">mp3</EncodingType>
+											<LengthList>
+												<Length source="MP3AudioHeader" type="ms">62903</Length>
+												<Length source="MP3AudioHeader" type="ss">62</Length>
+												<Length pattern="hh:mm:ss" source="MP3AudioHeader" type="hhmmss">00:01:02</Length>
+											</LengthList>
+											<BitsPerSample source="MP3AudioHeader">16</BitsPerSample>
+											<Channels source="MP3AudioHeader">Joint Stereo</Channels>
+											<SampleRate source="MP3AudioHeader">44100</SampleRate>
+											<Encoder source="MP3AudioHeader">LAME3.98r</Encoder>
+										</AudioInfo>
+										<Position number="01">1</Position>
+										<LabelList/>
+										<DescriptionList/>
+										<LyricsList/>
+										<CopyrightList/>
+										<CopyrightCollectiveList/>
+										<TagList>
+											<Tag fieldName="TRCK" source="ID3Tag" tagName="TRACK">12</Tag>
+											<Tag fieldName="UFID:http://musicbrainz.org" source="ID3Tag" tagName="MUSICBRAINZ_TRACK_ID">9c97ae69-b351-45a4-ac7a-041b289bb705</Tag>
+											<Tag fieldName="TALB" source="ID3Tag" tagName="ALBUM">Spirit They're Gone, Spirit They've Vanished / Danse Manatee</Tag>
+											<Tag fieldName="TDRC" source="ID3Tag" tagName="YEAR">2003-10-06</Tag>
+											<Tag fieldName="TSOP" source="ID3Tag" tagName="ARTIST_SORT">Animal Collective</Tag>
+											<Tag fieldName="TPOS" source="ID3Tag" tagName="DISC_NO">2</Tag>
+											<Tag fieldName="TSST" source="ID3Tag" tagName="DISC_SUBTITLE">Danse Manatee</Tag>
+											<Tag fieldName="TXXX:MusicBrainz Album Type" source="ID3Tag" tagName="MUSICBRAINZ_RELEASE_TYPE">album</Tag>
+											<Tag fieldName="TXXX:MusicBrainz Album Type" source="ID3Tag" tagName="MUSICBRAINZ_RELEASE_TYPE">compilation</Tag>
+											<Tag fieldName="COMM:Songs-DB_Custom3" source="ID3Tag" tagName="CUSTOM3">New York</Tag>
+											<Tag fieldName="TXXX:MusicBrainz Album Release Country" source="ID3Tag" tagName="MUSICBRAINZ_RELEASE_COUNTRY">GB</Tag>
+											<Tag fieldName="COMM:Songs-DB_Custom4" source="ID3Tag" tagName="CUSTOM4">American</Tag>
+											<Tag fieldName="COMM:Songs-DB_Custom1" source="ID3Tag" tagName="CUSTOM1">00s</Tag>
+											<Tag fieldName="COMM:Songs-DB_Custom2" source="ID3Tag" tagName="CUSTOM2">Unknown</Tag>
+											<Tag fieldName="TXXX:MusicBrainz Release Track Id" source="ID3Tag" tagName="MUSICBRAINZ_RELEASE_TRACK_ID">264c6345-bcba-3f34-a736-b4104f68c679</Tag>
+											<Tag fieldName="COMM" source="ID3Tag" tagName="COMMENT">00s</Tag>
+											<Tag fieldName="COMM" source="ID3Tag" tagName="COMMENT">Unknown</Tag>
+											<Tag fieldName="COMM" source="ID3Tag" tagName="COMMENT">New York</Tag>
+											<Tag fieldName="COMM" source="ID3Tag" tagName="COMMENT">American</Tag>
+											<Tag fieldName="TXXX:MusicBrainz Release Group Id" source="ID3Tag" tagName="MUSICBRAINZ_RELEASE_GROUP_ID">bb5426ab-6924-321a-8504-dc6f3cdf852b</Tag>
+											<Tag fieldName="TXXX:MusicBrainz Album Artist Id" source="ID3Tag" tagName="MUSICBRAINZ_RELEASEARTISTID">0c751690-c784-4a4f-b1e4-c1de27d47581</Tag>
+											<Tag fieldName="COMM:Songs-DB_Occasion" source="ID3Tag" tagName="OCCASION">Unknown</Tag>
+											<Tag fieldName="TSO2" source="ID3Tag" tagName="ALBUM_ARTIST_SORT">Animal Collective</Tag>
+											<Tag fieldName="TCON" source="ID3Tag" tagName="GENRE">Electronic</Tag>
+											<Tag fieldName="TCON" source="ID3Tag" tagName="GENRE">Noise</Tag>
+											<Tag fieldName="TCON" source="ID3Tag" tagName="GENRE">Experimental</Tag>
+											<Tag fieldName="TPE2" source="ID3Tag" tagName="ALBUM_ARTIST">Animal Collective</Tag>
+											<Tag fieldName="TPUB" source="ID3Tag" tagName="RECORD_LABEL">FatCat Records</Tag>
+											<Tag fieldName="TPE1" source="ID3Tag" tagName="ARTIST">Animal Collective</Tag>
+											<Tag fieldName="TXXX:BARCODE" source="ID3Tag" tagName="BARCODE">600116120724</Tag>
+											<Tag fieldName="TXXX:CATALOGNUMBER" source="ID3Tag" tagName="CATALOG_NO">FAT-SP07</Tag>
+											<Tag fieldName="TXXX:MusicBrainz Album Status" source="ID3Tag" tagName="MUSICBRAINZ_RELEASE_STATUS">official</Tag>
+											<Tag fieldName="TXXX:MusicBrainz Album Id" source="ID3Tag" tagName="MUSICBRAINZ_RELEASEID">27f3a5d1-97ff-4deb-847a-d9ce9ccd76ab</Tag>
+											<Tag fieldName="TDOR" source="ID3Tag" tagName="ORIGINAL_YEAR">2003-10-06</Tag>
+											<Tag fieldName="TIT2" source="ID3Tag" tagName="TITLE">A Manatee Dance</Tag>
+											<Tag fieldName="TIT1" source="ID3Tag" tagName="GROUPING">Noise</Tag>
+											<Tag fieldName="TXXX:ASIN" source="ID3Tag" tagName="AMAZON_ID">B0000BXBYA</Tag>
+											<Tag fieldName="TXXX:MusicBrainz Artist Id" source="ID3Tag" tagName="MUSICBRAINZ_ARTISTID">0c751690-c784-4a4f-b1e4-c1de27d47581</Tag>
+											<Tag fieldName="TMOO" source="ID3Tag" tagName="MOOD">Weird</Tag>
+											<Tag fieldName="TMED" source="ID3Tag" tagName="MEDIA">CD</Tag>
+										</TagList>
+										<RatingList/>
+										<UrlList/>
+										<CreditList/>
+										<DisambiguationList/>
+										<AnnotationList/>
+									</Track>
+									<Track>
+										<UniqueIdList/>
+										<NameList/>
+										<TypeList/>
+										<DateList/>
+										<PlaceList/>
+										<FileInfo/>
+										<AudioInfo/>
+										<Position/>
+										<LabelList/>
+										<DescriptionList/>
+										<LyricsList/>
+										<CopyrightList/>
+										<CopyrightCollectiveList/>
+										<TagList/>
+										<RatingList/>
+										<UrlList/>
+										<CreditList/>
+										<DisambiguationList/>
+										<AnnotationList/>
+									</Track>
+									<Track>
+										<UniqueIdList/>
+										<NameList/>
+										<TypeList/>
+										<DateList/>
+										<PlaceList/>
+										<FileInfo/>
+										<AudioInfo/>
+										<Position/>
+										<LabelList/>
+										<DescriptionList/>
+										<LyricsList/>
+										<CopyrightList/>
+										<CopyrightCollectiveList/>
+										<TagList/>
+										<RatingList/>
+										<UrlList/>
+										<CreditList/>
+										<DisambiguationList/>
+										<AnnotationList/>
+									</Track>
+									<Track>
+										<UniqueIdList/>
+										<NameList/>
+										<TypeList/>
+										<DateList/>
+										<PlaceList/>
+										<FileInfo/>
+										<AudioInfo/>
+										<Position/>
+										<LabelList/>
+										<DescriptionList/>
+										<LyricsList/>
+										<CopyrightList/>
+										<CopyrightCollectiveList/>
+										<TagList/>
+										<RatingList/>
+										<UrlList/>
+										<CreditList/>
+										<DisambiguationList/>
+										<AnnotationList/>
+									</Track>
+									<Track>
+										<UniqueIdList/>
+										<NameList/>
+										<TypeList/>
+										<DateList/>
+										<PlaceList/>
+										<FileInfo/>
+										<AudioInfo/>
+										<Position/>
+										<LabelList/>
+										<DescriptionList/>
+										<LyricsList/>
+										<CopyrightList/>
+										<CopyrightCollectiveList/>
+										<TagList/>
+										<RatingList/>
+										<UrlList/>
+										<CreditList/>
+										<DisambiguationList/>
+										<AnnotationList/>
+									</Track>
+									<Track>
+										<UniqueIdList/>
+										<NameList/>
+										<TypeList/>
+										<DateList/>
+										<PlaceList/>
+										<FileInfo/>
+										<AudioInfo/>
+										<Position/>
+										<LabelList/>
+										<DescriptionList/>
+										<LyricsList/>
+										<CopyrightList/>
+										<CopyrightCollectiveList/>
+										<TagList/>
+										<RatingList/>
+										<UrlList/>
+										<CreditList/>
+										<DisambiguationList/>
+										<AnnotationList/>
+									</Track>
+									<Track>
+										<UniqueIdList/>
+										<NameList/>
+										<TypeList/>
+										<DateList/>
+										<PlaceList/>
+										<FileInfo/>
+										<AudioInfo/>
+										<Position/>
+										<LabelList/>
+										<DescriptionList/>
+										<LyricsList/>
+										<CopyrightList/>
+										<CopyrightCollectiveList/>
+										<TagList/>
+										<RatingList/>
+										<UrlList/>
+										<CreditList/>
+										<DisambiguationList/>
+										<AnnotationList/>
+									</Track>
+									<Track>
+										<UniqueIdList/>
+										<NameList/>
+										<TypeList/>
+										<DateList/>
+										<PlaceList/>
+										<FileInfo/>
+										<AudioInfo/>
+										<Position/>
+										<LabelList/>
+										<DescriptionList/>
+										<LyricsList/>
+										<CopyrightList/>
+										<CopyrightCollectiveList/>
+										<TagList/>
+										<RatingList/>
+										<UrlList/>
+										<CreditList/>
+										<DisambiguationList/>
+										<AnnotationList/>
+									</Track>
+									<Track>
+										<UniqueIdList/>
+										<NameList/>
+										<TypeList/>
+										<DateList/>
+										<PlaceList/>
+										<FileInfo/>
+										<AudioInfo/>
+										<Position/>
+										<LabelList/>
+										<DescriptionList/>
+										<LyricsList/>
+										<CopyrightList/>
+										<CopyrightCollectiveList/>
+										<TagList/>
+										<RatingList/>
+										<UrlList/>
+										<CreditList/>
+										<DisambiguationList/>
+										<AnnotationList/>
+									</Track>
+									<Track>
+										<UniqueIdList/>
+										<NameList/>
+										<TypeList/>
+										<DateList/>
+										<PlaceList/>
+										<FileInfo/>
+										<AudioInfo/>
+										<Position/>
+										<LabelList/>
+										<DescriptionList/>
+										<LyricsList/>
+										<CopyrightList/>
+										<CopyrightCollectiveList/>
+										<TagList/>
+										<RatingList/>
+										<UrlList/>
+										<CreditList/>
+										<DisambiguationList/>
+										<AnnotationList/>
+									</Track>
+									<Track>
+										<UniqueIdList/>
+										<NameList/>
+										<TypeList/>
+										<DateList/>
+										<PlaceList/>
+										<FileInfo/>
+										<AudioInfo/>
+										<Position/>
+										<LabelList/>
+										<DescriptionList/>
+										<LyricsList/>
+										<CopyrightList/>
+										<CopyrightCollectiveList/>
+										<TagList/>
+										<RatingList/>
+										<UrlList/>
+										<CreditList/>
+										<DisambiguationList/>
+										<AnnotationList/>
+									</Track>
+									<Track>
+										<UniqueIdList/>
+										<NameList/>
+										<TypeList/>
+										<DateList/>
+										<PlaceList/>
+										<FileInfo/>
+										<AudioInfo/>
+										<Position/>
+										<LabelList/>
+										<DescriptionList/>
+										<LyricsList/>
+										<CopyrightList/>
+										<CopyrightCollectiveList/>
+										<TagList/>
+										<RatingList/>
+										<UrlList/>
+										<CreditList/>
+										<DisambiguationList/>
+										<AnnotationList/>
+									</Track>
+								</TrackList>
+							</Medium>
+						</MediumList>
+					</Release>
+				</ReleaseList>
+			</ReleaseGroup>
+		</ReleaseGroupList>
+	</Discography>
+</Artist>

@@ -1,0 +1,96 @@
+<metadata xmlns="http://musicbrainz.org/ns/mmd-2.0#">
+	<release-group type-id="f529b476-6e62-324f-b0aa-1f3e33d313fc" type="Album" id="61b7b6cd-86a6-4728-9478-b58c93bca8fd">
+		<title>Mylo Xyloto</title>
+		<annotation>
+			<text>Produced and recorded by Markus Dravs, Daniel Green and Rik Simpson Mixing by Mark 'Spike' Stent, Rik Simpson, Daniel Green and Michael Brauler Strings by Davide Rossi Additional cello by Rosie Danvers Percussion by Luis Jardim Mastered by Ted Jensen and Bob Ludwig Recording and mix assistance by Andy Rugg, Matt McGinn, Mat Miller, Christian Green, Olga Fitzroy, Ryan Gilligan, Matt Green, Pierre Eiras, David Emery, Ian Sylvester, Noah Goldstein, Ian Shea, Andrew Denny, Deepu Panjwani, Nobuyuki Murakami, Hidefumi Ohbuchi, and Mr. Tim Crompton</text>
+		</annotation>
+		<first-release-date>2011-10-19</first-release-date>
+		<primary-type id="f529b476-6e62-324f-b0aa-1f3e33d313fc">Album</primary-type>
+		<relation-list target-type="release_group">
+			<relation type-id="fcf680a9-6871-4519-8c4b-8c6549575b35" type="single from">
+				<target>13f91af7-ba7a-42b5-a15f-4f5eb31aae5d</target>
+				<direction>backward</direction>
+				<release-group id="13f91af7-ba7a-42b5-a15f-4f5eb31aae5d">
+					<title>Paradise</title>
+					<first-release-date>2011-09-12</first-release-date>
+				</release-group>
+			</relation>
+			<relation type="single from" type-id="fcf680a9-6871-4519-8c4b-8c6549575b35">
+				<target>4d3d0e67-fb38-4b4b-8242-9ec6e1148b2a</target>
+				<direction>backward</direction>
+				<release-group id="4d3d0e67-fb38-4b4b-8242-9ec6e1148b2a">
+					<title>Charlie Brown</title>
+					<first-release-date>2011-11-14</first-release-date>
+				</release-group>
+			</relation>
+			<relation type-id="fcf680a9-6871-4519-8c4b-8c6549575b35" type="single from">
+				<target>9c95d32c-7679-4c08-b2bd-a337c46a80ca</target>
+				<direction>backward</direction>
+				<release-group id="9c95d32c-7679-4c08-b2bd-a337c46a80ca">
+					<title>Every Teardrop Is a Waterfall</title>
+					<first-release-date>2011-06-03</first-release-date>
+				</release-group>
+			</relation>
+			<relation type="single from" type-id="fcf680a9-6871-4519-8c4b-8c6549575b35">
+				<target>dbf88f06-9b73-4313-a175-7c6f470485b7</target>
+				<direction>backward</direction>
+				<release-group id="dbf88f06-9b73-4313-a175-7c6f470485b7">
+					<title>Hurts Like Heaven</title>
+					<first-release-date>2012-07-30</first-release-date>
+				</release-group>
+			</relation>
+			<relation type="single from" type-id="fcf680a9-6871-4519-8c4b-8c6549575b35">
+				<target>fdd6aa86-9b2b-48b6-8e9d-70d89b78db53</target>
+				<direction>backward</direction>
+				<release-group id="fdd6aa86-9b2b-48b6-8e9d-70d89b78db53">
+					<title>Princess of China</title>
+					<first-release-date>2012-04-15</first-release-date>
+				</release-group>
+			</relation>
+		</relation-list>
+		<relation-list target-type="url">
+			<relation type-id="38320e40-9f4a-3ae7-8cb2-3f3c9c5d856d" type="other databases">
+				<target id="1aab0a43-a661-45b2-84b4-7edfb0197981">http://rateyourmusic.com/release/album/coldplay/mylo_xyloto/</target>
+			</relation>
+			<relation type-id="a50a1d20-2b20-4d2c-9a29-eb771dd78386" type="allmusic">
+				<target id="56ebbf0e-eca3-4f69-ada1-544e8dfe3e5e">http://www.allmusic.com/album/mw0002206149</target>
+			</relation>
+			<relation type-id="c3ac9c3b-f546-4d15-873f-b294d2c1b708" type="review">
+				<target id="905184e8-60ef-4f0f-85c5-51334338b7ad">http://www.bbc.co.uk/music/reviews/98x2</target>
+			</relation>
+			<relation type="wikipedia" type-id="6578f0e9-1ace-4095-9de8-6e517ddb1ceb">
+				<target id="4632df50-df88-400e-bc70-c1f76c0f629c">https://en.wikipedia.org/wiki/Mylo_Xyloto</target>
+			</relation>
+			<relation type-id="99e550f3-5ab4-3110-b5b9-fe01d970b126" type="discogs">
+				<target id="e5af2c10-dce0-4e37-afc0-d8850d05e044">https://www.discogs.com/master/377924</target>
+			</relation>
+			<relation type-id="b988d08c-5d86-4a57-9557-c83b399e3580" type="wikidata">
+				<target id="c540dd8c-96e7-4f09-9aba-bcf31b9df6e7">https://www.wikidata.org/wiki/Q679632</target>
+			</relation>
+		</relation-list>
+		<tag-list>
+			<tag count="0">
+				<name>alternative</name>
+			</tag>
+			<tag count="9">
+				<name>alternative rock</name>
+			</tag>
+			<tag count="1">
+				<name>electronic</name>
+			</tag>
+			<tag count="2">
+				<name>pop</name>
+			</tag>
+			<tag count="5">
+				<name>pop rock</name>
+			</tag>
+			<tag count="0">
+				<name>pop/rock</name>
+			</tag>
+			<tag count="3">
+				<name>rock</name>
+			</tag>
+		</tag-list>
+		<rating votes-count="14">3.8</rating>
+	</release-group>
+</metadata>

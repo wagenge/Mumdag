@@ -1,0 +1,135 @@
+<metadata xmlns="http://musicbrainz.org/ns/mmd-2.0#">
+	<release-group type-id="f529b476-6e62-324f-b0aa-1f3e33d313fc" id="ab88ca0b-da32-4e01-ae9b-198b0b7b8681" type="Album">
+		<title>Rebel Heart</title>
+		<first-release-date>2015-03-05</first-release-date>
+		<primary-type id="f529b476-6e62-324f-b0aa-1f3e33d313fc">Album</primary-type>
+		<relation-list target-type="release_group">
+			<relation type="single from" type-id="fcf680a9-6871-4519-8c4b-8c6549575b35">
+				<target>16000b54-553f-4a50-bbec-61adb8035fb9</target>
+				<direction>backward</direction>
+				<release-group id="16000b54-553f-4a50-bbec-61adb8035fb9">
+					<title>Living for Love</title>
+					<first-release-date>2015-02-09</first-release-date>
+				</release-group>
+			</relation>
+			<relation type="single from" type-id="fcf680a9-6871-4519-8c4b-8c6549575b35">
+				<target>221a5c7f-b59b-4e5d-a9ac-88252263d27c</target>
+				<direction>backward</direction>
+				<release-group id="221a5c7f-b59b-4e5d-a9ac-88252263d27c">
+					<title>Ghosttown</title>
+					<first-release-date>2015-04-24</first-release-date>
+				</release-group>
+			</relation>
+			<relation type="single from" type-id="fcf680a9-6871-4519-8c4b-8c6549575b35">
+				<target>2d98fffb-ce9e-4652-ae2a-6a98bdb5306b</target>
+				<direction>backward</direction>
+				<release-group id="2d98fffb-ce9e-4652-ae2a-6a98bdb5306b">
+					<title>Bitch I'm Madonna</title>
+					<first-release-date>2014-12-22</first-release-date>
+				</release-group>
+			</relation>
+			<relation type="single from" type-id="fcf680a9-6871-4519-8c4b-8c6549575b35">
+				<target>3fb377df-2df2-4697-a9f9-21f9753c48d8</target>
+				<direction>backward</direction>
+				<release-group id="3fb377df-2df2-4697-a9f9-21f9753c48d8">
+					<title>Devil Pray</title>
+					<first-release-date>2014-12-20</first-release-date>
+				</release-group>
+			</relation>
+			<relation type-id="fcf680a9-6871-4519-8c4b-8c6549575b35" type="single from">
+				<target>bc760a33-5059-4e3a-b504-5c0ceaeb82b8</target>
+				<direction>backward</direction>
+				<release-group id="bc760a33-5059-4e3a-b504-5c0ceaeb82b8">
+					<title>Unapologetic Bitch</title>
+					<first-release-date>2014-12-20</first-release-date>
+				</release-group>
+			</relation>
+			<relation type="single from" type-id="fcf680a9-6871-4519-8c4b-8c6549575b35">
+				<target>c5e8a612-36cc-4b37-9eee-899b4d65f954</target>
+				<direction>backward</direction>
+				<release-group id="c5e8a612-36cc-4b37-9eee-899b4d65f954">
+					<title>Illuminati</title>
+					<first-release-date>2014-12-20</first-release-date>
+				</release-group>
+			</relation>
+			<relation type-id="fcf680a9-6871-4519-8c4b-8c6549575b35" type="single from">
+				<target>def772f9-e9d5-4880-9708-17ed88462ada</target>
+				<direction>backward</direction>
+				<release-group id="def772f9-e9d5-4880-9708-17ed88462ada">
+					<title>Joan of Arc</title>
+					<first-release-date>2015-02-09</first-release-date>
+				</release-group>
+			</relation>
+			<relation type-id="04e0449b-6fb0-48f6-8b9d-0bd41d9b8d76" type="remix">
+				<target>f900e219-2fcf-4f80-9678-b7b77fdd3148</target>
+				<direction>backward</direction>
+				<release-group id="f900e219-2fcf-4f80-9678-b7b77fdd3148">
+					<title>Iconic</title>
+					<first-release-date>2014-12-17</first-release-date>
+				</release-group>
+			</relation>
+		</relation-list>
+		<relation-list target-type="url">
+			<relation type-id="a50a1d20-2b20-4d2c-9a29-eb771dd78386" type="allmusic">
+				<target id="c25db708-cfc4-4f3c-b04b-09efe1b6af0f">http://www.allmusic.com/album/mw0002806491</target>
+			</relation>
+			<relation type="wikipedia" type-id="6578f0e9-1ace-4095-9de8-6e517ddb1ceb">
+				<target id="7baedb89-eced-4f7d-a297-a44804f914f1">https://en.wikipedia.org/wiki/Rebel_Heart_(Madonna_album)</target>
+			</relation>
+			<relation type="other databases" type-id="38320e40-9f4a-3ae7-8cb2-3f3c9c5d856d">
+				<target id="f06843a4-cb8f-458d-aaea-ae978be948a0">https://rateyourmusic.com/release/album/madonna/rebel_heart/</target>
+			</relation>
+			<relation type="discogs" type-id="99e550f3-5ab4-3110-b5b9-fe01d970b126">
+				<target id="8cd93725-8be7-4265-8924-2b56d6a4e36b">https://www.discogs.com/master/805764</target>
+			</relation>
+			<relation type-id="99e550f3-5ab4-3110-b5b9-fe01d970b126" type="discogs">
+				<target id="d590f81f-057b-41ac-a750-2a26403cc1c0">https://www.discogs.com/master/821521</target>
+			</relation>
+			<relation type="wikidata" type-id="b988d08c-5d86-4a57-9557-c83b399e3580">
+				<target id="fbba2755-819f-490d-b377-9631d546bb38">https://www.wikidata.org/wiki/Q18650966</target>
+			</relation>
+		</relation-list>
+		<tag-list>
+			<tag count="1">
+				<name>contemporary r&amp;b</name>
+			</tag>
+			<tag count="1">
+				<name>dance</name>
+			</tag>
+			<tag count="2">
+				<name>dance-pop</name>
+			</tag>
+			<tag count="1">
+				<name>electro</name>
+			</tag>
+			<tag count="1">
+				<name>electro house</name>
+			</tag>
+			<tag count="1">
+				<name>electronic</name>
+			</tag>
+			<tag count="1">
+				<name>electropop</name>
+			</tag>
+			<tag count="1">
+				<name>europop</name>
+			</tag>
+			<tag count="1">
+				<name>house</name>
+			</tag>
+			<tag count="3">
+				<name>pop</name>
+			</tag>
+			<tag count="1">
+				<name>pop rap</name>
+			</tag>
+			<tag count="1">
+				<name>remix</name>
+			</tag>
+			<tag count="1">
+				<name>trap</name>
+			</tag>
+		</tag-list>
+		<rating votes-count="1">4</rating>
+	</release-group>
+</metadata>

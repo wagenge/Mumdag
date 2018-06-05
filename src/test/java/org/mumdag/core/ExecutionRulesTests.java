@@ -4,17 +4,9 @@ package org.mumdag.core;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.mumdag.model.index.MusicIndex;
-import org.mumdag.utils.MapListUtilsTest;
 import org.testng.annotations.*;
-
 import java.lang.reflect.Field;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.TreeMap;
 
-//import org.mumdag.core.ExecutionRules;
-//import org.mumdag.core.OutputXmlDoc;
 import org.mumdag.utils.PropertyHandler;
 
 //-----------------------------------------------------------------------------
@@ -27,7 +19,7 @@ private static Logger log = null;
 /*
  * 	TEST METHODS (public)
  */
-
+/*
 //DOC:			nok
 //ASSERTION:	ok
 @Test(dataProvider = "data_complexTest_ok")
@@ -46,7 +38,7 @@ public void test_complexTest_ok(String testDesc, String confFile) {
     log.info("Building music index finished ... {} artists and {} tracks found", mi.getNumOfArtists(), mi.getNumOfTracks());
 
     // Reading the execution rules
-    String executionRulesFilePath = "";
+    String executionRulesFilePath;
     ExecutionRules er;
     try {
         executionRulesFilePath = PropertyHandler.getInstance(confFile).getValue("ExecutionRules.rulesFileName");
@@ -70,9 +62,9 @@ public void test_complexTest_ok(String testDesc, String confFile) {
     }
     log.info("{} ... finished successfully!", testDesc);
 }
-
+*/
 //-----------------------------------------------------------------------------
-
+/*
 //DOC:	nok
 @DataProvider
 public Object[][] data_complexTest_ok() {
@@ -82,7 +74,7 @@ public Object[][] data_complexTest_ok() {
                     "./src/test/resources/ExecutionRulesTest/complex/complex-ok-1.properties"},
     };
 }
-
+*/
 //-----------------------------------------------------------------------------
 
 /*
@@ -406,7 +398,7 @@ public Object[][] configFiles_executeRules_nok() {
 @BeforeClass
 public static void setLogger() {
     System.setProperty("log4j.configurationFile","./src/test/resources/log4j2-testing.xml");
-    log = LogManager.getLogger(MapListUtilsTest.class);
+    log = LogManager.getLogger(ExecutionRulesTests.class);
 }
 
 //-----------------------------------------------------------------------------

@@ -1,8 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Release>
 	<UniqueIdList/>
-	<CoverartList/>
-	<MediumList>
-		<Medium/>
-	</MediumList>
+	<NameList/>
+	<TypeList/>
+	<DateList/>
+	<PlaceList/>
+	<LabelList/>
+	<LengthList/>
+	<DescriptionList/>
+	<CopyrightList/>
+	<TagList/>
+	<UrlList/>
+	<CreditList/>			
+	<ArtList/>
+	<DisambiguationList/>
+	<AnnotationList/>
+	<MediumList/>
 </Release>

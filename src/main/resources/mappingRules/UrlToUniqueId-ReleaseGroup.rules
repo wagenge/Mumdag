@@ -1,0 +1,5 @@
+discogs.com = ^http[s]?:\/\/www.discogs.com\/master\/([a-z0-9]+)						||	Discogs		||	ONLY_UNID
+allmusic.com = ^http[s]?:\/\/www.allmusic.com\/album\/([a-z0-9]+)						||	Allmusic	||	ONLY_UNID
+bbc.co.uk = ^http[s]?:\/\/www.bbc.co.uk\/music\/reviews\/([a-z0-9]+)					||	BBC			||	ONLY_UNID
+wikidata.org = ^http[s]?:\/\/www.wikidata.org\/wiki\/([a-zA-Z0-9]+)						||	Wikidata	||	ONLY_UNID
+imdb.com = ^http[s]?:\/\/www.imdb.com\/title\/([a-z0-9]+)								||	IMDB		||	NO_ATTRIBUTES

@@ -1,0 +1,183 @@
+<metadata xmlns="http://musicbrainz.org/ns/mmd-2.0#">
+	<release-group type="Album" type-id="f529b476-6e62-324f-b0aa-1f3e33d313fc" id="055be730-dcad-31bf-b550-45ba9c202aa3">
+		<title>The Beatles</title>
+		<disambiguation>“The White Album”</disambiguation>
+		<first-release-date>1968-11-22</first-release-date>
+		<primary-type id="f529b476-6e62-324f-b0aa-1f3e33d313fc">Album</primary-type>
+		<alias-list count="2">
+			<alias sort-name="The Beatles 1968 (White Album) (disc 2)">The Beatles 1968 (White Album) (disc 2)</alias>
+			<alias sort-name="White Album (disc 1)">White Album (disc 1)</alias>
+		</alias-list>
+		<relation-list target-type="release_group">
+			<relation type-id="03786c2a-cd9d-4148-b3ea-35ea61de1283" type="mashes up">
+				<target>5d9261c0-3ccf-3154-b331-ddde4c7b8ee0</target>
+				<direction>backward</direction>
+				<release-group id="5d9261c0-3ccf-3154-b331-ddde4c7b8ee0">
+					<title>The Grey Album</title>
+					<first-release-date>2004-02</first-release-date>
+				</release-group>
+			</relation>
+			<relation type="included in" type-id="589447ea-be2c-46cc-b9e9-469e1d06e18a">
+				<target>8a54edf1-1d51-40fd-8a08-01b3d0ddd874</target>
+				<release-group id="8a54edf1-1d51-40fd-8a08-01b3d0ddd874">
+					<title>The Beatles Box Set</title>
+					<first-release-date>1988-11-15</first-release-date>
+				</release-group>
+			</relation>
+			<relation type="cover" type-id="cf02e524-9d5b-46b7-a88e-329737395818">
+				<target>e125da39-eeee-3821-9ed6-339139c8dd0d</target>
+				<direction>backward</direction>
+				<release-group id="e125da39-eeee-3821-9ed6-339139c8dd0d">
+					<title>Mojo Presents: The White Album Recovered (N° 0000001)</title>
+					<first-release-date>2008-09-02</first-release-date>
+				</release-group>
+			</relation>
+		</relation-list>
+		<relation-list target-type="series">
+			<relation type-id="01018437-91d8-36b9-bf89-3f885d53b5bd" type="part of">
+				<target>8668518f-4a1e-4802-8b0d-81703ced6418</target>
+				<ordering-key>10</ordering-key>
+				<attribute-list>
+					<attribute value="10">number</attribute>
+				</attribute-list>
+				<series type-id="4c1c4949-7b6c-3a2d-9d54-a50a27e4fa77" id="8668518f-4a1e-4802-8b0d-81703ced6418" type="Release group">
+					<name>Rolling Stone: 500 Greatest Albums of All Time: 2012 edition</name>
+				</series>
+			</relation>
+		</relation-list>
+		<relation-list target-type="url">
+			<relation type-id="156344d3-da8b-40c6-8b10-7b1c22727124" type="lyrics">
+				<target id="32410c59-c21c-4ebf-a7ee-10aaeb93892c">http://lyrics.wikia.com/The_Beatles:The_Beatles_(1968)</target>
+			</relation>
+			<relation type="other databases" type-id="38320e40-9f4a-3ae7-8cb2-3f3c9c5d856d">
+				<target id="05f0598c-d3cb-4965-a7ef-a6d48f7810e2">http://musicmoz.org/Bands_and_Artists/B/Beatles,_The/Discography/Beatles_[The_White_Album],_The/</target>
+			</relation>
+			<relation type="review" type-id="c3ac9c3b-f546-4d15-873f-b294d2c1b708">
+				<target id="aa169b68-0fc8-42c9-8e45-23137f20a5f1">http://pitchfork.com/reviews/albums/13432-the-beatles/</target>
+			</relation>
+			<relation type-id="38320e40-9f4a-3ae7-8cb2-3f3c9c5d856d" type="other databases">
+				<target id="43193870-ac72-4385-92fe-a71a5e0119ce">http://rateyourmusic.com/release/album/the_beatles/the_beatles__white_album__f13/</target>
+			</relation>
+			<relation type="allmusic" type-id="a50a1d20-2b20-4d2c-9a29-eb771dd78386">
+				<target id="197ce530-a892-41b1-8933-58dbe93ae897">http://www.allmusic.com/album/mw0000418113</target>
+			</relation>
+			<relation type="review" type-id="c3ac9c3b-f546-4d15-873f-b294d2c1b708">
+				<target id="9b520b8a-3a44-4683-b4a4-c3d4954eb636">http://www.bbc.co.uk/music/reviews/4b8c</target>
+			</relation>
+			<relation type-id="c3ac9c3b-f546-4d15-873f-b294d2c1b708" type="review">
+				<target id="db627512-5043-4d21-bd1f-adebcafd7580">http://www.bootlegzone.com/album.php?name=cdm432_1</target>
+			</relation>
+			<relation type-id="c3ac9c3b-f546-4d15-873f-b294d2c1b708" type="review">
+				<target id="9dd13608-b03e-4a38-b298-1880c8a5e505">http://www.bootlegzone.com/album.php?name=cdm432_2</target>
+			</relation>
+			<relation type="review" type-id="c3ac9c3b-f546-4d15-873f-b294d2c1b708">
+				<target id="827656fd-03ed-45cf-84ec-14f50b17391d">http://www.bootlegzone.com/album.php?name=mfsltb2</target>
+			</relation>
+			<relation type-id="c3ac9c3b-f546-4d15-873f-b294d2c1b708" type="review">
+				<target id="3969d936-d5d0-4389-93bf-c4a9d51de6c8">http://www.nme.com/reviews/461</target>
+			</relation>
+			<relation type="review" type-id="c3ac9c3b-f546-4d15-873f-b294d2c1b708">
+				<target id="1c00a829-8357-4534-88cf-0d17f7c25827">http://www.popmatters.com/review/beatles-whitealbum/</target>
+			</relation>
+			<relation type="review" type-id="c3ac9c3b-f546-4d15-873f-b294d2c1b708">
+				<target id="1650df0d-4b9f-4fd3-87f6-1f74a310119d">http://www.slantmagazine.com/music/review/the-beatles-the-beatles-the-white-album/467</target>
+			</relation>
+			<relation type="review" type-id="c3ac9c3b-f546-4d15-873f-b294d2c1b708">
+				<target id="f461f6ff-33d1-4b80-933c-107afa5a0b0e">http://www.telegraph.co.uk/culture/music/the-beatles/6138859/The-Beatles-The-Beatles-review.html</target>
+			</relation>
+			<relation type="wikipedia" type-id="6578f0e9-1ace-4095-9de8-6e517ddb1ceb">
+				<target id="68d352df-2b42-4416-aca8-5921614b5f52">https://en.wikipedia.org/wiki/The_Beatles_(album)</target>
+			</relation>
+			<relation type-id="99e550f3-5ab4-3110-b5b9-fe01d970b126" type="discogs">
+				<target id="7607b03a-b657-40f7-b12d-bc6bd759258a">https://www.discogs.com/master/46402</target>
+			</relation>
+			<relation type-id="b988d08c-5d86-4a57-9557-c83b399e3580" type="wikidata">
+				<target id="275ed520-3abe-401f-a4de-de5fb5867a17">https://www.wikidata.org/wiki/Q3295515</target>
+			</relation>
+		</relation-list>
+		<tag-list>
+			<tag count="0">
+				<name>1960s</name>
+			</tag>
+			<tag count="0">
+				<name>1968</name>
+			</tag>
+			<tag count="2">
+				<name>60s</name>
+			</tag>
+			<tag count="6">
+				<name>album rock</name>
+			</tag>
+			<tag count="5">
+				<name>am pop</name>
+			</tag>
+			<tag count="1">
+				<name>avant-garde</name>
+			</tag>
+			<tag count="1">
+				<name>beat</name>
+			</tag>
+			<tag count="1">
+				<name>blues-rock</name>
+			</tag>
+			<tag count="1">
+				<name>british</name>
+			</tag>
+			<tag count="3">
+				<name>british invasion rock</name>
+			</tag>
+			<tag count="4">
+				<name>british psychedelia</name>
+			</tag>
+			<tag count="1">
+				<name>britpop</name>
+			</tag>
+			<tag count="0">
+				<name>classic pop and rock</name>
+			</tag>
+			<tag count="2">
+				<name>contemporary pop/rock</name>
+			</tag>
+			<tag count="0">
+				<name>english</name>
+			</tag>
+			<tag count="1">
+				<name>experimental</name>
+			</tag>
+			<tag count="1">
+				<name>hard rock</name>
+			</tag>
+			<tag count="6">
+				<name>pop</name>
+			</tag>
+			<tag count="1">
+				<name>pop-british</name>
+			</tag>
+			<tag count="1">
+				<name>pop/rock</name>
+			</tag>
+			<tag count="1">
+				<name>psychedelic</name>
+			</tag>
+			<tag count="0">
+				<name>psychedelic rock</name>
+			</tag>
+			<tag count="11">
+				<name>rock</name>
+			</tag>
+			<tag count="1">
+				<name>rock &amp; roll</name>
+			</tag>
+			<tag count="1">
+				<name>rock and roll</name>
+			</tag>
+			<tag count="1">
+				<name>rock roll</name>
+			</tag>
+			<tag count="0">
+				<name>uk</name>
+			</tag>
+		</tag-list>
+		<rating votes-count="33">4.3</rating>
+	</release-group>
+</metadata>

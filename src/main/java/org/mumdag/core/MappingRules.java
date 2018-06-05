@@ -8,8 +8,8 @@ import java.io.FileReader;
 import java.util.HashMap;
 
 import org.apache.commons.lang3.StringUtils;
-import org.mumdag.model.OutputXmlDoc.NodeAction;
-import org.mumdag.model.OutputXmlDoc.NodeStatus;
+import org.mumdag.model.xml.XmlDoc.NodeAction;
+import org.mumdag.model.xml.XmlDoc.NodeStatus;
 
 //-----------------------------------------------------------------------------
 

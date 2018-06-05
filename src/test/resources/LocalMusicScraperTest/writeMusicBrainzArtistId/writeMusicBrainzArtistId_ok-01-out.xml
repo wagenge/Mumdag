@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><Artist mbid="cb67438a-7f50-4f2b-a6f1-2bb2729fd538" path="./src/test/resources/LocalMusicScraperTest/_fileInput/A/Air/">
+	<UniqueIdList><UniqueId mbid="cb67438a-7f50-4f2b-a6f1-2bb2729fd538" source="MusicBrainz">
+			<SourceUrl>https://musicbrainz.org/artist/cb67438a-7f50-4f2b-a6f1-2bb2729fd538</SourceUrl>
+			<SourceWSUrl>https://musicbrainz.org/ws/2/artist/cb67438a-7f50-4f2b-a6f1-2bb2729fd538?inc=aliases+tags+annotation+ratings+artist-rels+url-rels</SourceWSUrl>
+			<Value>cb67438a-7f50-4f2b-a6f1-2bb2729fd538</Value>
+		</UniqueId></UniqueIdList>
+	<NameList/>
+	<TypeList/>
+	<PlaceList/>
+	<DateList/>
+	<DescriptionList/>
+	<TagList/>
+	<UrlList/>
+	<RatingList/>
+	<CreditList/>
+	<ArtList/>
+	<DisambiguationList/>
+	<AnnotationList/>
+	<Discography>
+		<ReleaseGroupList><ReleaseGroup path="./src/test/resources/LocalMusicScraperTest/_fileInput/A/Air/1997 - Premiers Symptômes/">
+	<UniqueIdList/>
+	<NameList/>
+	<TypeList/>
+	<DateList/>
+	<AwardList/>
+	<ChartList/>
+	<DescriptionList/>
+	<TagList/>
+	<UrlList/>
+	<RatingList/>
+	<CreditList/>
+	<ArtList/>
+	<DisambiguationList/>
+	<AnnotationList/>
+	<ReleaseList><Release path="./src/test/resources/LocalMusicScraperTest/_fileInput/A/Air/1997 - Premiers Symptômes/">
+	<UniqueIdList/>
+	<NameList/>
+	<TypeList/>
+	<DateList/>
+	<PlaceList/>
+	<LabelList/>
+	<LengthList/>
+	<DescriptionList/>
+	<CopyrightList/>
+	<TagList/>
+	<UrlList/>
+	<CreditList/>			
+	<ArtList/>
+	<DisambiguationList/>
+	<AnnotationList/>
+	<MediumList><Medium discNo="1" path="./src/test/resources/LocalMusicScraperTest/_fileInput/A/Air/1997 - Premiers Symptômes/">
+	<UniqueIdList/>
+	<NameList/>
+	<TypeList/>
+	<LengthList/>
+	<TrackList><Track path="./src/test/resources/LocalMusicScraperTest/_fileInput/A/Air/1997 - Premiers Symptômes/01 - Modular Mix.mp3" trackNo="01" trackPos="1">
+	<UniqueIdList/>
+	<NameList/>
+	<TypeList/>
+	<DateList/>
+	<PlaceList/>
+	<FileInfo><AbsolutePath>./src/test/resources/LocalMusicScraperTest/_fileInput/A/Air/1997 - Premiers Symptômes/01 - Modular Mix.mp3</AbsolutePath><RelativePath>./1997 - Premiers Symptômes/01 - Modular Mix.mp3</RelativePath><Name>01 - Modular Mix.mp3</Name><Extension>mp3</Extension><Size>10087183</Size></FileInfo>
+	<AudioInfo/>
+	<Position number="01">1</Position>
+	<LabelList/>
+	<DescriptionList/>
+	<LyricsList/>
+	<CopyrightList/>
+	<CopyrightCollectiveList/>
+	<TagList/>
+	<RatingList/>
+	<UrlList/>
+	<CreditList/>
+	<DisambiguationList/>
+	<AnnotationList/>
+</Track><Track>
+	<UniqueIdList/>
+	<NameList/>
+	<TypeList/>
+	<DateList/>
+	<PlaceList/>
+	<FileInfo/>
+	<AudioInfo/>
+	<Position/>
+	<LabelList/>
+	<DescriptionList/>
+	<LyricsList/>
+	<CopyrightList/>
+	<CopyrightCollectiveList/>
+	<TagList/>
+	<RatingList/>
+	<UrlList/>
+	<CreditList/>
+	<DisambiguationList/>
+	<AnnotationList/>
+</Track><Track>
+	<UniqueIdList/>
+	<NameList/>
+	<TypeList/>
+	<DateList/>
+	<PlaceList/>
+	<FileInfo/>
+	<AudioInfo/>
+	<Position/>
+	<LabelList/>
+	<DescriptionList/>
+	<LyricsList/>
+	<CopyrightList/>
+	<CopyrightCollectiveList/>
+	<TagList/>
+	<RatingList/>
+	<UrlList/>
+	<CreditList/>
+	<DisambiguationList/>
+	<AnnotationList/>
+</Track><Track>
+	<UniqueIdList/>
+	<NameList/>
+	<TypeList/>
+	<DateList/>
+	<PlaceList/>
+	<FileInfo/>
+	<AudioInfo/>
+	<Position/>
+	<LabelList/>
+	<DescriptionList/>
+	<LyricsList/>
+	<CopyrightList/>
+	<CopyrightCollectiveList/>
+	<TagList/>
+	<RatingList/>
+	<UrlList/>
+	<CreditList/>
+	<DisambiguationList/>
+	<AnnotationList/>
+</Track><Track>
+	<UniqueIdList/>
+	<NameList/>
+	<TypeList/>
+	<DateList/>
+	<PlaceList/>
+	<FileInfo/>
+	<AudioInfo/>
+	<Position/>
+	<LabelList/>
+	<DescriptionList/>
+	<LyricsList/>
+	<CopyrightList/>
+	<CopyrightCollectiveList/>
+	<TagList/>
+	<RatingList/>
+	<UrlList/>
+	<CreditList/>
+	<DisambiguationList/>
+	<AnnotationList/>
+</Track><Track>
+	<UniqueIdList/>
+	<NameList/>
+	<TypeList/>
+	<DateList/>
+	<PlaceList/>
+	<FileInfo/>
+	<AudioInfo/>
+	<Position/>
+	<LabelList/>
+	<DescriptionList/>
+	<LyricsList/>
+	<CopyrightList/>
+	<CopyrightCollectiveList/>
+	<TagList/>
+	<RatingList/>
+	<UrlList/>
+	<CreditList/>
+	<DisambiguationList/>
+	<AnnotationList/>
+</Track><Track>
+	<UniqueIdList/>
+	<NameList/>
+	<TypeList/>
+	<DateList/>
+	<PlaceList/>
+	<FileInfo/>
+	<AudioInfo/>
+	<Position/>
+	<LabelList/>
+	<DescriptionList/>
+	<LyricsList/>
+	<CopyrightList/>
+	<CopyrightCollectiveList/>
+	<TagList/>
+	<RatingList/>
+	<UrlList/>
+	<CreditList/>
+	<DisambiguationList/>
+	<AnnotationList/>
+</Track></TrackList>
+</Medium></MediumList>
+</Release></ReleaseList>
+</ReleaseGroup></ReleaseGroupList>
+	</Discography>
+</Artist>

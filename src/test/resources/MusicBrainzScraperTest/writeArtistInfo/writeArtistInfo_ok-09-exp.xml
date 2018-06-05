@@ -1,0 +1,616 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Artist amid="id2715720" dcid="137880" mbid="164f0d73-1234-4e2c-8743-d77bf2191051" path="./src/test/resources/MusicBrainzScraperTest/_fileInput/W/West, Kanye/" rmid="mn0000361014" spid="5K4W6rqBFWDnAN6FQUkS6x" wdid="Q15935">
+	<UniqueIdList>
+		<UniqueId source="VIAF" viafid="61794068">
+			<SourceUrl>http://viaf.org/viaf/61794068</SourceUrl>
+			<SourceWSUrl>http://viaf.org/viaf/61794068/rdf.xml</SourceWSUrl>
+			<Value>61794068</Value>
+		</UniqueId>
+		<UniqueId rmid="mn0000361014" source="Allmusic">
+			<SourceUrl>http://www.allmusic.com/artist/mn0000361014</SourceUrl>
+			<SourceWSUrl>-</SourceWSUrl>
+			<Value>mn0000361014</Value>
+		</UniqueId>
+		<UniqueId mbid="164f0d73-1234-4e2c-8743-d77bf2191051" source="BBC">
+			<SourceUrl>http://www.bbc.co.uk/music/artists/164f0d73-1234-4e2c-8743-d77bf2191051</SourceUrl>
+			<SourceWSUrl>-</SourceWSUrl>
+			<Value>164f0d73-1234-4e2c-8743-d77bf2191051</Value>
+		</UniqueId>
+		<UniqueId imdbid="nm1577190" source="IMDB">
+			<SourceUrl>http://www.imdb.com/name/nm1577190/</SourceUrl>
+			<SourceWSUrl>http://www.omdbapi.com/?i=nm1577190&amp;plot=full&amp;r=xml</SourceWSUrl>
+			<Value>nm1577190</Value>
+		</UniqueId>
+		<UniqueId mbid="164f0d73-1234-4e2c-8743-d77bf2191051" source="LastFM">
+			<SourceUrl>http://www.last.fm/music/Kanye+West</SourceUrl>
+			<SourceWSUrl>http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&amp;mbid=164f0d73-1234-4e2c-8743-d77bf2191051&amp;api_key=YOUR_API_KEY</SourceWSUrl>
+			<Value>164f0d73-1234-4e2c-8743-d77bf2191051</Value>
+		</UniqueId>
+		<UniqueId amid="id2715720" source="AppleMusic">
+			<SourceUrl>https://itunes.apple.com/us/artist/id2715720</SourceUrl>
+			<SourceWSUrl>https://api.music.apple.com/v1/catalog/_storefront_/artists/id2715720</SourceWSUrl>
+			<Value>id2715720</Value>
+		</UniqueId>
+		<UniqueId source="Spotify" spid="5K4W6rqBFWDnAN6FQUkS6x">
+			<SourceUrl>https://open.spotify.com/artist/5K4W6rqBFWDnAN6FQUkS6x</SourceUrl>
+			<SourceWSUrl>https://api.spotify.com/v1/artists/5K4W6rqBFWDnAN6FQUkS6x</SourceWSUrl>
+			<Value>5K4W6rqBFWDnAN6FQUkS6x</Value>
+		</UniqueId>
+		<UniqueId dcid="137880" source="Discogs">
+			<SourceUrl>https://www.discogs.com/artist/137880</SourceUrl>
+			<SourceWSUrl>https://api.discogs.com/artist/137880</SourceWSUrl>
+			<Value>137880</Value>
+		</UniqueId>
+		<UniqueId mbid="164f0d73-1234-4e2c-8743-d77bf2191051" source="SetlistFM">
+			<SourceUrl>https://www.setlist.fm/setlists/kanye-west-bd6bd8a.html</SourceUrl>
+			<SourceWSUrl>http://api.setlist.fm/rest/1.0/164f0d73-1234-4e2c-8743-d77bf2191051</SourceWSUrl>
+			<Value>164f0d73-1234-4e2c-8743-d77bf2191051</Value>
+		</UniqueId>
+		<UniqueId source="Wikidata" wdid="Q15935">
+			<SourceUrl>https://www.wikidata.org/wiki/Q15935</SourceUrl>
+			<SourceWSUrl>https://www.wikidata.org/w/api.php?action=wbgetentities&amp;format=xml&amp;ids=Q15935</SourceWSUrl>
+			<Value>Q15935</Value>
+		</UniqueId>
+		<UniqueId ipi="00335677734" source="IPI">
+			<SourceUrl>-</SourceUrl>
+			<SourceWSUrl>-</SourceWSUrl>
+			<Value>00335677734</Value>
+		</UniqueId>
+		<UniqueId ipi="00451108296" source="IPI">
+			<SourceUrl>-</SourceUrl>
+			<SourceWSUrl>-</SourceWSUrl>
+			<Value>00451108296</Value>
+		</UniqueId>
+		<UniqueId isni="0000000116557565" source="ISNI">
+			<SourceUrl>http://www.isni.org/isni/0000000116557565</SourceUrl>
+			<SourceWSUrl>http://isni.oclc.org/sru/?query=pica.isn+%3D+0000000116557565&amp;operation=searchRetrieve&amp;recordSchema=isni-b</SourceWSUrl>
+			<Value>0000000116557565</Value>
+		</UniqueId>
+		<UniqueId isni="0000000362939198" source="ISNI">
+			<SourceUrl>http://www.isni.org/isni/0000000362939198</SourceUrl>
+			<SourceWSUrl>http://isni.oclc.org/sru/?query=pica.isn+%3D+0000000362939198&amp;operation=searchRetrieve&amp;recordSchema=isni-b</SourceWSUrl>
+			<Value>0000000362939198</Value>
+		</UniqueId>
+	</UniqueIdList>
+	<NameList>
+		<Name mbid="164f0d73-1234-4e2c-8743-d77bf2191051" primary="primary" sort-name="West, Kanye" source="MusicBrainz" type="Artist name" type-id="894afba6-2816-3c24-8072-eadb66bd04bc">Kanye West</Name>
+		<Name mbid="164f0d73-1234-4e2c-8743-d77bf2191051" sort-name="West, Kanye" source="MusicBrainz" type="Name">Kanye West</Name>
+		<Name mbid="164f0d73-1234-4e2c-8743-d77bf2191051" sort-name="K. West" source="MusicBrainz" type="Search hint" type-id="1937e404-b981-3cb7-8151-4c86ebfc8d8e">K. West</Name>
+		<Name mbid="164f0d73-1234-4e2c-8743-d77bf2191051" sort-name="Kanye" source="MusicBrainz" type="Artist name" type-id="894afba6-2816-3c24-8072-eadb66bd04bc">Kanye</Name>
+		<Name mbid="164f0d73-1234-4e2c-8743-d77bf2191051" sort-name="West, Kanye Omari" source="MusicBrainz" type="Legal name" type-id="d4dcd0c0-b341-3612-a332-c0ce797b25cf">Kanye Omari West</Name>
+		<Name mbid="164f0d73-1234-4e2c-8743-d77bf2191051" sort-name="Kayne West" source="MusicBrainz" type="Search hint" type-id="1937e404-b981-3cb7-8151-4c86ebfc8d8e">Kayne West</Name>
+		<Name locale="ja" mbid="164f0d73-1234-4e2c-8743-d77bf2191051" primary="primary" sort-name="カニエ・ウェスト" source="MusicBrainz" type="Artist name" type-id="894afba6-2816-3c24-8072-eadb66bd04bc">カニエ・ウェスト</Name>
+	</NameList>
+	<TypeList>
+		<Type mbid="164f0d73-1234-4e2c-8743-d77bf2191051" source="MusicBrainz" type="ArtistType">Person</Type>
+		<Type mbid="164f0d73-1234-4e2c-8743-d77bf2191051" source="MusicBrainz" type="Gender">Male</Type>
+	</TypeList>
+	<PlaceList>
+		<Place event="born" mbid="26e0e534-19ea-4645-bfb3-1aa4e83a4046" seq="1" source="MusicBrainz" type="City">Atlanta</Place>
+		<Place event="born" mbid="2b66da02-b2e3-4220-bff5-875d9a5a973a" seq="2" source="MusicBrainz" type="County">Fulton County</Place>
+		<Place code="US-GA" event="born" mbid="d10ba752-c9ce-4804-afc0-7ff94aa5d8d6" seq="3" source="MusicBrainz" type="Subdivision">Georgia</Place>
+		<Place code="US" event="born" mbid="489ce91b-6658-3307-9877-795b68554c98" seq="4" source="MusicBrainz" type="Country">United States</Place>
+	</PlaceList>
+	<DateList>
+		<Date mbid="164f0d73-1234-4e2c-8743-d77bf2191051" type="born">1977-06-08</Date>
+	</DateList>
+	<DescriptionList/>
+	<TagList>
+		<Tag count="2" mbid="164f0d73-1234-4e2c-8743-d77bf2191051" source="MusicBrainz">electropop</Tag>
+		<Tag count="1" mbid="164f0d73-1234-4e2c-8743-d77bf2191051" source="MusicBrainz">experimental hip hop</Tag>
+		<Tag count="2" mbid="164f0d73-1234-4e2c-8743-d77bf2191051" source="MusicBrainz">grammy winner</Tag>
+		<Tag count="1" mbid="164f0d73-1234-4e2c-8743-d77bf2191051" source="MusicBrainz">hardcore hip hop</Tag>
+		<Tag count="4" mbid="164f0d73-1234-4e2c-8743-d77bf2191051" source="MusicBrainz">hip hop</Tag>
+		<Tag count="1" mbid="164f0d73-1234-4e2c-8743-d77bf2191051" source="MusicBrainz">hip-hop</Tag>
+		<Tag count="1" mbid="164f0d73-1234-4e2c-8743-d77bf2191051" source="MusicBrainz">pop</Tag>
+		<Tag count="2" mbid="164f0d73-1234-4e2c-8743-d77bf2191051" source="MusicBrainz">pop rap</Tag>
+		<Tag count="1" mbid="164f0d73-1234-4e2c-8743-d77bf2191051" source="MusicBrainz">rapper</Tag>
+		<Tag count="2" mbid="164f0d73-1234-4e2c-8743-d77bf2191051" source="MusicBrainz">synthpop</Tag>
+	</TagList>
+	<UrlList>
+		<Url mbid="164f0d73-1234-4e2c-8743-d77bf2191051" type="lyrics">http://decoda.com/kanye-west-lyrics</Url>
+		<Url mbid="164f0d73-1234-4e2c-8743-d77bf2191051" type="lyrics">http://genius.com/artists/Kanye-west</Url>
+		<Url mbid="164f0d73-1234-4e2c-8743-d77bf2191051" type="lyrics">http://lyrics.wikia.com/Kanye_west</Url>
+		<Url mbid="164f0d73-1234-4e2c-8743-d77bf2191051" type="other databases">http://musicmoz.org/Bands_and_Artists/W/West,_Kanye/</Url>
+		<Url mbid="164f0d73-1234-4e2c-8743-d77bf2191051" type="other databases">http://rateyourmusic.com/artist/kanye_west</Url>
+		<Url mbid="164f0d73-1234-4e2c-8743-d77bf2191051" type="VIAF">http://viaf.org/viaf/61794068</Url>
+		<Url mbid="164f0d73-1234-4e2c-8743-d77bf2191051" type="discography">http://weave.me/app/weave.html?Kanye_West</Url>
+		<Url mbid="164f0d73-1234-4e2c-8743-d77bf2191051" type="allmusic">http://www.allmusic.com/artist/mn0000361014</Url>
+		<Url mbid="164f0d73-1234-4e2c-8743-d77bf2191051" type="BBC Music page">http://www.bbc.co.uk/music/artists/164f0d73-1234-4e2c-8743-d77bf2191051</Url>
+		<Url mbid="164f0d73-1234-4e2c-8743-d77bf2191051" type="lyrics">http://www.directlyrics.com/kanye-west-artist.html</Url>
+		<Url mbid="164f0d73-1234-4e2c-8743-d77bf2191051" type="IMDb">http://www.imdb.com/name/nm1577190/</Url>
+		<Url mbid="164f0d73-1234-4e2c-8743-d77bf2191051" type="official homepage">http://www.kanyewest.com/</Url>
+		<Url mbid="164f0d73-1234-4e2c-8743-d77bf2191051" type="last.fm">http://www.last.fm/music/Kanye+West</Url>
+		<Url mbid="164f0d73-1234-4e2c-8743-d77bf2191051" type="secondhandsongs">http://www.secondhandsongs.com/artist/8120</Url>
+		<Url mbid="164f0d73-1234-4e2c-8743-d77bf2191051" type="streaming music">http://www.staimusic.com/en/bands/kanye-west_2380.html</Url>
+		<Url mbid="164f0d73-1234-4e2c-8743-d77bf2191051" type="image">https://commons.wikimedia.org/wiki/File:Kanye_West_Lollapalooza_Chile_2011_2.jpg</Url>
+		<Url mbid="164f0d73-1234-4e2c-8743-d77bf2191051" type="purchase for download">https://itunes.apple.com/us/artist/id2715720</Url>
+		<Url mbid="164f0d73-1234-4e2c-8743-d77bf2191051" type="streaming music">https://listen.tidal.com/artist/25022</Url>
+		<Url mbid="164f0d73-1234-4e2c-8743-d77bf2191051" type="myspace">https://myspace.com/kanyewest</Url>
+		<Url mbid="164f0d73-1234-4e2c-8743-d77bf2191051" type="streaming music">https://open.spotify.com/artist/5K4W6rqBFWDnAN6FQUkS6x</Url>
+		<Url mbid="164f0d73-1234-4e2c-8743-d77bf2191051" type="purchase for download">https://play.google.com/store/music/artist?id=A3bn3euz42saceyegr7defldcze</Url>
+		<Url mbid="164f0d73-1234-4e2c-8743-d77bf2191051" type="soundcloud">https://soundcloud.com/kanyewest</Url>
+		<Url mbid="164f0d73-1234-4e2c-8743-d77bf2191051" type="social network">https://twitter.com/kanyewest</Url>
+		<Url mbid="164f0d73-1234-4e2c-8743-d77bf2191051" type="bandsintown">https://www.bandsintown.com/a/160</Url>
+		<Url mbid="164f0d73-1234-4e2c-8743-d77bf2191051" type="streaming music">https://www.deezer.com/artist/230</Url>
+		<Url mbid="164f0d73-1234-4e2c-8743-d77bf2191051" type="discogs">https://www.discogs.com/artist/137880</Url>
+		<Url mbid="164f0d73-1234-4e2c-8743-d77bf2191051" type="social network">https://www.instagram.com/privatekanye/</Url>
+		<Url mbid="164f0d73-1234-4e2c-8743-d77bf2191051" type="setlistfm">https://www.setlist.fm/setlists/kanye-west-bd6bd8a.html</Url>
+		<Url mbid="164f0d73-1234-4e2c-8743-d77bf2191051" type="songkick">https://www.songkick.com/artists/552177-kanye-west</Url>
+		<Url mbid="164f0d73-1234-4e2c-8743-d77bf2191051" type="wikidata">https://www.wikidata.org/wiki/Q15935</Url>
+		<Url mbid="164f0d73-1234-4e2c-8743-d77bf2191051" type="youtube">https://www.youtube.com/channel/UCRY5dYsbIN5TylSbd7gVnZg</Url>
+		<Url mbid="164f0d73-1234-4e2c-8743-d77bf2191051" type="youtube">https://www.youtube.com/user/KanyeWestVEVO</Url>
+		<Url mbid="164f0d73-1234-4e2c-8743-d77bf2191051" type="youtube">https://www.youtube.com/user/kanyewest</Url>
+	</UrlList>
+	<RatingList>
+		<Rating mbid="164f0d73-1234-4e2c-8743-d77bf2191051" source="MusicBrainz" votes="21">3.75</Rating>
+	</RatingList>
+	<CreditList>
+		<Credit mbid="9563442b-69e2-43cf-8012-3c9371f174cb">
+			<UniqueIdList>
+				<UniqueId mbid="9563442b-69e2-43cf-8012-3c9371f174cb" source="MusicBrainz">
+					<SourceUrl>https://musicbrainz.org/artist/9563442b-69e2-43cf-8012-3c9371f174cb</SourceUrl>
+					<SourceWSUrl>https://musicbrainz.org/ws/2/artist/9563442b-69e2-43cf-8012-3c9371f174cb?inc=aliases+tags+annotation+ratings+artist-rels+url-rels</SourceWSUrl>
+					<Value>9563442b-69e2-43cf-8012-3c9371f174cb</Value>
+				</UniqueId>
+			</UniqueIdList>
+			<NameList>
+				<Name mbid="9563442b-69e2-43cf-8012-3c9371f174cb" sort-name="Child Rebel Soldier" source="MusicBrainz" type="Name">Child Rebel Soldier</Name>
+			</NameList>
+			<RoleList>
+				<Role mbid="9563442b-69e2-43cf-8012-3c9371f174cb" original="false" type="membership">member of band</Role>
+			</RoleList>
+			<DateList>
+				<Date/>
+			</DateList>	
+		</Credit>
+		<Credit mbid="33cfd8a2-85de-4b0a-9acd-bd8ba91df3a0">
+			<UniqueIdList>
+				<UniqueId mbid="33cfd8a2-85de-4b0a-9acd-bd8ba91df3a0" source="MusicBrainz">
+					<SourceUrl>https://musicbrainz.org/artist/33cfd8a2-85de-4b0a-9acd-bd8ba91df3a0</SourceUrl>
+					<SourceWSUrl>https://musicbrainz.org/ws/2/artist/33cfd8a2-85de-4b0a-9acd-bd8ba91df3a0?inc=aliases+tags+annotation+ratings+artist-rels+url-rels</SourceWSUrl>
+					<Value>33cfd8a2-85de-4b0a-9acd-bd8ba91df3a0</Value>
+				</UniqueId>
+			</UniqueIdList>
+			<NameList>
+				<Name mbid="33cfd8a2-85de-4b0a-9acd-bd8ba91df3a0" sort-name="Go Getters" source="MusicBrainz" type="Name">Go Getters</Name>
+			</NameList>
+			<RoleList>
+				<Role mbid="33cfd8a2-85de-4b0a-9acd-bd8ba91df3a0" original="false" type="membership">member of band</Role>
+			</RoleList>
+			<DateList>
+				<Date/>
+			</DateList>	
+		</Credit>
+	</CreditList>
+	<ArtList/>
+	<DisambiguationList/>
+	<AnnotationList/>
+	<Discography>
+		<ReleaseGroupList>
+			<ReleaseGroup path="./src/test/resources/MusicBrainzScraperTest/_fileInput/W/West, Kanye/2016 - The Life of Pablo/">
+				<UniqueIdList/>
+				<NameList/>
+				<TypeList/>
+				<DateList/>
+				<AwardList/>
+				<ChartList/>
+				<DescriptionList/>
+				<TagList/>
+				<UrlList/>
+				<RatingList/>
+				<CreditList/>
+				<ArtList/>
+				<DisambiguationList/>
+				<AnnotationList/>
+				<ReleaseList>
+					<Release path="./src/test/resources/MusicBrainzScraperTest/_fileInput/W/West, Kanye/2016 - The Life of Pablo/">
+						<UniqueIdList/>
+						<NameList/>
+						<TypeList/>
+						<DateList/>
+						<PlaceList/>
+						<LabelList/>
+						<LengthList/>
+						<DescriptionList/>
+						<CopyrightList/>
+						<TagList/>
+						<UrlList/>
+						<CreditList/>			
+						<ArtList/>
+						<DisambiguationList/>
+						<AnnotationList/>
+						<MediumList>
+							<Medium discNo="1" path="./src/test/resources/MusicBrainzScraperTest/_fileInput/W/West, Kanye/2016 - The Life of Pablo/">
+								<UniqueIdList/>
+								<NameList/>
+								<TypeList/>
+								<LengthList/>
+								<TrackList>
+									<Track>
+										<UniqueIdList/>
+										<NameList/>
+										<TypeList/>
+										<DateList/>
+										<PlaceList/>
+										<FileInfo/>
+										<AudioInfo/>
+										<Position/>
+										<LabelList/>
+										<DescriptionList/>
+										<LyricsList/>
+										<CopyrightList/>
+										<CopyrightCollectiveList/>
+										<TagList/>
+										<RatingList/>
+										<UrlList/>
+										<CreditList/>
+										<DisambiguationList/>
+										<AnnotationList/>
+									</Track>
+									<Track>
+										<UniqueIdList/>
+										<NameList/>
+										<TypeList/>
+										<DateList/>
+										<PlaceList/>
+										<FileInfo/>
+										<AudioInfo/>
+										<Position/>
+										<LabelList/>
+										<DescriptionList/>
+										<LyricsList/>
+										<CopyrightList/>
+										<CopyrightCollectiveList/>
+										<TagList/>
+										<RatingList/>
+										<UrlList/>
+										<CreditList/>
+										<DisambiguationList/>
+										<AnnotationList/>
+									</Track>
+									<Track>
+										<UniqueIdList/>
+										<NameList/>
+										<TypeList/>
+										<DateList/>
+										<PlaceList/>
+										<FileInfo/>
+										<AudioInfo/>
+										<Position/>
+										<LabelList/>
+										<DescriptionList/>
+										<LyricsList/>
+										<CopyrightList/>
+										<CopyrightCollectiveList/>
+										<TagList/>
+										<RatingList/>
+										<UrlList/>
+										<CreditList/>
+										<DisambiguationList/>
+										<AnnotationList/>
+									</Track>
+									<Track>
+										<UniqueIdList/>
+										<NameList/>
+										<TypeList/>
+										<DateList/>
+										<PlaceList/>
+										<FileInfo/>
+										<AudioInfo/>
+										<Position/>
+										<LabelList/>
+										<DescriptionList/>
+										<LyricsList/>
+										<CopyrightList/>
+										<CopyrightCollectiveList/>
+										<TagList/>
+										<RatingList/>
+										<UrlList/>
+										<CreditList/>
+										<DisambiguationList/>
+										<AnnotationList/>
+									</Track>
+									<Track>
+										<UniqueIdList/>
+										<NameList/>
+										<TypeList/>
+										<DateList/>
+										<PlaceList/>
+										<FileInfo/>
+										<AudioInfo/>
+										<Position/>
+										<LabelList/>
+										<DescriptionList/>
+										<LyricsList/>
+										<CopyrightList/>
+										<CopyrightCollectiveList/>
+										<TagList/>
+										<RatingList/>
+										<UrlList/>
+										<CreditList/>
+										<DisambiguationList/>
+										<AnnotationList/>
+									</Track>
+									<Track>
+										<UniqueIdList/>
+										<NameList/>
+										<TypeList/>
+										<DateList/>
+										<PlaceList/>
+										<FileInfo/>
+										<AudioInfo/>
+										<Position/>
+										<LabelList/>
+										<DescriptionList/>
+										<LyricsList/>
+										<CopyrightList/>
+										<CopyrightCollectiveList/>
+										<TagList/>
+										<RatingList/>
+										<UrlList/>
+										<CreditList/>
+										<DisambiguationList/>
+										<AnnotationList/>
+									</Track>
+									<Track>
+										<UniqueIdList/>
+										<NameList/>
+										<TypeList/>
+										<DateList/>
+										<PlaceList/>
+										<FileInfo/>
+										<AudioInfo/>
+										<Position/>
+										<LabelList/>
+										<DescriptionList/>
+										<LyricsList/>
+										<CopyrightList/>
+										<CopyrightCollectiveList/>
+										<TagList/>
+										<RatingList/>
+										<UrlList/>
+										<CreditList/>
+										<DisambiguationList/>
+										<AnnotationList/>
+									</Track>
+									<Track>
+										<UniqueIdList/>
+										<NameList/>
+										<TypeList/>
+										<DateList/>
+										<PlaceList/>
+										<FileInfo/>
+										<AudioInfo/>
+										<Position/>
+										<LabelList/>
+										<DescriptionList/>
+										<LyricsList/>
+										<CopyrightList/>
+										<CopyrightCollectiveList/>
+										<TagList/>
+										<RatingList/>
+										<UrlList/>
+										<CreditList/>
+										<DisambiguationList/>
+										<AnnotationList/>
+									</Track>
+									<Track>
+										<UniqueIdList/>
+										<NameList/>
+										<TypeList/>
+										<DateList/>
+										<PlaceList/>
+										<FileInfo/>
+										<AudioInfo/>
+										<Position/>
+										<LabelList/>
+										<DescriptionList/>
+										<LyricsList/>
+										<CopyrightList/>
+										<CopyrightCollectiveList/>
+										<TagList/>
+										<RatingList/>
+										<UrlList/>
+										<CreditList/>
+										<DisambiguationList/>
+										<AnnotationList/>
+									</Track>
+									<Track>
+										<UniqueIdList/>
+										<NameList/>
+										<TypeList/>
+										<DateList/>
+										<PlaceList/>
+										<FileInfo/>
+										<AudioInfo/>
+										<Position/>
+										<LabelList/>
+										<DescriptionList/>
+										<LyricsList/>
+										<CopyrightList/>
+										<CopyrightCollectiveList/>
+										<TagList/>
+										<RatingList/>
+										<UrlList/>
+										<CreditList/>
+										<DisambiguationList/>
+										<AnnotationList/>
+									</Track>
+									<Track>
+										<UniqueIdList/>
+										<NameList/>
+										<TypeList/>
+										<DateList/>
+										<PlaceList/>
+										<FileInfo/>
+										<AudioInfo/>
+										<Position/>
+										<LabelList/>
+										<DescriptionList/>
+										<LyricsList/>
+										<CopyrightList/>
+										<CopyrightCollectiveList/>
+										<TagList/>
+										<RatingList/>
+										<UrlList/>
+										<CreditList/>
+										<DisambiguationList/>
+										<AnnotationList/>
+									</Track>
+									<Track>
+										<UniqueIdList/>
+										<NameList/>
+										<TypeList/>
+										<DateList/>
+										<PlaceList/>
+										<FileInfo/>
+										<AudioInfo/>
+										<Position/>
+										<LabelList/>
+										<DescriptionList/>
+										<LyricsList/>
+										<CopyrightList/>
+										<CopyrightCollectiveList/>
+										<TagList/>
+										<RatingList/>
+										<UrlList/>
+										<CreditList/>
+										<DisambiguationList/>
+										<AnnotationList/>
+									</Track>
+									<Track>
+										<UniqueIdList/>
+										<NameList/>
+										<TypeList/>
+										<DateList/>
+										<PlaceList/>
+										<FileInfo/>
+										<AudioInfo/>
+										<Position/>
+										<LabelList/>
+										<DescriptionList/>
+										<LyricsList/>
+										<CopyrightList/>
+										<CopyrightCollectiveList/>
+										<TagList/>
+										<RatingList/>
+										<UrlList/>
+										<CreditList/>
+										<DisambiguationList/>
+										<AnnotationList/>
+									</Track>
+									<Track>
+										<UniqueIdList/>
+										<NameList/>
+										<TypeList/>
+										<DateList/>
+										<PlaceList/>
+										<FileInfo/>
+										<AudioInfo/>
+										<Position/>
+										<LabelList/>
+										<DescriptionList/>
+										<LyricsList/>
+										<CopyrightList/>
+										<CopyrightCollectiveList/>
+										<TagList/>
+										<RatingList/>
+										<UrlList/>
+										<CreditList/>
+										<DisambiguationList/>
+										<AnnotationList/>
+									</Track>
+									<Track>
+										<UniqueIdList/>
+										<NameList/>
+										<TypeList/>
+										<DateList/>
+										<PlaceList/>
+										<FileInfo/>
+										<AudioInfo/>
+										<Position/>
+										<LabelList/>
+										<DescriptionList/>
+										<LyricsList/>
+										<CopyrightList/>
+										<CopyrightCollectiveList/>
+										<TagList/>
+										<RatingList/>
+										<UrlList/>
+										<CreditList/>
+										<DisambiguationList/>
+										<AnnotationList/>
+									</Track>
+									<Track>
+										<UniqueIdList/>
+										<NameList/>
+										<TypeList/>
+										<DateList/>
+										<PlaceList/>
+										<FileInfo/>
+										<AudioInfo/>
+										<Position/>
+										<LabelList/>
+										<DescriptionList/>
+										<LyricsList/>
+										<CopyrightList/>
+										<CopyrightCollectiveList/>
+										<TagList/>
+										<RatingList/>
+										<UrlList/>
+										<CreditList/>
+										<DisambiguationList/>
+										<AnnotationList/>
+									</Track>
+									<Track>
+										<UniqueIdList/>
+										<NameList/>
+										<TypeList/>
+										<DateList/>
+										<PlaceList/>
+										<FileInfo/>
+										<AudioInfo/>
+										<Position/>
+										<LabelList/>
+										<DescriptionList/>
+										<LyricsList/>
+										<CopyrightList/>
+										<CopyrightCollectiveList/>
+										<TagList/>
+										<RatingList/>
+										<UrlList/>
+										<CreditList/>
+										<DisambiguationList/>
+										<AnnotationList/>
+									</Track>
+									<Track>
+										<UniqueIdList/>
+										<NameList/>
+										<TypeList/>
+										<DateList/>
+										<PlaceList/>
+										<FileInfo/>
+										<AudioInfo/>
+										<Position/>
+										<LabelList/>
+										<DescriptionList/>
+										<LyricsList/>
+										<CopyrightList/>
+										<CopyrightCollectiveList/>
+										<TagList/>
+										<RatingList/>
+										<UrlList/>
+										<CreditList/>
+										<DisambiguationList/>
+										<AnnotationList/>
+									</Track>
+								</TrackList>
+							</Medium>
+						</MediumList>
+					</Release>
+				</ReleaseList>
+			</ReleaseGroup>
+		</ReleaseGroupList>
+	</Discography>
+</Artist>

@@ -52,7 +52,29 @@ public void buildIndex() {
         log.info("Getting all files in '{}' ... including those in subdirectories", dir.getCanonicalPath());
         List<File> files = (List<File>) FileUtils.listFiles(dir, musicFileExtensions, true);
         for (File file : files) {
-            HashMap<String, Object> indexMap = extractIndexInfoFromPath(file.getCanonicalPath().replace('\\', '/'));
+            HashMap<String, Object> indexMap = extractIndexInfoFromPath(file.getCanonicalPath().replaceAll("\\\\", "/").replaceAll("//", "/"));
+            musicIndex.addEntry(indexMap);
+        }
+        musicIndex.calcNumOfTracks();
+        musicIndex.calcNumOfTracksSelected();
+        musicIndex.createFlatIndex();
+        log.info("Number of Artists = {}", musicIndex.getNumOfArtists());
+        log.info("Number of Entries = {}", musicIndex.getFlatMusicIndex().size());
+    } catch (Exception ex) {
+        ex.printStackTrace();
+    }
+}
+
+//-----------------------------------------------------------------------------
+
+//ERROR HANDLING:	nok
+//DOC:				nok
+//TEST:				nok
+public void buildIndex(List<String> fileList) {
+    try {
+        log.info("Getting all files from list");
+        for (String filePath : fileList) {
+            HashMap<String, Object> indexMap = extractIndexInfoFromPath(filePath.replaceAll("\\\\", "/").replaceAll("//", "/"));
             musicIndex.addEntry(indexMap);
         }
         musicIndex.calcNumOfTracks();
@@ -128,16 +150,16 @@ private HashMap<String, Object> extractIndexInfoFromPath(String path) {
     retMap.put("artistCanonicalPath", artistCanonicalPath);
 
     List<String> regExPatterns = new ArrayList<>();
-    regExPatterns.add("\\A(?<trackPos>[0-9]{1,2})[- ._]{3}(?<trackName>.*)\\.(?<trackExtension>mp3|m4a|flac)\\Z");
-    regExPatterns.add("\\A(?<mediumNumber>[0-9]{1,2})[- ._]{1}(?<trackPos>[0-9]{1,2})[- ._]{3}(?<trackName>.*)\\.(?<trackExtension>mp3|m4a|flac)\\Z");
+    regExPatterns.add("\\A(?<trackNum>[0-9]{1,2})[- ._]{3}(?<trackName>.*)\\.(?<trackExtension>mp3|m4a|flac)\\Z");
+    regExPatterns.add("\\A(?<mediumNumber>[0-9]{1,2})[- ._]{1}(?<trackNum>[0-9]{1,2})[- ._]{3}(?<trackName>.*)\\.(?<trackExtension>mp3|m4a|flac)\\Z");
 
     for(String regex : regExPatterns) {
         HashMap<String, String> groupMap = RegexUtils.extractGroups(trackFileName, regex);
         //convert the string-string map to a string-object map
         retMap.putAll((HashMap<String,Object>)(Map)groupMap);
         //convert certain fields to integer field
-        if(retMap.containsKey("trackPos")) {
-            retMap.put("trackPos", Integer.valueOf((String)retMap.get("trackPos")));
+        if(retMap.containsKey("trackNum")) {
+            retMap.put("trackPos", Integer.valueOf((String)retMap.get("trackNum")));
         }
         if(retMap.containsKey("mediumNumber")) {
             retMap.put("mediumNumber", Integer.valueOf((String)retMap.get("mediumNumber")));

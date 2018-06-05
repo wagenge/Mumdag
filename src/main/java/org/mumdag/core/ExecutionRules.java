@@ -4,17 +4,13 @@ package org.mumdag.core;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-//import java.lang.reflect.Constructor;
-import java.lang.reflect.Constructor;
 import java.lang.reflect.Method;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.text.MessageFormat;
-import java.util.HashMap;
-import java.util.Iterator;
+import java.util.*;
 import java.util.Map.Entry;
-import java.util.TreeMap;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -25,7 +21,7 @@ import javax.xml.xpath.XPathFactory;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.mumdag.utils.PropertyHandler;
-import org.mumdag.utils.XmlUtils;
+import org.mumdag.utils.XpathUtils;
 import org.w3c.dom.Document;
 import org.w3c.dom.NodeList;
 
@@ -128,28 +124,32 @@ public void executeRules(HashMap<String, Object> entry) {
 	//iterates over all rules sets (aka all scraper)
 	Iterator<Entry <String, Object>> rulesSetIt = this.ruleSetMap.entrySet().iterator();
  	while (rulesSetIt.hasNext()) {
- 		Class<?> scraperClass;
-	  	Constructor<?> classCons = null;
-	  	Object classObj = null;
+ 		Class<?> scraperClass ;
+	  	//Constructor<?> classCons = null;
+	  	Object classObj;
 	  	Entry<String, Object> rulesSetPair = rulesSetIt.next();
 
-	  	log.info("Load RuleSet {} ... ", rulesSetPair.getKey());
-	  	try {
-			// find scraper class, get the correct constructor and get a new instance (created by this constructor)
-			scraperClass = Class.forName(this.scraperPackage + "." + rulesSetPair.getKey().toString());
-			classCons = scraperClass.getDeclaredConstructor();
-			//classCons = scraperClass.getDeclaredConstructor(new Class[] {String.class, String.class, OutputXmlDoc.class});
-			classObj = classCons.newInstance();
-		} catch (Exception ex) {
-	  		log.error("could not find class {}",rulesSetPair.getKey().toString());
-	  		break;
-		}
-		log.info("Load RuleSet {} ... successfully", rulesSetPair.getKey());
-	      
+	  	//log.info("Load RuleSet {} ... ", rulesSetPair.getKey());
+        try {
+            // find scraper class, get the correct constructor and get a new instance (created by this constructor)
+            //scraperClass = Class.forName(this.scraperPackage + "." + rulesSetPair.getKey().toString());
+            scraperClass = Class.forName(this.scraperPackage + "." + rulesSetPair.getKey());
+            //classCons = scraperClass.getDeclaredConstructor();
+            //classCons = scraperClass.getDeclaredConstructor(new Class[] {String.class, String.class, OutputXmlDoc.class});
+            //classObj = classCons.newInstance();
+           // constructorList.add(rulesSetPair.getKey());
+            Method factoryMethod = scraperClass.getDeclaredMethod("getInstance");
+            classObj = factoryMethod.invoke(null);
+        } catch (Exception ex) {
+            log.error("could not find class {}", rulesSetPair.getKey());
+            break;
+        }
+        log.info("Load RuleSet {} ... successfully", rulesSetPair.getKey());
+
 		//iterates over all actions
 		TreeMap<Integer, HashMap<String, String>> actionList;
 		actionList = (TreeMap<Integer, HashMap<String, String>>)rulesSetPair.getValue();
-		log.info("Load ActionList ... {} actions found", actionList.size());
+		//log.info("Load ActionList ... {} actions found", actionList.size());
 		Iterator<?> actionListIt = actionList.entrySet().iterator();
 		while (actionListIt.hasNext()) {
 			Entry<?, ?> actionListPair = (Entry<?, ?>)actionListIt.next();
@@ -162,7 +162,7 @@ public void executeRules(HashMap<String, Object> entry) {
 
 			//select the correct actions for the current entry type (artist scraper for artist type, e.g.)
 			if(ruleName.toLowerCase().equals(entryType.toLowerCase())) {
-                log.info("Action #{} {} ... started ... ", actionListPair.getKey(), actionMethod);
+                //log.info("Action #{} {} ... started ... ", actionListPair.getKey(), actionMethod);
                 try {
                     //paramList is null
                     if (paramList == null || paramList.length == 0) {
@@ -186,13 +186,11 @@ public void executeRules(HashMap<String, Object> entry) {
                         }
                     }
                 } catch (Exception ex) {
-                    log.error("could not find method{}", actionMethod);
+                    log.error("could not find method {}\nError:", actionMethod);
+                    ex.printStackTrace();
                     break;
                 }
-                log.info("Action #{} {} ... finished", actionListPair.getKey(), actionMethod);
-            }
-            else {
-                log.info("Action {} ... skipped", actionMethod);
+                //log.info("Action #{} {} ... finished", actionListPair.getKey(), actionMethod);
             }
 		}
  	}
@@ -260,7 +258,7 @@ private void createRuleSetMap() throws Exception {
 	Document doc = this.getRuleSetXml();
 
 	// get all rule set names
-	String xpathRuleSetNames = XmlUtils.resolveXpathString(PropertyHandler.getInstance().getValue("ExecutionRules.xpath.ruleSetName"), "_rs_::");
+	String xpathRuleSetNames = XpathUtils.resolveXpathString(PropertyHandler.getInstance().getValue("ExecutionRules.xpath.ruleSetName"), "_rs_::");
 	NodeList ruleSetNames;
 	ruleSetNames = (NodeList)xPath.compile(xpathRuleSetNames).evaluate(doc, XPathConstants.NODESET);
 	if(ruleSetNames.getLength() == 0 ) {
@@ -281,7 +279,7 @@ private void createRuleSetMap() throws Exception {
 		int actionSeqNr = 0; 
 		
 		// get all rule numbers for each rule set
-		String xpathRuleNo = XmlUtils.resolveXpathString(PropertyHandler.getInstance().getValue("ExecutionRules.xpath.ruleRuleNo"),
+		String xpathRuleNo = XpathUtils.resolveXpathString(PropertyHandler.getInstance().getValue("ExecutionRules.xpath.ruleRuleNo"),
 				"_rs_::" + "@name='" + ruleSetName + "'", "_rl_::");
 		NodeList ruleNos;
 		ruleNos = (NodeList)xPath.compile(xpathRuleNo).evaluate(doc, XPathConstants.NODESET);
@@ -297,7 +295,7 @@ private void createRuleSetMap() throws Exception {
 			}			
 			
 			// get all action numbers for each rule
-			String xpathActionNo = XmlUtils.resolveXpathString(PropertyHandler.getInstance().getValue("ExecutionRules.xpath.ruleActionNo"),
+			String xpathActionNo = XpathUtils.resolveXpathString(PropertyHandler.getInstance().getValue("ExecutionRules.xpath.ruleActionNo"),
 					"_rs_::@name='" + ruleSetName + "'", "_rl_::@no='" + ruleNo + "'", "_ac_::");
 			NodeList actionNos;
 			actionNos = (NodeList)xPath.compile(xpathActionNo).evaluate(doc, XPathConstants.NODESET);
@@ -318,13 +316,13 @@ private void createRuleSetMap() throws Exception {
 				
 				actionSeqNr++;
 				// get Method/ReturnVar/ParamList for each action
-				String xpathRuleName = XmlUtils.resolveXpathString(PropertyHandler.getInstance().getValue("ExecutionRules.xpath.ruleRuleName"),
+				String xpathRuleName = XpathUtils.resolveXpathString(PropertyHandler.getInstance().getValue("ExecutionRules.xpath.ruleRuleName"),
 						"_rs_::" + "@name='" + ruleSetName + "'", "_rl_::@no='" + ruleNo + "'");
-				String xpathMethod =XmlUtils.resolveXpathString(PropertyHandler.getInstance().getValue("ExecutionRules.xpath.ruleActionMethod"),
+				String xpathMethod =XpathUtils.resolveXpathString(PropertyHandler.getInstance().getValue("ExecutionRules.xpath.ruleActionMethod"),
 						"_rs_::@name='" + ruleSetName + "'", "_rl_::@no='" + ruleNo + "'", "_ac_::@no='" + actionNo + "'");
-				String xpathReturnVar = XmlUtils.resolveXpathString(PropertyHandler.getInstance().getValue("ExecutionRules.xpath.ruleActionReturnVar"),
+				String xpathReturnVar = XpathUtils.resolveXpathString(PropertyHandler.getInstance().getValue("ExecutionRules.xpath.ruleActionReturnVar"),
 						"_rs_::@name='" + ruleSetName + "'", "_rl_::@no='" + ruleNo + "'", "_ac_::@no='" + actionNo + "'");
-				String xpathParamList =XmlUtils.resolveXpathString(PropertyHandler.getInstance().getValue("ExecutionRules.xpath.ruleActionParamList"),
+				String xpathParamList =XpathUtils.resolveXpathString(PropertyHandler.getInstance().getValue("ExecutionRules.xpath.ruleActionParamList"),
 						"_rs_::@name='" + ruleSetName + "'", "_rl_::@no='" + ruleNo + "'", "_ac_::@no='" + actionNo + "'");
 				actionMethod = (String)xPath.compile(xpathMethod).evaluate(doc, XPathConstants.STRING);
 				if(actionMethod.length() == 0) {

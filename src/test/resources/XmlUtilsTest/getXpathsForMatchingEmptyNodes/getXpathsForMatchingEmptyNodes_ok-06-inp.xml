@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Artist mbid="cb67438a-7f50-4f2b-a6f1-2bb2729fd538" path="./src/test/resources/LocalMusicScraperTest/_fileInput//A/Air/">
+	<UniqueIdList>
+		<UniqueId mbid="cb67438a-7f50-4f2b-a6f1-2bb2729fd538" source="MusicBrainz">
+			<SourceUrl>https://musicbrainz.org/artist/cb67438a-7f50-4f2b-a6f1-2bb2729fd538</SourceUrl>
+			<SourceWSUrl>https://musicbrainz.org/ws/2/artist/cb67438a-7f50-4f2b-a6f1-2bb2729fd538?inc=aliases+artist-rels+url-rels</SourceWSUrl>
+			<Value>cb67438a-7f50-4f2b-a6f1-2bb2729fd538</Value>
+		</UniqueId>
+	</UniqueIdList>
+	<NameList/>
+	<Type/>
+	<AreaList/>
+	<PeriodList/>
+	<DescriptionList/>
+	<TagList/>
+	<UrlList/>
+	<RatingList/>
+	<ArtistCreditList/>
+	<ArtList/>
+	<DisambiguationList/>
+	<AnnotationList/>
+	<Discography>
+		<ReleaseGroupList>
+			<ReleaseGroup mbid="809df41b-b9b4-32e7-822b-cc5bbaad929e" path="./src/test/resources/LocalMusicScraperTest/_fileInput//A/Air/1997 - Premiers Symptômes/">
+				<UniqueIdList>
+					<UniqueId mbid="809df41b-b9b4-32e7-822b-cc5bbaad929e" source="MusicBrainz">
+						<SourceUrl>https://musicbrainz.org/release-group/809df41b-b9b4-32e7-822b-cc5bbaad929e</SourceUrl>
+						<SourceWSUrl>https://musicbrainz.org/ws/2/release-group/809df41b-b9b4-32e7-822b-cc5bbaad929e?inc=releases+tags+annotation+ratings+release-group-rels+series-rels+url-rels</SourceWSUrl>
+						<Value>809df41b-b9b4-32e7-822b-cc5bbaad929e</Value>
+					</UniqueId>
+				</UniqueIdList>
+				<ArtistCreditList>
+					<ArtistCredits>
+						<UniqueIdList>
+							<UniqueId>
+								<SourceUrl>one</SourceUrl>
+								<SourceWSUrl/>
+								<Value/>
+							</UniqueId>
+							<UniqueId>
+								<SourceUrl>two</SourceUrl>
+								<SourceWSUrl/>
+								<Value/>
+							</UniqueId>
+							<UniqueId>
+								<SourceUrl>three</SourceUrl>
+								<SourceWSUrl/>
+								<Value/>
+							</UniqueId>
+							<UniqueId>
+								<SourceUrl attr="four"></SourceUrl>
+								<SourceWSUrl/>
+								<Value/>
+							</UniqueId>
+						</UniqueIdList>
+						<NameList>
+							<Name/>
+						</NameList>
+						<RoleList>
+							<Role/>
+						</RoleList>
+						<PeriodList>
+							<Date/>
+						</PeriodList>
+					</ArtistCredits>
+				</ArtistCreditList>		
+				<AlbumReviewList>
+					<AlbumReview>
+						<SourceUrl/>
+						<Description/>
+					</AlbumReview>
+				</AlbumReviewList>
+				<UrlList>
+					<Urls/>
+				</UrlList>	
+				<CoverartList>
+					<Coverart>
+						<ImageType/>
+						<ImageFileType/>
+						<ImageFileName/>
+						<ImageFilePath/>
+						<ImageUrl/>
+						<ImageSource/>
+						<ImageSourceId/>
+						<Resolution>
+							<XValue/>
+							<YValue/>
+							<Size/>
+						</Resolution>
+					</Coverart>
+				</CoverartList>
+				<ReleaseList>
+					<Release mbid="45b729bb-21ea-31b0-a1ad-71946b723627" path="./src/test/resources/LocalMusicScraperTest/_fileInput//A/Air/1997 - Premiers Symptômes/">
+						<UniqueIdList>
+							<UniqueId mbid="45b729bb-21ea-31b0-a1ad-71946b723627" source="MusicBrainz">
+								<SourceUrl>https://musicbrainz.org/release/45b729bb-21ea-31b0-a1ad-71946b723627</SourceUrl>
+								<SourceWSUrl>https://musicbrainz.org/ws/2/release/45b729bb-21ea-31b0-a1ad-71946b723627?inc=recordings+tags+annotation+ratings</SourceWSUrl>
+								<Value>45b729bb-21ea-31b0-a1ad-71946b723627</Value>
+							</UniqueId>
+						</UniqueIdList>
+						<CoverartList>
+							<Coverart>
+								<ImageType/>
+								<ImageFileType/>
+								<ImageFileName/>
+								<ImageFilePath/>
+								<ImageUrl/>
+								<ImageSource/>
+								<ImageSourceId/>
+								<Resolution>
+									<XValue/>
+									<YValue/>
+									<Size/>
+								</Resolution>
+							</Coverart>
+						</CoverartList>
+						<MediumList>
+							<Medium discNo="1" discTotal="1" path="./src/test/resources/LocalMusicScraperTest/_fileInput//A/Air/1997 - Premiers Symptômes/">
+								<TrackList>
+									<Track mbid="6115ac6f-d29a-4ae2-ac58-6fac6eb71f68" path="./src/test/resources/LocalMusicScraperTest/_fileInput//A/Air/1997 - Premiers Symptômes/01 - Modular Mix.mp3" trackPos="1">
+										<UniqueIdList>
+											<UniqueId mbid="6115ac6f-d29a-4ae2-ac58-6fac6eb71f68" source="MusicBrainz">
+												<SourceUrl>https://musicbrainz.org/recording/6115ac6f-d29a-4ae2-ac58-6fac6eb71f68</SourceUrl>
+												<SourceWSUrl>https://musicbrainz.org/ws/2/recording/6115ac6f-d29a-4ae2-ac58-6fac6eb71f68?inc=aliases+artist-credits+releases</SourceWSUrl>
+												<Value>6115ac6f-d29a-4ae2-ac58-6fac6eb71f68</Value>
+											</UniqueId>
+										</UniqueIdList>
+										<Name/>
+										<FileInfo>
+											<Extension>mp3</Extension>
+											<Name>01 - Modular Mix.mp3</Name>
+											<RelativePath>./1997 - Premiers Symptômes/01 - Modular Mix.mp3</RelativePath>
+											<AbsolutePath>./src/test/resources/LocalMusicScraperTest/_fileInput//A/Air/1997 - Premiers Symptômes/01 - Modular Mix.mp3</AbsolutePath>
+											<Size>10087183</Size>
+										</FileInfo>
+										<AudioInfo>
+											<Encoder source="MP3AudioHeader">LAME3.96r</Encoder>
+											<EncodingType source="MP3AudioHeader">mp3</EncodingType>
+											<Length>
+												<Milliseconds source="MP3AudioHeader">361927</Milliseconds>
+												<Seconds source="MP3AudioHeader">361</Seconds>
+												<MinutesSeconds source="MP3AudioHeader">00:06:01</MinutesSeconds>
+											</Length>	
+											<BitRate lossless="false" source="MP3AudioHeader" variable="true">~217</BitRate>
+											<BitsPerSample source="MP3AudioHeader">16</BitsPerSample>
+											<SampleRate source="MP3AudioHeader">44100</SampleRate>
+											<MpegVersion source="MP3AudioHeader">MPEG-1</MpegVersion>
+											<MpegLayer source="MP3AudioHeader">Layer 3</MpegLayer>
+											<Channels source="MP3AudioHeader">Joint Stereo</Channels>
+											<Emphasis source="MP3AudioHeader">None</Emphasis>
+											<IntellectualProperty copyright="false" original="true"/>
+										</AudioInfo>
+										<Position>1</Position>
+										<TagList>
+											<Tag fieldName="TPE1" source="ID3Tag" tagName="ARTIST">Air</Tag>
+											<Tag fieldName="TCON" source="ID3Tag" tagName="GENRE">Ambient</Tag>
+											<Tag fieldName="TCON" source="ID3Tag" tagName="GENRE">Downtempo</Tag>
+											<Tag fieldName="TCON" source="ID3Tag" tagName="GENRE">Lounge</Tag>
+											<Tag fieldName="TCON" source="ID3Tag" tagName="GENRE">Instrumental</Tag>
+										</TagList>
+									</Track>
+									<Track>
+										<UniqueIdList>
+											<UniqueId>
+												<SourceUrl/>
+												<SourceWSUrl/>
+												<Value/>
+											</UniqueId>
+										</UniqueIdList>
+										<Name/>
+										<FileInfo>
+											<Extension/>
+											<Name/>
+											<RelativePath/>
+											<AbsolutePath/>
+											<Size/>
+										</FileInfo>
+										<AudioInfo>
+											<Encoder/>
+											<EncodingType/>
+											<Length>
+												<Milliseconds/>
+												<Seconds/>
+												<MinutesSeconds/>
+											</Length>	
+											<BitRate/>
+											<BitsPerSample/>
+											<SampleRate/>
+											<MpegVersion/>
+											<MpegLayer/>
+											<Channels/>
+											<Emphasis/>
+											<IntellectualProperty copyright="false" original="false"/>
+										</AudioInfo>
+										<Position/>
+										<TagList>
+											<Tag/>
+										</TagList>
+									</Track>
+									<Track>
+										<UniqueIdList>
+											<UniqueId>
+												<SourceUrl/>
+												<SourceWSUrl/>
+												<Value/>
+											</UniqueId>
+										</UniqueIdList>
+										<Name/>
+										<FileInfo>
+											<Extension/>
+											<Name/>
+											<RelativePath/>
+											<AbsolutePath/>
+											<Size/>
+										</FileInfo>
+										<AudioInfo>
+											<Encoder/>
+											<EncodingType/>
+											<Length>
+												<Milliseconds/>
+												<Seconds/>
+												<MinutesSeconds/>
+											</Length>	
+											<BitRate/>
+											<BitsPerSample/>
+											<SampleRate/>
+											<MpegVersion/>
+											<MpegLayer/>
+											<Channels/>
+											<Emphasis/>
+											<IntellectualProperty copyright="false" original="false"/>
+										</AudioInfo>
+										<Position/>
+										<TagList>
+											<Tag/>
+										</TagList>
+									</Track>
+									<Track>
+										<UniqueIdList>
+											<UniqueId>
+												<SourceUrl/>
+												<SourceWSUrl/>
+												<Value/>
+											</UniqueId>
+										</UniqueIdList>
+										<Name/>
+										<FileInfo>
+											<Extension/>
+											<Name/>
+											<RelativePath/>
+											<AbsolutePath/>
+											<Size/>
+										</FileInfo>
+										<AudioInfo>
+											<Encoder/>
+											<EncodingType/>
+											<Length>
+												<Milliseconds/>
+												<Seconds/>
+												<MinutesSeconds/>
+											</Length>	
+											<BitRate/>
+											<BitsPerSample/>
+											<SampleRate/>
+											<MpegVersion/>
+											<MpegLayer/>
+											<Channels/>
+											<Emphasis/>
+											<IntellectualProperty copyright="false" original="false"/>
+										</AudioInfo>
+										<Position/>
+										<TagList>
+											<Tag/>
+										</TagList>
+									</Track>
+									<Track>
+										<UniqueIdList>
+											<UniqueId>
+												<SourceUrl/>
+												<SourceWSUrl/>
+												<Value/>
+											</UniqueId>
+										</UniqueIdList>
+										<Name/>
+										<FileInfo>
+											<Extension/>
+											<Name/>
+											<RelativePath/>
+											<AbsolutePath/>
+											<Size/>
+										</FileInfo>
+										<AudioInfo>
+											<Encoder/>
+											<EncodingType/>
+											<Length>
+												<Milliseconds/>
+												<Seconds/>
+												<MinutesSeconds/>
+											</Length>	
+											<BitRate/>
+											<BitsPerSample/>
+											<SampleRate/>
+											<MpegVersion/>
+											<MpegLayer/>
+											<Channels/>
+											<Emphasis/>
+											<IntellectualProperty copyright="false" original="false"/>
+										</AudioInfo>
+										<Position/>
+										<TagList>
+											<Tag/>
+										</TagList>
+									</Track>
+									<Track>
+										<UniqueIdList>
+											<UniqueId>
+												<SourceUrl/>
+												<SourceWSUrl/>
+												<Value/>
+											</UniqueId>
+										</UniqueIdList>
+										<Name/>
+										<FileInfo>
+											<Extension/>
+											<Name/>
+											<RelativePath/>
+											<AbsolutePath/>
+											<Size/>
+										</FileInfo>
+										<AudioInfo>
+											<Encoder/>
+											<EncodingType/>
+											<Length>
+												<Milliseconds/>
+												<Seconds/>
+												<MinutesSeconds/>
+											</Length>	
+											<BitRate/>
+											<BitsPerSample/>
+											<SampleRate/>
+											<MpegVersion/>
+											<MpegLayer/>
+											<Channels/>
+											<Emphasis/>
+											<IntellectualProperty copyright="false" original="false"/>
+										</AudioInfo>
+										<Position/>
+										<TagList>
+											<Tag/>
+										</TagList>
+									</Track>
+									<Track>
+										<UniqueIdList>
+											<UniqueId>
+												<SourceUrl/>
+												<SourceWSUrl/>
+												<Value/>
+											</UniqueId>
+										</UniqueIdList>
+										<Name/>
+										<FileInfo>
+											<Extension/>
+											<Name/>
+											<RelativePath/>
+											<AbsolutePath/>
+											<Size/>
+										</FileInfo>
+										<AudioInfo>
+											<Encoder/>
+											<EncodingType/>
+											<Length>
+												<Milliseconds/>
+												<Seconds/>
+												<MinutesSeconds/>
+											</Length>	
+											<BitRate/>
+											<BitsPerSample/>
+											<SampleRate/>
+											<MpegVersion/>
+											<MpegLayer/>
+											<Channels/>
+											<Emphasis/>
+											<IntellectualProperty copyright="false" original="false"/>
+										</AudioInfo>
+										<Position/>
+										<TagList>
+											<Tag/>
+										</TagList>
+									</Track>
+								</TrackList>
+							</Medium>
+						</MediumList>
+					</Release>
+				</ReleaseList>
+			</ReleaseGroup>
+		</ReleaseGroupList>
+	</Discography>
+</Artist>

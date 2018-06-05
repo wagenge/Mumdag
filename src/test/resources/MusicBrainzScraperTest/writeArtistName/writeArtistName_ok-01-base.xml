@@ -2,14 +2,14 @@
 <Artist mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d">
 	<UniqueIdList/>
 	<NameList/>
-	<Type/>
-	<AreaList/>
-	<PeriodList/>
+	<TypeList/>
+	<PlaceList/>
+	<DateList/>
 	<DescriptionList/>
 	<TagList/>
 	<UrlList/>
 	<RatingList/>
-	<ArtistCreditList/>
+	<CreditList/>
 	<ArtList/>
 	<DisambiguationList/>
 	<AnnotationList/>

@@ -1,0 +1,109 @@
+<metadata xmlns="http://musicbrainz.org/ns/mmd-2.0#">
+	<release-group type="Album" id="8c18657a-6338-490d-a952-897663596b96" type-id="f529b476-6e62-324f-b0aa-1f3e33d313fc">
+		<title>The Life of Pablo</title>
+		<first-release-date>2016-02-14</first-release-date>
+		<primary-type id="f529b476-6e62-324f-b0aa-1f3e33d313fc">Album</primary-type>
+		<alias-list count="1">
+			<alias sort-name="The Life Of Pablo">The Life Of Pablo</alias>
+		</alias-list>
+		<relation-list target-type="artist">
+			<relation type-id="25dd0db4-189f-436c-a610-aacb979f13e2" type="artists and repertoire">
+				<target>076774d8-e82d-482f-bd08-0b991b8d5469</target>
+				<direction>backward</direction>
+				<artist id="076774d8-e82d-482f-bd08-0b991b8d5469">
+					<name>Plain Pat</name>
+					<sort-name>Plain Pat</sort-name>
+				</artist>
+			</relation>
+			<relation type-id="25dd0db4-189f-436c-a610-aacb979f13e2" type="artists and repertoire">
+				<target>0d9acc26-03eb-43fc-a12f-b3e106c89d4c</target>
+				<direction>backward</direction>
+				<artist id="0d9acc26-03eb-43fc-a12f-b3e106c89d4c">
+					<name>Che Vicious</name>
+					<sort-name>Che Vicious</sort-name>
+				</artist>
+				<target-credit>Ché Pope</target-credit>
+			</relation>
+			<relation type="creative direction" type-id="e035ac25-a2ff-48a6-9fb6-077692c67241">
+				<target>164f0d73-1234-4e2c-8743-d77bf2191051</target>
+				<direction>backward</direction>
+				<artist id="164f0d73-1234-4e2c-8743-d77bf2191051">
+					<name>Kanye West</name>
+					<sort-name>West, Kanye</sort-name>
+				</artist>
+			</relation>
+			<relation type="artists and repertoire" type-id="25dd0db4-189f-436c-a610-aacb979f13e2">
+				<target>1cd913a1-5641-4b2a-9624-a0417914e3e7</target>
+				<direction>backward</direction>
+				<artist id="1cd913a1-5641-4b2a-9624-a0417914e3e7">
+					<name>No I.D.</name>
+					<sort-name>No I.D.</sort-name>
+					<disambiguation>US hip hop/R&amp;B producer</disambiguation>
+				</artist>
+				<target-credit>Dion (No ID) Wilson</target-credit>
+			</relation>
+			<relation type="creative direction" type-id="e035ac25-a2ff-48a6-9fb6-077692c67241">
+				<target>d1b04ab5-94e9-4130-96f0-e59dfa66555e</target>
+				<direction>backward</direction>
+				<attribute-list>
+					<attribute>additional</attribute>
+				</attribute-list>
+				<artist id="d1b04ab5-94e9-4130-96f0-e59dfa66555e">
+					<name>Virgil Abloh</name>
+					<sort-name>Abloh, Virgil</sort-name>
+				</artist>
+			</relation>
+			<relation type-id="25dd0db4-189f-436c-a610-aacb979f13e2" type="artists and repertoire">
+				<target>d85b0f1c-3bec-462a-a52e-67c3ec3b7c3f</target>
+				<direction>backward</direction>
+				<artist id="d85b0f1c-3bec-462a-a52e-67c3ec3b7c3f">
+					<name>Leesa D. Brunson</name>
+					<sort-name>Brunson, Leesa D.</sort-name>
+				</artist>
+				<target-credit>Leesa Brunson</target-credit>
+			</relation>
+		</relation-list>
+		<relation-list target-type="release_group">
+			<relation type="single from" type-id="fcf680a9-6871-4519-8c4b-8c6549575b35">
+				<target>ca29cdb1-76f2-41bc-80b5-ca244502749b</target>
+				<direction>backward</direction>
+				<release-group id="ca29cdb1-76f2-41bc-80b5-ca244502749b">
+					<title>Famous</title>
+					<first-release-date>2016-03</first-release-date>
+				</release-group>
+			</relation>
+		</relation-list>
+		<relation-list target-type="url">
+			<relation type-id="a50a1d20-2b20-4d2c-9a29-eb771dd78386" type="allmusic">
+				<target id="ea3e24b4-2448-457c-8ee0-bbaa7799a0a8">http://www.allmusic.com/album/mw0002913866</target>
+			</relation>
+			<relation type="wikipedia" type-id="6578f0e9-1ace-4095-9de8-6e517ddb1ceb">
+				<target id="e19226c1-8bd2-4baa-92b3-c72170f0f57f">https://en.wikipedia.org/wiki/The_Life_of_Pablo</target>
+			</relation>
+			<relation type="other databases" type-id="38320e40-9f4a-3ae7-8cb2-3f3c9c5d856d">
+				<target id="9b053c07-d3a1-4434-b5e4-a9dd7f5a606b">https://rateyourmusic.com/release/album/kanye_west/the_life_of_pablo/</target>
+			</relation>
+			<relation type-id="99e550f3-5ab4-3110-b5b9-fe01d970b126" type="discogs">
+				<target id="fddf8016-b5c9-4a32-9642-b42181c454ef">https://www.discogs.com/master/958466</target>
+			</relation>
+			<relation type-id="b988d08c-5d86-4a57-9557-c83b399e3580" type="wikidata">
+				<target id="24c54f43-cedd-49c5-890a-65e3608f111d">https://www.wikidata.org/wiki/Q21996865</target>
+			</relation>
+		</relation-list>
+		<tag-list>
+			<tag count="2">
+				<name>experimental hip hop</name>
+			</tag>
+			<tag count="1">
+				<name>hip-hop</name>
+			</tag>
+			<tag count="1">
+				<name>hip-hop/rap</name>
+			</tag>
+			<tag count="1">
+				<name>trap rap</name>
+			</tag>
+		</tag-list>
+		<rating votes-count="5">4.2</rating>
+	</release-group>
+</metadata>

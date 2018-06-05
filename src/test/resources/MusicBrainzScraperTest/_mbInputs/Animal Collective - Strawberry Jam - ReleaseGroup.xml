@@ -1,0 +1,72 @@
+<metadata xmlns="http://musicbrainz.org/ns/mmd-2.0#">
+	<release-group id="89e4f726-2b6f-3f15-992e-b52105f53899" type="Album" type-id="f529b476-6e62-324f-b0aa-1f3e33d313fc">
+		<title>Strawberry Jam</title>
+		<first-release-date>2007-09-03</first-release-date>
+		<primary-type id="f529b476-6e62-324f-b0aa-1f3e33d313fc">Album</primary-type>
+		<relation-list target-type="release_group">
+			<relation type="single from" type-id="fcf680a9-6871-4519-8c4b-8c6549575b35">
+				<target>1c893242-cfd8-3f02-822c-41cccf8c3a73</target>
+				<direction>backward</direction>
+				<release-group id="1c893242-cfd8-3f02-822c-41cccf8c3a73">
+					<title>Peacebone</title>
+					<first-release-date>2007-08-13</first-release-date>
+				</release-group>
+			</relation>
+			<relation type-id="fcf680a9-6871-4519-8c4b-8c6549575b35" type="single from">
+				<target>fc6f7fbf-2534-3030-9808-dc021cb21639</target>
+				<direction>backward</direction>
+				<release-group id="fc6f7fbf-2534-3030-9808-dc021cb21639">
+					<title>Fireworks</title>
+					<first-release-date>2007-11-05</first-release-date>
+				</release-group>
+			</relation>
+		</relation-list>
+		<relation-list target-type="url">
+			<relation type="review" type-id="c3ac9c3b-f546-4d15-873f-b294d2c1b708">
+				<target id="57dfedaa-ddc9-4814-8d94-7fec862a045b">http://www.bbc.co.uk/music/reviews/53jw</target>
+			</relation>
+			<relation type-id="6578f0e9-1ace-4095-9de8-6e517ddb1ceb" type="wikipedia">
+				<target id="e9be2b3a-f012-48b6-8d38-f3aea58c183a">https://en.wikipedia.org/wiki/Strawberry_Jam</target>
+			</relation>
+			<relation type-id="38320e40-9f4a-3ae7-8cb2-3f3c9c5d856d" type="other databases">
+				<target id="dbf7760a-083c-4b67-af19-48cb4463f639">https://rateyourmusic.com/release/album/animal_collective/strawberry_jam/</target>
+			</relation>
+			<relation type="discogs" type-id="99e550f3-5ab4-3110-b5b9-fe01d970b126">
+				<target id="7e290c1b-81d5-485f-b732-3f31cd372ff1">https://www.discogs.com/master/5217</target>
+			</relation>
+			<relation type-id="b988d08c-5d86-4a57-9557-c83b399e3580" type="wikidata">
+				<target id="5007fce7-7fa4-4ef1-9242-a6347c52636d">https://www.wikidata.org/wiki/Q2196867</target>
+			</relation>
+		</relation-list>
+		<tag-list>
+			<tag count="4">
+				<name>art rock</name>
+			</tag>
+			<tag count="2">
+				<name>avantgarde</name>
+			</tag>
+			<tag count="1">
+				<name>electronic</name>
+			</tag>
+			<tag count="2">
+				<name>folk rock</name>
+			</tag>
+			<tag count="1">
+				<name>indie rock</name>
+			</tag>
+			<tag count="1">
+				<name>leftfield</name>
+			</tag>
+			<tag count="1">
+				<name>post rock</name>
+			</tag>
+			<tag count="1">
+				<name>rock</name>
+			</tag>
+			<tag count="1">
+				<name>rock and indie</name>
+			</tag>
+		</tag-list>
+		<rating votes-count="5">3.8</rating>
+	</release-group>
+</metadata>

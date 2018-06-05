@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><Artist mbid="cb67438a-7f50-4f2b-a6f1-2bb2729fd538" path="./src/test/resources/LocalMusicScraperTest/_fileInput/A/Air/">
+	<UniqueIdList>
+		<UniqueId mbid="cb67438a-7f50-4f2b-a6f1-2bb2729fd538" source="MusicBrainz">
+			<SourceUrl>https://musicbrainz.org/artist/cb67438a-7f50-4f2b-a6f1-2bb2729fd538</SourceUrl>
+			<SourceWSUrl>https://musicbrainz.org/ws/2/artist/cb67438a-7f50-4f2b-a6f1-2bb2729fd538?inc=aliases+tags+annotation+ratings+artist-rels+url-rels</SourceWSUrl>
+			<Value>cb67438a-7f50-4f2b-a6f1-2bb2729fd538</Value>
+		</UniqueId>
+	</UniqueIdList>
+	<NameList/>
+	<TypeList/>
+	<PlaceList/>
+	<DateList/>
+	<DescriptionList/>
+	<TagList/>
+	<UrlList/>
+	<RatingList/>
+	<CreditList/>
+	<ArtList/>
+	<DisambiguationList/>
+	<AnnotationList/>
+	<Discography>
+		<ReleaseGroupList><ReleaseGroup mbid="809df41b-b9b4-32e7-822b-cc5bbaad929e" path="./src/test/resources/LocalMusicScraperTest/_fileInput/A/Air/1997 - Premiers Symptômes/">
+				<UniqueIdList>
+					<UniqueId mbid="809df41b-b9b4-32e7-822b-cc5bbaad929e" source="MusicBrainz">
+						<SourceUrl>https://musicbrainz.org/release-group/809df41b-b9b4-32e7-822b-cc5bbaad929e</SourceUrl>
+						<SourceWSUrl>https://musicbrainz.org/ws/2/release-group/809df41b-b9b4-32e7-822b-cc5bbaad929e?inc=aliases+tags+annotation+ratings+artist-rels+release-group-rels+series-rels+url-rels</SourceWSUrl>
+						<Value>809df41b-b9b4-32e7-822b-cc5bbaad929e</Value>
+					</UniqueId>
+				</UniqueIdList>
+				<NameList/>
+				<TypeList/>
+				<DateList/>
+				<AwardList/>
+				<ChartList/>
+				<DescriptionList/>
+				<TagList/>
+				<UrlList/>
+				<RatingList/>
+				<CreditList/>
+				<ArtList/>
+				<DisambiguationList/>
+				<AnnotationList/>
+				<ReleaseList><Release mbid="45b729bb-21ea-31b0-a1ad-71946b723627" path="./src/test/resources/LocalMusicScraperTest/_fileInput/A/Air/1997 - Premiers Symptômes/">
+						<UniqueIdList>
+							<UniqueId mbid="45b729bb-21ea-31b0-a1ad-71946b723627" source="MusicBrainz">
+								<SourceUrl>https://musicbrainz.org/release/45b729bb-21ea-31b0-a1ad-71946b723627</SourceUrl>
+								<SourceWSUrl>https://musicbrainz.org/ws/2/release/45b729bb-21ea-31b0-a1ad-71946b723627?inc=labels+aliases+tags+annotation+media+discids+artist-rels+release-rels+label-rels+area-rels+place-rels+url-rels+event-rels</SourceWSUrl>
+								<Value>45b729bb-21ea-31b0-a1ad-71946b723627</Value>
+							</UniqueId>
+						</UniqueIdList>
+						<NameList/>
+						<TypeList/>
+						<DateList/>
+						<PlaceList/>
+						<LabelList/>
+						<LengthList/>
+						<DescriptionList/>
+						<CopyrightList/>
+						<TagList/>
+						<UrlList/>
+						<CreditList/>			
+						<ArtList/>
+						<DisambiguationList/>
+						<AnnotationList/>
+						<MediumList><Medium discNo="1" discTotal="1" path="./src/test/resources/LocalMusicScraperTest/_fileInput/A/Air/1997 - Premiers Symptômes/">
+								<UniqueIdList/>
+								<NameList/>
+								<TypeList/>
+								<LengthList/>
+								<TrackList><Track mbid="6115ac6f-d29a-4ae2-ac58-6fac6eb71f68" path="./src/test/resources/LocalMusicScraperTest/_fileInput/A/Air/1997 - Premiers Symptômes/01 - Modular Mix.mp3" trackNo="01" trackPos="1">
+										<UniqueIdList>
+											<UniqueId mbid="6115ac6f-d29a-4ae2-ac58-6fac6eb71f68" source="MusicBrainz">
+												<SourceUrl>https://musicbrainz.org/recording/6115ac6f-d29a-4ae2-ac58-6fac6eb71f68</SourceUrl>
+												<SourceWSUrl>https://musicbrainz.org/ws/2/recording/6115ac6f-d29a-4ae2-ac58-6fac6eb71f68?inc=aliases+annotation+tags+ratings+isrcs+artist-rels+work-rels+place-rels+label-rels+url-rels</SourceWSUrl>
+												<Value>6115ac6f-d29a-4ae2-ac58-6fac6eb71f68</Value>
+											</UniqueId>
+										</UniqueIdList>
+										<NameList/>
+										<TypeList/>
+										<DateList/>
+										<PlaceList/>
+										<FileInfo>
+											<AbsolutePath>./src/test/resources/LocalMusicScraperTest/_fileInput/A/Air/1997 - Premiers Symptômes/01 - Modular Mix.mp3</AbsolutePath>
+											<RelativePath>./1997 - Premiers Symptômes/01 - Modular Mix.mp3</RelativePath>
+											<Name>01 - Modular Mix.mp3</Name>
+											<Extension>mp3</Extension>
+											<Size>10087183</Size>
+										</FileInfo>
+										<AudioInfo>
+											<Emphasis source="MP3AudioHeader">None</Emphasis>
+											<MpegVersion source="MP3AudioHeader">MPEG-1</MpegVersion>
+											<MpegLayer source="MP3AudioHeader">Layer 3</MpegLayer>
+											<BitRate lossless="false" source="MP3AudioHeader" variable="true">~217</BitRate>
+											<IntellectualProperty copyright="false" original="true"/>
+											<EncodingType source="MP3AudioHeader">mp3</EncodingType>
+											<LengthList>
+												<Length source="MP3AudioHeader" type="ms">361927</Length>
+												<Length source="MP3AudioHeader" type="ss">361</Length>
+												<Length pattern="hh:mm:ss" source="MP3AudioHeader" type="hhmmss">00:06:01</Length>
+											</LengthList>
+											<BitsPerSample source="MP3AudioHeader">16</BitsPerSample>
+											<Channels source="MP3AudioHeader">Joint Stereo</Channels>
+											<SampleRate source="MP3AudioHeader">44100</SampleRate>
+											<Encoder source="MP3AudioHeader">LAME3.96r</Encoder>
+										</AudioInfo>
+										<Position number="01">1</Position>
+										<LabelList/>
+										<DescriptionList/>
+										<LyricsList/>
+										<CopyrightList/>
+										<CopyrightCollectiveList/>
+										<TagList/>
+										<RatingList/>
+										<UrlList/>
+										<CreditList/>
+										<DisambiguationList/>
+										<AnnotationList/>
+									</Track><Track>
+	<UniqueIdList/>
+	<NameList/>
+	<TypeList/>
+	<DateList/>
+	<PlaceList/>
+	<FileInfo/>
+	<AudioInfo/>
+	<Position/>
+	<LabelList/>
+	<DescriptionList/>
+	<LyricsList/>
+	<CopyrightList/>
+	<CopyrightCollectiveList/>
+	<TagList/>
+	<RatingList/>
+	<UrlList/>
+	<CreditList/>
+	<DisambiguationList/>
+	<AnnotationList/>
+</Track><Track>
+	<UniqueIdList/>
+	<NameList/>
+	<TypeList/>
+	<DateList/>
+	<PlaceList/>
+	<FileInfo/>
+	<AudioInfo/>
+	<Position/>
+	<LabelList/>
+	<DescriptionList/>
+	<LyricsList/>
+	<CopyrightList/>
+	<CopyrightCollectiveList/>
+	<TagList/>
+	<RatingList/>
+	<UrlList/>
+	<CreditList/>
+	<DisambiguationList/>
+	<AnnotationList/>
+</Track><Track>
+	<UniqueIdList/>
+	<NameList/>
+	<TypeList/>
+	<DateList/>
+	<PlaceList/>
+	<FileInfo/>
+	<AudioInfo/>
+	<Position/>
+	<LabelList/>
+	<DescriptionList/>
+	<LyricsList/>
+	<CopyrightList/>
+	<CopyrightCollectiveList/>
+	<TagList/>
+	<RatingList/>
+	<UrlList/>
+	<CreditList/>
+	<DisambiguationList/>
+	<AnnotationList/>
+</Track><Track>
+	<UniqueIdList/>
+	<NameList/>
+	<TypeList/>
+	<DateList/>
+	<PlaceList/>
+	<FileInfo/>
+	<AudioInfo/>
+	<Position/>
+	<LabelList/>
+	<DescriptionList/>
+	<LyricsList/>
+	<CopyrightList/>
+	<CopyrightCollectiveList/>
+	<TagList/>
+	<RatingList/>
+	<UrlList/>
+	<CreditList/>
+	<DisambiguationList/>
+	<AnnotationList/>
+</Track><Track>
+	<UniqueIdList/>
+	<NameList/>
+	<TypeList/>
+	<DateList/>
+	<PlaceList/>
+	<FileInfo/>
+	<AudioInfo/>
+	<Position/>
+	<LabelList/>
+	<DescriptionList/>
+	<LyricsList/>
+	<CopyrightList/>
+	<CopyrightCollectiveList/>
+	<TagList/>
+	<RatingList/>
+	<UrlList/>
+	<CreditList/>
+	<DisambiguationList/>
+	<AnnotationList/>
+</Track><Track>
+	<UniqueIdList/>
+	<NameList/>
+	<TypeList/>
+	<DateList/>
+	<PlaceList/>
+	<FileInfo/>
+	<AudioInfo/>
+	<Position/>
+	<LabelList/>
+	<DescriptionList/>
+	<LyricsList/>
+	<CopyrightList/>
+	<CopyrightCollectiveList/>
+	<TagList/>
+	<RatingList/>
+	<UrlList/>
+	<CreditList/>
+	<DisambiguationList/>
+	<AnnotationList/>
+</Track></TrackList>
+							</Medium></MediumList>
+					</Release></ReleaseList>
+			</ReleaseGroup></ReleaseGroupList>
+	</Discography>
+</Artist>

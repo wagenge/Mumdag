@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ReleaseGroup>
 	<UniqueIdList/>
-	<ArtistCreditList/>
-	<AlbumReviewList/>
+	<NameList/>
+	<TypeList/>
+	<DateList/>
+	<AwardList/>
+	<ChartList/>
+	<DescriptionList/>
+	<TagList/>
 	<UrlList/>
-	<CoverartList/>
-	<ReleaseList>
-		<Release/>
-	</ReleaseList>
+	<RatingList/>
+	<CreditList/>
+	<ArtList/>
+	<DisambiguationList/>
+	<AnnotationList/>
+	<ReleaseList/>
 </ReleaseGroup>

@@ -38,7 +38,7 @@ public void test_buildIndex(String testDesc, String startPath, List<Integer> exp
 
     lmi.calcResolvBaseMaps("path");
 
-    Object obj1 = lmi.getMusicIndex().findEntry(10000000000L);
+    lmi.getMusicIndex().findEntry(10000000000L);
     Track tr = ((Track)lmi.getMusicIndex().findEntry(10000050110L));
     tr.setSelected(false);
     numOfTracksSelected = lmi.getNumOfTracksSelected();
@@ -57,7 +57,7 @@ public Object[][] data_buildIndex_ok() {
     return new Object[][] {
             new Object[]{"01 - ...",
                     "../../_testdata/_localFilesInput/",
-                    Arrays.asList(2, 202, 167, 166, 201)},
+                    Arrays.asList(3, 454, 388, 387, 453)},
     };
 }
 

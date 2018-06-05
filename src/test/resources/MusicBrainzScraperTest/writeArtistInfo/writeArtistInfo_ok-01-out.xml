@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><Artist mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><Artist amid="id136975" dcid="82730" mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" path="./src/test/resources/MusicBrainzScraperTest/_fileInput/B/Beatles, The/" rmid="mn0000754032" spid="3WrFJ7ztbogyGnTHbHJFl2" wdid="Q1299">
 	<UniqueIdList><UniqueId source="VIAF" viafid="141205608">
 			<SourceUrl>http://viaf.org/viaf/141205608</SourceUrl>
 			<SourceWSUrl>http://viaf.org/viaf/141205608/rdf.xml</SourceWSUrl>
@@ -44,53 +44,21 @@
 			<SourceWSUrl>http://isni.oclc.org/sru/?query=pica.isn+%3D+0000000121707484&amp;operation=searchRetrieve&amp;recordSchema=isni-b</SourceWSUrl>
 			<Value>0000000121707484</Value>
 		</UniqueId></UniqueIdList>
-	<NameList><Name mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" sort-name="Beatles, The" source="MusicBrainz" type="Name">The Beatles</Name><Name mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" sort-name="B" source="MusicBrainz" type="Search hint" type-id="1937e404-b981-3cb7-8151-4c86ebfc8d8e">B</Name><Name mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" sort-name="Be" source="MusicBrainz" type="Search hint" type-id="1937e404-b981-3cb7-8151-4c86ebfc8d8e">Be</Name><Name mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" sort-name="Beat" source="MusicBrainz" type="Search hint" type-id="1937e404-b981-3cb7-8151-4c86ebfc8d8e">Beat</Name><Name locale="en" mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" sort-name="Beatles" source="MusicBrainz" type="Artist name" type-id="894afba6-2816-3c24-8072-eadb66bd04bc">Beatles</Name><Name mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" sort-name="Beetles" source="MusicBrainz" type="Search hint" type-id="1937e404-b981-3cb7-8151-4c86ebfc8d8e">Beetles</Name><Name locale="es" mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" primary="primary" sort-name="Los Beatles" source="MusicBrainz" type="Alias">Los Beatles</Name><Name locale="en" mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" primary="primary" sort-name="Beatles, The" source="MusicBrainz" type="Artist name" type-id="894afba6-2816-3c24-8072-eadb66bd04bc">The Beatles</Name><Name mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" sort-name="Savage Young Beatles, The" source="MusicBrainz" type="Alias">The Savage Young Beatles</Name><Name mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" sort-name="fab four" source="MusicBrainz" type="Search hint" type-id="1937e404-b981-3cb7-8151-4c86ebfc8d8e">fab four</Name><Name locale="ru" mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" primary="primary" sort-name="Битлз" source="MusicBrainz" type="Alias">Битлз</Name><Name locale="ja" mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" primary="primary" sort-name="ビートルズ (ザ)" source="MusicBrainz" type="Alias">ザ・ビートルズ</Name><Name locale="zh_Hans" mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" primary="primary" sort-name="披头士" source="MusicBrainz" type="Alias">披头士</Name><Name locale="zh_Hant" mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" primary="primary" sort-name="披頭四" source="MusicBrainz" type="Alias">披頭四</Name><Name locale="ko" mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" primary="primary" sort-name="더 비틀즈" source="MusicBrainz" type="Alias">더 비틀즈</Name></NameList>
-	<Type mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d">Group</Type>
-	<AreaList><Area code="GB-LIV" event="founded in" mbid="c249c30e-88ab-4b2f-a745-96a25bd7afee" seq="1" source="MusicBrainz" type="City">Liverpool</Area><Area event="founded in" mbid="dbcfe24c-1c0b-4722-addf-28b8696e32f8" seq="2" source="MusicBrainz" type="Subdivision">Merseyside</Area><Area code="GB-ENG" event="founded in" mbid="9d5dd675-3cf4-4296-9e39-67865ebee758" seq="3" source="MusicBrainz" type="Subdivision">England</Area><Area code="GB" event="founded in" mbid="8a754a16-0027-3a29-b6d7-2b40ea0481ed" seq="4" source="MusicBrainz" type="Country">United Kingdom</Area></AreaList>
-	<PeriodList><Date mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" type="founded">1957-03</Date><Date mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" type="dissolved">1970-04-10</Date></PeriodList>
+	<NameList>
+		<Name locale="en" mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" primary="primary" sort-name="Beatles, The" source="MusicBrainz" type="Artist name" type-id="894afba6-2816-3c24-8072-eadb66bd04bc">The Beatles</Name>
+	<Name mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" sort-name="Beatles, The" source="MusicBrainz" type="Name">The Beatles</Name><Name mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" sort-name="B" source="MusicBrainz" type="Search hint" type-id="1937e404-b981-3cb7-8151-4c86ebfc8d8e">B</Name><Name mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" sort-name="Be" source="MusicBrainz" type="Search hint" type-id="1937e404-b981-3cb7-8151-4c86ebfc8d8e">Be</Name><Name mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" sort-name="Beat" source="MusicBrainz" type="Search hint" type-id="1937e404-b981-3cb7-8151-4c86ebfc8d8e">Beat</Name><Name locale="en" mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" sort-name="Beatles" source="MusicBrainz" type="Artist name" type-id="894afba6-2816-3c24-8072-eadb66bd04bc">Beatles</Name><Name mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" sort-name="Beetles" source="MusicBrainz" type="Search hint" type-id="1937e404-b981-3cb7-8151-4c86ebfc8d8e">Beetles</Name><Name locale="es" mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" primary="primary" sort-name="Los Beatles" source="MusicBrainz" type="Alias">Los Beatles</Name><Name mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" sort-name="Savage Young Beatles, The" source="MusicBrainz" type="Alias">The Savage Young Beatles</Name><Name mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" sort-name="fab four" source="MusicBrainz" type="Search hint" type-id="1937e404-b981-3cb7-8151-4c86ebfc8d8e">fab four</Name><Name locale="ru" mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" primary="primary" sort-name="Битлз" source="MusicBrainz" type="Alias">Битлз</Name><Name locale="ja" mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" primary="primary" sort-name="ビートルズ (ザ)" source="MusicBrainz" type="Alias">ザ・ビートルズ</Name><Name locale="zh_Hans" mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" primary="primary" sort-name="披头士" source="MusicBrainz" type="Alias">披头士</Name><Name locale="zh_Hant" mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" primary="primary" sort-name="披頭四" source="MusicBrainz" type="Alias">披頭四</Name><Name locale="ko" mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" primary="primary" sort-name="더 비틀즈" source="MusicBrainz" type="Alias">더 비틀즈</Name></NameList>
+	<TypeList><Type mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" source="MusicBrainz" type="ArtistType">Group</Type></TypeList>
+	<PlaceList><Place code="GB-LIV" event="founded" mbid="c249c30e-88ab-4b2f-a745-96a25bd7afee" seq="1" source="MusicBrainz" type="City">Liverpool</Place><Place event="founded" mbid="dbcfe24c-1c0b-4722-addf-28b8696e32f8" seq="2" source="MusicBrainz" type="Subdivision">Merseyside</Place><Place code="GB-ENG" event="founded" mbid="9d5dd675-3cf4-4296-9e39-67865ebee758" seq="3" source="MusicBrainz" type="Subdivision">England</Place><Place code="GB" event="founded" mbid="8a754a16-0027-3a29-b6d7-2b40ea0481ed" seq="4" source="MusicBrainz" type="Country">United Kingdom</Place></PlaceList>
+	<DateList><Date mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" type="founded">1957-03</Date><Date mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" type="dissolved">1970-04-10</Date></DateList>
 	<DescriptionList/>
 	<TagList><Tag count="1" mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" source="MusicBrainz">art pop</Tag><Tag count="1" mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" source="MusicBrainz">art rock</Tag><Tag count="1" mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" source="MusicBrainz">beat music</Tag><Tag count="1" mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" source="MusicBrainz">blues rock</Tag><Tag count="1" mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" source="MusicBrainz">boys band</Tag><Tag count="7" mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" source="MusicBrainz">british</Tag><Tag count="1" mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" source="MusicBrainz">british invasion</Tag><Tag count="1" mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" source="MusicBrainz">british rhythm &amp; blues</Tag><Tag count="1" mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" source="MusicBrainz">classical pop</Tag><Tag count="2" mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" source="MusicBrainz">experimental</Tag><Tag count="1" mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" source="MusicBrainz">folk pop</Tag><Tag count="1" mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" source="MusicBrainz">folk rock</Tag><Tag count="2" mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" source="MusicBrainz">hard rock</Tag><Tag count="1" mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" source="MusicBrainz">liverpool</Tag><Tag count="2" mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" source="MusicBrainz">merseybeat</Tag><Tag count="10" mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" source="MusicBrainz">pop</Tag><Tag count="4" mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" source="MusicBrainz">pop rock</Tag><Tag count="2" mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" source="MusicBrainz">psychedelic pop</Tag><Tag count="2" mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" source="MusicBrainz">psychedelic rock</Tag><Tag count="1" mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" source="MusicBrainz">rhythm &amp; blues</Tag><Tag count="11" mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" source="MusicBrainz">rock</Tag><Tag count="2" mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" source="MusicBrainz">rock &amp; roll</Tag><Tag count="1" mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" source="MusicBrainz">sunshine pop</Tag><Tag count="1" mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" source="MusicBrainz">uk</Tag></TagList>
 	<UrlList><Url mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" type="lyrics">http://decoda.com/the-beatles-lyrics</Url><Url mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" type="lyrics">http://genius.com/artists/The-beatles</Url><Url mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" type="lyrics">http://lyrics.wikia.com/The_Beatles</Url><Url mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" type="other databases">http://musicmoz.org/Bands_and_Artists/B/Beatles,_The/</Url><Url mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" type="lyrics">http://muzikum.eu/en/122-3389/the-beatles/lyrics.html</Url><Url mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" type="other databases">http://rateyourmusic.com/artist/the_beatles</Url><Url mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" type="VIAF">http://viaf.org/viaf/141205608</Url><Url mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" type="other databases">http://www.45cat.com/artist/the-beatles</Url><Url mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" type="fanpage">http://www.aboutthebeatles.com/</Url><Url mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" type="allmusic">http://www.allmusic.com/artist/mn0000754032</Url><Url mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" type="BBC Music page">http://www.bbc.co.uk/music/artists/b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d</Url><Url mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" type="fanpage">http://www.beatles.ru/</Url><Url mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" type="fanpage">http://www.beatlesfanclub.nl/</Url><Url mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" type="fanpage">http://www.britishbeatlesfanclub.co.uk/</Url><Url mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" type="fanpage">http://www.dmbeatles.com/</Url><Url mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" type="IMDb">http://www.imdb.com/name/nm1397313/</Url><Url mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" type="last.fm">http://www.last.fm/music/The+Beatles</Url><Url mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" type="streaming music">http://www.pandora.com/beatles</Url><Url mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" type="secondhandsongs">http://www.secondhandsongs.com/artist/41</Url><Url mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" type="streaming music">http://www.staimusic.com/en/bands/the-beatles_4309.html</Url><Url mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" type="official homepage">http://www.thebeatles.com/</Url><Url mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" type="other databases">http://www.whosampled.com/The-Beatles/</Url><Url mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" type="image">https://commons.wikimedia.org/wiki/File:The_Fabs.JPG</Url><Url mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" type="wikipedia">https://en.wikipedia.org/wiki/The_Beatles</Url><Url mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" type="purchase for download">https://itunes.apple.com/artist/id136975</Url><Url mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" type="myspace">https://myspace.com/thebeatles</Url><Url mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" type="streaming music">https://open.spotify.com/artist/3WrFJ7ztbogyGnTHbHJFl2</Url><Url mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" type="purchase for download">https://play.google.com/store/music/artist?id=Apyx6rt3d2amstq7u3ntxenxhkq</Url><Url mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" type="social network">https://plus.google.com/111520018934389590684</Url><Url mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" type="soundcloud">https://soundcloud.com/thebeatles</Url><Url mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" type="social network">https://twitter.com/thebeatles</Url><Url mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" type="purchase for mail-order">https://www.amazon.co.uk/-/e/B000APTK6K</Url><Url mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" type="streaming music">https://www.deezer.com/artist/1</Url><Url mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" type="discogs">https://www.discogs.com/artist/82730</Url><Url mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" type="social network">https://www.facebook.com/thebeatles</Url><Url mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" type="discography">https://www.musicmeter.nl/artist/13409</Url><Url mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" type="other databases">https://www.musik-sammler.de/artist/the-beatles/</Url><Url mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" type="setlistfm">https://www.setlist.fm/setlists/the-beatles-23d6a88b.html</Url><Url mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" type="wikidata">https://www.wikidata.org/wiki/Q1299</Url><Url mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" type="youtube">https://www.youtube.com/user/thebeatles</Url></UrlList>
 	<RatingList><Rating mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" source="MusicBrainz" votes="67">4.8</Rating></RatingList>
-	<ArtistCreditList><ArtistCredit mbid="0d4ab0f9-bbda-4ab1-ae2c-f772ffcfbea9">
-			<UniqueIdList>
-				<UniqueId mbid="0d4ab0f9-bbda-4ab1-ae2c-f772ffcfbea9" source="MusicBrainz">
-					<SourceUrl>https://musicbrainz.org/artist/0d4ab0f9-bbda-4ab1-ae2c-f772ffcfbea9</SourceUrl>
-					<SourceWSUrl>https://musicbrainz.org/ws/2/artist/0d4ab0f9-bbda-4ab1-ae2c-f772ffcfbea9?inc=aliases+artist-rels+url-rels</SourceWSUrl>
-					<Value>0d4ab0f9-bbda-4ab1-ae2c-f772ffcfbea9</Value>
-				</UniqueId>
-			</UniqueIdList>
-			<NameList>
-				<Name mbid="0d4ab0f9-bbda-4ab1-ae2c-f772ffcfbea9" sort-name="Best, Pete" source="MusicBrainz" type="Name">Pete Best</Name>
-			</NameList>
-			<RoleList>
-				<Role mbid="0d4ab0f9-bbda-4ab1-ae2c-f772ffcfbea9" type="instrument">drums</Role>
-			<Role mbid="0d4ab0f9-bbda-4ab1-ae2c-f772ffcfbea9" original="false" type="membership">member of band</Role></RoleList>
-			<PeriodList>
-				<Date mbid="0d4ab0f9-bbda-4ab1-ae2c-f772ffcfbea9" type="begin">1960-08-12</Date>
-			<Date mbid="0d4ab0f9-bbda-4ab1-ae2c-f772ffcfbea9" type="end">1962-08-16</Date></PeriodList>
-		</ArtistCredit><ArtistCredit mbid="300c4c73-33ac-4255-9d57-4e32627f5e13">
-			<UniqueIdList>
-				<UniqueId mbid="300c4c73-33ac-4255-9d57-4e32627f5e13" source="MusicBrainz">
-					<SourceUrl>https://musicbrainz.org/artist/300c4c73-33ac-4255-9d57-4e32627f5e13</SourceUrl>
-					<SourceWSUrl>https://musicbrainz.org/ws/2/artist/300c4c73-33ac-4255-9d57-4e32627f5e13?inc=aliases+artist-rels+url-rels</SourceWSUrl>
-					<Value>300c4c73-33ac-4255-9d57-4e32627f5e13</Value>
-				</UniqueId>
-			</UniqueIdList>
-			<NameList>
-				<Name mbid="300c4c73-33ac-4255-9d57-4e32627f5e13" sort-name="Starr, Ringo" source="MusicBrainz" type="Name">Ringo Starr</Name>
-			</NameList>
-			<RoleList>
-				<Role mbid="300c4c73-33ac-4255-9d57-4e32627f5e13" type="instrument">drums</Role>
-			<Role mbid="300c4c73-33ac-4255-9d57-4e32627f5e13" original="false" type="membership">member of band</Role></RoleList>
-			<PeriodList>
-				<Date mbid="300c4c73-33ac-4255-9d57-4e32627f5e13" type="begin">1962-08</Date>
-			<Date mbid="300c4c73-33ac-4255-9d57-4e32627f5e13" type="end">1970-04-10</Date></PeriodList>
-		</ArtistCredit><ArtistCredit mbid="42a8f507-8412-4611-854f-926571049fa0">
+	<CreditList><Credit mbid="42a8f507-8412-4611-854f-926571049fa0">
 			<UniqueIdList>
 				<UniqueId mbid="42a8f507-8412-4611-854f-926571049fa0" source="MusicBrainz">
 					<SourceUrl>https://musicbrainz.org/artist/42a8f507-8412-4611-854f-926571049fa0</SourceUrl>
-					<SourceWSUrl>https://musicbrainz.org/ws/2/artist/42a8f507-8412-4611-854f-926571049fa0?inc=aliases+artist-rels+url-rels</SourceWSUrl>
+					<SourceWSUrl>https://musicbrainz.org/ws/2/artist/42a8f507-8412-4611-854f-926571049fa0?inc=aliases+tags+annotation+ratings+artist-rels+url-rels</SourceWSUrl>
 					<Value>42a8f507-8412-4611-854f-926571049fa0</Value>
 				</UniqueId>
 			</UniqueIdList>
@@ -100,48 +68,14 @@
 			<RoleList>
 				<Role mbid="42a8f507-8412-4611-854f-926571049fa0" type="instrument">guitar</Role>
 			<Role mbid="42a8f507-8412-4611-854f-926571049fa0" type="instrument">lead vocals</Role><Role mbid="42a8f507-8412-4611-854f-926571049fa0" original="true" type="membership">member of band</Role></RoleList>
-			<PeriodList>
+			<DateList>
 				<Date mbid="42a8f507-8412-4611-854f-926571049fa0" type="begin">1958-04</Date>
-			<Date mbid="42a8f507-8412-4611-854f-926571049fa0" type="end">1970-04-10</Date></PeriodList>
-		</ArtistCredit><ArtistCredit mbid="49a51491-650e-44b3-8085-2f07ac2986dd">
-			<UniqueIdList>
-				<UniqueId mbid="49a51491-650e-44b3-8085-2f07ac2986dd" source="MusicBrainz">
-					<SourceUrl>https://musicbrainz.org/artist/49a51491-650e-44b3-8085-2f07ac2986dd</SourceUrl>
-					<SourceWSUrl>https://musicbrainz.org/ws/2/artist/49a51491-650e-44b3-8085-2f07ac2986dd?inc=aliases+artist-rels+url-rels</SourceWSUrl>
-					<Value>49a51491-650e-44b3-8085-2f07ac2986dd</Value>
-				</UniqueId>
-			</UniqueIdList>
-			<NameList>
-				<Name mbid="49a51491-650e-44b3-8085-2f07ac2986dd" sort-name="Sutcliffe, Stuart" source="MusicBrainz" type="Name">Stuart Sutcliffe</Name>
-			</NameList>
-			<RoleList>
-				<Role mbid="49a51491-650e-44b3-8085-2f07ac2986dd" type="instrument">bass guitar</Role>
-			<Role mbid="49a51491-650e-44b3-8085-2f07ac2986dd" original="false" type="membership">member of band</Role></RoleList>
-			<PeriodList>
-				<Date mbid="49a51491-650e-44b3-8085-2f07ac2986dd" type="begin">1960-01</Date>
-			<Date mbid="49a51491-650e-44b3-8085-2f07ac2986dd" type="end">1962</Date></PeriodList>
-		</ArtistCredit><ArtistCredit mbid="4d5447d7-c61c-4120-ba1b-d7f471d385b9">
-			<UniqueIdList>
-				<UniqueId mbid="4d5447d7-c61c-4120-ba1b-d7f471d385b9" source="MusicBrainz">
-					<SourceUrl>https://musicbrainz.org/artist/4d5447d7-c61c-4120-ba1b-d7f471d385b9</SourceUrl>
-					<SourceWSUrl>https://musicbrainz.org/ws/2/artist/4d5447d7-c61c-4120-ba1b-d7f471d385b9?inc=aliases+artist-rels+url-rels</SourceWSUrl>
-					<Value>4d5447d7-c61c-4120-ba1b-d7f471d385b9</Value>
-				</UniqueId>
-			</UniqueIdList>
-			<NameList>
-				<Name mbid="4d5447d7-c61c-4120-ba1b-d7f471d385b9" sort-name="Lennon, John" source="MusicBrainz" type="Name">John Lennon</Name>
-			</NameList>
-			<RoleList>
-				<Role mbid="4d5447d7-c61c-4120-ba1b-d7f471d385b9" type="instrument">guitar</Role>
-			<Role mbid="4d5447d7-c61c-4120-ba1b-d7f471d385b9" type="instrument">lead vocals</Role><Role mbid="4d5447d7-c61c-4120-ba1b-d7f471d385b9" original="true" type="membership">member of band</Role></RoleList>
-			<PeriodList>
-				<Date mbid="4d5447d7-c61c-4120-ba1b-d7f471d385b9" type="end">1970-04-10</Date>
-			</PeriodList>
-		</ArtistCredit><ArtistCredit mbid="ba550d0e-adac-4864-b88b-407cab5e76af">
+			<Date mbid="42a8f507-8412-4611-854f-926571049fa0" type="end">1970-04-10</Date></DateList>	
+		</Credit><Credit mbid="ba550d0e-adac-4864-b88b-407cab5e76af">
 			<UniqueIdList>
 				<UniqueId mbid="ba550d0e-adac-4864-b88b-407cab5e76af" source="MusicBrainz">
 					<SourceUrl>https://musicbrainz.org/artist/ba550d0e-adac-4864-b88b-407cab5e76af</SourceUrl>
-					<SourceWSUrl>https://musicbrainz.org/ws/2/artist/ba550d0e-adac-4864-b88b-407cab5e76af?inc=aliases+artist-rels+url-rels</SourceWSUrl>
+					<SourceWSUrl>https://musicbrainz.org/ws/2/artist/ba550d0e-adac-4864-b88b-407cab5e76af?inc=aliases+tags+annotation+ratings+artist-rels+url-rels</SourceWSUrl>
 					<Value>ba550d0e-adac-4864-b88b-407cab5e76af</Value>
 				</UniqueId>
 			</UniqueIdList>
@@ -151,14 +85,401 @@
 			<RoleList>
 				<Role mbid="ba550d0e-adac-4864-b88b-407cab5e76af" type="instrument">bass guitar</Role>
 			<Role mbid="ba550d0e-adac-4864-b88b-407cab5e76af" type="instrument">lead vocals</Role><Role mbid="ba550d0e-adac-4864-b88b-407cab5e76af" original="true" type="membership">member of band</Role></RoleList>
-			<PeriodList>
+			<DateList>
 				<Date mbid="ba550d0e-adac-4864-b88b-407cab5e76af" type="begin">1957-07</Date>
-			<Date mbid="ba550d0e-adac-4864-b88b-407cab5e76af" type="end">1970-04-10</Date></PeriodList>
-		</ArtistCredit></ArtistCreditList>
+			<Date mbid="ba550d0e-adac-4864-b88b-407cab5e76af" type="end">1970-04-10</Date></DateList>	
+		</Credit><Credit mbid="0d4ab0f9-bbda-4ab1-ae2c-f772ffcfbea9">
+			<UniqueIdList>
+				<UniqueId mbid="0d4ab0f9-bbda-4ab1-ae2c-f772ffcfbea9" source="MusicBrainz">
+					<SourceUrl>https://musicbrainz.org/artist/0d4ab0f9-bbda-4ab1-ae2c-f772ffcfbea9</SourceUrl>
+					<SourceWSUrl>https://musicbrainz.org/ws/2/artist/0d4ab0f9-bbda-4ab1-ae2c-f772ffcfbea9?inc=aliases+tags+annotation+ratings+artist-rels+url-rels</SourceWSUrl>
+					<Value>0d4ab0f9-bbda-4ab1-ae2c-f772ffcfbea9</Value>
+				</UniqueId>
+			</UniqueIdList>
+			<NameList>
+				<Name mbid="0d4ab0f9-bbda-4ab1-ae2c-f772ffcfbea9" sort-name="Best, Pete" source="MusicBrainz" type="Name">Pete Best</Name>
+			</NameList>
+			<RoleList>
+				<Role mbid="0d4ab0f9-bbda-4ab1-ae2c-f772ffcfbea9" type="instrument">drums</Role>
+			<Role mbid="0d4ab0f9-bbda-4ab1-ae2c-f772ffcfbea9" original="false" type="membership">member of band</Role></RoleList>
+			<DateList>
+				<Date mbid="0d4ab0f9-bbda-4ab1-ae2c-f772ffcfbea9" type="begin">1960-08-12</Date>
+			<Date mbid="0d4ab0f9-bbda-4ab1-ae2c-f772ffcfbea9" type="end">1962-08-16</Date></DateList>	
+		</Credit><Credit mbid="49a51491-650e-44b3-8085-2f07ac2986dd">
+			<UniqueIdList>
+				<UniqueId mbid="49a51491-650e-44b3-8085-2f07ac2986dd" source="MusicBrainz">
+					<SourceUrl>https://musicbrainz.org/artist/49a51491-650e-44b3-8085-2f07ac2986dd</SourceUrl>
+					<SourceWSUrl>https://musicbrainz.org/ws/2/artist/49a51491-650e-44b3-8085-2f07ac2986dd?inc=aliases+tags+annotation+ratings+artist-rels+url-rels</SourceWSUrl>
+					<Value>49a51491-650e-44b3-8085-2f07ac2986dd</Value>
+				</UniqueId>
+			</UniqueIdList>
+			<NameList>
+				<Name mbid="49a51491-650e-44b3-8085-2f07ac2986dd" sort-name="Sutcliffe, Stuart" source="MusicBrainz" type="Name">Stuart Sutcliffe</Name>
+			</NameList>
+			<RoleList>
+				<Role mbid="49a51491-650e-44b3-8085-2f07ac2986dd" type="instrument">bass guitar</Role>
+			<Role mbid="49a51491-650e-44b3-8085-2f07ac2986dd" original="false" type="membership">member of band</Role></RoleList>
+			<DateList>
+				<Date mbid="49a51491-650e-44b3-8085-2f07ac2986dd" type="begin">1960-01</Date>
+			<Date mbid="49a51491-650e-44b3-8085-2f07ac2986dd" type="end">1962</Date></DateList>	
+		</Credit><Credit mbid="300c4c73-33ac-4255-9d57-4e32627f5e13">
+			<UniqueIdList>
+				<UniqueId mbid="300c4c73-33ac-4255-9d57-4e32627f5e13" source="MusicBrainz">
+					<SourceUrl>https://musicbrainz.org/artist/300c4c73-33ac-4255-9d57-4e32627f5e13</SourceUrl>
+					<SourceWSUrl>https://musicbrainz.org/ws/2/artist/300c4c73-33ac-4255-9d57-4e32627f5e13?inc=aliases+tags+annotation+ratings+artist-rels+url-rels</SourceWSUrl>
+					<Value>300c4c73-33ac-4255-9d57-4e32627f5e13</Value>
+				</UniqueId>
+			</UniqueIdList>
+			<NameList>
+				<Name mbid="300c4c73-33ac-4255-9d57-4e32627f5e13" sort-name="Starr, Ringo" source="MusicBrainz" type="Name">Ringo Starr</Name>
+			</NameList>
+			<RoleList>
+				<Role mbid="300c4c73-33ac-4255-9d57-4e32627f5e13" type="instrument">drums</Role>
+			<Role mbid="300c4c73-33ac-4255-9d57-4e32627f5e13" original="false" type="membership">member of band</Role></RoleList>
+			<DateList>
+				<Date mbid="300c4c73-33ac-4255-9d57-4e32627f5e13" type="begin">1962-08</Date>
+			<Date mbid="300c4c73-33ac-4255-9d57-4e32627f5e13" type="end">1970-04-10</Date></DateList>	
+		</Credit><Credit mbid="4d5447d7-c61c-4120-ba1b-d7f471d385b9">
+			<UniqueIdList>
+				<UniqueId mbid="4d5447d7-c61c-4120-ba1b-d7f471d385b9" source="MusicBrainz">
+					<SourceUrl>https://musicbrainz.org/artist/4d5447d7-c61c-4120-ba1b-d7f471d385b9</SourceUrl>
+					<SourceWSUrl>https://musicbrainz.org/ws/2/artist/4d5447d7-c61c-4120-ba1b-d7f471d385b9?inc=aliases+tags+annotation+ratings+artist-rels+url-rels</SourceWSUrl>
+					<Value>4d5447d7-c61c-4120-ba1b-d7f471d385b9</Value>
+				</UniqueId>
+			</UniqueIdList>
+			<NameList>
+				<Name mbid="4d5447d7-c61c-4120-ba1b-d7f471d385b9" sort-name="Lennon, John" source="MusicBrainz" type="Name">John Lennon</Name>
+			</NameList>
+			<RoleList>
+				<Role mbid="4d5447d7-c61c-4120-ba1b-d7f471d385b9" type="instrument">guitar</Role>
+			<Role mbid="4d5447d7-c61c-4120-ba1b-d7f471d385b9" type="instrument">lead vocals</Role><Role mbid="4d5447d7-c61c-4120-ba1b-d7f471d385b9" original="true" type="membership">member of band</Role></RoleList>
+			<DateList>
+				<Date mbid="4d5447d7-c61c-4120-ba1b-d7f471d385b9" type="end">1970-04-10</Date>
+			</DateList>	
+		</Credit></CreditList>
 	<ArtList/>
 	<DisambiguationList/>
 	<AnnotationList><Annotation mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" source="MusicBrainz">The official name of “The White Album” is “The Beatles”; please do not add incorrectly titled releases to the database!</Annotation><Annotation mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" source="MusicBrainz">Please do not re-add individual mono remaster releases to their individual release groups. The mono remasters were never released separately, and are all already in the database as 13 mediums of the release the name "The Beatles in Mono".</Annotation></AnnotationList>
 	<Discography>
-		<ReleaseGroupList/>
+		<ReleaseGroupList><ReleaseGroup path="./src/test/resources/MusicBrainzScraperTest/_fileInput/B/Beatles, The/1963 - Please Please Me/">
+	<UniqueIdList/>
+	<NameList/>
+	<TypeList/>
+	<DateList/>
+	<AwardList/>
+	<ChartList/>
+	<DescriptionList/>
+	<TagList/>
+	<UrlList/>
+	<RatingList/>
+	<CreditList/>
+	<ArtList/>
+	<DisambiguationList/>
+	<AnnotationList/>
+	<ReleaseList><Release path="./src/test/resources/MusicBrainzScraperTest/_fileInput/B/Beatles, The/1963 - Please Please Me/">
+	<UniqueIdList/>
+	<NameList/>
+	<TypeList/>
+	<DateList/>
+	<PlaceList/>
+	<LabelList/>
+	<LengthList/>
+	<DescriptionList/>
+	<CopyrightList/>
+	<TagList/>
+	<UrlList/>
+	<CreditList/>			
+	<ArtList/>
+	<DisambiguationList/>
+	<AnnotationList/>
+	<MediumList><Medium discNo="1" path="./src/test/resources/MusicBrainzScraperTest/_fileInput/B/Beatles, The/1963 - Please Please Me/">
+	<UniqueIdList/>
+	<NameList/>
+	<TypeList/>
+	<LengthList/>
+	<TrackList><Track>
+	<UniqueIdList/>
+	<NameList/>
+	<TypeList/>
+	<DateList/>
+	<PlaceList/>
+	<FileInfo/>
+	<AudioInfo/>
+	<Position/>
+	<LabelList/>
+	<DescriptionList/>
+	<LyricsList/>
+	<CopyrightList/>
+	<CopyrightCollectiveList/>
+	<TagList/>
+	<RatingList/>
+	<UrlList/>
+	<CreditList/>
+	<DisambiguationList/>
+	<AnnotationList/>
+</Track><Track>
+	<UniqueIdList/>
+	<NameList/>
+	<TypeList/>
+	<DateList/>
+	<PlaceList/>
+	<FileInfo/>
+	<AudioInfo/>
+	<Position/>
+	<LabelList/>
+	<DescriptionList/>
+	<LyricsList/>
+	<CopyrightList/>
+	<CopyrightCollectiveList/>
+	<TagList/>
+	<RatingList/>
+	<UrlList/>
+	<CreditList/>
+	<DisambiguationList/>
+	<AnnotationList/>
+</Track><Track>
+	<UniqueIdList/>
+	<NameList/>
+	<TypeList/>
+	<DateList/>
+	<PlaceList/>
+	<FileInfo/>
+	<AudioInfo/>
+	<Position/>
+	<LabelList/>
+	<DescriptionList/>
+	<LyricsList/>
+	<CopyrightList/>
+	<CopyrightCollectiveList/>
+	<TagList/>
+	<RatingList/>
+	<UrlList/>
+	<CreditList/>
+	<DisambiguationList/>
+	<AnnotationList/>
+</Track><Track>
+	<UniqueIdList/>
+	<NameList/>
+	<TypeList/>
+	<DateList/>
+	<PlaceList/>
+	<FileInfo/>
+	<AudioInfo/>
+	<Position/>
+	<LabelList/>
+	<DescriptionList/>
+	<LyricsList/>
+	<CopyrightList/>
+	<CopyrightCollectiveList/>
+	<TagList/>
+	<RatingList/>
+	<UrlList/>
+	<CreditList/>
+	<DisambiguationList/>
+	<AnnotationList/>
+</Track><Track>
+	<UniqueIdList/>
+	<NameList/>
+	<TypeList/>
+	<DateList/>
+	<PlaceList/>
+	<FileInfo/>
+	<AudioInfo/>
+	<Position/>
+	<LabelList/>
+	<DescriptionList/>
+	<LyricsList/>
+	<CopyrightList/>
+	<CopyrightCollectiveList/>
+	<TagList/>
+	<RatingList/>
+	<UrlList/>
+	<CreditList/>
+	<DisambiguationList/>
+	<AnnotationList/>
+</Track><Track>
+	<UniqueIdList/>
+	<NameList/>
+	<TypeList/>
+	<DateList/>
+	<PlaceList/>
+	<FileInfo/>
+	<AudioInfo/>
+	<Position/>
+	<LabelList/>
+	<DescriptionList/>
+	<LyricsList/>
+	<CopyrightList/>
+	<CopyrightCollectiveList/>
+	<TagList/>
+	<RatingList/>
+	<UrlList/>
+	<CreditList/>
+	<DisambiguationList/>
+	<AnnotationList/>
+</Track><Track>
+	<UniqueIdList/>
+	<NameList/>
+	<TypeList/>
+	<DateList/>
+	<PlaceList/>
+	<FileInfo/>
+	<AudioInfo/>
+	<Position/>
+	<LabelList/>
+	<DescriptionList/>
+	<LyricsList/>
+	<CopyrightList/>
+	<CopyrightCollectiveList/>
+	<TagList/>
+	<RatingList/>
+	<UrlList/>
+	<CreditList/>
+	<DisambiguationList/>
+	<AnnotationList/>
+</Track><Track>
+	<UniqueIdList/>
+	<NameList/>
+	<TypeList/>
+	<DateList/>
+	<PlaceList/>
+	<FileInfo/>
+	<AudioInfo/>
+	<Position/>
+	<LabelList/>
+	<DescriptionList/>
+	<LyricsList/>
+	<CopyrightList/>
+	<CopyrightCollectiveList/>
+	<TagList/>
+	<RatingList/>
+	<UrlList/>
+	<CreditList/>
+	<DisambiguationList/>
+	<AnnotationList/>
+</Track><Track>
+	<UniqueIdList/>
+	<NameList/>
+	<TypeList/>
+	<DateList/>
+	<PlaceList/>
+	<FileInfo/>
+	<AudioInfo/>
+	<Position/>
+	<LabelList/>
+	<DescriptionList/>
+	<LyricsList/>
+	<CopyrightList/>
+	<CopyrightCollectiveList/>
+	<TagList/>
+	<RatingList/>
+	<UrlList/>
+	<CreditList/>
+	<DisambiguationList/>
+	<AnnotationList/>
+</Track><Track>
+	<UniqueIdList/>
+	<NameList/>
+	<TypeList/>
+	<DateList/>
+	<PlaceList/>
+	<FileInfo/>
+	<AudioInfo/>
+	<Position/>
+	<LabelList/>
+	<DescriptionList/>
+	<LyricsList/>
+	<CopyrightList/>
+	<CopyrightCollectiveList/>
+	<TagList/>
+	<RatingList/>
+	<UrlList/>
+	<CreditList/>
+	<DisambiguationList/>
+	<AnnotationList/>
+</Track><Track>
+	<UniqueIdList/>
+	<NameList/>
+	<TypeList/>
+	<DateList/>
+	<PlaceList/>
+	<FileInfo/>
+	<AudioInfo/>
+	<Position/>
+	<LabelList/>
+	<DescriptionList/>
+	<LyricsList/>
+	<CopyrightList/>
+	<CopyrightCollectiveList/>
+	<TagList/>
+	<RatingList/>
+	<UrlList/>
+	<CreditList/>
+	<DisambiguationList/>
+	<AnnotationList/>
+</Track><Track>
+	<UniqueIdList/>
+	<NameList/>
+	<TypeList/>
+	<DateList/>
+	<PlaceList/>
+	<FileInfo/>
+	<AudioInfo/>
+	<Position/>
+	<LabelList/>
+	<DescriptionList/>
+	<LyricsList/>
+	<CopyrightList/>
+	<CopyrightCollectiveList/>
+	<TagList/>
+	<RatingList/>
+	<UrlList/>
+	<CreditList/>
+	<DisambiguationList/>
+	<AnnotationList/>
+</Track><Track>
+	<UniqueIdList/>
+	<NameList/>
+	<TypeList/>
+	<DateList/>
+	<PlaceList/>
+	<FileInfo/>
+	<AudioInfo/>
+	<Position/>
+	<LabelList/>
+	<DescriptionList/>
+	<LyricsList/>
+	<CopyrightList/>
+	<CopyrightCollectiveList/>
+	<TagList/>
+	<RatingList/>
+	<UrlList/>
+	<CreditList/>
+	<DisambiguationList/>
+	<AnnotationList/>
+</Track><Track>
+	<UniqueIdList/>
+	<NameList/>
+	<TypeList/>
+	<DateList/>
+	<PlaceList/>
+	<FileInfo/>
+	<AudioInfo/>
+	<Position/>
+	<LabelList/>
+	<DescriptionList/>
+	<LyricsList/>
+	<CopyrightList/>
+	<CopyrightCollectiveList/>
+	<TagList/>
+	<RatingList/>
+	<UrlList/>
+	<CreditList/>
+	<DisambiguationList/>
+	<AnnotationList/>
+</Track></TrackList>
+</Medium></MediumList>
+</Release></ReleaseList>
+</ReleaseGroup></ReleaseGroupList>
 	</Discography>
 </Artist>

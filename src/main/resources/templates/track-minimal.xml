@@ -1,8 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Track>
 	<UniqueIdList/>
+	<NameList/>
+	<TypeList/>
+	<DateList/>
+	<PlaceList/>
 	<FileInfo/>
 	<AudioInfo/>
 	<Position/>
+	<LabelList/>
+	<DescriptionList/>
+	<LyricsList/>
+	<CopyrightList/>
+	<CopyrightCollectiveList/>
 	<TagList/>
+	<RatingList/>
+	<UrlList/>
+	<CreditList/>
+	<DisambiguationList/>
+	<AnnotationList/>
 </Track>

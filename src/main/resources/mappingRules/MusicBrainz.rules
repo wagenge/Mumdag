@@ -1,5 +1,138 @@
+###################################################################################################
+#
+#	EXTRACT RULES - GENERAL
+#
+###################################################################################################
+#--------------------------------------
+#	Alias
+#--------------------------------------
+GeneralAlias.xpathAbsolute = /metadata/_section_/alias-list/alias/
+GeneralAlias.subType = node-content
+
+#--------------------------------------
+#	Tags
+#--------------------------------------
+GeneralTags.xpathAbsolute = /metadata/_section_/tag-list/tag[@count > 0]
+GeneralTags.subType = node-content
+
+#--------------------------------------
+#	Rating
+#--------------------------------------
+GeneralRating.xpathAbsolute = /metadata/_section_/rating
+GeneralRating.subType = node-content
+
+#--------------------------------------
+#	Disambiguation
+#--------------------------------------
+GeneralDisambiguation.xpathAbsolute = /metadata/_section_/disambiguation/text()
+GeneralDisambiguation.subType = text
+
+#--------------------------------------
+#	Annotation
+#--------------------------------------
+GeneralAnnotation.xpathAbsolute = /metadata/_section_/annotation/text/text()
+GeneralAnnotation.subType = text
+GeneralAnnotation.splitRegEx = \n{2,}|-{2,}
+
+#--------------------------------------
+#	Relations
+#--------------------------------------
+GeneralRelations.xpathAbsolute = /metadata/_section_/relation-list[_targettype_]/relation[_whitelist_]
+GeneralRelations.subType = node-content
+
+
+
+###################################################################################################
+#
+#	EXTRACT RULES - ARTIST
+#
+###################################################################################################
+#--------------------------------------
+#	ArtistId
+#--------------------------------------
 ArtistId.xpathAbsolute = /metadata/artist/@_arid_
 ArtistId.subType = text
+
+#--------------------------------------
+#	ArtistName/ArtistSortName
+#--------------------------------------
+ArtistName.xpathAbsolute = /metadata/artist/name/text()
+ArtistName.subType = text
+ArtistSortName.xpathAbsolute = /metadata/artist/sort-name/text()
+ArtistSortName.subType = text
+
+#--------------------------------------
+#	ArtistIPI/ArtistISNI
+#--------------------------------------
+ArtistIPI.xpathAbsolute = /metadata/artist/ipi-list/ipi/text()
+ArtistIPI.subType = text
+ArtistISNI.xpathAbsolute = /metadata/artist/isni-list/isni/text()
+ArtistISNI.subType = text
+
+#--------------------------------------
+#	ArtistType/ArtistGender
+#--------------------------------------
+ArtistType.xpathAbsolute = /metadata/artist/@type
+ArtistType.subType = text
+ArtistGender.xpathAbsolute = /metadata/artist/gender/text()
+ArtistGender.subType = text
+
+#--------------------------------------
+#	ArtistArea
+#--------------------------------------
+ArtistAreaBeginId.xpathAbsolute = /metadata/artist/begin-area/@id 
+ArtistAreaBeginId.subType = text
+ArtistAreaEndId.xpathAbsolute = /metadata/artist/end-area/@id 
+ArtistAreaEndId.subType = text
+AreaInfo.xpathAbsolute = /metadata/area
+AreaInfo.subType = node-content-blacklist
+AreaInfo.blacklist = relation-list
+AreaRelationBackward.xpathAbsolute = /metadata/area/relation-list/relation/direction[text() = 'backward']/../target/text()
+AreaRelationBackward.subType = text 
+
+#--------------------------------------
+#	ArtistLifeSpan
+#--------------------------------------
+ArtistLifeSpan.xpathAbsolute = /metadata/artist/life-span
+ArtistLifeSpan.subType = node-content
+
+
+
+###################################################################################################
+#
+#	EXTRACT RULES - RELEASEGROUP
+#
+###################################################################################################
+#--------------------------------------
+#	ReleaseGroupTitle
+#--------------------------------------
+ReleaseGroupTitle.xpathAbsolute = /metadata/release-group/title/text()
+ReleaseGroupTitle.subType = text
+
+#--------------------------------------
+#	ReleaseGroupTypes
+#--------------------------------------
+ReleaseGroupPrimaryType.xpathAbsolute = /metadata/release-group/primary-type/text()
+ReleaseGroupPrimaryType.subType = text
+ReleaseGroupSecondaryType.xpathAbsolute = /metadata/release-group/secondary-type-list/secondary-type/text()
+ReleaseGroupSecondaryType.subType = text
+
+#--------------------------------------
+#	FirstReleaseDate
+#--------------------------------------
+FirstReleaseDate.xpathAbsolute = /metadata/release-group/first-release-date/text()
+FirstReleaseDate.subType = text
+
+
+
+###################################################################################################
+#
+#	COPY RULES - ARTIST
+#
+###################################################################################################
+#--------------------------------------
+#	ArtistUniqueId
+#--------------------------------------
 ArtistId.A_EMPTY_NODE_EXISTS = UPDATE
 ArtistId.NO_EMPTY_NODE_EXISTS = ADD
 ArtistId.NODE_WITH_SAME_ATTRIBUTE_NAME_EXISTS = ADD
@@ -7,15 +140,16 @@ ArtistId.NODE_WITH_SAME_ATTRIBUTE_VALUE_EXISTS = UPDATE
 ArtistId.NODE_WITH_SAME_CONTENT_EXISTS = DO_NOTHING
 ArtistId.SAME_NODE_EXISTS = DO_NOTHING
 
-ArtistIPI.xpathAbsolute = /metadata/artist/ipi-list/ipi/text()
-ArtistIPI.subType = text
-ArtistISNI.xpathAbsolute = /metadata/artist/isni-list/isni/text()
-ArtistISNI.subType = text
+ArtistIdUnId.A_EMPTY_NODE_EXISTS = UPDATE
+ArtistIdUnId.NO_EMPTY_NODE_EXISTS = UPDATE
+ArtistIdUnId.NODE_WITH_SAME_ATTRIBUTE_NAME_EXISTS = DO_NOTHING
+ArtistIdUnId.NODE_WITH_SAME_ATTRIBUTE_VALUE_EXISTS = DO_NOTHING
+ArtistIdUnId.NODE_WITH_SAME_CONTENT_EXISTS = DO_NOTHING
+ArtistIdUnId.SAME_NODE_EXISTS = DO_NOTHING
 
-ArtistName.xpathAbsolute = /metadata/artist[_arid_]/name/text()
-ArtistName.subType = text
-ArtistSortName.xpathAbsolute = /metadata/artist[_arid_]/sort-name/text()
-ArtistSortName.subType = text
+#--------------------------------------
+#	ArtistName/ArtistAliasName
+#--------------------------------------
 ArtistName.A_EMPTY_NODE_EXISTS = UPDATE
 ArtistName.NO_EMPTY_NODE_EXISTS = ADD
 ArtistName.NODE_WITH_SAME_ATTRIBUTE_NAME_EXISTS = ADD
@@ -23,10 +157,6 @@ ArtistName.NODE_WITH_SAME_ATTRIBUTE_VALUE_EXISTS = DO_NOTHING
 ArtistName.NODE_WITH_SAME_CONTENT_EXISTS = DO_NOTHING
 ArtistName.SAME_NODE_EXISTS = DO_NOTHING
 
-ArtistAliasName.xpathAbsolute = /metadata/artist[_arid_]/alias-list/alias/text()
-ArtistAliasName.subType = text
-ArtistAliasAttributes.xpathAbsolute=/metadata/artist[_arid_]/alias-list/alias[text() = '_alname_']/@*
-ArtistAliasAttributes.subType = attribute
 ArtistAliasName.A_EMPTY_NODE_EXISTS = UPDATE
 ArtistAliasName.NO_EMPTY_NODE_EXISTS = ADD
 ArtistAliasName.NODE_WITH_SAME_ATTRIBUTE_NAME_EXISTS = ADD
@@ -34,77 +164,49 @@ ArtistAliasName.NODE_WITH_SAME_ATTRIBUTE_VALUE_EXISTS = ADD
 ArtistAliasName.NODE_WITH_SAME_CONTENT_EXISTS = ADD
 ArtistAliasName.SAME_NODE_EXISTS = DO_NOTHING
 
-ArtistAnnotation.xpathAbsolute = /metadata/artist/annotation/text/text()
-ArtistAnnotation.subType = text
-ArtistAnnotation.splitRegEx = \n{2,}|-{2,}
-ArtistAnnotation.A_EMPTY_NODE_EXISTS = UPDATE
-ArtistAnnotation.NO_EMPTY_NODE_EXISTS = ADD
-ArtistAnnotation.NODE_WITH_SAME_ATTRIBUTE_NAME_EXISTS = ADD
-ArtistAnnotation.NODE_WITH_SAME_ATTRIBUTE_VALUE_EXISTS = ADD
-ArtistAnnotation.NODE_WITH_SAME_CONTENT_EXISTS = DO_NOTHING
-ArtistAnnotation.SAME_NODE_EXISTS = DO_NOTHING
-
-ArtistDisambiguation.xpathAbsolute = /metadata/artist/disambiguation/text()
-ArtistDisambiguation.subType = text
-ArtistDisambiguation.A_EMPTY_NODE_EXISTS = UPDATE
-ArtistDisambiguation.NO_EMPTY_NODE_EXISTS = ADD
-ArtistDisambiguation.NODE_WITH_SAME_ATTRIBUTE_NAME_EXISTS = ADD
-ArtistDisambiguation.NODE_WITH_SAME_ATTRIBUTE_VALUE_EXISTS = UPDATE
-ArtistDisambiguation.NODE_WITH_SAME_CONTENT_EXISTS = DO_NOTHING
-ArtistDisambiguation.SAME_NODE_EXISTS = DO_NOTHING
-
-ArtistType.xpathAbsolute = /metadata/artist[_arid_]/@_artype_
-ArtistType.subType = text
-ArtistGender.xpathAbsolute = /metadata/artist[_arid_]/gender/text()
-ArtistGender.subType = text
+#--------------------------------------
+#	ArtistType
+#--------------------------------------
 ArtistType.A_EMPTY_NODE_EXISTS = UPDATE
 ArtistType.NO_EMPTY_NODE_EXISTS = ADD
-ArtistType.NODE_WITH_SAME_ATTRIBUTE_NAME_EXISTS = UPDATE
-ArtistType.NODE_WITH_SAME_ATTRIBUTE_VALUE_EXISTS = DO_NOTHING
+ArtistType.NODE_WITH_SAME_ATTRIBUTE_NAME_EXISTS = ADD
+ArtistType.NODE_WITH_SAME_ATTRIBUTE_VALUE_EXISTS = UPDATE
 ArtistType.NODE_WITH_SAME_CONTENT_EXISTS = DO_NOTHING
 ArtistType.SAME_NODE_EXISTS = DO_NOTHING
 
-ArtistLifeSpanBegin.xpathAbsolute = /metadata/artist[_arid_]/life-span/begin/text()
-ArtistLifeSpanBegin.subType = text
-ArtistLifeSpanEnd.xpathAbsolute = /metadata/artist[_arid_]/life-span/end/text()
-ArtistLifeSpanEnd.subType = text
+#--------------------------------------
+#	ArtistPlace
+#--------------------------------------
+ArtistPlace.A_EMPTY_NODE_EXISTS = UPDATE
+ArtistPlace.NO_EMPTY_NODE_EXISTS = ADD
+ArtistPlace.NODE_WITH_SAME_ATTRIBUTE_NAME_EXISTS = ADD
+ArtistPlace.NODE_WITH_SAME_ATTRIBUTE_VALUE_EXISTS = UPDATE
+ArtistPlace.NODE_WITH_SAME_CONTENT_EXISTS = ADD
+ArtistPlace.SAME_NODE_EXISTS = DO_NOTHING
 
-ArtistPeriod.A_EMPTY_NODE_EXISTS = UPDATE
-ArtistPeriod.NO_EMPTY_NODE_EXISTS = ADD
-ArtistPeriod.NODE_WITH_SAME_ATTRIBUTE_NAME_EXISTS = ADD
-ArtistPeriod.NODE_WITH_SAME_ATTRIBUTE_VALUE_EXISTS = UPDATE
-ArtistPeriod.NODE_WITH_SAME_CONTENT_EXISTS = UPDATE
-ArtistPeriod.SAME_NODE_EXISTS = DO_NOTHING
+#--------------------------------------
+#	ArtistDate
+#--------------------------------------
+ArtistDate.A_EMPTY_NODE_EXISTS = UPDATE
+ArtistDate.NO_EMPTY_NODE_EXISTS = ADD
+ArtistDate.NODE_WITH_SAME_ATTRIBUTE_NAME_EXISTS = ADD
+ArtistDate.NODE_WITH_SAME_ATTRIBUTE_VALUE_EXISTS = UPDATE
+ArtistDate.NODE_WITH_SAME_CONTENT_EXISTS = UPDATE
+ArtistDate.SAME_NODE_EXISTS = DO_NOTHING
 
-ArtistAreaBeginId.xpathAbsolute = /metadata/artist/begin-area/@_areaid_ 
-ArtistAreaBeginId.subType = text
-ArtistAreaEndId.xpathAbsolute = /metadata/artist/end-area/@_areaid_ 
-ArtistAreaEndId.subType = text
+#--------------------------------------
+#	ArtistTags
+#--------------------------------------
+ArtistTags.A_EMPTY_NODE_EXISTS = UPDATE
+ArtistTags.NO_EMPTY_NODE_EXISTS = ADD
+ArtistTags.NODE_WITH_SAME_ATTRIBUTE_NAME_EXISTS = ADD
+ArtistTags.NODE_WITH_SAME_ATTRIBUTE_VALUE_EXISTS = ADD
+ArtistTags.NODE_WITH_SAME_CONTENT_EXISTS = UPDATE
+ArtistTags.SAME_NODE_EXISTS = DO_NOTHING
 
-ArtistArea.A_EMPTY_NODE_EXISTS = UPDATE
-ArtistArea.NO_EMPTY_NODE_EXISTS = ADD
-ArtistArea.NODE_WITH_SAME_ATTRIBUTE_NAME_EXISTS = ADD
-ArtistArea.NODE_WITH_SAME_ATTRIBUTE_VALUE_EXISTS = UPDATE
-ArtistArea.NODE_WITH_SAME_CONTENT_EXISTS = ADD
-ArtistArea.SAME_NODE_EXISTS = DO_NOTHING
-
-AreaName.xpathAbsolute = /metadata/area/name/text()
-AreaName.subType = text
-AreaSortName.xpathAbsolute = /metadata/area/sort-name/text()
-AreaSortName.subType = text
-AreaType.xpathAbsolute = /metadata/area/@_areatype_
-AreaType.subType = text
-AreaCode1.xpathAbsolute = /metadata/area/iso-3166-1-code-list/iso-3166-1-code[1]/text()
-AreaCode1.subType = text
-AreaCode2.xpathAbsolute = /metadata/area/iso-3166-2-code-list/iso-3166-2-code[1]/text()
-AreaCode2.subType = text
-AreaRelationBackward.xpathAbsolute = /metadata/area/relation-list/relation/direction[text() = 'backward']/../target/text()
-AreaRelationBackward.subType = text
-
-ArtistUrl.xpathAbsolute = /metadata/artist/relation-list[@target-type='url']/relation/target/text()
-ArtistUrl.subType = text
-ArtistUrlType.xpathAbsolute = /metadata/artist/relation-list[@target-type='url']/relation/target[text() = '_url_']/../@type
-ArtistUrlType.subType = text
+#--------------------------------------
+#	ArtistUrl
+#--------------------------------------
 ArtistUrl.A_EMPTY_NODE_EXISTS = UPDATE
 ArtistUrl.NO_EMPTY_NODE_EXISTS = ADD
 ArtistUrl.NODE_WITH_SAME_ATTRIBUTE_NAME_EXISTS = ADD
@@ -112,31 +214,33 @@ ArtistUrl.NODE_WITH_SAME_ATTRIBUTE_VALUE_EXISTS = ADD
 ArtistUrl.NODE_WITH_SAME_CONTENT_EXISTS = UPDATE
 ArtistUrl.SAME_NODE_EXISTS = DO_NOTHING
 
-ArtistCreditIds.xpathAbsolute = /metadata/artist/relation-list[@target-type='artist']/relation[@type='member of band' or @type='instrumental supporting musician']/target/text()
-ArtistCreditIds.subType = text
+#--------------------------------------
+#	ArtistRating
+#--------------------------------------
+ArtistRating.A_EMPTY_NODE_EXISTS = UPDATE
+ArtistRating.NO_EMPTY_NODE_EXISTS = ADD
+ArtistRating.NODE_WITH_SAME_ATTRIBUTE_NAME_EXISTS = UPDATE
+ArtistRating.NODE_WITH_SAME_ATTRIBUTE_VALUE_EXISTS = UPDATE
+ArtistRating.NODE_WITH_SAME_CONTENT_EXISTS = DO_NOTHING
+ArtistRating.SAME_NODE_EXISTS = DO_NOTHING
+
+#--------------------------------------
+#	ArtistCredits
+#--------------------------------------
 ArtistCreditIds.A_EMPTY_NODE_EXISTS = UPDATE
 ArtistCreditIds.NO_EMPTY_NODE_EXISTS = ADD
 ArtistCreditIds.NODE_WITH_SAME_ATTRIBUTE_NAME_EXISTS = ADD
 ArtistCreditIds.NODE_WITH_SAME_ATTRIBUTE_VALUE_EXISTS = UPDATE
 ArtistCreditIds.NODE_WITH_SAME_CONTENT_EXISTS = UPDATE
 ArtistCreditIds.SAME_NODE_EXISTS = DO_NOTHING
-ArtistCreditName.xpathAbsolute = /metadata/artist/relation-list[@target-type='artist']/relation[@type='member of band' or @type='instrumental supporting musician']/target[text() = '_acid_']/../artist[@id = '_acid_']/name/text()
-ArtistCreditName.subType = text
-ArtistCreditSortName.xpathAbsolute = /metadata/artist/relation-list[@target-type='artist']/relation[@type='member of band' or @type='instrumental supporting musician']/target[text() = '_acid_']/../artist[@id = '_acid_']/sort-name/text()
-ArtistCreditSortName.subType = text
+
 ArtistCreditName.A_EMPTY_NODE_EXISTS = UPDATE
 ArtistCreditName.NO_EMPTY_NODE_EXISTS = ADD
 ArtistCreditName.NODE_WITH_SAME_ATTRIBUTE_NAME_EXISTS = ADD
 ArtistCreditName.NODE_WITH_SAME_ATTRIBUTE_VALUE_EXISTS = DO_NOTHING
 ArtistCreditName.NODE_WITH_SAME_CONTENT_EXISTS = DO_NOTHING
 ArtistCreditName.SAME_NODE_EXISTS = DO_NOTHING
-ArtistCreditType.xpathAbsolute = /metadata/artist/relation-list[@target-type='artist']/relation[@type='member of band' or @type='instrumental supporting musician']/target[text() = '_acid_']/../@type
-ArtistCreditType.subType = text
-ArtistCreditAttributes.xpathAbsolute = /metadata/artist/relation-list[@target-type='artist']/relation[@type='member of band' or @type='instrumental supporting musician']/target[text() = '_acid_']/../attribute-list/attribute/text()
-ArtistCreditAttributes.subType = text
-ArtistCreditPeriods.xpathAbsolute = /metadata/artist/relation-list[@target-type='artist']/relation[@type='member of band' or @type='instrumental supporting musician']/target[text() = '_acid_']/..
-ArtistCreditPeriods.subType = node
-ArtistCreditPeriods.childNodeNames = begin,end
+
 ArtistCreditPeriods.A_EMPTY_NODE_EXISTS = UPDATE
 ArtistCreditPeriods.NO_EMPTY_NODE_EXISTS = ADD
 ArtistCreditPeriods.NODE_WITH_SAME_ATTRIBUTE_NAME_EXISTS = ADD
@@ -151,24 +255,164 @@ ArtistCreditRole.NODE_WITH_SAME_ATTRIBUTE_VALUE_EXISTS = ADD
 ArtistCreditRole.NODE_WITH_SAME_CONTENT_EXISTS = UPDATE
 ArtistCreditRole.SAME_NODE_EXISTS = DO_NOTHING
 
-ArtistTags.xpathAbsolute = /metadata/artist/tag-list/tag[@count > 0]/name/text()
-ArtistTags.subType = text
-ArtistTagsCount.xpathAbsolute = /metadata/artist/tag-list/tag[@count > 0]/name[text() = '_tag_']/../@count
-ArtistTagsCount.subType = text
-ArtistTags.A_EMPTY_NODE_EXISTS = UPDATE
-ArtistTags.NO_EMPTY_NODE_EXISTS = ADD
-ArtistTags.NODE_WITH_SAME_ATTRIBUTE_NAME_EXISTS = ADD
-ArtistTags.NODE_WITH_SAME_ATTRIBUTE_VALUE_EXISTS = ADD
-ArtistTags.NODE_WITH_SAME_CONTENT_EXISTS = UPDATE
-ArtistTags.SAME_NODE_EXISTS = DO_NOTHING
+#--------------------------------------
+#	ArtistDisambiguation
+#--------------------------------------
+ArtistDisambiguation.A_EMPTY_NODE_EXISTS = UPDATE
+ArtistDisambiguation.NO_EMPTY_NODE_EXISTS = ADD
+ArtistDisambiguation.NODE_WITH_SAME_ATTRIBUTE_NAME_EXISTS = ADD
+ArtistDisambiguation.NODE_WITH_SAME_ATTRIBUTE_VALUE_EXISTS = UPDATE
+ArtistDisambiguation.NODE_WITH_SAME_CONTENT_EXISTS = DO_NOTHING
+ArtistDisambiguation.SAME_NODE_EXISTS = DO_NOTHING
 
-ArtistRating.xpathAbsolute = /metadata/artist/rating/text()
-ArtistRating.subType = text
-ArtistRatingVotesCount.xpathAbsolute = /metadata/artist/rating/@votes-count
-ArtistRatingVotesCount.subType = text
-ArtistRating.A_EMPTY_NODE_EXISTS = UPDATE
-ArtistRating.NO_EMPTY_NODE_EXISTS = ADD
-ArtistRating.NODE_WITH_SAME_ATTRIBUTE_NAME_EXISTS = UPDATE
-ArtistRating.NODE_WITH_SAME_ATTRIBUTE_VALUE_EXISTS = UPDATE
-ArtistRating.NODE_WITH_SAME_CONTENT_EXISTS = DO_NOTHING
-ArtistRating.SAME_NODE_EXISTS = DO_NOTHING
+#--------------------------------------
+#	ArtistAnnotation
+#--------------------------------------
+ArtistAnnotation.A_EMPTY_NODE_EXISTS = UPDATE
+ArtistAnnotation.NO_EMPTY_NODE_EXISTS = ADD
+ArtistAnnotation.NODE_WITH_SAME_ATTRIBUTE_NAME_EXISTS = ADD
+ArtistAnnotation.NODE_WITH_SAME_ATTRIBUTE_VALUE_EXISTS = ADD
+ArtistAnnotation.NODE_WITH_SAME_CONTENT_EXISTS = DO_NOTHING
+ArtistAnnotation.SAME_NODE_EXISTS = DO_NOTHING
+
+
+
+###################################################################################################
+#
+#	COPY RULES - RELEASEGROUP
+#
+###################################################################################################
+#--------------------------------------
+#	ReleaseGroupUniqueId
+#--------------------------------------
+ReleaseGroupId.A_EMPTY_NODE_EXISTS = UPDATE
+ReleaseGroupId.NO_EMPTY_NODE_EXISTS = ADD
+ReleaseGroupId.NODE_WITH_SAME_ATTRIBUTE_NAME_EXISTS = ADD
+ReleaseGroupId.NODE_WITH_SAME_ATTRIBUTE_VALUE_EXISTS = UPDATE
+ReleaseGroupId.NODE_WITH_SAME_CONTENT_EXISTS = DO_NOTHING
+ReleaseGroupId.SAME_NODE_EXISTS = DO_NOTHING
+
+ReleaseGroupIdUnId.A_EMPTY_NODE_EXISTS = UPDATE
+ReleaseGroupIdUnId.NO_EMPTY_NODE_EXISTS = UPDATE
+ReleaseGroupIdUnId.NODE_WITH_SAME_ATTRIBUTE_NAME_EXISTS = DO_NOTHING
+ReleaseGroupIdUnId.NODE_WITH_SAME_ATTRIBUTE_VALUE_EXISTS = DO_NOTHING
+ReleaseGroupIdUnId.NODE_WITH_SAME_CONTENT_EXISTS = DO_NOTHING
+ReleaseGroupIdUnId.SAME_NODE_EXISTS = DO_NOTHING
+
+#--------------------------------------
+#	ReleaseGroupName/ReleaseGroupAlias
+#--------------------------------------
+ReleaseGroupName.A_EMPTY_NODE_EXISTS = UPDATE
+ReleaseGroupName.NO_EMPTY_NODE_EXISTS = ADD
+ReleaseGroupName.NODE_WITH_SAME_ATTRIBUTE_NAME_EXISTS = ADD
+ReleaseGroupName.NODE_WITH_SAME_ATTRIBUTE_VALUE_EXISTS = DO_NOTHING
+ReleaseGroupName.NODE_WITH_SAME_CONTENT_EXISTS = DO_NOTHING
+ReleaseGroupName.SAME_NODE_EXISTS = DO_NOTHING
+
+ReleaseGroupAlias.A_EMPTY_NODE_EXISTS = UPDATE
+ReleaseGroupAlias.NO_EMPTY_NODE_EXISTS = ADD
+ReleaseGroupAlias.NODE_WITH_SAME_ATTRIBUTE_NAME_EXISTS = ADD
+ReleaseGroupAlias.NODE_WITH_SAME_ATTRIBUTE_VALUE_EXISTS = ADD
+ReleaseGroupAlias.NODE_WITH_SAME_CONTENT_EXISTS = ADD
+ReleaseGroupAlias.SAME_NODE_EXISTS = DO_NOTHING
+
+#--------------------------------------
+#	ReleaseGroupType
+#--------------------------------------
+ReleaseGroupType.A_EMPTY_NODE_EXISTS = UPDATE
+ReleaseGroupType.NO_EMPTY_NODE_EXISTS = ADD
+ReleaseGroupType.NODE_WITH_SAME_ATTRIBUTE_NAME_EXISTS = ADD
+ReleaseGroupType.NODE_WITH_SAME_ATTRIBUTE_VALUE_EXISTS = ADD
+ReleaseGroupType.NODE_WITH_SAME_CONTENT_EXISTS = DO_NOTHING
+ReleaseGroupType.SAME_NODE_EXISTS = DO_NOTHING
+
+#--------------------------------------
+#	ReleaseGroupDate
+#--------------------------------------
+ReleaseGroupDate.A_EMPTY_NODE_EXISTS = UPDATE
+ReleaseGroupDate.NO_EMPTY_NODE_EXISTS = ADD
+ReleaseGroupDate.NODE_WITH_SAME_ATTRIBUTE_NAME_EXISTS = UPDATE
+ReleaseGroupDate.NODE_WITH_SAME_ATTRIBUTE_VALUE_EXISTS = UPDATE
+ReleaseGroupDate.NODE_WITH_SAME_CONTENT_EXISTS = UPDATE
+ReleaseGroupDate.SAME_NODE_EXISTS = DO_NOTHING
+
+#--------------------------------------
+#	ReleaseGroupTags
+#--------------------------------------
+ReleaseGroupTags.A_EMPTY_NODE_EXISTS = UPDATE
+ReleaseGroupTags.NO_EMPTY_NODE_EXISTS = ADD
+ReleaseGroupTags.NODE_WITH_SAME_ATTRIBUTE_NAME_EXISTS = ADD
+ReleaseGroupTags.NODE_WITH_SAME_ATTRIBUTE_VALUE_EXISTS = ADD
+ReleaseGroupTags.NODE_WITH_SAME_CONTENT_EXISTS = UPDATE
+ReleaseGroupTags.SAME_NODE_EXISTS = DO_NOTHING
+
+#--------------------------------------
+#	ReleaseGroupRating
+#--------------------------------------
+ReleaseGroupRating.A_EMPTY_NODE_EXISTS = UPDATE
+ReleaseGroupRating.NO_EMPTY_NODE_EXISTS = ADD
+ReleaseGroupRating.NODE_WITH_SAME_ATTRIBUTE_NAME_EXISTS = UPDATE
+ReleaseGroupRating.NODE_WITH_SAME_ATTRIBUTE_VALUE_EXISTS = UPDATE
+ReleaseGroupRating.NODE_WITH_SAME_CONTENT_EXISTS = DO_NOTHING
+ReleaseGroupRating.SAME_NODE_EXISTS = DO_NOTHING
+
+#--------------------------------------
+#	ReleaseGroupRating
+#--------------------------------------
+ReleaseGroupUrl.A_EMPTY_NODE_EXISTS = UPDATE
+ReleaseGroupUrl.NO_EMPTY_NODE_EXISTS = ADD
+ReleaseGroupUrl.NODE_WITH_SAME_ATTRIBUTE_NAME_EXISTS = ADD
+ReleaseGroupUrl.NODE_WITH_SAME_ATTRIBUTE_VALUE_EXISTS = ADD
+ReleaseGroupUrl.NODE_WITH_SAME_CONTENT_EXISTS = UPDATE
+ReleaseGroupUrl.SAME_NODE_EXISTS = DO_NOTHING
+
+#--------------------------------------
+#	ReleaseGroupArtistCredits
+#--------------------------------------
+ReleaseGroupCreditIds.A_EMPTY_NODE_EXISTS = UPDATE
+ReleaseGroupCreditIds.NO_EMPTY_NODE_EXISTS = ADD
+ReleaseGroupCreditIds.NODE_WITH_SAME_ATTRIBUTE_NAME_EXISTS = ADD
+ReleaseGroupCreditIds.NODE_WITH_SAME_ATTRIBUTE_VALUE_EXISTS = UPDATE
+ReleaseGroupCreditIds.NODE_WITH_SAME_CONTENT_EXISTS = UPDATE
+ReleaseGroupCreditIds.SAME_NODE_EXISTS = DO_NOTHING
+
+ReleaseGroupCreditName.A_EMPTY_NODE_EXISTS = UPDATE
+ReleaseGroupCreditName.NO_EMPTY_NODE_EXISTS = ADD
+ReleaseGroupCreditName.NODE_WITH_SAME_ATTRIBUTE_NAME_EXISTS = ADD
+ReleaseGroupCreditName.NODE_WITH_SAME_ATTRIBUTE_VALUE_EXISTS = DO_NOTHING
+ReleaseGroupCreditName.NODE_WITH_SAME_CONTENT_EXISTS = DO_NOTHING
+ReleaseGroupCreditName.SAME_NODE_EXISTS = DO_NOTHING
+
+ReleaseGroupCreditPeriods.A_EMPTY_NODE_EXISTS = UPDATE
+ReleaseGroupCreditPeriods.NO_EMPTY_NODE_EXISTS = ADD
+ReleaseGroupCreditPeriods.NODE_WITH_SAME_ATTRIBUTE_NAME_EXISTS = ADD
+ReleaseGroupCreditPeriods.NODE_WITH_SAME_ATTRIBUTE_VALUE_EXISTS = ADD
+ReleaseGroupCreditPeriods.NODE_WITH_SAME_CONTENT_EXISTS = ADD
+ReleaseGroupCreditPeriods.SAME_NODE_EXISTS = DO_NOTHING
+
+ReleaseGroupCreditRole.A_EMPTY_NODE_EXISTS = UPDATE
+ReleaseGroupCreditRole.NO_EMPTY_NODE_EXISTS = ADD
+ReleaseGroupCreditRole.NODE_WITH_SAME_ATTRIBUTE_NAME_EXISTS = ADD
+ReleaseGroupCreditRole.NODE_WITH_SAME_ATTRIBUTE_VALUE_EXISTS = ADD
+ReleaseGroupCreditRole.NODE_WITH_SAME_CONTENT_EXISTS = UPDATE
+ReleaseGroupCreditRole.SAME_NODE_EXISTS = DO_NOTHING
+
+#--------------------------------------
+#	ReleaseGroupDisambiguation
+#--------------------------------------
+ReleaseGroupDisambiguation.A_EMPTY_NODE_EXISTS = UPDATE
+ReleaseGroupDisambiguation.NO_EMPTY_NODE_EXISTS = ADD
+ReleaseGroupDisambiguation.NODE_WITH_SAME_ATTRIBUTE_NAME_EXISTS = ADD
+ReleaseGroupDisambiguation.NODE_WITH_SAME_ATTRIBUTE_VALUE_EXISTS = UPDATE
+ReleaseGroupDisambiguation.NODE_WITH_SAME_CONTENT_EXISTS = DO_NOTHING
+ReleaseGroupDisambiguation.SAME_NODE_EXISTS = DO_NOTHING
+
+#--------------------------------------
+#	ReleaseGroupAnnotation
+#--------------------------------------
+ReleaseGroupAnnotation.A_EMPTY_NODE_EXISTS = UPDATE
+ReleaseGroupAnnotation.NO_EMPTY_NODE_EXISTS = ADD
+ReleaseGroupAnnotation.NODE_WITH_SAME_ATTRIBUTE_NAME_EXISTS = ADD
+ReleaseGroupAnnotation.NODE_WITH_SAME_ATTRIBUTE_VALUE_EXISTS = ADD
+ReleaseGroupAnnotation.NODE_WITH_SAME_CONTENT_EXISTS = DO_NOTHING
+ReleaseGroupAnnotation.SAME_NODE_EXISTS = DO_NOTHING

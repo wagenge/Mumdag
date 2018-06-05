@@ -1,0 +1,599 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Artist mbid="cb67438a-7f50-4f2b-a6f1-2bb2729fd538" path="./src/test/resources/LocalMusicScraperTest/_fileInput/A/Air/">
+	<UniqueIdList>
+		<UniqueId mbid="cb67438a-7f50-4f2b-a6f1-2bb2729fd538" source="MusicBrainz">
+			<SourceUrl>https://musicbrainz.org/artist/cb67438a-7f50-4f2b-a6f1-2bb2729fd538</SourceUrl>
+			<SourceWSUrl>https://musicbrainz.org/ws/2/artist/cb67438a-7f50-4f2b-a6f1-2bb2729fd538?inc=aliases+tags+annotation+ratings+artist-rels+url-rels</SourceWSUrl>
+			<Value>cb67438a-7f50-4f2b-a6f1-2bb2729fd538</Value>
+		</UniqueId>
+	</UniqueIdList>
+	<NameList/>
+	<TypeList/>
+	<PlaceList/>
+	<DateList/>
+	<DescriptionList/>
+	<TagList/>
+	<UrlList/>
+	<RatingList/>
+	<CreditList/>
+	<ArtList/>
+	<DisambiguationList/>
+	<AnnotationList/>
+	<Discography>
+		<ReleaseGroupList>
+			<ReleaseGroup mbid="809df41b-b9b4-32e7-822b-cc5bbaad929e" path="./src/test/resources/LocalMusicScraperTest/_fileInput/A/Air/1997 - Premiers Symptômes/">
+				<UniqueIdList>
+					<UniqueId mbid="809df41b-b9b4-32e7-822b-cc5bbaad929e" source="MusicBrainz">
+						<SourceUrl>https://musicbrainz.org/release-group/809df41b-b9b4-32e7-822b-cc5bbaad929e</SourceUrl>
+						<SourceWSUrl>https://musicbrainz.org/ws/2/release-group/809df41b-b9b4-32e7-822b-cc5bbaad929e?inc=aliases+tags+annotation+ratings+artist-rels+release-group-rels+series-rels+url-rels</SourceWSUrl>
+						<Value>809df41b-b9b4-32e7-822b-cc5bbaad929e</Value>
+					</UniqueId>
+				</UniqueIdList>
+				<NameList/>
+				<TypeList/>
+				<DateList/>
+				<AwardList/>
+				<ChartList/>
+				<DescriptionList/>
+				<TagList/>
+				<UrlList/>
+				<RatingList/>
+				<CreditList/>
+				<ArtList/>
+				<DisambiguationList/>
+				<AnnotationList/>
+				<ReleaseList>
+					<Release mbid="45b729bb-21ea-31b0-a1ad-71946b723627" path="./src/test/resources/LocalMusicScraperTest/_fileInput/A/Air/1997 - Premiers Symptômes/">
+						<UniqueIdList>
+							<UniqueId mbid="45b729bb-21ea-31b0-a1ad-71946b723627" source="MusicBrainz">
+								<SourceUrl>https://musicbrainz.org/release/45b729bb-21ea-31b0-a1ad-71946b723627</SourceUrl>
+								<SourceWSUrl>https://musicbrainz.org/ws/2/release/45b729bb-21ea-31b0-a1ad-71946b723627?inc=labels+aliases+tags+annotation+media+discids+artist-rels+release-rels+label-rels+area-rels+place-rels+url-rels+event-rels</SourceWSUrl>
+								<Value>45b729bb-21ea-31b0-a1ad-71946b723627</Value>
+							</UniqueId>
+						</UniqueIdList>
+						<NameList/>
+						<TypeList/>
+						<DateList/>
+						<PlaceList/>
+						<LabelList/>
+						<LengthList/>
+						<DescriptionList/>
+						<CopyrightList/>
+						<TagList/>
+						<UrlList/>
+						<CreditList/>			
+						<ArtList/>
+						<DisambiguationList/>
+						<AnnotationList/>
+						<MediumList>
+							<Medium discNo="1" discTotal="1" path="./src/test/resources/LocalMusicScraperTest/_fileInput/A/Air/1997 - Premiers Symptômes/">
+								<UniqueIdList/>
+								<NameList/>
+								<TypeList/>
+								<LengthList/>
+								<TrackList>
+									<Track mbid="6115ac6f-d29a-4ae2-ac58-6fac6eb71f68" path="./src/test/resources/LocalMusicScraperTest/_fileInput/A/Air/1997 - Premiers Symptômes/01 - Modular Mix.mp3" trackNo="01" trackPos="1">
+										<UniqueIdList>
+											<UniqueId mbid="6115ac6f-d29a-4ae2-ac58-6fac6eb71f68" source="MusicBrainz">
+												<SourceUrl>https://musicbrainz.org/recording/6115ac6f-d29a-4ae2-ac58-6fac6eb71f68</SourceUrl>
+												<SourceWSUrl>https://musicbrainz.org/ws/2/recording/6115ac6f-d29a-4ae2-ac58-6fac6eb71f68?inc=aliases+annotation+tags+ratings+isrcs+artist-rels+work-rels+place-rels+label-rels+url-rels</SourceWSUrl>
+												<Value>6115ac6f-d29a-4ae2-ac58-6fac6eb71f68</Value>
+											</UniqueId>
+										</UniqueIdList>
+										<NameList/>
+										<TypeList/>
+										<DateList/>
+										<PlaceList/>
+										<FileInfo>
+											<AbsolutePath>./src/test/resources/LocalMusicScraperTest/_fileInput/A/Air/1997 - Premiers Symptômes/01 - Modular Mix.mp3</AbsolutePath>
+											<RelativePath>./1997 - Premiers Symptômes/01 - Modular Mix.mp3</RelativePath>
+											<Name>01 - Modular Mix.mp3</Name>
+											<Extension>mp3</Extension>
+											<Size>10087183</Size>
+										</FileInfo>
+										<AudioInfo>
+											<Emphasis source="MP3AudioHeader">None</Emphasis>
+											<MpegVersion source="MP3AudioHeader">MPEG-1</MpegVersion>
+											<MpegLayer source="MP3AudioHeader">Layer 3</MpegLayer>
+											<BitRate lossless="false" source="MP3AudioHeader" variable="true">~217</BitRate>
+											<IntellectualProperty copyright="false" original="true"/>
+											<EncodingType source="MP3AudioHeader">mp3</EncodingType>
+											<LengthList>
+												<Length source="MP3AudioHeader" type="ms">361927</Length>
+												<Length source="MP3AudioHeader" type="ss">361</Length>
+												<Length pattern="hh:mm:ss" source="MP3AudioHeader" type="hhmmss">00:06:01</Length>
+											</LengthList>
+											<BitsPerSample source="MP3AudioHeader">16</BitsPerSample>
+											<Channels source="MP3AudioHeader">Joint Stereo</Channels>
+											<SampleRate source="MP3AudioHeader">44100</SampleRate>
+											<Encoder source="MP3AudioHeader">LAME3.96r</Encoder>
+										</AudioInfo>
+										<Position number="01">1</Position>
+										<LabelList/>
+										<DescriptionList/>
+										<LyricsList/>
+										<CopyrightList/>
+										<CopyrightCollectiveList/>
+										<TagList>
+											<Tag fieldName="TPE1" source="ID3Tag" tagName="ARTIST">Air</Tag>
+											<Tag fieldName="TCON" source="ID3Tag" tagName="GENRE">Ambient</Tag>
+											<Tag fieldName="TCON" source="ID3Tag" tagName="GENRE">Downtempo</Tag>
+											<Tag fieldName="TCON" source="ID3Tag" tagName="GENRE">Lounge</Tag>
+											<Tag fieldName="TCON" source="ID3Tag" tagName="GENRE">Instrumental</Tag>
+										</TagList>
+										<RatingList/>
+										<UrlList/>
+										<CreditList/>
+										<DisambiguationList/>
+										<AnnotationList/>
+									</Track>
+									<Track>
+										<UniqueIdList/>
+										<NameList/>
+										<TypeList/>
+										<DateList/>
+										<PlaceList/>
+										<FileInfo/>
+										<AudioInfo/>
+										<Position/>
+										<LabelList/>
+										<DescriptionList/>
+										<LyricsList/>
+										<CopyrightList/>
+										<CopyrightCollectiveList/>
+										<TagList/>
+										<RatingList/>
+										<UrlList/>
+										<CreditList/>
+										<DisambiguationList/>
+										<AnnotationList/>
+									</Track>
+									<Track>
+										<UniqueIdList/>
+										<NameList/>
+										<TypeList/>
+										<DateList/>
+										<PlaceList/>
+										<FileInfo/>
+										<AudioInfo/>
+										<Position/>
+										<LabelList/>
+										<DescriptionList/>
+										<LyricsList/>
+										<CopyrightList/>
+										<CopyrightCollectiveList/>
+										<TagList/>
+										<RatingList/>
+										<UrlList/>
+										<CreditList/>
+										<DisambiguationList/>
+										<AnnotationList/>
+									</Track>
+									<Track>
+										<UniqueIdList/>
+										<NameList/>
+										<TypeList/>
+										<DateList/>
+										<PlaceList/>
+										<FileInfo/>
+										<AudioInfo/>
+										<Position/>
+										<LabelList/>
+										<DescriptionList/>
+										<LyricsList/>
+										<CopyrightList/>
+										<CopyrightCollectiveList/>
+										<TagList/>
+										<RatingList/>
+										<UrlList/>
+										<CreditList/>
+										<DisambiguationList/>
+										<AnnotationList/>
+									</Track>
+									<Track>
+										<UniqueIdList/>
+										<NameList/>
+										<TypeList/>
+										<DateList/>
+										<PlaceList/>
+										<FileInfo/>
+										<AudioInfo/>
+										<Position/>
+										<LabelList/>
+										<DescriptionList/>
+										<LyricsList/>
+										<CopyrightList/>
+										<CopyrightCollectiveList/>
+										<TagList/>
+										<RatingList/>
+										<UrlList/>
+										<CreditList/>
+										<DisambiguationList/>
+										<AnnotationList/>
+									</Track>
+									<Track>
+										<UniqueIdList/>
+										<NameList/>
+										<TypeList/>
+										<DateList/>
+										<PlaceList/>
+										<FileInfo/>
+										<AudioInfo/>
+										<Position/>
+										<LabelList/>
+										<DescriptionList/>
+										<LyricsList/>
+										<CopyrightList/>
+										<CopyrightCollectiveList/>
+										<TagList/>
+										<RatingList/>
+										<UrlList/>
+										<CreditList/>
+										<DisambiguationList/>
+										<AnnotationList/>
+									</Track>
+									<Track>
+										<UniqueIdList/>
+										<NameList/>
+										<TypeList/>
+										<DateList/>
+										<PlaceList/>
+										<FileInfo/>
+										<AudioInfo/>
+										<Position/>
+										<LabelList/>
+										<DescriptionList/>
+										<LyricsList/>
+										<CopyrightList/>
+										<CopyrightCollectiveList/>
+										<TagList/>
+										<RatingList/>
+										<UrlList/>
+										<CreditList/>
+										<DisambiguationList/>
+										<AnnotationList/>
+									</Track>
+								</TrackList>
+							</Medium>
+						</MediumList>
+					</Release>
+				</ReleaseList>
+			</ReleaseGroup>
+			<ReleaseGroup path="./src/test/resources/LocalMusicScraperTest/_fileInput/A/Air/1998 - Moon Safari/">
+				<UniqueIdList/>
+				<NameList/>
+				<TypeList/>
+				<DateList/>
+				<AwardList/>
+				<ChartList/>
+				<DescriptionList/>
+				<TagList/>
+				<UrlList/>
+				<RatingList/>
+				<CreditList/>
+				<ArtList/>
+				<DisambiguationList/>
+				<AnnotationList/>
+				<ReleaseList>
+					<Release mbid="4d172642-ca71-38c7-aa95-5a498dd5b8fb" path="./src/test/resources/LocalMusicScraperTest/_fileInput/A/Air/1998 - Moon Safari/">
+						<UniqueIdList>
+							<UniqueId mbid="4d172642-ca71-38c7-aa95-5a498dd5b8fb" source="MusicBrainz">
+								<SourceUrl>https://musicbrainz.org/release/4d172642-ca71-38c7-aa95-5a498dd5b8fb</SourceUrl>
+								<SourceWSUrl>https://musicbrainz.org/ws/2/release/4d172642-ca71-38c7-aa95-5a498dd5b8fb?inc=labels+aliases+tags+annotation+media+discids+artist-rels+release-rels+label-rels+area-rels+place-rels+url-rels+event-rels</SourceWSUrl>
+								<Value>4d172642-ca71-38c7-aa95-5a498dd5b8fb</Value>
+							</UniqueId>
+						</UniqueIdList>
+						<NameList/>
+						<TypeList/>
+						<DateList/>
+						<PlaceList/>
+						<LabelList/>
+						<LengthList/>
+						<DescriptionList/>
+						<CopyrightList/>
+						<TagList/>
+						<UrlList/>
+						<CreditList/>			
+						<ArtList/>
+						<DisambiguationList/>
+						<AnnotationList/>
+						<MediumList>
+							<Medium discNo="1" discTotal="1" path="./src/test/resources/LocalMusicScraperTest/_fileInput/A/Air/1998 - Moon Safari/">
+								<UniqueIdList/>
+								<NameList/>
+								<TypeList/>
+								<LengthList/>
+								<TrackList>
+									<Track mbid="864c7424-c9ab-481e-a9c0-ad986e646c67" path="./src/test/resources/LocalMusicScraperTest/_fileInput/A/Air/1998 - Moon Safari/01 - La Femme d'argent.mp3" trackNo="01" trackPos="1">
+										<UniqueIdList>
+											<UniqueId mbid="864c7424-c9ab-481e-a9c0-ad986e646c67" source="MusicBrainz">
+												<SourceUrl>https://musicbrainz.org/recording/864c7424-c9ab-481e-a9c0-ad986e646c67</SourceUrl>
+												<SourceWSUrl>https://musicbrainz.org/ws/2/recording/864c7424-c9ab-481e-a9c0-ad986e646c67?inc=aliases+annotation+tags+ratings+isrcs+artist-rels+work-rels+place-rels+label-rels+url-rels</SourceWSUrl>
+												<Value>864c7424-c9ab-481e-a9c0-ad986e646c67</Value>
+											</UniqueId>
+										</UniqueIdList>
+										<NameList/>
+										<TypeList/>
+										<DateList/>
+										<PlaceList/>
+										<FileInfo>
+											<AbsolutePath>./src/test/resources/LocalMusicScraperTest/_fileInput/A/Air/1998 - Moon Safari/01 - La Femme d'argent.mp3</AbsolutePath>
+											<RelativePath>./1998 - Moon Safari/01 - La Femme d'argent.mp3</RelativePath>
+											<Name>01 - La Femme d'argent.mp3</Name>
+											<Extension>mp3</Extension>
+											<Size>14099680</Size>
+										</FileInfo>
+										<AudioInfo>
+											<Emphasis source="MP3AudioHeader">None</Emphasis>
+											<MpegVersion source="MP3AudioHeader">MPEG-1</MpegVersion>
+											<MpegLayer source="MP3AudioHeader">Layer 3</MpegLayer>
+											<BitRate lossless="false" source="MP3AudioHeader" variable="true">~258</BitRate>
+											<IntellectualProperty copyright="false" original="true"/>
+											<EncodingType source="MP3AudioHeader">mp3</EncodingType>
+											<LengthList>
+												<Length source="MP3AudioHeader" type="ms">427964</Length>
+												<Length source="MP3AudioHeader" type="ss">427</Length>
+												<Length pattern="hh:mm:ss" source="MP3AudioHeader" type="hhmmss">00:07:07</Length>
+											</LengthList>
+											<BitsPerSample source="MP3AudioHeader">16</BitsPerSample>
+											<Channels source="MP3AudioHeader">Joint Stereo</Channels>
+											<SampleRate source="MP3AudioHeader">44100</SampleRate>
+											<Encoder source="MP3AudioHeader">LAME3.96r</Encoder>
+										</AudioInfo>
+										<Position number="01">1</Position>
+										<LabelList/>
+										<DescriptionList/>
+										<LyricsList/>
+										<CopyrightList/>
+										<CopyrightCollectiveList/>
+										<TagList>
+											<Tag fieldName="TRCK" source="ID3Tag" tagName="TRACK">10</Tag>
+											<Tag fieldName="UFID:http://musicbrainz.org" source="ID3Tag" tagName="MUSICBRAINZ_TRACK_ID">864c7424-c9ab-481e-a9c0-ad986e646c67</Tag>
+											<Tag fieldName="TALB" source="ID3Tag" tagName="ALBUM">Moon Safari</Tag>
+											<Tag fieldName="TDRC" source="ID3Tag" tagName="YEAR">1998-01-20</Tag>
+											<Tag fieldName="TSOP" source="ID3Tag" tagName="ARTIST_SORT">Air</Tag>
+											<Tag fieldName="TPOS" source="ID3Tag" tagName="DISC_NO">1</Tag>
+											<Tag fieldName="TXXX:MusicBrainz Album Type" source="ID3Tag" tagName="MUSICBRAINZ_RELEASE_TYPE">album</Tag>
+											<Tag fieldName="COMM:Songs-DB_Custom3" source="ID3Tag" tagName="CUSTOM3">Unknown</Tag>
+											<Tag fieldName="TXXX:MusicBrainz Album Release Country" source="ID3Tag" tagName="MUSICBRAINZ_RELEASE_COUNTRY">US</Tag>
+											<Tag fieldName="COMM:Songs-DB_Custom4" source="ID3Tag" tagName="CUSTOM4">French</Tag>
+											<Tag fieldName="COMM:Songs-DB_Custom1" source="ID3Tag" tagName="CUSTOM1">90s</Tag>
+											<Tag fieldName="COMM:Songs-DB_Custom2" source="ID3Tag" tagName="CUSTOM2">Beautiful</Tag>
+											<Tag fieldName="COMM:Songs-DB_Custom2" source="ID3Tag" tagName="CUSTOM2">Awesome</Tag>
+											<Tag fieldName="COMM:Songs-DB_Custom2" source="ID3Tag" tagName="CUSTOM2">Bass</Tag>
+											<Tag fieldName="COMM:Songs-DB_Custom2" source="ID3Tag" tagName="CUSTOM2">Loved</Tag>
+											<Tag fieldName="TXXX:MusicBrainz Release Track Id" source="ID3Tag" tagName="MUSICBRAINZ_RELEASE_TRACK_ID">84b16bd5-a01c-39fc-b338-2754d9c846a3</Tag>
+											<Tag fieldName="COMM" source="ID3Tag" tagName="COMMENT">90s</Tag>
+											<Tag fieldName="COMM" source="ID3Tag" tagName="COMMENT">French</Tag>
+											<Tag fieldName="COMM" source="ID3Tag" tagName="COMMENT">Unknown</Tag>
+											<Tag fieldName="COMM" source="ID3Tag" tagName="COMMENT">Chillout</Tag>
+											<Tag fieldName="COMM" source="ID3Tag" tagName="COMMENT">Beautiful</Tag>
+											<Tag fieldName="TSRC" source="ID3Tag" tagName="ISRC">FRS639700550</Tag>
+											<Tag fieldName="TXXX:MusicBrainz Release Group Id" source="ID3Tag" tagName="MUSICBRAINZ_RELEASE_GROUP_ID">b0bf2b77-b8cf-32f6-8893-9741d757b400</Tag>
+											<Tag fieldName="TXXX:MusicBrainz Album Artist Id" source="ID3Tag" tagName="MUSICBRAINZ_RELEASEARTISTID">cb67438a-7f50-4f2b-a6f1-2bb2729fd538</Tag>
+											<Tag fieldName="COMM:Songs-DB_Occasion" source="ID3Tag" tagName="OCCASION">Chillout</Tag>
+											<Tag fieldName="TSO2" source="ID3Tag" tagName="ALBUM_ARTIST_SORT">Air</Tag>
+											<Tag fieldName="TCON" source="ID3Tag" tagName="GENRE">Downtempo</Tag>
+											<Tag fieldName="TCON" source="ID3Tag" tagName="GENRE">Lounge</Tag>
+											<Tag fieldName="TCON" source="ID3Tag" tagName="GENRE">Instrumental</Tag>
+											<Tag fieldName="TPE2" source="ID3Tag" tagName="ALBUM_ARTIST">Air</Tag>
+											<Tag fieldName="TPUB" source="ID3Tag" tagName="RECORD_LABEL">Caroline Records</Tag>
+											<Tag fieldName="TPE1" source="ID3Tag" tagName="ARTIST">Air</Tag>
+											<Tag fieldName="TXXX:BARCODE" source="ID3Tag" tagName="BARCODE">017046664424</Tag>
+											<Tag fieldName="TXXX:CATALOGNUMBER" source="ID3Tag" tagName="CATALOG_NO">CAR 6644-2</Tag>
+											<Tag fieldName="TXXX:MusicBrainz Album Status" source="ID3Tag" tagName="MUSICBRAINZ_RELEASE_STATUS">official</Tag>
+											<Tag fieldName="TXXX:MusicBrainz Album Id" source="ID3Tag" tagName="MUSICBRAINZ_RELEASEID">4d172642-ca71-38c7-aa95-5a498dd5b8fb</Tag>
+											<Tag fieldName="TDOR" source="ID3Tag" tagName="ORIGINAL_YEAR">1998-01-16</Tag>
+											<Tag fieldName="TIT2" source="ID3Tag" tagName="TITLE">La Femme d'argent</Tag>
+											<Tag fieldName="TIT1" source="ID3Tag" tagName="GROUPING">Electronic</Tag>
+											<Tag fieldName="TXXX:ASIN" source="ID3Tag" tagName="AMAZON_ID">B000003S5H</Tag>
+											<Tag fieldName="TXXX:MusicBrainz Artist Id" source="ID3Tag" tagName="MUSICBRAINZ_ARTISTID">cb67438a-7f50-4f2b-a6f1-2bb2729fd538</Tag>
+											<Tag fieldName="TMOO" source="ID3Tag" tagName="MOOD">Chill</Tag>
+											<Tag fieldName="TMOO" source="ID3Tag" tagName="MOOD">Relaxed</Tag>
+											<Tag fieldName="TMOO" source="ID3Tag" tagName="MOOD">Mellow</Tag>
+											<Tag fieldName="TMED" source="ID3Tag" tagName="MEDIA">CD</Tag>
+										</TagList>
+										<RatingList/>
+										<UrlList/>
+										<CreditList/>
+										<DisambiguationList/>
+										<AnnotationList/>
+									</Track>
+									<Track>
+										<UniqueIdList/>
+										<NameList/>
+										<TypeList/>
+										<DateList/>
+										<PlaceList/>
+										<FileInfo/>
+										<AudioInfo/>
+										<Position/>
+										<LabelList/>
+										<DescriptionList/>
+										<LyricsList/>
+										<CopyrightList/>
+										<CopyrightCollectiveList/>
+										<TagList/>
+										<RatingList/>
+										<UrlList/>
+										<CreditList/>
+										<DisambiguationList/>
+										<AnnotationList/>
+									</Track>
+									<Track>
+										<UniqueIdList/>
+										<NameList/>
+										<TypeList/>
+										<DateList/>
+										<PlaceList/>
+										<FileInfo/>
+										<AudioInfo/>
+										<Position/>
+										<LabelList/>
+										<DescriptionList/>
+										<LyricsList/>
+										<CopyrightList/>
+										<CopyrightCollectiveList/>
+										<TagList/>
+										<RatingList/>
+										<UrlList/>
+										<CreditList/>
+										<DisambiguationList/>
+										<AnnotationList/>
+									</Track>
+									<Track>
+										<UniqueIdList/>
+										<NameList/>
+										<TypeList/>
+										<DateList/>
+										<PlaceList/>
+										<FileInfo/>
+										<AudioInfo/>
+										<Position/>
+										<LabelList/>
+										<DescriptionList/>
+										<LyricsList/>
+										<CopyrightList/>
+										<CopyrightCollectiveList/>
+										<TagList/>
+										<RatingList/>
+										<UrlList/>
+										<CreditList/>
+										<DisambiguationList/>
+										<AnnotationList/>
+									</Track>
+									<Track>
+										<UniqueIdList/>
+										<NameList/>
+										<TypeList/>
+										<DateList/>
+										<PlaceList/>
+										<FileInfo/>
+										<AudioInfo/>
+										<Position/>
+										<LabelList/>
+										<DescriptionList/>
+										<LyricsList/>
+										<CopyrightList/>
+										<CopyrightCollectiveList/>
+										<TagList/>
+										<RatingList/>
+										<UrlList/>
+										<CreditList/>
+										<DisambiguationList/>
+										<AnnotationList/>
+									</Track>
+									<Track>
+										<UniqueIdList/>
+										<NameList/>
+										<TypeList/>
+										<DateList/>
+										<PlaceList/>
+										<FileInfo/>
+										<AudioInfo/>
+										<Position/>
+										<LabelList/>
+										<DescriptionList/>
+										<LyricsList/>
+										<CopyrightList/>
+										<CopyrightCollectiveList/>
+										<TagList/>
+										<RatingList/>
+										<UrlList/>
+										<CreditList/>
+										<DisambiguationList/>
+										<AnnotationList/>
+									</Track>
+									<Track>
+										<UniqueIdList/>
+										<NameList/>
+										<TypeList/>
+										<DateList/>
+										<PlaceList/>
+										<FileInfo/>
+										<AudioInfo/>
+										<Position/>
+										<LabelList/>
+										<DescriptionList/>
+										<LyricsList/>
+										<CopyrightList/>
+										<CopyrightCollectiveList/>
+										<TagList/>
+										<RatingList/>
+										<UrlList/>
+										<CreditList/>
+										<DisambiguationList/>
+										<AnnotationList/>
+									</Track>
+									<Track>
+										<UniqueIdList/>
+										<NameList/>
+										<TypeList/>
+										<DateList/>
+										<PlaceList/>
+										<FileInfo/>
+										<AudioInfo/>
+										<Position/>
+										<LabelList/>
+										<DescriptionList/>
+										<LyricsList/>
+										<CopyrightList/>
+										<CopyrightCollectiveList/>
+										<TagList/>
+										<RatingList/>
+										<UrlList/>
+										<CreditList/>
+										<DisambiguationList/>
+										<AnnotationList/>
+									</Track>
+									<Track>
+										<UniqueIdList/>
+										<NameList/>
+										<TypeList/>
+										<DateList/>
+										<PlaceList/>
+										<FileInfo/>
+										<AudioInfo/>
+										<Position/>
+										<LabelList/>
+										<DescriptionList/>
+										<LyricsList/>
+										<CopyrightList/>
+										<CopyrightCollectiveList/>
+										<TagList/>
+										<RatingList/>
+										<UrlList/>
+										<CreditList/>
+										<DisambiguationList/>
+										<AnnotationList/>
+									</Track>
+									<Track>
+										<UniqueIdList/>
+										<NameList/>
+										<TypeList/>
+										<DateList/>
+										<PlaceList/>
+										<FileInfo/>
+										<AudioInfo/>
+										<Position/>
+										<LabelList/>
+										<DescriptionList/>
+										<LyricsList/>
+										<CopyrightList/>
+										<CopyrightCollectiveList/>
+										<TagList/>
+										<RatingList/>
+										<UrlList/>
+										<CreditList/>
+										<DisambiguationList/>
+										<AnnotationList/>
+									</Track>
+								</TrackList>
+							</Medium>
+						</MediumList>
+					</Release>
+				</ReleaseList>
+			</ReleaseGroup>
+		</ReleaseGroupList>
+	</Discography>
+</Artist>

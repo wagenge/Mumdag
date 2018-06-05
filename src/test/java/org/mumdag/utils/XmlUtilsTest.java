@@ -9,13 +9,11 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import org.testng.collections.Lists;
+import org.w3c.dom.Document;
 
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
+import java.util.*;
 
 import static org.assertj.core.api.Assertions.fail;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
@@ -37,7 +35,7 @@ private static Logger log = null;
 public void test_resolveXpathString_varargs_ok(String testDesc, String xpath, String paramStr, String expRes) {
     log.info("{} ... started", testDesc);
     String [] params = paramStr.split("\\|\\|");
-    String res = XmlUtils.resolveXpathString(xpath, params);
+    String res = XpathUtils.resolveXpathString(xpath, params);
     assertThat(res).isEqualTo(expRes);
     log.info("{} ... finished successfully!", testDesc);
 }
@@ -134,7 +132,7 @@ public void test_resolveXpathString_map_ok(String testDesc, String xpath, String
             }
         }
     }
-    String res = XmlUtils.resolveXpathString(xpath, resolveMap);
+    String res = XpathUtils.resolveXpathString(xpath, resolveMap);
     assertThat(res).isEqualTo(expRes);
     log.info("{} ... finished successfully!", testDesc);
 }
@@ -171,7 +169,7 @@ public Object[][] data_resolveXpathString_map2_ok() {
 @Test(dataProvider = "data_removePredicatesFromXpath_ok")
 public void test_removePredicatesFromXpath_ok(String testDesc, String xpath, String expRes) {
     log.info("{} ... started", testDesc);
-    String res = XmlUtils.removePredicatesFromXpath(xpath);
+    String res = XpathUtils.removePredicatesFromXpath(xpath);
     assertThat(res).isEqualTo(expRes);
     log.info("{} ... finished successfully!", testDesc);
 }
@@ -377,6 +375,65 @@ public Object[][] data_getNodeByXPath_ok() {
 }
 
 //-----------------------------------------------------------------------------
+@SuppressWarnings("unchecked")
+@Test(dataProvider = "data_getNodeContentByXPath_ok")
+public void test_getNodeContentByXPath_ok(String testDesc, String xmlFile, String xpath, List<String> expList) {
+    log.info("{} ... started", testDesc);
+    List<HashMap<String, Object>> resList = new ArrayList<>();
+    try {
+        String xmlStr = new String(Files.readAllBytes(Paths.get(xmlFile)));
+        resList = XmlUtils.getNodeContentByXPath(xmlStr, xpath);
+    }
+    catch (Exception ex) {
+        log.error("... failed");
+        fail("No exception expected. Maybe file '" + xmlFile + "' not found!\n" + "Error: " + ex.getMessage());
+    }
+    for(int i = 0; i < expList.size(); i++)    {
+        String expMapStr = expList.get(i);
+        HashMap<String, String> expMap = MapUtils.array2Map("::", expMapStr.split(","));
+        HashMap<String, Object> resMap = resList.get(i);
+        for(String key : expMap.keySet()) {
+            String expVal = expMap.get(key);
+            String resVal;
+            if(resMap.get(key) instanceof ArrayList) {
+                resVal = String.join("¦", (List<String>)resMap.get(key));
+            } else {
+                resVal = (String) resMap.get(key);
+            }
+            assertThat(resVal).isEqualTo(expVal);
+        }
+    }
+    log.info("{} ... finished successfully!", testDesc);
+}
+
+//-----------------------------------------------------------------------------
+
+//DOC:	nok
+@DataProvider
+public Object[][] data_getNodeContentByXPath_ok() {
+    return new Object[][] {
+            new Object[] {"01 - xml ok, xpath ok, child list ok, 2 nodes found",
+                    "./src/test/resources/XmlUtilsTest/getNodeContentByXPath/getNodeContentByXPath_ok-01-inp.xml",
+                    "/metadata/release-group/relation-list[@target-type='release_group']/relation[@type='mashes up' or @type='included in']",
+                    Arrays.asList("type-id::03786c2a-cd9d-4148-b3ea-35ea61de1283,id::5d9261c0-3ccf-3154-b331-ddde4c7b8ee0,type::mashes up,title::The Grey Album,first-release-date::2004-02,target::5d9261c0-3ccf-3154-b331-ddde4c7b8ee0,direction::backward",
+                            "type-id::589447ea-be2c-46cc-b9e9-469e1d06e18a,id::8a54edf1-1d51-40fd-8a08-01b3d0ddd874,type::included in,title::The Beatles Box Set,first-release-date::1988-11-15,target::8a54edf1-1d51-40fd-8a08-01b3d0ddd874")},
+            new Object[] {"02 - 6 nodes found, one list attribute",
+                    "./src/test/resources/XmlUtilsTest/getNodeContentByXPath/getNodeContentByXPath_ok-02-inp.xml",
+                    "/metadata/artist/relation-list[@target-type='artist']/relation[@type='member of band']",
+                    Arrays.asList("target::0d4ab0f9-bbda-4ab1-ae2c-f772ffcfbea9,name::Pete Best,attribute::drums",
+                            "target::300c4c73-33ac-4255-9d57-4e32627f5e13,name::Ringo Starr,attribute::drums",
+                            "target::42a8f507-8412-4611-854f-926571049fa0,name::George Harrison,attribute.list::guitar¦lead vocals¦original")},
+            new Object[] {"03 - 6 nodes found, one list attribute, one list type from nodes and attributes",
+                    "./src/test/resources/XmlUtilsTest/getNodeContentByXPath/getNodeContentByXPath_ok-03-inp.xml",
+                    "/metadata/artist/relation-list[@target-type='artist']/relation[@type='member of band']",
+                    Arrays.asList("target::0d4ab0f9-bbda-4ab1-ae2c-f772ffcfbea9,name::Pete Best,attribute::drums,type.list::member of band¦member of band2¦member of band3",
+                            "target::300c4c73-33ac-4255-9d57-4e32627f5e13,name::Ringo Starr,attribute::drums",
+                            "target::42a8f507-8412-4611-854f-926571049fa0,name::George Harrison,attribute.list::guitar¦lead vocals¦original")},
+
+    };
+}
+
+//-----------------------------------------------------------------------------
 
 @Test(dataProvider = "data_getNodeAttributeTextByXPath_ok")
 public void test_getNodeAttributeTextByXPath_ok(String testDesc, String xmlFile, String xpath, String attrName, String expRes) {
@@ -486,6 +543,107 @@ public Object[][] data_getNodeAttributeTextByXPath_ok() {
     };
 }
 
+
+
+//-----------------------------------------------------------------------------
+
+@Test(dataProvider = "data_getXpathsForMatchingNodes_ok")
+public void test_getXpathsForMatchingNodes_ok(String testDesc, String xmlFile, String xpath, String expRes) {
+    log.info("{} ... started", testDesc);
+    List<String> resList = new ArrayList<>();
+    try {
+        Document xmlDoc = XmlUtils.createXmlDoc(xmlFile);
+        resList = XmlUtils.getXpathsForMatchingNodes(xmlDoc, xpath);
+    }
+    catch (Exception ex) {
+        log.error("... failed");
+        fail("No exception expected. Maybe file '" + xmlFile + "' not found!\n" + "Error: " + ex.getMessage());
+    }
+
+    assertThat(resList.size()).isEqualTo(Integer.valueOf(expRes));
+    for(int i = 0; i < Integer.valueOf(expRes); i++) {
+        String resStr = resList.get(i);
+        assertThat(resStr).isEqualTo(xpath+'['+String.valueOf(i+1)+']');
+    }
+    log.info("{} ... finished successfully!", testDesc);
+}
+
+//-----------------------------------------------------------------------------
+
+//DOC:	nok
+@DataProvider
+public Object[][] data_getXpathsForMatchingNodes_ok() {
+    return new Object[][] {
+            new Object[] {"01 - found 4 occurences (nodes)",
+                    "./src/test/resources/XmlUtilsTest/getXpathsForMatchingNodes/getXpathsForMatchingNodes_ok-01-inp.xml",
+                    "//Track[@mbid='6115ac6f-d29a-4ae2-ac58-6fac6eb71f68']/TagList/Tag[@tagName='GENRE']",
+                    "4"},
+            new Object[] {"02 - found 4 occurences (elements) ... return list is empty",
+                    "./src/test/resources/XmlUtilsTest/getXpathsForMatchingNodes/getXpathsForMatchingNodes_ok-02-inp.xml",
+                    "//Track[@mbid='6115ac6f-d29a-4ae2-ac58-6fac6eb71f68']/TagList/Tag[@tagName='GENRE']/node()",
+                    "0"},
+            new Object[] {"03 - found 0 occurences (nodes)",
+                    "./src/test/resources/XmlUtilsTest/getXpathsForMatchingNodes/getXpathsForMatchingNodes_ok-03-inp.xml",
+                    "//Track[@mbid='6115ac6f-d29a-4ae2-ac58-6fac6eb71f68']/TagList/Tag[@tagName='GENRE_x']",
+                    "0"},
+    };
+}
+
+
+//-----------------------------------------------------------------------------
+
+@Test(dataProvider = "data_getXpathsForMatchingEmptyNodes_ok")
+public void test_getXpathsForMatchingEmptyNodes_ok(String testDesc, String xmlFile, String xpath, List<String> expResList) {
+    log.info("{} ... started", testDesc);
+    List<String> resList = new ArrayList<>();
+    try {
+        Document xmlDoc = XmlUtils.createXmlDoc(xmlFile);
+        resList = XmlUtils.getXpathsForMatchingEmptyNodes(xmlDoc, xpath);
+    }
+    catch (Exception ex) {
+        log.error("... failed");
+        fail("No exception expected. Maybe file '" + xmlFile + "' not found!\n" + "Error: " + ex.getMessage());
+    }
+
+    assertThat(resList).isEqualTo(expResList);
+    log.info("{} ... finished successfully!", testDesc);
+}
+
+//-----------------------------------------------------------------------------
+
+//DOC:	nok
+@DataProvider
+public Object[][] data_getXpathsForMatchingEmptyNodes_ok() {
+    return new Object[][] {
+            new Object[] {"01 - found 2 occurences, 1 empty node, 1 with attributes",
+                    "./src/test/resources/XmlUtilsTest/getXpathsForMatchingEmptyNodes/getXpathsForMatchingEmptyNodes_ok-01-inp.xml",
+                    "/Artist/Discography/ReleaseGroupList/ReleaseGroup/ArtistCreditList/ArtistCredits/UniqueIdList/UniqueId",
+                    Collections.singletonList("/Artist/Discography/ReleaseGroupList/ReleaseGroup/ArtistCreditList/ArtistCredits/UniqueIdList/UniqueId[2]")},
+            new Object[] {"02 - found 2 occurences, 1 empty node, 1 with text",
+                    "./src/test/resources/XmlUtilsTest/getXpathsForMatchingEmptyNodes/getXpathsForMatchingEmptyNodes_ok-02-inp.xml",
+                    "/Artist/Discography/ReleaseGroupList/ReleaseGroup/ArtistCreditList/ArtistCredits/UniqueIdList/UniqueId",
+                    Collections.singletonList("/Artist/Discography/ReleaseGroupList/ReleaseGroup/ArtistCreditList/ArtistCredits/UniqueIdList/UniqueId[2]")},
+            new Object[] {"03 - found 2 occurences, 2 empty nodes",
+                    "./src/test/resources/XmlUtilsTest/getXpathsForMatchingEmptyNodes/getXpathsForMatchingEmptyNodes_ok-03-inp.xml",
+                    "/Artist/Discography/ReleaseGroupList/ReleaseGroup/ArtistCreditList/ArtistCredits/UniqueIdList/UniqueId",
+                    Arrays.asList("/Artist/Discography/ReleaseGroupList/ReleaseGroup/ArtistCreditList/ArtistCredits/UniqueIdList/UniqueId[1]",
+                            "/Artist/Discography/ReleaseGroupList/ReleaseGroup/ArtistCreditList/ArtistCredits/UniqueIdList/UniqueId[2]")},
+            new Object[] {"04 - found 4 occurences, 2 empty nodes, 1 with attributes, 1 with text",
+                    "./src/test/resources/XmlUtilsTest/getXpathsForMatchingEmptyNodes/getXpathsForMatchingEmptyNodes_ok-04-inp.xml",
+                    "/Artist/Discography/ReleaseGroupList/ReleaseGroup/ArtistCreditList/ArtistCredits/UniqueIdList/UniqueId",
+                    Arrays.asList("/Artist/Discography/ReleaseGroupList/ReleaseGroup/ArtistCreditList/ArtistCredits/UniqueIdList/UniqueId[2]",
+                            "/Artist/Discography/ReleaseGroupList/ReleaseGroup/ArtistCreditList/ArtistCredits/UniqueIdList/UniqueId[3]")},
+            new Object[] {"05 - found 4 occurences, 2 empty nodes, 1 with attributes, 1 with text, 1 with blank text",
+                    "./src/test/resources/XmlUtilsTest/getXpathsForMatchingEmptyNodes/getXpathsForMatchingEmptyNodes_ok-05-inp.xml",
+                    "/Artist/Discography/ReleaseGroupList/ReleaseGroup/ArtistCreditList/ArtistCredits/UniqueIdList/UniqueId",
+                    Arrays.asList("/Artist/Discography/ReleaseGroupList/ReleaseGroup/ArtistCreditList/ArtistCredits/UniqueIdList/UniqueId[2]",
+                            "/Artist/Discography/ReleaseGroupList/ReleaseGroup/ArtistCreditList/ArtistCredits/UniqueIdList/UniqueId[3]")},
+            new Object[] {"06 - found 4 occurences, 0 empty nodes",
+                    "./src/test/resources/XmlUtilsTest/getXpathsForMatchingEmptyNodes/getXpathsForMatchingEmptyNodes_ok-06-inp.xml",
+                    "/Artist/Discography/ReleaseGroupList/ReleaseGroup/ArtistCreditList/ArtistCredits/UniqueIdList/UniqueId",
+                    new ArrayList<String>()},
+    };
+}
 
 //=============================================================================
 /*

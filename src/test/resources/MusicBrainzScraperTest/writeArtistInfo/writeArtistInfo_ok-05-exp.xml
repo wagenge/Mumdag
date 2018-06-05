@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<Artist mbid="070d193a-845c-479f-980e-bef15710653e">
+<Artist amid="id155814" dcid="28795" mbid="070d193a-845c-479f-980e-bef15710653e" path="./src/test/resources/MusicBrainzScraperTest/_fileInput/P/Prince/" rmid="mn0000361393" spid="5a2EaR3hamoenG9rDuVn8j" wdid="Q7542">
 	<UniqueIdList>
 		<UniqueId source="VIAF" viafid="256968961">
 			<SourceUrl>http://viaf.org/viaf/256968961</SourceUrl>
@@ -25,6 +25,11 @@
 			<SourceUrl>http://www.last.fm/music/Prince</SourceUrl>
 			<SourceWSUrl>http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&amp;mbid=070d193a-845c-479f-980e-bef15710653e&amp;api_key=YOUR_API_KEY</SourceWSUrl>
 			<Value>070d193a-845c-479f-980e-bef15710653e</Value>
+		</UniqueId>
+		<UniqueId amid="id155814" source="AppleMusic">
+			<SourceUrl>https://itunes.apple.com/gb/artist/id155814</SourceUrl>
+			<SourceWSUrl>https://api.music.apple.com/v1/catalog/_storefront_/artists/id155814</SourceWSUrl>
+			<Value>id155814</Value>
 		</UniqueId>
 		<UniqueId source="Spotify" spid="5a2EaR3hamoenG9rDuVn8j">
 			<SourceUrl>https://open.spotify.com/artist/5a2EaR3hamoenG9rDuVn8j</SourceUrl>
@@ -88,21 +93,24 @@
 		<Name mbid="070d193a-845c-479f-980e-bef15710653e" sort-name="Ƭ̵̬̊" source="MusicBrainz" type="Search hint" type-id="1937e404-b981-3cb7-8151-4c86ebfc8d8e">Ƭ̵̬̊</Name>
 		<Name mbid="070d193a-845c-479f-980e-bef15710653e" sort-name="♀♂" source="MusicBrainz" type="Search hint" type-id="1937e404-b981-3cb7-8151-4c86ebfc8d8e">♀♂</Name>
 	</NameList>
-	<Type gender="Male" mbid="070d193a-845c-479f-980e-bef15710653e">Person</Type>
-	<AreaList>
-		<Area event="born in" mbid="3e80aaa7-9b71-450f-8147-0ecf101d8f1a" seq="1" source="MusicBrainz" type="City">Minneapolis</Area>
-		<Area event="born in" mbid="e2dbccef-b210-4a6d-bba6-70c65889bfee" seq="2" source="MusicBrainz" type="County">Hennepin County</Area>
-		<Area code="US-MN" event="born in" mbid="f5ffcc03-ebf2-466a-bb11-b38c6c0c84f5" seq="3" source="MusicBrainz" type="Subdivision">Minnesota</Area>
-		<Area code="US" event="born in" mbid="489ce91b-6658-3307-9877-795b68554c98" seq="4" source="MusicBrainz" type="Country">United States</Area>
-		<Area event="died in" mbid="cac242a2-9fa1-476a-a160-0812e08aec4f" seq="1" source="MusicBrainz" type="City">Chanhassen</Area>
-		<Area event="died in" mbid="8a1b8370-3164-4add-bf0f-8049e6fe409b" seq="2" source="MusicBrainz" type="County">Carver County</Area>
-		<Area code="US-MN" event="died in" mbid="f5ffcc03-ebf2-466a-bb11-b38c6c0c84f5" seq="3" source="MusicBrainz" type="Subdivision">Minnesota</Area>
-		<Area code="US" event="died in" mbid="489ce91b-6658-3307-9877-795b68554c98" seq="4" source="MusicBrainz" type="Country">United States</Area>
-	</AreaList>
-	<PeriodList>
+	<TypeList>
+		<Type mbid="070d193a-845c-479f-980e-bef15710653e" source="MusicBrainz" type="ArtistType">Person</Type>
+		<Type mbid="070d193a-845c-479f-980e-bef15710653e" source="MusicBrainz" type="Gender">Male</Type>
+	</TypeList>
+	<PlaceList>
+		<Place event="born" mbid="3e80aaa7-9b71-450f-8147-0ecf101d8f1a" seq="1" source="MusicBrainz" type="City">Minneapolis</Place>
+		<Place event="born" mbid="e2dbccef-b210-4a6d-bba6-70c65889bfee" seq="2" source="MusicBrainz" type="County">Hennepin County</Place>
+		<Place code="US-MN" event="born" mbid="f5ffcc03-ebf2-466a-bb11-b38c6c0c84f5" seq="3" source="MusicBrainz" type="Subdivision">Minnesota</Place>
+		<Place code="US" event="born" mbid="489ce91b-6658-3307-9877-795b68554c98" seq="4" source="MusicBrainz" type="Country">United States</Place>
+		<Place event="died" mbid="cac242a2-9fa1-476a-a160-0812e08aec4f" seq="1" source="MusicBrainz" type="City">Chanhassen</Place>
+		<Place event="died" mbid="8a1b8370-3164-4add-bf0f-8049e6fe409b" seq="2" source="MusicBrainz" type="County">Carver County</Place>
+		<Place code="US-MN" event="died" mbid="f5ffcc03-ebf2-466a-bb11-b38c6c0c84f5" seq="3" source="MusicBrainz" type="Subdivision">Minnesota</Place>
+		<Place code="US" event="died" mbid="489ce91b-6658-3307-9877-795b68554c98" seq="4" source="MusicBrainz" type="Country">United States</Place>
+	</PlaceList>
+	<DateList>
 		<Date mbid="070d193a-845c-479f-980e-bef15710653e" type="born">1958-06-07</Date>
 		<Date mbid="070d193a-845c-479f-980e-bef15710653e" type="died">2016-04-21</Date>
-	</PeriodList>
+	</DateList>
 	<DescriptionList/>
 	<TagList>
 		<Tag count="4" mbid="070d193a-845c-479f-980e-bef15710653e" source="MusicBrainz">contemporary r&amp;b</Tag>
@@ -121,7 +129,7 @@
 		<Tag count="1" mbid="070d193a-845c-479f-980e-bef15710653e" source="MusicBrainz">soul</Tag>
 		<Tag count="3" mbid="070d193a-845c-479f-980e-bef15710653e" source="MusicBrainz">synth funk</Tag>
 		<Tag count="2" mbid="070d193a-845c-479f-980e-bef15710653e" source="MusicBrainz">usa</Tag>
-	</TagList>	
+	</TagList>
 	<UrlList>
 		<Url mbid="070d193a-845c-479f-980e-bef15710653e" type="lyrics">http://decoda.com/prince-lyrics</Url>
 		<Url mbid="070d193a-845c-479f-980e-bef15710653e" type="lyrics">http://genius.com/artists/Prince</Url>
@@ -158,67 +166,13 @@
 	</UrlList>
 	<RatingList>
 		<Rating mbid="070d193a-845c-479f-980e-bef15710653e" source="MusicBrainz" votes="10">4.5</Rating>
-	</RatingList>	
-	<ArtistCreditList>
-		<ArtistCredit mbid="0c111654-2eb9-4729-8a27-7397d3db63e3">
-			<UniqueIdList>
-				<UniqueId mbid="0c111654-2eb9-4729-8a27-7397d3db63e3" source="MusicBrainz">
-					<SourceUrl>https://musicbrainz.org/artist/0c111654-2eb9-4729-8a27-7397d3db63e3</SourceUrl>
-					<SourceWSUrl>https://musicbrainz.org/ws/2/artist/0c111654-2eb9-4729-8a27-7397d3db63e3?inc=aliases+artist-rels+url-rels</SourceWSUrl>
-					<Value>0c111654-2eb9-4729-8a27-7397d3db63e3</Value>
-				</UniqueId>
-			</UniqueIdList>
-			<NameList>
-				<Name mbid="0c111654-2eb9-4729-8a27-7397d3db63e3" sort-name="3rdEyeGirl" source="MusicBrainz" type="Name">3rdEyeGirl</Name>
-			</NameList>
-			<RoleList>
-				<Role mbid="0c111654-2eb9-4729-8a27-7397d3db63e3" original="true" type="membership">member of band</Role>
-			</RoleList>
-			<PeriodList>
-				<Date/>
-			</PeriodList>
-		</ArtistCredit>
-		<ArtistCredit mbid="21c0fd52-4234-4407-bc4e-9870b0a48a3d">
-			<UniqueIdList>
-				<UniqueId mbid="21c0fd52-4234-4407-bc4e-9870b0a48a3d" source="MusicBrainz">
-					<SourceUrl>https://musicbrainz.org/artist/21c0fd52-4234-4407-bc4e-9870b0a48a3d</SourceUrl>
-					<SourceWSUrl>https://musicbrainz.org/ws/2/artist/21c0fd52-4234-4407-bc4e-9870b0a48a3d?inc=aliases+artist-rels+url-rels</SourceWSUrl>
-					<Value>21c0fd52-4234-4407-bc4e-9870b0a48a3d</Value>
-				</UniqueId>
-			</UniqueIdList>
-			<NameList>
-				<Name mbid="21c0fd52-4234-4407-bc4e-9870b0a48a3d" sort-name="94 East" source="MusicBrainz" type="Name">94 East</Name>
-			</NameList>
-			<RoleList>
-				<Role mbid="21c0fd52-4234-4407-bc4e-9870b0a48a3d" original="false" type="membership">member of band</Role>
-			</RoleList>
-			<PeriodList>
-				<Date/>
-			</PeriodList>
-		</ArtistCredit>
-		<ArtistCredit mbid="4c8ead39-b9df-4c56-a27c-51bc049cfd48">
-			<UniqueIdList>
-				<UniqueId mbid="4c8ead39-b9df-4c56-a27c-51bc049cfd48" source="MusicBrainz">
-					<SourceUrl>https://musicbrainz.org/artist/4c8ead39-b9df-4c56-a27c-51bc049cfd48</SourceUrl>
-					<SourceWSUrl>https://musicbrainz.org/ws/2/artist/4c8ead39-b9df-4c56-a27c-51bc049cfd48?inc=aliases+artist-rels+url-rels</SourceWSUrl>
-					<Value>4c8ead39-b9df-4c56-a27c-51bc049cfd48</Value>
-				</UniqueId>
-			</UniqueIdList>
-			<NameList>
-				<Name mbid="4c8ead39-b9df-4c56-a27c-51bc049cfd48" sort-name="Revolution, The" source="MusicBrainz" type="Name">The Revolution</Name>
-			</NameList>
-			<RoleList>
-				<Role mbid="4c8ead39-b9df-4c56-a27c-51bc049cfd48" original="true" type="membership">member of band</Role>
-			</RoleList>
-			<PeriodList>
-				<Date/>
-			</PeriodList>
-		</ArtistCredit>
-		<ArtistCredit mbid="9b2d12b0-49f1-4d1a-8ca6-f552beb4aa6d">
+	</RatingList>
+	<CreditList>
+		<Credit mbid="9b2d12b0-49f1-4d1a-8ca6-f552beb4aa6d">
 			<UniqueIdList>
 				<UniqueId mbid="9b2d12b0-49f1-4d1a-8ca6-f552beb4aa6d" source="MusicBrainz">
 					<SourceUrl>https://musicbrainz.org/artist/9b2d12b0-49f1-4d1a-8ca6-f552beb4aa6d</SourceUrl>
-					<SourceWSUrl>https://musicbrainz.org/ws/2/artist/9b2d12b0-49f1-4d1a-8ca6-f552beb4aa6d?inc=aliases+artist-rels+url-rels</SourceWSUrl>
+					<SourceWSUrl>https://musicbrainz.org/ws/2/artist/9b2d12b0-49f1-4d1a-8ca6-f552beb4aa6d?inc=aliases+tags+annotation+ratings+artist-rels+url-rels</SourceWSUrl>
 					<Value>9b2d12b0-49f1-4d1a-8ca6-f552beb4aa6d</Value>
 				</UniqueId>
 			</UniqueIdList>
@@ -228,15 +182,15 @@
 			<RoleList>
 				<Role mbid="9b2d12b0-49f1-4d1a-8ca6-f552beb4aa6d" original="false" type="membership">member of band</Role>
 			</RoleList>
-			<PeriodList>
+			<DateList>
 				<Date/>
-			</PeriodList>
-		</ArtistCredit>
-		<ArtistCredit mbid="9eaac218-880e-4826-b76e-2d4b4bb2ce8d">
+			</DateList>	
+		</Credit>
+		<Credit mbid="9eaac218-880e-4826-b76e-2d4b4bb2ce8d">
 			<UniqueIdList>
 				<UniqueId mbid="9eaac218-880e-4826-b76e-2d4b4bb2ce8d" source="MusicBrainz">
 					<SourceUrl>https://musicbrainz.org/artist/9eaac218-880e-4826-b76e-2d4b4bb2ce8d</SourceUrl>
-					<SourceWSUrl>https://musicbrainz.org/ws/2/artist/9eaac218-880e-4826-b76e-2d4b4bb2ce8d?inc=aliases+artist-rels+url-rels</SourceWSUrl>
+					<SourceWSUrl>https://musicbrainz.org/ws/2/artist/9eaac218-880e-4826-b76e-2d4b4bb2ce8d?inc=aliases+tags+annotation+ratings+artist-rels+url-rels</SourceWSUrl>
 					<Value>9eaac218-880e-4826-b76e-2d4b4bb2ce8d</Value>
 				</UniqueId>
 			</UniqueIdList>
@@ -250,17 +204,306 @@
 				<Role mbid="9eaac218-880e-4826-b76e-2d4b4bb2ce8d" type="instrument">guitar</Role>
 				<Role mbid="9eaac218-880e-4826-b76e-2d4b4bb2ce8d" original="true" type="membership">member of band</Role>
 			</RoleList>
-			<PeriodList>
+			<DateList>
 				<Date/>
-			</PeriodList>
-		</ArtistCredit>
-	</ArtistCreditList>
+			</DateList>	
+		</Credit>
+		<Credit mbid="0c111654-2eb9-4729-8a27-7397d3db63e3">
+			<UniqueIdList>
+				<UniqueId mbid="0c111654-2eb9-4729-8a27-7397d3db63e3" source="MusicBrainz">
+					<SourceUrl>https://musicbrainz.org/artist/0c111654-2eb9-4729-8a27-7397d3db63e3</SourceUrl>
+					<SourceWSUrl>https://musicbrainz.org/ws/2/artist/0c111654-2eb9-4729-8a27-7397d3db63e3?inc=aliases+tags+annotation+ratings+artist-rels+url-rels</SourceWSUrl>
+					<Value>0c111654-2eb9-4729-8a27-7397d3db63e3</Value>
+				</UniqueId>
+			</UniqueIdList>
+			<NameList>
+				<Name mbid="0c111654-2eb9-4729-8a27-7397d3db63e3" sort-name="3rdEyeGirl" source="MusicBrainz" type="Name">3rdEyeGirl</Name>
+			</NameList>
+			<RoleList>
+				<Role mbid="0c111654-2eb9-4729-8a27-7397d3db63e3" original="true" type="membership">member of band</Role>
+			</RoleList>
+			<DateList>
+				<Date/>
+			</DateList>	
+		</Credit>
+		<Credit mbid="4c8ead39-b9df-4c56-a27c-51bc049cfd48">
+			<UniqueIdList>
+				<UniqueId mbid="4c8ead39-b9df-4c56-a27c-51bc049cfd48" source="MusicBrainz">
+					<SourceUrl>https://musicbrainz.org/artist/4c8ead39-b9df-4c56-a27c-51bc049cfd48</SourceUrl>
+					<SourceWSUrl>https://musicbrainz.org/ws/2/artist/4c8ead39-b9df-4c56-a27c-51bc049cfd48?inc=aliases+tags+annotation+ratings+artist-rels+url-rels</SourceWSUrl>
+					<Value>4c8ead39-b9df-4c56-a27c-51bc049cfd48</Value>
+				</UniqueId>
+			</UniqueIdList>
+			<NameList>
+				<Name mbid="4c8ead39-b9df-4c56-a27c-51bc049cfd48" sort-name="Revolution, The" source="MusicBrainz" type="Name">The Revolution</Name>
+			</NameList>
+			<RoleList>
+				<Role mbid="4c8ead39-b9df-4c56-a27c-51bc049cfd48" original="true" type="membership">member of band</Role>
+			</RoleList>
+			<DateList>
+				<Date/>
+			</DateList>	
+		</Credit>
+		<Credit mbid="21c0fd52-4234-4407-bc4e-9870b0a48a3d">
+			<UniqueIdList>
+				<UniqueId mbid="21c0fd52-4234-4407-bc4e-9870b0a48a3d" source="MusicBrainz">
+					<SourceUrl>https://musicbrainz.org/artist/21c0fd52-4234-4407-bc4e-9870b0a48a3d</SourceUrl>
+					<SourceWSUrl>https://musicbrainz.org/ws/2/artist/21c0fd52-4234-4407-bc4e-9870b0a48a3d?inc=aliases+tags+annotation+ratings+artist-rels+url-rels</SourceWSUrl>
+					<Value>21c0fd52-4234-4407-bc4e-9870b0a48a3d</Value>
+				</UniqueId>
+			</UniqueIdList>
+			<NameList>
+				<Name mbid="21c0fd52-4234-4407-bc4e-9870b0a48a3d" sort-name="94 East" source="MusicBrainz" type="Name">94 East</Name>
+			</NameList>
+			<RoleList>
+				<Role mbid="21c0fd52-4234-4407-bc4e-9870b0a48a3d" original="false" type="membership">member of band</Role>
+			</RoleList>
+			<DateList>
+				<Date/>
+			</DateList>	
+		</Credit>
+	</CreditList>
 	<ArtList/>
 	<DisambiguationList>
 		<Disambiguation mbid="070d193a-845c-479f-980e-bef15710653e" source="MusicBrainz">“The Artist Formerly Known as…”</Disambiguation>
 	</DisambiguationList>
 	<AnnotationList/>
 	<Discography>
-		<ReleaseGroupList/>
+		<ReleaseGroupList>
+			<ReleaseGroup path="./src/test/resources/MusicBrainzScraperTest/_fileInput/P/Prince/1984 - Purple Rain/">
+				<UniqueIdList/>
+				<NameList/>
+				<TypeList/>
+				<DateList/>
+				<AwardList/>
+				<ChartList/>
+				<DescriptionList/>
+				<TagList/>
+				<UrlList/>
+				<RatingList/>
+				<CreditList/>
+				<ArtList/>
+				<DisambiguationList/>
+				<AnnotationList/>
+				<ReleaseList>
+					<Release path="./src/test/resources/MusicBrainzScraperTest/_fileInput/P/Prince/1984 - Purple Rain/">
+						<UniqueIdList/>
+						<NameList/>
+						<TypeList/>
+						<DateList/>
+						<PlaceList/>
+						<LabelList/>
+						<LengthList/>
+						<DescriptionList/>
+						<CopyrightList/>
+						<TagList/>
+						<UrlList/>
+						<CreditList/>			
+						<ArtList/>
+						<DisambiguationList/>
+						<AnnotationList/>
+						<MediumList>
+							<Medium discNo="1" path="./src/test/resources/MusicBrainzScraperTest/_fileInput/P/Prince/1984 - Purple Rain/">
+								<UniqueIdList/>
+								<NameList/>
+								<TypeList/>
+								<LengthList/>
+								<TrackList>
+									<Track>
+										<UniqueIdList/>
+										<NameList/>
+										<TypeList/>
+										<DateList/>
+										<PlaceList/>
+										<FileInfo/>
+										<AudioInfo/>
+										<Position/>
+										<LabelList/>
+										<DescriptionList/>
+										<LyricsList/>
+										<CopyrightList/>
+										<CopyrightCollectiveList/>
+										<TagList/>
+										<RatingList/>
+										<UrlList/>
+										<CreditList/>
+										<DisambiguationList/>
+										<AnnotationList/>
+									</Track>
+									<Track>
+										<UniqueIdList/>
+										<NameList/>
+										<TypeList/>
+										<DateList/>
+										<PlaceList/>
+										<FileInfo/>
+										<AudioInfo/>
+										<Position/>
+										<LabelList/>
+										<DescriptionList/>
+										<LyricsList/>
+										<CopyrightList/>
+										<CopyrightCollectiveList/>
+										<TagList/>
+										<RatingList/>
+										<UrlList/>
+										<CreditList/>
+										<DisambiguationList/>
+										<AnnotationList/>
+									</Track>
+									<Track>
+										<UniqueIdList/>
+										<NameList/>
+										<TypeList/>
+										<DateList/>
+										<PlaceList/>
+										<FileInfo/>
+										<AudioInfo/>
+										<Position/>
+										<LabelList/>
+										<DescriptionList/>
+										<LyricsList/>
+										<CopyrightList/>
+										<CopyrightCollectiveList/>
+										<TagList/>
+										<RatingList/>
+										<UrlList/>
+										<CreditList/>
+										<DisambiguationList/>
+										<AnnotationList/>
+									</Track>
+									<Track>
+										<UniqueIdList/>
+										<NameList/>
+										<TypeList/>
+										<DateList/>
+										<PlaceList/>
+										<FileInfo/>
+										<AudioInfo/>
+										<Position/>
+										<LabelList/>
+										<DescriptionList/>
+										<LyricsList/>
+										<CopyrightList/>
+										<CopyrightCollectiveList/>
+										<TagList/>
+										<RatingList/>
+										<UrlList/>
+										<CreditList/>
+										<DisambiguationList/>
+										<AnnotationList/>
+									</Track>
+									<Track>
+										<UniqueIdList/>
+										<NameList/>
+										<TypeList/>
+										<DateList/>
+										<PlaceList/>
+										<FileInfo/>
+										<AudioInfo/>
+										<Position/>
+										<LabelList/>
+										<DescriptionList/>
+										<LyricsList/>
+										<CopyrightList/>
+										<CopyrightCollectiveList/>
+										<TagList/>
+										<RatingList/>
+										<UrlList/>
+										<CreditList/>
+										<DisambiguationList/>
+										<AnnotationList/>
+									</Track>
+									<Track>
+										<UniqueIdList/>
+										<NameList/>
+										<TypeList/>
+										<DateList/>
+										<PlaceList/>
+										<FileInfo/>
+										<AudioInfo/>
+										<Position/>
+										<LabelList/>
+										<DescriptionList/>
+										<LyricsList/>
+										<CopyrightList/>
+										<CopyrightCollectiveList/>
+										<TagList/>
+										<RatingList/>
+										<UrlList/>
+										<CreditList/>
+										<DisambiguationList/>
+										<AnnotationList/>
+									</Track>
+									<Track>
+										<UniqueIdList/>
+										<NameList/>
+										<TypeList/>
+										<DateList/>
+										<PlaceList/>
+										<FileInfo/>
+										<AudioInfo/>
+										<Position/>
+										<LabelList/>
+										<DescriptionList/>
+										<LyricsList/>
+										<CopyrightList/>
+										<CopyrightCollectiveList/>
+										<TagList/>
+										<RatingList/>
+										<UrlList/>
+										<CreditList/>
+										<DisambiguationList/>
+										<AnnotationList/>
+									</Track>
+									<Track>
+										<UniqueIdList/>
+										<NameList/>
+										<TypeList/>
+										<DateList/>
+										<PlaceList/>
+										<FileInfo/>
+										<AudioInfo/>
+										<Position/>
+										<LabelList/>
+										<DescriptionList/>
+										<LyricsList/>
+										<CopyrightList/>
+										<CopyrightCollectiveList/>
+										<TagList/>
+										<RatingList/>
+										<UrlList/>
+										<CreditList/>
+										<DisambiguationList/>
+										<AnnotationList/>
+									</Track>
+									<Track>
+										<UniqueIdList/>
+										<NameList/>
+										<TypeList/>
+										<DateList/>
+										<PlaceList/>
+										<FileInfo/>
+										<AudioInfo/>
+										<Position/>
+										<LabelList/>
+										<DescriptionList/>
+										<LyricsList/>
+										<CopyrightList/>
+										<CopyrightCollectiveList/>
+										<TagList/>
+										<RatingList/>
+										<UrlList/>
+										<CreditList/>
+										<DisambiguationList/>
+										<AnnotationList/>
+									</Track>
+								</TrackList>
+							</Medium>
+						</MediumList>
+					</Release>
+				</ReleaseList>
+			</ReleaseGroup>
+		</ReleaseGroupList>
 	</Discography>
 </Artist>

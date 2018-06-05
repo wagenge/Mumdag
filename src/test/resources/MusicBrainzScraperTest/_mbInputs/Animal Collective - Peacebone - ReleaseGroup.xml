@@ -1,0 +1,41 @@
+<metadata xmlns="http://musicbrainz.org/ns/mmd-2.0#">
+	<release-group type="Single" id="1c893242-cfd8-3f02-822c-41cccf8c3a73" type-id="d6038452-8ee0-3f68-affc-2de9a1ede0b9">
+		<title>Peacebone</title>
+		<first-release-date>2007-08-13</first-release-date>
+		<primary-type id="d6038452-8ee0-3f68-affc-2de9a1ede0b9">Single</primary-type>
+		<relation-list target-type="release_group">
+			<relation type-id="fcf680a9-6871-4519-8c4b-8c6549575b35" type="single from">
+				<target>89e4f726-2b6f-3f15-992e-b52105f53899</target>
+				<release-group id="89e4f726-2b6f-3f15-992e-b52105f53899">
+					<title>Strawberry Jam</title>
+					<first-release-date>2007-09-03</first-release-date>
+				</release-group>
+			</relation>
+		</relation-list>
+		<relation-list target-type="url">
+			<relation type="wikipedia" type-id="6578f0e9-1ace-4095-9de8-6e517ddb1ceb">
+				<target id="5ece618d-856e-4f07-a8e8-b79bffd902ea">https://en.wikipedia.org/wiki/Peacebone</target>
+			</relation>
+			<relation type="discogs" type-id="99e550f3-5ab4-3110-b5b9-fe01d970b126">
+				<target id="eabee30f-189f-4151-8126-bdefea3fed30">https://www.discogs.com/master/5089</target>
+			</relation>
+			<relation type-id="b988d08c-5d86-4a57-9557-c83b399e3580" type="wikidata">
+				<target id="7f6176b8-046b-4768-b165-bfbed6ee657c">https://www.wikidata.org/wiki/Q7157569</target>
+			</relation>
+		</relation-list>
+		<tag-list>
+			<tag count="1">
+				<name>avantgarde</name>
+			</tag>
+			<tag count="2">
+				<name>electronic</name>
+			</tag>
+			<tag count="1">
+				<name>experimental</name>
+			</tag>
+			<tag count="1">
+				<name>pop</name>
+			</tag>
+		</tag-list>
+	</release-group>
+</metadata>

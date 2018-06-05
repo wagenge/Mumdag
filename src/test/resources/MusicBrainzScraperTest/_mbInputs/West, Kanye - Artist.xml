@@ -1,0 +1,226 @@
+<metadata xmlns="http://musicbrainz.org/ns/mmd-2.0#">
+	<artist type="Person" type-id="b6e035f4-3ce9-331c-97df-83397230b0df" id="164f0d73-1234-4e2c-8743-d77bf2191051">
+		<name>Kanye West</name>
+		<sort-name>West, Kanye</sort-name>
+		<ipi>00335677734</ipi>
+		<ipi-list>
+			<ipi>00335677734</ipi>
+			<ipi>00451108296</ipi>
+		</ipi-list>
+		<isni-list>
+			<isni>0000000116557565</isni>
+			<isni>0000000362939198</isni>
+		</isni-list>
+		<gender id="36d3d30a-839d-3eda-8cb3-29be4384e4a9">Male</gender>
+		<area id="29a709d8-0320-493e-8d0c-f2c386662b7f">
+			<name>Chicago</name>
+			<sort-name>Chicago</sort-name>
+		</area>
+		<begin-area id="26e0e534-19ea-4645-bfb3-1aa4e83a4046">
+			<name>Atlanta</name>
+			<sort-name>Atlanta</sort-name>
+		</begin-area>
+		<life-span>
+			<begin>1977-06-08</begin>
+		</life-span>
+		<alias-list count="5">
+			<alias type="Search hint" type-id="1937e404-b981-3cb7-8151-4c86ebfc8d8e" sort-name="K. West">K. West</alias>
+			<alias sort-name="Kanye" type="Artist name" type-id="894afba6-2816-3c24-8072-eadb66bd04bc">Kanye</alias>
+			<alias sort-name="West, Kanye Omari" type-id="d4dcd0c0-b341-3612-a332-c0ce797b25cf" type="Legal name">Kanye Omari West</alias>
+			<alias type-id="1937e404-b981-3cb7-8151-4c86ebfc8d8e" type="Search hint" sort-name="Kayne West">Kayne West</alias>
+			<alias sort-name="カニエ・ウェスト" primary="primary" type="Artist name" type-id="894afba6-2816-3c24-8072-eadb66bd04bc" locale="ja">カニエ・ウェスト</alias>
+		</alias-list>
+		<relation-list target-type="artist">
+			<relation type-id="5be4c609-9afa-4ea0-910b-12ffb71e3821" type="member of band">
+				<target>33cfd8a2-85de-4b0a-9acd-bd8ba91df3a0</target>
+				<artist id="33cfd8a2-85de-4b0a-9acd-bd8ba91df3a0">
+					<name>Go Getters</name>
+					<sort-name>Go Getters</sort-name>
+				</artist>
+			</relation>
+			<relation type="involved with" type-id="fd3927ba-fd51-4fa9-bcc2-e83637896fe8">
+				<target>80ff1c00-d064-4887-ae07-81c01cbc2fdc</target>
+				<direction>backward</direction>
+				<begin>2008</begin>
+				<end>2010</end>
+				<ended>true</ended>
+				<artist id="80ff1c00-d064-4887-ae07-81c01cbc2fdc">
+					<name>Amber Rose</name>
+					<sort-name>Rose, Amber</sort-name>
+					<disambiguation>American model, recording artist, actress and socialite</disambiguation>
+				</artist>
+			</relation>
+			<relation type="member of band" type-id="5be4c609-9afa-4ea0-910b-12ffb71e3821">
+				<target>9563442b-69e2-43cf-8012-3c9371f174cb</target>
+				<artist id="9563442b-69e2-43cf-8012-3c9371f174cb">
+					<name>Child Rebel Soldier</name>
+					<sort-name>Child Rebel Soldier</sort-name>
+				</artist>
+			</relation>
+			<relation type="involved with" type-id="fd3927ba-fd51-4fa9-bcc2-e83637896fe8">
+				<target>b13c7b85-86bf-41d0-baa7-444f03ec0b38</target>
+				<begin>2012-04</begin>
+				<end>2014-05-24</end>
+				<ended>true</ended>
+				<artist id="b13c7b85-86bf-41d0-baa7-444f03ec0b38">
+					<name>Kim Kardashian</name>
+					<sort-name>Kardashian, Kim</sort-name>
+				</artist>
+			</relation>
+			<relation type="married" type-id="b2bf7a5d-2da6-4742-baf4-e38d8a7ad029">
+				<target>b13c7b85-86bf-41d0-baa7-444f03ec0b38</target>
+				<begin>2014-05-24</begin>
+				<artist id="b13c7b85-86bf-41d0-baa7-444f03ec0b38">
+					<name>Kim Kardashian</name>
+					<sort-name>Kardashian, Kim</sort-name>
+				</artist>
+			</relation>
+		</relation-list>
+		<relation-list target-type="url">
+			<relation type="lyrics" type-id="e4d73442-3762-45a8-905c-401da65544ed">
+				<target id="8cbf4a39-1ed8-4900-b702-48ae55fcd244">http://decoda.com/kanye-west-lyrics</target>
+			</relation>
+			<relation type="lyrics" type-id="e4d73442-3762-45a8-905c-401da65544ed">
+				<target id="9f179c9e-5768-46d3-990d-ff4e812349b0">http://genius.com/artists/Kanye-west</target>
+			</relation>
+			<relation type-id="e4d73442-3762-45a8-905c-401da65544ed" type="lyrics">
+				<target id="47556485-823a-4eee-a1bc-dc92927b2ad4">http://lyrics.wikia.com/Kanye_west</target>
+			</relation>
+			<relation type-id="d94fb61c-fa20-4e3c-a19a-71a949fb2c55" type="other databases">
+				<target id="a9a231c8-1466-4d33-9ef8-605fa5de490a">http://musicmoz.org/Bands_and_Artists/W/West,_Kanye/</target>
+			</relation>
+			<relation type-id="d94fb61c-fa20-4e3c-a19a-71a949fb2c55" type="other databases">
+				<target id="695fec6f-b9c0-4d00-9676-b44feb613cd7">http://rateyourmusic.com/artist/kanye_west</target>
+			</relation>
+			<relation type="VIAF" type-id="e8571dcc-35d4-4e91-a577-a3382fd84460">
+				<target id="e0b0894e-88c9-4b75-8c9e-34e4a26f49c5">http://viaf.org/viaf/61794068</target>
+			</relation>
+			<relation type="discography" type-id="4fb0eeec-a6eb-4ae3-ad52-b55765b94e8f">
+				<target id="89f3fc0c-8656-4ec4-8d17-47591f9fd69e">http://weave.me/app/weave.html?Kanye_West</target>
+			</relation>
+			<relation type="allmusic" type-id="6b3e3c85-0002-4f34-aca6-80ace0d7e846">
+				<target id="b45c1af7-8052-46a6-ab6c-f2cd4d77df9f">http://www.allmusic.com/artist/mn0000361014</target>
+			</relation>
+			<relation type="BBC Music page" type-id="d028a975-000c-4525-9333-d3c8425e4b54">
+				<target id="bb20e8a9-d0cc-4973-a63c-329cbcbb7ce5">http://www.bbc.co.uk/music/artists/164f0d73-1234-4e2c-8743-d77bf2191051</target>
+			</relation>
+			<relation type="lyrics" type-id="e4d73442-3762-45a8-905c-401da65544ed">
+				<target id="f00cd241-72cf-402f-a483-dca546307b4a">http://www.directlyrics.com/kanye-west-artist.html</target>
+			</relation>
+			<relation type="IMDb" type-id="94c8b0cc-4477-4106-932c-da60e63de61c">
+				<target id="046ef200-1e9c-419b-a373-93afc556e190">http://www.imdb.com/name/nm1577190/</target>
+			</relation>
+			<relation type-id="fe33d22f-c3b0-4d68-bd53-a856badf2b15" type="official homepage">
+				<target id="15c7aa84-4de8-4ca9-9407-f46abee9c0a2">http://www.kanyewest.com/</target>
+			</relation>
+			<relation type="last.fm" type-id="08db8098-c0df-4b78-82c3-c8697b4bba7f">
+				<target id="21a98fb3-489f-46c1-8bfa-d5596c19464c">http://www.last.fm/music/Kanye+West</target>
+			</relation>
+			<relation type="secondhandsongs" type-id="79c5b84d-a206-4f4c-9832-78c028c312c3">
+				<target id="716e1e78-e094-482f-b398-18de22019771">http://www.secondhandsongs.com/artist/8120</target>
+			</relation>
+			<relation type-id="769085a1-c2f7-4c24-a532-2375a77693bd" type="streaming music">
+				<target id="1ae887b1-315d-4417-928a-fdbcedd37d5b">http://www.staimusic.com/en/bands/kanye-west_2380.html</target>
+			</relation>
+			<relation type-id="221132e9-e30e-43f2-a741-15afc4c5fa7c" type="image">
+				<target id="2ffa7992-6f97-4108-be95-06c9591507be">https://commons.wikimedia.org/wiki/File:Kanye_West_Lollapalooza_Chile_2011_2.jpg</target>
+			</relation>
+			<relation type="purchase for download" type-id="f8319a2f-f824-4617-81c8-be6560b3b203">
+				<target id="a5be6d9f-5699-4ab2-bbbb-4bd52ce0db62">https://itunes.apple.com/us/artist/id2715720</target>
+			</relation>
+			<relation type-id="769085a1-c2f7-4c24-a532-2375a77693bd" type="streaming music">
+				<target id="133179b3-54da-4a03-8624-fef8be87373a">https://listen.tidal.com/artist/25022</target>
+			</relation>
+			<relation type-id="bac47923-ecde-4b59-822e-d08f0cd10156" type="myspace">
+				<target id="e6aed9a6-d7e6-4b1d-adbc-08f4f83d3d98">https://myspace.com/kanyewest</target>
+			</relation>
+			<relation type="streaming music" type-id="769085a1-c2f7-4c24-a532-2375a77693bd">
+				<target id="90d1f426-c0c2-452a-b7fe-ff357abb9737">https://open.spotify.com/artist/5K4W6rqBFWDnAN6FQUkS6x</target>
+			</relation>
+			<relation type="purchase for download" type-id="f8319a2f-f824-4617-81c8-be6560b3b203">
+				<target id="31dcac20-2105-45e1-bd6e-682425e403ba">https://play.google.com/store/music/artist?id=A3bn3euz42saceyegr7defldcze</target>
+			</relation>
+			<relation type="soundcloud" type-id="89e4a949-0976-440d-bda1-5f772c1e5710">
+				<target id="29e2c844-0e19-4e7d-842c-072e01913ada">https://soundcloud.com/kanyewest</target>
+			</relation>
+			<relation type="social network" type-id="99429741-f3f6-484b-84f8-23af51991770">
+				<target id="79ee234f-02ed-40d8-b99a-0a3d6f6ce9f9">https://twitter.com/kanyewest</target>
+			</relation>
+			<relation type-id="ea45ed3d-2d5e-456e-8c32-94b6f51426e2" type="bandsintown">
+				<target id="97ab9974-5d65-4bf2-8603-375f2d250091">https://www.bandsintown.com/a/160</target>
+			</relation>
+			<relation type="streaming music" type-id="769085a1-c2f7-4c24-a532-2375a77693bd">
+				<target id="7d151a0a-e5c2-4624-bd0d-8eaf5fc1919e">https://www.deezer.com/artist/230</target>
+			</relation>
+			<relation type="discogs" type-id="04a5b104-a4c2-4bac-99a1-7b837c37d9e4">
+				<target id="0ebe36e1-09e6-4bba-9bc2-d145f4f5a0fd">https://www.discogs.com/artist/137880</target>
+			</relation>
+			<relation type="social network" type-id="99429741-f3f6-484b-84f8-23af51991770">
+				<target id="54cc9b24-3225-45a9-b3ad-2b72dfa6d8cb">https://www.instagram.com/privatekanye/</target>
+			</relation>
+			<relation type-id="bf5d0d5e-27a1-4e94-9df7-3cdc67b3b207" type="setlistfm">
+				<target id="f984eebe-a101-4d55-b998-9b8a8186d9e1">https://www.setlist.fm/setlists/kanye-west-bd6bd8a.html</target>
+			</relation>
+			<relation type-id="aac9c4bc-a5b9-30b8-9839-e3ac314c6e58" type="songkick">
+				<target id="82d7384c-1207-4b2f-ab2a-d27c55585541">https://www.songkick.com/artists/552177-kanye-west</target>
+			</relation>
+			<relation type="wikidata" type-id="689870a4-a1e4-4912-b17f-7b2664215698">
+				<target id="2fc28386-7eff-4fc0-9b36-d0c1eb4fdc4b">https://www.wikidata.org/wiki/Q15935</target>
+			</relation>
+			<relation type="youtube" type-id="6a540e5b-58c6-4192-b6ba-dbc71ec8fcf0">
+				<target id="641a743c-a198-4a2f-a987-d10ceee15428">https://www.youtube.com/channel/UCRY5dYsbIN5TylSbd7gVnZg</target>
+			</relation>
+			<relation type-id="6a540e5b-58c6-4192-b6ba-dbc71ec8fcf0" type="youtube">
+				<target id="666f1388-e7c5-4974-bb86-957b7b561959">https://www.youtube.com/user/KanyeWestVEVO</target>
+			</relation>
+			<relation type="youtube" type-id="6a540e5b-58c6-4192-b6ba-dbc71ec8fcf0">
+				<target id="dd1be730-04c3-40f2-9878-2cb66cdf1ad1">https://www.youtube.com/user/kanyewest</target>
+			</relation>
+		</relation-list>
+		<tag-list>
+			<tag count="0">
+				<name>american</name>
+			</tag>
+			<tag count="2">
+				<name>electropop</name>
+			</tag>
+			<tag count="1">
+				<name>experimental hip hop</name>
+			</tag>
+			<tag count="2">
+				<name>grammy winner</name>
+			</tag>
+			<tag count="1">
+				<name>hardcore hip hop</name>
+			</tag>
+			<tag count="4">
+				<name>hip hop</name>
+			</tag>
+			<tag count="0">
+				<name>hip hop rnb and dance hall</name>
+			</tag>
+			<tag count="1">
+				<name>hip-hop</name>
+			</tag>
+			<tag count="1">
+				<name>pop</name>
+			</tag>
+			<tag count="2">
+				<name>pop rap</name>
+			</tag>
+			<tag count="0">
+				<name>producer</name>
+			</tag>
+			<tag count="1">
+				<name>rapper</name>
+			</tag>
+			<tag count="2">
+				<name>synthpop</name>
+			</tag>
+			<tag count="0">
+				<name>us</name>
+			</tag>
+		</tag-list>
+		<rating votes-count="21">3.75</rating>
+	</artist>
+</metadata>

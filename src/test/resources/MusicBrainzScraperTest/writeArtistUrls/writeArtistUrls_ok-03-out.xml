@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><Artist amid="id20044" dcid="8760" mbid="79239441-bfd5-4981-a70c-55c3f15c1287" path="./src/test/resources/MusicBrainzScraperTest/_fileInput/M/Madonna/" rmid="mn0000237205" spid="6tbjWDEIzxoDsBA1FuhfPW" wdid="Q1744">
+	<UniqueIdList><UniqueId source="VIAF" viafid="59270244">
+			<SourceUrl>http://viaf.org/viaf/59270244</SourceUrl>
+			<SourceWSUrl>http://viaf.org/viaf/59270244/rdf.xml</SourceWSUrl>
+			<Value>59270244</Value>
+		</UniqueId><UniqueId rmid="mn0000237205" source="Allmusic">
+			<SourceUrl>http://www.allmusic.com/artist/mn0000237205</SourceUrl>
+			<SourceWSUrl>-</SourceWSUrl>
+			<Value>mn0000237205</Value>
+		</UniqueId><UniqueId mbid="79239441-bfd5-4981-a70c-55c3f15c1287" source="BBC">
+			<SourceUrl>http://www.bbc.co.uk/music/artists/79239441-bfd5-4981-a70c-55c3f15c1287</SourceUrl>
+			<SourceWSUrl>-</SourceWSUrl>
+			<Value>79239441-bfd5-4981-a70c-55c3f15c1287</Value>
+		</UniqueId><UniqueId imdbid="nm0000187" source="IMDB">
+			<SourceUrl>http://www.imdb.com/name/nm0000187/</SourceUrl>
+			<SourceWSUrl>http://www.omdbapi.com/?i=nm0000187&amp;plot=full&amp;r=xml</SourceWSUrl>
+			<Value>nm0000187</Value>
+		</UniqueId><UniqueId mbid="79239441-bfd5-4981-a70c-55c3f15c1287" source="LastFM">
+			<SourceUrl>http://www.last.fm/music/Madonna</SourceUrl>
+			<SourceWSUrl>http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&amp;mbid=79239441-bfd5-4981-a70c-55c3f15c1287&amp;api_key=YOUR_API_KEY</SourceWSUrl>
+			<Value>79239441-bfd5-4981-a70c-55c3f15c1287</Value>
+		</UniqueId><UniqueId mbid="79239441-bfd5-4981-a70c-55c3f15c1287" source="SetlistFM">
+			<SourceUrl>http://www.setlist.fm/setlists/madonna-bd6bdbe.html</SourceUrl>
+			<SourceWSUrl>http://api.setlist.fm/rest/1.0/79239441-bfd5-4981-a70c-55c3f15c1287</SourceWSUrl>
+			<Value>79239441-bfd5-4981-a70c-55c3f15c1287</Value>
+		</UniqueId><UniqueId amid="id20044" source="AppleMusic">
+			<SourceUrl>https://itunes.apple.com/us/artist/id20044</SourceUrl>
+			<SourceWSUrl>https://api.music.apple.com/v1/catalog/_storefront_/artists/id20044</SourceWSUrl>
+			<Value>id20044</Value>
+		</UniqueId><UniqueId source="Spotify" spid="6tbjWDEIzxoDsBA1FuhfPW">
+			<SourceUrl>https://open.spotify.com/artist/6tbjWDEIzxoDsBA1FuhfPW</SourceUrl>
+			<SourceWSUrl>https://api.spotify.com/v1/artists/6tbjWDEIzxoDsBA1FuhfPW</SourceWSUrl>
+			<Value>6tbjWDEIzxoDsBA1FuhfPW</Value>
+		</UniqueId><UniqueId dcid="8760" source="Discogs">
+			<SourceUrl>https://www.discogs.com/artist/8760</SourceUrl>
+			<SourceWSUrl>https://api.discogs.com/artist/8760</SourceWSUrl>
+			<Value>8760</Value>
+		</UniqueId><UniqueId source="Wikidata" wdid="Q1744">
+			<SourceUrl>https://www.wikidata.org/wiki/Q1744</SourceUrl>
+			<SourceWSUrl>https://www.wikidata.org/w/api.php?action=wbgetentities&amp;format=xml&amp;ids=Q1744</SourceWSUrl>
+			<Value>Q1744</Value>
+		</UniqueId></UniqueIdList>
+	<NameList>
+		<Name mbid="79239441-bfd5-4981-a70c-55c3f15c1287" sort-name="Madonna" source="MusicBrainz" type="Name">Madonna</Name>
+	</NameList>
+	<TypeList/>
+	<PlaceList/>
+	<DateList/>
+	<DescriptionList/>
+	<TagList/>
+	<UrlList><Url mbid="79239441-bfd5-4981-a70c-55c3f15c1287" type="fanpage">http://allaboutmadonna.com/</Url><Url mbid="79239441-bfd5-4981-a70c-55c3f15c1287" type="lyrics">http://decoda.com/madonna-lyrics</Url><Url mbid="79239441-bfd5-4981-a70c-55c3f15c1287" type="lyrics">http://genius.com/artists/Madonna</Url><Url mbid="79239441-bfd5-4981-a70c-55c3f15c1287" type="lyrics">http://lyrics.wikia.com/Madonna</Url><Url mbid="79239441-bfd5-4981-a70c-55c3f15c1287" type="blog">http://madonna.tumblr.com/</Url><Url mbid="79239441-bfd5-4981-a70c-55c3f15c1287" type="fanpage">http://madonnaonline.com.br/</Url><Url mbid="79239441-bfd5-4981-a70c-55c3f15c1287" type="official homepage">http://mouskni.com/artists/madonna/</Url><Url mbid="79239441-bfd5-4981-a70c-55c3f15c1287" type="other databases">http://musicmoz.org/Bands_and_Artists/M/Madonna/</Url><Url mbid="79239441-bfd5-4981-a70c-55c3f15c1287" type="lyrics">http://muzikum.eu/en/122-3752/madonna/lyrics.html</Url><Url mbid="79239441-bfd5-4981-a70c-55c3f15c1287" type="other databases">http://rateyourmusic.com/artist/madonna</Url><Url mbid="79239441-bfd5-4981-a70c-55c3f15c1287" type="other databases">http://soundtrackcollector.com/composer/3583/</Url><Url mbid="79239441-bfd5-4981-a70c-55c3f15c1287" type="VIAF">http://viaf.org/viaf/59270244</Url><Url mbid="79239441-bfd5-4981-a70c-55c3f15c1287" type="allmusic">http://www.allmusic.com/artist/mn0000237205</Url><Url mbid="79239441-bfd5-4981-a70c-55c3f15c1287" type="bandsintown">http://www.bandsintown.com/Madonna</Url><Url mbid="79239441-bfd5-4981-a70c-55c3f15c1287" type="BBC Music page">http://www.bbc.co.uk/music/artists/79239441-bfd5-4981-a70c-55c3f15c1287</Url><Url mbid="79239441-bfd5-4981-a70c-55c3f15c1287" type="lyrics">http://www.directlyrics.com/madonna-artist.html</Url><Url mbid="79239441-bfd5-4981-a70c-55c3f15c1287" type="social network">http://www.flickr.com/photos/madonnaphotos/</Url><Url mbid="79239441-bfd5-4981-a70c-55c3f15c1287" type="IMDb">http://www.imdb.com/name/nm0000187/</Url><Url mbid="79239441-bfd5-4981-a70c-55c3f15c1287" type="last.fm">http://www.last.fm/music/Madonna</Url><Url mbid="79239441-bfd5-4981-a70c-55c3f15c1287" type="fanpage">http://www.mad-eyes.net/</Url><Url mbid="79239441-bfd5-4981-a70c-55c3f15c1287" type="official homepage">http://www.madonna.com/</Url><Url mbid="79239441-bfd5-4981-a70c-55c3f15c1287" type="discography">http://www.madonnadiscography.pl/</Url><Url mbid="79239441-bfd5-4981-a70c-55c3f15c1287" type="fanpage">http://www.madonnalicious.com/</Url><Url mbid="79239441-bfd5-4981-a70c-55c3f15c1287" type="discography">http://www.madonnarecords.com/</Url><Url mbid="79239441-bfd5-4981-a70c-55c3f15c1287" type="fanpage">http://www.minsane.com.br/</Url><Url mbid="79239441-bfd5-4981-a70c-55c3f15c1287" type="secondhandsongs">http://www.secondhandsongs.com/artist/84</Url><Url mbid="79239441-bfd5-4981-a70c-55c3f15c1287" type="setlistfm">http://www.setlist.fm/setlists/madonna-bd6bdbe.html</Url><Url mbid="79239441-bfd5-4981-a70c-55c3f15c1287" type="streaming music">http://www.staimusic.com/en/bands/madonna_2801.html</Url><Url mbid="79239441-bfd5-4981-a70c-55c3f15c1287" type="other databases">http://www.worldcat.org/identities/lccn-n84156128/</Url><Url mbid="79239441-bfd5-4981-a70c-55c3f15c1287" type="image">https://commons.wikimedia.org/wiki/File:Madonna_%C3%A0_Nice_17_edit.jpg</Url><Url mbid="79239441-bfd5-4981-a70c-55c3f15c1287" type="wikipedia">https://en.wikipedia.org/wiki/Madonna_(entertainer)</Url><Url mbid="79239441-bfd5-4981-a70c-55c3f15c1287" type="social network">https://instagram.com/madonna/</Url><Url mbid="79239441-bfd5-4981-a70c-55c3f15c1287" type="purchase for download">https://itunes.apple.com/us/artist/id20044</Url><Url mbid="79239441-bfd5-4981-a70c-55c3f15c1287" type="myspace">https://myspace.com/madonna</Url><Url mbid="79239441-bfd5-4981-a70c-55c3f15c1287" type="streaming music">https://open.spotify.com/artist/6tbjWDEIzxoDsBA1FuhfPW</Url><Url mbid="79239441-bfd5-4981-a70c-55c3f15c1287" type="social network">https://plus.google.com/+Madonna</Url><Url mbid="79239441-bfd5-4981-a70c-55c3f15c1287" type="soundcloud">https://soundcloud.com/madonna</Url><Url mbid="79239441-bfd5-4981-a70c-55c3f15c1287" type="social network">https://twitter.com/Madonna</Url><Url mbid="79239441-bfd5-4981-a70c-55c3f15c1287" type="purchase for mail-order">https://www.amazon.com/-/e/B000APIQE2</Url><Url mbid="79239441-bfd5-4981-a70c-55c3f15c1287" type="discogs">https://www.discogs.com/artist/8760</Url><Url mbid="79239441-bfd5-4981-a70c-55c3f15c1287" type="social network">https://www.facebook.com/madonna</Url><Url mbid="79239441-bfd5-4981-a70c-55c3f15c1287" type="wikidata">https://www.wikidata.org/wiki/Q1744</Url><Url mbid="79239441-bfd5-4981-a70c-55c3f15c1287" type="youtube">https://www.youtube.com/user/MADONNAVEVO</Url><Url mbid="79239441-bfd5-4981-a70c-55c3f15c1287" type="youtube">https://www.youtube.com/user/madonna</Url></UrlList>
+	<RatingList/>
+	<CreditList/>
+	<ArtList/>
+	<DisambiguationList/>
+	<AnnotationList/>
+	<Discography>
+		<ReleaseGroupList><ReleaseGroup path="./src/test/resources/MusicBrainzScraperTest/_fileInput/M/Madonna/1984 - Like A Virgin/">
+	<UniqueIdList/>
+	<NameList/>
+	<TypeList/>
+	<DateList/>
+	<AwardList/>
+	<ChartList/>
+	<DescriptionList/>
+	<TagList/>
+	<UrlList/>
+	<RatingList/>
+	<CreditList/>
+	<ArtList/>
+	<DisambiguationList/>
+	<AnnotationList/>
+	<ReleaseList><Release path="./src/test/resources/MusicBrainzScraperTest/_fileInput/M/Madonna/1984 - Like A Virgin/">
+	<UniqueIdList/>
+	<NameList/>
+	<TypeList/>
+	<DateList/>
+	<PlaceList/>
+	<LabelList/>
+	<LengthList/>
+	<DescriptionList/>
+	<CopyrightList/>
+	<TagList/>
+	<UrlList/>
+	<CreditList/>			
+	<ArtList/>
+	<DisambiguationList/>
+	<AnnotationList/>
+	<MediumList><Medium discNo="1" path="./src/test/resources/MusicBrainzScraperTest/_fileInput/M/Madonna/1984 - Like A Virgin/">
+	<UniqueIdList/>
+	<NameList/>
+	<TypeList/>
+	<LengthList/>
+	<TrackList><Track>
+	<UniqueIdList/>
+	<NameList/>
+	<TypeList/>
+	<DateList/>
+	<PlaceList/>
+	<FileInfo/>
+	<AudioInfo/>
+	<Position/>
+	<LabelList/>
+	<DescriptionList/>
+	<LyricsList/>
+	<CopyrightList/>
+	<CopyrightCollectiveList/>
+	<TagList/>
+	<RatingList/>
+	<UrlList/>
+	<CreditList/>
+	<DisambiguationList/>
+	<AnnotationList/>
+</Track><Track>
+	<UniqueIdList/>
+	<NameList/>
+	<TypeList/>
+	<DateList/>
+	<PlaceList/>
+	<FileInfo/>
+	<AudioInfo/>
+	<Position/>
+	<LabelList/>
+	<DescriptionList/>
+	<LyricsList/>
+	<CopyrightList/>
+	<CopyrightCollectiveList/>
+	<TagList/>
+	<RatingList/>
+	<UrlList/>
+	<CreditList/>
+	<DisambiguationList/>
+	<AnnotationList/>
+</Track><Track>
+	<UniqueIdList/>
+	<NameList/>
+	<TypeList/>
+	<DateList/>
+	<PlaceList/>
+	<FileInfo/>
+	<AudioInfo/>
+	<Position/>
+	<LabelList/>
+	<DescriptionList/>
+	<LyricsList/>
+	<CopyrightList/>
+	<CopyrightCollectiveList/>
+	<TagList/>
+	<RatingList/>
+	<UrlList/>
+	<CreditList/>
+	<DisambiguationList/>
+	<AnnotationList/>
+</Track><Track>
+	<UniqueIdList/>
+	<NameList/>
+	<TypeList/>
+	<DateList/>
+	<PlaceList/>
+	<FileInfo/>
+	<AudioInfo/>
+	<Position/>
+	<LabelList/>
+	<DescriptionList/>
+	<LyricsList/>
+	<CopyrightList/>
+	<CopyrightCollectiveList/>
+	<TagList/>
+	<RatingList/>
+	<UrlList/>
+	<CreditList/>
+	<DisambiguationList/>
+	<AnnotationList/>
+</Track><Track>
+	<UniqueIdList/>
+	<NameList/>
+	<TypeList/>
+	<DateList/>
+	<PlaceList/>
+	<FileInfo/>
+	<AudioInfo/>
+	<Position/>
+	<LabelList/>
+	<DescriptionList/>
+	<LyricsList/>
+	<CopyrightList/>
+	<CopyrightCollectiveList/>
+	<TagList/>
+	<RatingList/>
+	<UrlList/>
+	<CreditList/>
+	<DisambiguationList/>
+	<AnnotationList/>
+</Track><Track>
+	<UniqueIdList/>
+	<NameList/>
+	<TypeList/>
+	<DateList/>
+	<PlaceList/>
+	<FileInfo/>
+	<AudioInfo/>
+	<Position/>
+	<LabelList/>
+	<DescriptionList/>
+	<LyricsList/>
+	<CopyrightList/>
+	<CopyrightCollectiveList/>
+	<TagList/>
+	<RatingList/>
+	<UrlList/>
+	<CreditList/>
+	<DisambiguationList/>
+	<AnnotationList/>
+</Track><Track>
+	<UniqueIdList/>
+	<NameList/>
+	<TypeList/>
+	<DateList/>
+	<PlaceList/>
+	<FileInfo/>
+	<AudioInfo/>
+	<Position/>
+	<LabelList/>
+	<DescriptionList/>
+	<LyricsList/>
+	<CopyrightList/>
+	<CopyrightCollectiveList/>
+	<TagList/>
+	<RatingList/>
+	<UrlList/>
+	<CreditList/>
+	<DisambiguationList/>
+	<AnnotationList/>
+</Track><Track>
+	<UniqueIdList/>
+	<NameList/>
+	<TypeList/>
+	<DateList/>
+	<PlaceList/>
+	<FileInfo/>
+	<AudioInfo/>
+	<Position/>
+	<LabelList/>
+	<DescriptionList/>
+	<LyricsList/>
+	<CopyrightList/>
+	<CopyrightCollectiveList/>
+	<TagList/>
+	<RatingList/>
+	<UrlList/>
+	<CreditList/>
+	<DisambiguationList/>
+	<AnnotationList/>
+</Track><Track>
+	<UniqueIdList/>
+	<NameList/>
+	<TypeList/>
+	<DateList/>
+	<PlaceList/>
+	<FileInfo/>
+	<AudioInfo/>
+	<Position/>
+	<LabelList/>
+	<DescriptionList/>
+	<LyricsList/>
+	<CopyrightList/>
+	<CopyrightCollectiveList/>
+	<TagList/>
+	<RatingList/>
+	<UrlList/>
+	<CreditList/>
+	<DisambiguationList/>
+	<AnnotationList/>
+</Track></TrackList>
+</Medium></MediumList>
+</Release></ReleaseList>
+</ReleaseGroup></ReleaseGroupList>
+	</Discography>
+</Artist>

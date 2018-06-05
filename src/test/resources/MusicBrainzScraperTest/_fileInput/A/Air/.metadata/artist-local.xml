@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Artist mbid="cb67438a-7f50-4f2b-a6f1-2bb2729fd538">
+	<UniqueIdList/>
+	<NameList>
+		<Name mbid="cb67438a-7f50-4f2b-a6f1-2bb2729fd538" primary="primary" sort-name="Air" source="MusicBrainz" type="Artist name" type-id="894afba6-2816-3c24-8072-eadb66bd04bc">Air</Name>
+	</NameList>
+	<TypeList/>
+	<PlaceList/>
+	<DateList/>
+	<DescriptionList/>
+	<TagList/>
+	<UrlList/>
+	<RatingList/>
+	<CreditList/>
+	<ArtList/>
+	<DisambiguationList/>
+	<AnnotationList/>
+	<Discography>
+		<ReleaseGroupList/>
+	</Discography>
+</Artist>

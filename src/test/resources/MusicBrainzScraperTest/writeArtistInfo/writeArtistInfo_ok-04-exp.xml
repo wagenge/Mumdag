@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<Artist mbid="76c9a186-75bd-436a-85c0-823e3efddb7f">
+<Artist dcid="120232" mbid="76c9a186-75bd-436a-85c0-823e3efddb7f" path="./src/test/resources/MusicBrainzScraperTest/_fileInput/J/Joplin, Janis/" rmid="mn0000177060" wdid="Q1514">
 	<UniqueIdList>
 		<UniqueId source="VIAF" viafid="7574301">
 			<SourceUrl>http://viaf.org/viaf/7574301</SourceUrl>
@@ -53,21 +53,24 @@
 		<Name mbid="76c9a186-75bd-436a-85c0-823e3efddb7f" sort-name="Joplin, Janis Lyn" source="MusicBrainz" type="Legal name" type-id="d4dcd0c0-b341-3612-a332-c0ce797b25cf">Janis Lyn Joplin</Name>
 		<Name mbid="76c9a186-75bd-436a-85c0-823e3efddb7f" sort-name="Joplin, Janis" source="MusicBrainz" type="Alias">Joplin, Janis</Name>
 	</NameList>
-	<Type gender="Female" mbid="76c9a186-75bd-436a-85c0-823e3efddb7f">Person</Type>
-	<AreaList>
-		<Area event="born in" mbid="5a9b37e6-927d-4674-852b-9f472408b47e" seq="1" source="MusicBrainz" type="City">Port Arthur</Area>
-		<Area event="born in" mbid="56e5c440-1bc5-45c2-a076-93503bca1e9c" seq="2" source="MusicBrainz" type="County">Jefferson County</Area>
-		<Area code="US-TX" event="born in" mbid="f934c8da-e40e-4056-8f8c-212e68fdcaec" seq="3" source="MusicBrainz" type="Subdivision">Texas</Area>
-		<Area code="US" event="born in" mbid="489ce91b-6658-3307-9877-795b68554c98" seq="4" source="MusicBrainz" type="Country">United States</Area>
-		<Area event="died in" mbid="1f40c6e1-47ba-4e35-996f-fe6ee5840e62" seq="1" source="MusicBrainz" type="City">Los Angeles</Area>
-		<Area event="died in" mbid="720f8272-6ba3-48f7-b78e-14cd2641c2cf" seq="2" source="MusicBrainz" type="County">Los Angeles County</Area>
-		<Area code="US-CA" event="died in" mbid="ae0110b6-13d4-4998-9116-5b926287aa23" seq="3" source="MusicBrainz" type="Subdivision">California</Area>
-		<Area code="US" event="died in" mbid="489ce91b-6658-3307-9877-795b68554c98" seq="4" source="MusicBrainz" type="Country">United States</Area>
-	</AreaList>
-	<PeriodList>
+	<TypeList>
+		<Type mbid="76c9a186-75bd-436a-85c0-823e3efddb7f" source="MusicBrainz" type="ArtistType">Person</Type>
+		<Type mbid="76c9a186-75bd-436a-85c0-823e3efddb7f" source="MusicBrainz" type="Gender">Female</Type>
+	</TypeList>
+	<PlaceList>
+		<Place event="born" mbid="5a9b37e6-927d-4674-852b-9f472408b47e" seq="1" source="MusicBrainz" type="City">Port Arthur</Place>
+		<Place event="born" mbid="56e5c440-1bc5-45c2-a076-93503bca1e9c" seq="2" source="MusicBrainz" type="County">Jefferson County</Place>
+		<Place code="US-TX" event="born" mbid="f934c8da-e40e-4056-8f8c-212e68fdcaec" seq="3" source="MusicBrainz" type="Subdivision">Texas</Place>
+		<Place code="US" event="born" mbid="489ce91b-6658-3307-9877-795b68554c98" seq="4" source="MusicBrainz" type="Country">United States</Place>
+		<Place event="died" mbid="1f40c6e1-47ba-4e35-996f-fe6ee5840e62" seq="1" source="MusicBrainz" type="City">Los Angeles</Place>
+		<Place event="died" mbid="720f8272-6ba3-48f7-b78e-14cd2641c2cf" seq="2" source="MusicBrainz" type="County">Los Angeles County</Place>
+		<Place code="US-CA" event="died" mbid="ae0110b6-13d4-4998-9116-5b926287aa23" seq="3" source="MusicBrainz" type="Subdivision">California</Place>
+		<Place code="US" event="died" mbid="489ce91b-6658-3307-9877-795b68554c98" seq="4" source="MusicBrainz" type="Country">United States</Place>
+	</PlaceList>
+	<DateList>
 		<Date mbid="76c9a186-75bd-436a-85c0-823e3efddb7f" type="born">1943-01-19</Date>
 		<Date mbid="76c9a186-75bd-436a-85c0-823e3efddb7f" type="died">1970-10-04</Date>
-	</PeriodList>
+	</DateList>
 	<DescriptionList/>
 	<TagList>
 		<Tag count="2" mbid="76c9a186-75bd-436a-85c0-823e3efddb7f" source="MusicBrainz">acid rock</Tag>
@@ -80,7 +83,7 @@
 		<Tag count="4" mbid="76c9a186-75bd-436a-85c0-823e3efddb7f" source="MusicBrainz">psychedelic rock</Tag>
 		<Tag count="4" mbid="76c9a186-75bd-436a-85c0-823e3efddb7f" source="MusicBrainz">rock</Tag>
 		<Tag count="1" mbid="76c9a186-75bd-436a-85c0-823e3efddb7f" source="MusicBrainz">soul</Tag>
-	</TagList>	
+	</TagList>
 	<UrlList>
 		<Url mbid="76c9a186-75bd-436a-85c0-823e3efddb7f" type="lyrics">http://lyrics.wikia.com/Janis_Joplin</Url>
 		<Url mbid="76c9a186-75bd-436a-85c0-823e3efddb7f" type="lyrics">http://muzikum.eu/en/122-4189/janis-joplin/lyrics.html</Url>
@@ -108,13 +111,13 @@
 	</UrlList>
 	<RatingList>
 		<Rating mbid="76c9a186-75bd-436a-85c0-823e3efddb7f" source="MusicBrainz" votes="7">4.55</Rating>
-	</RatingList>	
-	<ArtistCreditList>
-		<ArtistCredit mbid="3cf5a3be-25ef-4408-98fe-e66fee536be1">
+	</RatingList>
+	<CreditList>
+		<Credit mbid="3cf5a3be-25ef-4408-98fe-e66fee536be1">
 			<UniqueIdList>
 				<UniqueId mbid="3cf5a3be-25ef-4408-98fe-e66fee536be1" source="MusicBrainz">
 					<SourceUrl>https://musicbrainz.org/artist/3cf5a3be-25ef-4408-98fe-e66fee536be1</SourceUrl>
-					<SourceWSUrl>https://musicbrainz.org/ws/2/artist/3cf5a3be-25ef-4408-98fe-e66fee536be1?inc=aliases+artist-rels+url-rels</SourceWSUrl>
+					<SourceWSUrl>https://musicbrainz.org/ws/2/artist/3cf5a3be-25ef-4408-98fe-e66fee536be1?inc=aliases+tags+annotation+ratings+artist-rels+url-rels</SourceWSUrl>
 					<Value>3cf5a3be-25ef-4408-98fe-e66fee536be1</Value>
 				</UniqueId>
 			</UniqueIdList>
@@ -124,15 +127,15 @@
 			<RoleList>
 				<Role mbid="3cf5a3be-25ef-4408-98fe-e66fee536be1" original="false" type="membership">member of band</Role>
 			</RoleList>
-			<PeriodList>
+			<DateList>
 				<Date/>
-			</PeriodList>
-		</ArtistCredit>
-		<ArtistCredit mbid="667972a5-a87e-44b7-bc0e-fd65ed66111f">
+			</DateList>	
+		</Credit>
+		<Credit mbid="667972a5-a87e-44b7-bc0e-fd65ed66111f">
 			<UniqueIdList>
 				<UniqueId mbid="667972a5-a87e-44b7-bc0e-fd65ed66111f" source="MusicBrainz">
 					<SourceUrl>https://musicbrainz.org/artist/667972a5-a87e-44b7-bc0e-fd65ed66111f</SourceUrl>
-					<SourceWSUrl>https://musicbrainz.org/ws/2/artist/667972a5-a87e-44b7-bc0e-fd65ed66111f?inc=aliases+artist-rels+url-rels</SourceWSUrl>
+					<SourceWSUrl>https://musicbrainz.org/ws/2/artist/667972a5-a87e-44b7-bc0e-fd65ed66111f?inc=aliases+tags+annotation+ratings+artist-rels+url-rels</SourceWSUrl>
 					<Value>667972a5-a87e-44b7-bc0e-fd65ed66111f</Value>
 				</UniqueId>
 			</UniqueIdList>
@@ -142,15 +145,15 @@
 			<RoleList>
 				<Role mbid="667972a5-a87e-44b7-bc0e-fd65ed66111f" original="false" type="membership">member of band</Role>
 			</RoleList>
-			<PeriodList>
+			<DateList>
 				<Date/>
-			</PeriodList>
-		</ArtistCredit>
-		<ArtistCredit mbid="da22392b-7060-4ec0-b736-d1347e14a72f">
+			</DateList>	
+		</Credit>
+		<Credit mbid="da22392b-7060-4ec0-b736-d1347e14a72f">
 			<UniqueIdList>
 				<UniqueId mbid="da22392b-7060-4ec0-b736-d1347e14a72f" source="MusicBrainz">
 					<SourceUrl>https://musicbrainz.org/artist/da22392b-7060-4ec0-b736-d1347e14a72f</SourceUrl>
-					<SourceWSUrl>https://musicbrainz.org/ws/2/artist/da22392b-7060-4ec0-b736-d1347e14a72f?inc=aliases+artist-rels+url-rels</SourceWSUrl>
+					<SourceWSUrl>https://musicbrainz.org/ws/2/artist/da22392b-7060-4ec0-b736-d1347e14a72f?inc=aliases+tags+annotation+ratings+artist-rels+url-rels</SourceWSUrl>
 					<Value>da22392b-7060-4ec0-b736-d1347e14a72f</Value>
 				</UniqueId>
 			</UniqueIdList>
@@ -160,17 +163,273 @@
 			<RoleList>
 				<Role mbid="da22392b-7060-4ec0-b736-d1347e14a72f" original="false" type="membership">member of band</Role>
 			</RoleList>
-			<PeriodList>
+			<DateList>
 				<Date/>
-			</PeriodList>
-		</ArtistCredit>
-	</ArtistCreditList>
+			</DateList>	
+		</Credit>
+	</CreditList>
 	<ArtList/>
 	<DisambiguationList/>
 	<AnnotationList>
 		<Annotation mbid="76c9a186-75bd-436a-85c0-823e3efddb7f" source="MusicBrainz">Janis' first two albums '''Big Brother &amp; the Holding Company''' and '''Cheap Thrills''' can be found under '''[http://musicbrainz.org/artist/3cf5a3be-25ef-4408-98fe-e66fee536be1.html|Big Brother &amp; the Holding Company]'''.</Annotation>
 	</AnnotationList>
 	<Discography>
-		<ReleaseGroupList/>
+		<ReleaseGroupList>
+			<ReleaseGroup path="./src/test/resources/MusicBrainzScraperTest/_fileInput/J/Joplin, Janis/1971 - Pearl/">
+				<UniqueIdList/>
+				<NameList/>
+				<TypeList/>
+				<DateList/>
+				<AwardList/>
+				<ChartList/>
+				<DescriptionList/>
+				<TagList/>
+				<UrlList/>
+				<RatingList/>
+				<CreditList/>
+				<ArtList/>
+				<DisambiguationList/>
+				<AnnotationList/>
+				<ReleaseList>
+					<Release path="./src/test/resources/MusicBrainzScraperTest/_fileInput/J/Joplin, Janis/1971 - Pearl/">
+						<UniqueIdList/>
+						<NameList/>
+						<TypeList/>
+						<DateList/>
+						<PlaceList/>
+						<LabelList/>
+						<LengthList/>
+						<DescriptionList/>
+						<CopyrightList/>
+						<TagList/>
+						<UrlList/>
+						<CreditList/>			
+						<ArtList/>
+						<DisambiguationList/>
+						<AnnotationList/>
+						<MediumList>
+							<Medium discNo="1" path="./src/test/resources/MusicBrainzScraperTest/_fileInput/J/Joplin, Janis/1971 - Pearl/">
+								<UniqueIdList/>
+								<NameList/>
+								<TypeList/>
+								<LengthList/>
+								<TrackList>
+									<Track>
+										<UniqueIdList/>
+										<NameList/>
+										<TypeList/>
+										<DateList/>
+										<PlaceList/>
+										<FileInfo/>
+										<AudioInfo/>
+										<Position/>
+										<LabelList/>
+										<DescriptionList/>
+										<LyricsList/>
+										<CopyrightList/>
+										<CopyrightCollectiveList/>
+										<TagList/>
+										<RatingList/>
+										<UrlList/>
+										<CreditList/>
+										<DisambiguationList/>
+										<AnnotationList/>
+									</Track>
+									<Track>
+										<UniqueIdList/>
+										<NameList/>
+										<TypeList/>
+										<DateList/>
+										<PlaceList/>
+										<FileInfo/>
+										<AudioInfo/>
+										<Position/>
+										<LabelList/>
+										<DescriptionList/>
+										<LyricsList/>
+										<CopyrightList/>
+										<CopyrightCollectiveList/>
+										<TagList/>
+										<RatingList/>
+										<UrlList/>
+										<CreditList/>
+										<DisambiguationList/>
+										<AnnotationList/>
+									</Track>
+									<Track>
+										<UniqueIdList/>
+										<NameList/>
+										<TypeList/>
+										<DateList/>
+										<PlaceList/>
+										<FileInfo/>
+										<AudioInfo/>
+										<Position/>
+										<LabelList/>
+										<DescriptionList/>
+										<LyricsList/>
+										<CopyrightList/>
+										<CopyrightCollectiveList/>
+										<TagList/>
+										<RatingList/>
+										<UrlList/>
+										<CreditList/>
+										<DisambiguationList/>
+										<AnnotationList/>
+									</Track>
+									<Track>
+										<UniqueIdList/>
+										<NameList/>
+										<TypeList/>
+										<DateList/>
+										<PlaceList/>
+										<FileInfo/>
+										<AudioInfo/>
+										<Position/>
+										<LabelList/>
+										<DescriptionList/>
+										<LyricsList/>
+										<CopyrightList/>
+										<CopyrightCollectiveList/>
+										<TagList/>
+										<RatingList/>
+										<UrlList/>
+										<CreditList/>
+										<DisambiguationList/>
+										<AnnotationList/>
+									</Track>
+									<Track>
+										<UniqueIdList/>
+										<NameList/>
+										<TypeList/>
+										<DateList/>
+										<PlaceList/>
+										<FileInfo/>
+										<AudioInfo/>
+										<Position/>
+										<LabelList/>
+										<DescriptionList/>
+										<LyricsList/>
+										<CopyrightList/>
+										<CopyrightCollectiveList/>
+										<TagList/>
+										<RatingList/>
+										<UrlList/>
+										<CreditList/>
+										<DisambiguationList/>
+										<AnnotationList/>
+									</Track>
+									<Track>
+										<UniqueIdList/>
+										<NameList/>
+										<TypeList/>
+										<DateList/>
+										<PlaceList/>
+										<FileInfo/>
+										<AudioInfo/>
+										<Position/>
+										<LabelList/>
+										<DescriptionList/>
+										<LyricsList/>
+										<CopyrightList/>
+										<CopyrightCollectiveList/>
+										<TagList/>
+										<RatingList/>
+										<UrlList/>
+										<CreditList/>
+										<DisambiguationList/>
+										<AnnotationList/>
+									</Track>
+									<Track>
+										<UniqueIdList/>
+										<NameList/>
+										<TypeList/>
+										<DateList/>
+										<PlaceList/>
+										<FileInfo/>
+										<AudioInfo/>
+										<Position/>
+										<LabelList/>
+										<DescriptionList/>
+										<LyricsList/>
+										<CopyrightList/>
+										<CopyrightCollectiveList/>
+										<TagList/>
+										<RatingList/>
+										<UrlList/>
+										<CreditList/>
+										<DisambiguationList/>
+										<AnnotationList/>
+									</Track>
+									<Track>
+										<UniqueIdList/>
+										<NameList/>
+										<TypeList/>
+										<DateList/>
+										<PlaceList/>
+										<FileInfo/>
+										<AudioInfo/>
+										<Position/>
+										<LabelList/>
+										<DescriptionList/>
+										<LyricsList/>
+										<CopyrightList/>
+										<CopyrightCollectiveList/>
+										<TagList/>
+										<RatingList/>
+										<UrlList/>
+										<CreditList/>
+										<DisambiguationList/>
+										<AnnotationList/>
+									</Track>
+									<Track>
+										<UniqueIdList/>
+										<NameList/>
+										<TypeList/>
+										<DateList/>
+										<PlaceList/>
+										<FileInfo/>
+										<AudioInfo/>
+										<Position/>
+										<LabelList/>
+										<DescriptionList/>
+										<LyricsList/>
+										<CopyrightList/>
+										<CopyrightCollectiveList/>
+										<TagList/>
+										<RatingList/>
+										<UrlList/>
+										<CreditList/>
+										<DisambiguationList/>
+										<AnnotationList/>
+									</Track>
+									<Track>
+										<UniqueIdList/>
+										<NameList/>
+										<TypeList/>
+										<DateList/>
+										<PlaceList/>
+										<FileInfo/>
+										<AudioInfo/>
+										<Position/>
+										<LabelList/>
+										<DescriptionList/>
+										<LyricsList/>
+										<CopyrightList/>
+										<CopyrightCollectiveList/>
+										<TagList/>
+										<RatingList/>
+										<UrlList/>
+										<CreditList/>
+										<DisambiguationList/>
+										<AnnotationList/>
+									</Track>
+								</TrackList>
+							</Medium>
+						</MediumList>
+					</Release>
+				</ReleaseList>
+			</ReleaseGroup>
+		</ReleaseGroupList>
 	</Discography>
 </Artist>

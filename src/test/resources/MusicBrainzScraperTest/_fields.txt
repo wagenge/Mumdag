@@ -1,0 +1,99 @@
+RELEASEGROUP:
+<UniqueIdList/>			von url-rels abgeleitet
+<NameList/>				von title
+						von aliases .. evtl? (sehr selten, bspw hier 055be730-dcad-31bf-b550-45ba9c202aa3!!, a1ad21db-0072-31dd-9f75-7c9ba084a5c6, 9ca8522c-4f42-44be-86ef-16837d61057e, 03216374-322b-38cc-a1c7-73f21c0d47f2, 8c6b3756-7c0a-4a3e-99d2-82e8d0c1e692, 0544a70f-2cef-393c-9bf9-0cc41b7c25f6 oder 201b43a2-dc5a-3003-851c-5303e4f849e3)
+<TypeList/>				von primary-type
+						von secondary-type-list
+						von release-group-rels (https://musicbrainz.org/relationships/release_group-release_group) ... cover(?) / live performance / remix / single from / includes (689c0901-5277-321a-a6e2-083bc4a008f4)
+						von series-rels (https://musicbrainz.org/relationships/release_group-series) ... tour in support of (28c5684e-59e1-400c-81fb-1ceb3d0fdd18)
+<DateList/>				von first-release-date ... released first on
+<AwardList/>
+<ChartList/>
+<DescriptionList/>
+<TagList/>				von tag-list
+<UrlList/>				von url-rels
+<RatingList/>			von rating
+<CreditList/>			von artist-rels (https://musicbrainz.org/relationships/artist-release_group) ... artists and repertoire / creative direction ... bspw Madonna, MDNA / Janis Joplin, Janis Joplin’s Greatest Hits / Air, Talkie Walkie		8c18657a-6338-490d-a952-897663596b96!!! und ef0484e3-eb90-3806-bfce-fea9cd68d058!!
+<ArtList/>
+<DisambiguationList/>	von disambiguation ... bspw. Beatles, White Album
+<AnnotationList/>		von annotations ... bspw. Coldplay, Mylo Xyloto
+https://musicbrainz.org/ws/2/release-group/61b7b6cd-86a6-4728-9478-b58c93bca8fd?inc=aliases+tags+annotation+ratings+artist-rels+release-group-rels+series-rels+url-rels
+
+
+
+RELEASE:
+<UniqueIdList/>			von barcode
+						von asin (besser von url-rels)
+						von url-rels (kann bsow mehrere asins geben .... bspw. bfae6df7-3ee2-4031-ac09-8dc63c6ce6ca)
+							.... Catalog-Nummer??
+<NameList/>				von title
+						von aliases ... evtl? (sehr selten: 585fed19-5afc-4d5b-8454-419fd6ff143c, 595ab00b-e21e-44ed-ab78-d7ebd0968e19, 98793cf0-40a0-4871-a6f0-320991dde9c4)
+<TypeList/>				von medium/format ... format (bspw 12" Vinyl / CD) 
+						von status ... status (bspw offical)
+						von packaging ... packaging (bspw. Cardboard/Paper Sleeve)
+						von text-representation ... language / script
+						von release-rels (https://musicbrainz.org/relationships/release-release) ...remstered (bspw. 3a685770-7326-34fc-9f18-e5f5626f3dc5)
+<DateList/>				von date ... released 
+						von release-event/date ... released (was machen, wenn es nicht übereinstimmt??, oder wenn es zwei oder mehr gitb ??? ... bspw. 034e0c73-c2df-328b-861c-3db28217aeed)
+						von place-rels ... editet / ... (siehe PlaceList)
+<PlaceList/>			von release-event/area	... released
+						von place-rels (https://musicbrainz.org/relationships/place-release) ... recorded / arranged / edited / ...
+						von area-rels  (https://musicbrainz.org/relationships/area-release) ... recorded / arranged / edited / ...
+						von event-rels (https://musicbrainz.org/relationships/event-release) ) ... recorded / arranged / edited / ...
+<LabelList/>			von label ... name, type=Label, sort-name, code, mbid
+<Length/>
+<DescriptionList/>
+<CopyrightList/>		von artist-rels (https://musicbrainz.org/relationships/artist-release) ...copyright (bspw 7542431b-0fab-4443-a994-5fa98593da02)
+						von label-rels (https://musicbrainz.org/relationships/label-release) ... copyright (bspw 20b363e9-f175-43be-8b9c-67373e5dc05c)
+<TagList/>
+<UrlList/>
+<CreditList/>			
+<ArtList/>
+<DisambiguationList/>
+<AnnotationList/>
+https://musicbrainz.org/ws/2/release/3a685770-7326-34fc-9f18-e5f5626f3dc5?inc=recordings+labels+aliases+tags+annotation+media+discids+isrcs+artist-rels+release-rels+label-rels+area-rels+place-rels+url-rels+event-rels
+https://musicbrainz.org/ws/2/release/3a685770-7326-34fc-9f18-e5f5626f3dc5?inc=labels+aliases+tags+annotation+media+discids+artist-rels+release-rels+label-rels+area-rels+place-rels+url-rels+event-rels
+
+
+MEDIUM:
+<UniqueIdList/>			evtl discIds? ... regel: alle, mit der gleichen zeit des releases. wenn es keinen mit der gleichen zeit gibt, dann alle
+<NameList/>				manchmal haben verschiedene medien verschiedene titel
+<TypeList/>				von release/medium CD/DVD
+
+
+TRACK:
+<UniqueIdList/>			mbids immer sowohl von recording, als auch von work
+						von recording/url-rels (https://musicbrainz.org/relationships/recording-url) ...
+<NameList/>				von recording title
+						von work title (sollte gleich sein)
+						von work/aliases
+<TypeList/>				e.g. Song plus Tonart (Yellow Submarine) plus Sprache
+						von recording/recording-rels (https://musicbrainz.org/relationships/recording-recording) ... remix / compilation / remaster / video (... als link zu youtube) ... bspw https://musicbrainz.org/recording/3b083303-7c3e-4bf3-8457-6eb417f581f5	
+						von work ... song / instrumental ...
+						von work/work-rels (https://musicbrainz.org/relationships/work-work) ... based on / revision of
+<DateList/>				event=recorded on/mixed/performed
+<PlaceList>				event=recorded at/mixed at
+						von recording/area-rels (https://musicbrainz.org/relationships/area-recording) ... produced in / arranged in / ...
+						von recording/place-rels (https://musicbrainz.org/relationships/place-recording) ... produced at / arraged at / ...
+						von work/area-rels (https://musicbrainz.org/relationships/area-work) ... written in / premiere / arranged in / ...
+						von work/place-rels (https://musicbrainz.org/relationships/place-work) ... written a7 / premiere / arranged at / ...
+<FileInfo/>
+<AudioInfo/>
+<Position/>
+<LabelList/>			Name, type=publisher, sort-name, code, mbid
+<DescriptionList/>
+<LyricsList/>
+<CopyrightCollectiveList/>	GEMA, BMI, ASCAP, ... ISWC
+<CopyrightList/>		von work ... ISWC
+						von recording/label-rels ... phonographic copyright
+						von work/label-rels ... publishing
+<TagList/>
+<UrlList/>				von recording/url-rels (https://musicbrainz.org/relationships/recording-url) ...
+						von work/url-rels (https://musicbrainz.org/relationships/url-work) ...
+<RatingList/>			combined from recording and work
+<CreditList/>			von recording/artist-rels (https://musicbrainz.org/relationships/artist-recording) ... performaner / producer / arranger / ...
+						von work/artist-rels (https://musicbrainz.org/relationships/artist-work) ... writer / composer / arranger
+<DisambiguationList/>
+<AnnotationList/>
+https://musicbrainz.org/ws/2/work/b85845e2-38fc-3092-a992-d373e7d517e9?inc=aliases+tags+artist-rels+url-rels+label-rels+place-rels
+https://musicbrainz.org/ws/2/recording/822dd185-2d8f-443c-9bd4-81ce37258625?inc=aliases+annotation+tags+ratings+isrcs+artist-rels+work-rels+place-rels+label-rels+url-rels

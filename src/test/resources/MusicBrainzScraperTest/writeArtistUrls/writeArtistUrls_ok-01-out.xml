@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><Artist mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><Artist amid="id136975" dcid="82730" mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" path="./src/test/resources/MusicBrainzScraperTest/_fileInput/B/Beatles, The/" rmid="mn0000754032" spid="3WrFJ7ztbogyGnTHbHJFl2" wdid="Q1299">
 	<UniqueIdList><UniqueId source="VIAF" viafid="141205608">
 			<SourceUrl>http://viaf.org/viaf/141205608</SourceUrl>
 			<SourceWSUrl>http://viaf.org/viaf/141205608/rdf.xml</SourceWSUrl>
@@ -41,20 +41,339 @@
 			<Value>Q1299</Value>
 		</UniqueId></UniqueIdList>
 	<NameList>
-		<Name mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" sort-name="Beatles, The" source="MusicBrainz" type="Name">The Beatles</Name>
+		<Name locale="en" mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" primary="primary" sort-name="Beatles, The" source="MusicBrainz" type="Artist name" type-id="894afba6-2816-3c24-8072-eadb66bd04bc">The Beatles</Name>
 	</NameList>
-	<Type/>
-	<AreaList/>
-	<PeriodList/>
+	<TypeList/>
+	<PlaceList/>
+	<DateList/>
 	<DescriptionList/>
 	<TagList/>
 	<UrlList><Url mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" type="lyrics">http://decoda.com/the-beatles-lyrics</Url><Url mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" type="lyrics">http://genius.com/artists/The-beatles</Url><Url mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" type="lyrics">http://lyrics.wikia.com/The_Beatles</Url><Url mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" type="other databases">http://musicmoz.org/Bands_and_Artists/B/Beatles,_The/</Url><Url mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" type="lyrics">http://muzikum.eu/en/122-3389/the-beatles/lyrics.html</Url><Url mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" type="other databases">http://rateyourmusic.com/artist/the_beatles</Url><Url mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" type="VIAF">http://viaf.org/viaf/141205608</Url><Url mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" type="other databases">http://www.45cat.com/artist/the-beatles</Url><Url mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" type="fanpage">http://www.aboutthebeatles.com/</Url><Url mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" type="allmusic">http://www.allmusic.com/artist/mn0000754032</Url><Url mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" type="BBC Music page">http://www.bbc.co.uk/music/artists/b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d</Url><Url mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" type="fanpage">http://www.beatles.ru/</Url><Url mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" type="fanpage">http://www.beatlesfanclub.nl/</Url><Url mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" type="fanpage">http://www.britishbeatlesfanclub.co.uk/</Url><Url mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" type="fanpage">http://www.dmbeatles.com/</Url><Url mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" type="IMDb">http://www.imdb.com/name/nm1397313/</Url><Url mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" type="last.fm">http://www.last.fm/music/The+Beatles</Url><Url mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" type="streaming music">http://www.pandora.com/beatles</Url><Url mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" type="secondhandsongs">http://www.secondhandsongs.com/artist/41</Url><Url mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" type="streaming music">http://www.staimusic.com/en/bands/the-beatles_4309.html</Url><Url mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" type="official homepage">http://www.thebeatles.com/</Url><Url mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" type="other databases">http://www.whosampled.com/The-Beatles/</Url><Url mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" type="image">https://commons.wikimedia.org/wiki/File:The_Fabs.JPG</Url><Url mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" type="wikipedia">https://en.wikipedia.org/wiki/The_Beatles</Url><Url mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" type="purchase for download">https://itunes.apple.com/artist/id136975</Url><Url mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" type="myspace">https://myspace.com/thebeatles</Url><Url mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" type="streaming music">https://open.spotify.com/artist/3WrFJ7ztbogyGnTHbHJFl2</Url><Url mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" type="purchase for download">https://play.google.com/store/music/artist?id=Apyx6rt3d2amstq7u3ntxenxhkq</Url><Url mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" type="social network">https://plus.google.com/111520018934389590684</Url><Url mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" type="soundcloud">https://soundcloud.com/thebeatles</Url><Url mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" type="social network">https://twitter.com/thebeatles</Url><Url mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" type="purchase for mail-order">https://www.amazon.co.uk/-/e/B000APTK6K</Url><Url mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" type="streaming music">https://www.deezer.com/artist/1</Url><Url mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" type="discogs">https://www.discogs.com/artist/82730</Url><Url mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" type="social network">https://www.facebook.com/thebeatles</Url><Url mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" type="discography">https://www.musicmeter.nl/artist/13409</Url><Url mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" type="other databases">https://www.musik-sammler.de/artist/the-beatles/</Url><Url mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" type="setlistfm">https://www.setlist.fm/setlists/the-beatles-23d6a88b.html</Url><Url mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" type="wikidata">https://www.wikidata.org/wiki/Q1299</Url><Url mbid="b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" type="youtube">https://www.youtube.com/user/thebeatles</Url></UrlList>
 	<RatingList/>
-	<ArtistCreditList/>
+	<CreditList/>
 	<ArtList/>
 	<DisambiguationList/>
 	<AnnotationList/>
 	<Discography>
-		<ReleaseGroupList/>
+		<ReleaseGroupList><ReleaseGroup path="./src/test/resources/MusicBrainzScraperTest/_fileInput/B/Beatles, The/1963 - Please Please Me/">
+	<UniqueIdList/>
+	<NameList/>
+	<TypeList/>
+	<DateList/>
+	<AwardList/>
+	<ChartList/>
+	<DescriptionList/>
+	<TagList/>
+	<UrlList/>
+	<RatingList/>
+	<CreditList/>
+	<ArtList/>
+	<DisambiguationList/>
+	<AnnotationList/>
+	<ReleaseList><Release path="./src/test/resources/MusicBrainzScraperTest/_fileInput/B/Beatles, The/1963 - Please Please Me/">
+	<UniqueIdList/>
+	<NameList/>
+	<TypeList/>
+	<DateList/>
+	<PlaceList/>
+	<LabelList/>
+	<LengthList/>
+	<DescriptionList/>
+	<CopyrightList/>
+	<TagList/>
+	<UrlList/>
+	<CreditList/>			
+	<ArtList/>
+	<DisambiguationList/>
+	<AnnotationList/>
+	<MediumList><Medium discNo="1" path="./src/test/resources/MusicBrainzScraperTest/_fileInput/B/Beatles, The/1963 - Please Please Me/">
+	<UniqueIdList/>
+	<NameList/>
+	<TypeList/>
+	<LengthList/>
+	<TrackList><Track>
+	<UniqueIdList/>
+	<NameList/>
+	<TypeList/>
+	<DateList/>
+	<PlaceList/>
+	<FileInfo/>
+	<AudioInfo/>
+	<Position/>
+	<LabelList/>
+	<DescriptionList/>
+	<LyricsList/>
+	<CopyrightList/>
+	<CopyrightCollectiveList/>
+	<TagList/>
+	<RatingList/>
+	<UrlList/>
+	<CreditList/>
+	<DisambiguationList/>
+	<AnnotationList/>
+</Track><Track>
+	<UniqueIdList/>
+	<NameList/>
+	<TypeList/>
+	<DateList/>
+	<PlaceList/>
+	<FileInfo/>
+	<AudioInfo/>
+	<Position/>
+	<LabelList/>
+	<DescriptionList/>
+	<LyricsList/>
+	<CopyrightList/>
+	<CopyrightCollectiveList/>
+	<TagList/>
+	<RatingList/>
+	<UrlList/>
+	<CreditList/>
+	<DisambiguationList/>
+	<AnnotationList/>
+</Track><Track>
+	<UniqueIdList/>
+	<NameList/>
+	<TypeList/>
+	<DateList/>
+	<PlaceList/>
+	<FileInfo/>
+	<AudioInfo/>
+	<Position/>
+	<LabelList/>
+	<DescriptionList/>
+	<LyricsList/>
+	<CopyrightList/>
+	<CopyrightCollectiveList/>
+	<TagList/>
+	<RatingList/>
+	<UrlList/>
+	<CreditList/>
+	<DisambiguationList/>
+	<AnnotationList/>
+</Track><Track>
+	<UniqueIdList/>
+	<NameList/>
+	<TypeList/>
+	<DateList/>
+	<PlaceList/>
+	<FileInfo/>
+	<AudioInfo/>
+	<Position/>
+	<LabelList/>
+	<DescriptionList/>
+	<LyricsList/>
+	<CopyrightList/>
+	<CopyrightCollectiveList/>
+	<TagList/>
+	<RatingList/>
+	<UrlList/>
+	<CreditList/>
+	<DisambiguationList/>
+	<AnnotationList/>
+</Track><Track>
+	<UniqueIdList/>
+	<NameList/>
+	<TypeList/>
+	<DateList/>
+	<PlaceList/>
+	<FileInfo/>
+	<AudioInfo/>
+	<Position/>
+	<LabelList/>
+	<DescriptionList/>
+	<LyricsList/>
+	<CopyrightList/>
+	<CopyrightCollectiveList/>
+	<TagList/>
+	<RatingList/>
+	<UrlList/>
+	<CreditList/>
+	<DisambiguationList/>
+	<AnnotationList/>
+</Track><Track>
+	<UniqueIdList/>
+	<NameList/>
+	<TypeList/>
+	<DateList/>
+	<PlaceList/>
+	<FileInfo/>
+	<AudioInfo/>
+	<Position/>
+	<LabelList/>
+	<DescriptionList/>
+	<LyricsList/>
+	<CopyrightList/>
+	<CopyrightCollectiveList/>
+	<TagList/>
+	<RatingList/>
+	<UrlList/>
+	<CreditList/>
+	<DisambiguationList/>
+	<AnnotationList/>
+</Track><Track>
+	<UniqueIdList/>
+	<NameList/>
+	<TypeList/>
+	<DateList/>
+	<PlaceList/>
+	<FileInfo/>
+	<AudioInfo/>
+	<Position/>
+	<LabelList/>
+	<DescriptionList/>
+	<LyricsList/>
+	<CopyrightList/>
+	<CopyrightCollectiveList/>
+	<TagList/>
+	<RatingList/>
+	<UrlList/>
+	<CreditList/>
+	<DisambiguationList/>
+	<AnnotationList/>
+</Track><Track>
+	<UniqueIdList/>
+	<NameList/>
+	<TypeList/>
+	<DateList/>
+	<PlaceList/>
+	<FileInfo/>
+	<AudioInfo/>
+	<Position/>
+	<LabelList/>
+	<DescriptionList/>
+	<LyricsList/>
+	<CopyrightList/>
+	<CopyrightCollectiveList/>
+	<TagList/>
+	<RatingList/>
+	<UrlList/>
+	<CreditList/>
+	<DisambiguationList/>
+	<AnnotationList/>
+</Track><Track>
+	<UniqueIdList/>
+	<NameList/>
+	<TypeList/>
+	<DateList/>
+	<PlaceList/>
+	<FileInfo/>
+	<AudioInfo/>
+	<Position/>
+	<LabelList/>
+	<DescriptionList/>
+	<LyricsList/>
+	<CopyrightList/>
+	<CopyrightCollectiveList/>
+	<TagList/>
+	<RatingList/>
+	<UrlList/>
+	<CreditList/>
+	<DisambiguationList/>
+	<AnnotationList/>
+</Track><Track>
+	<UniqueIdList/>
+	<NameList/>
+	<TypeList/>
+	<DateList/>
+	<PlaceList/>
+	<FileInfo/>
+	<AudioInfo/>
+	<Position/>
+	<LabelList/>
+	<DescriptionList/>
+	<LyricsList/>
+	<CopyrightList/>
+	<CopyrightCollectiveList/>
+	<TagList/>
+	<RatingList/>
+	<UrlList/>
+	<CreditList/>
+	<DisambiguationList/>
+	<AnnotationList/>
+</Track><Track>
+	<UniqueIdList/>
+	<NameList/>
+	<TypeList/>
+	<DateList/>
+	<PlaceList/>
+	<FileInfo/>
+	<AudioInfo/>
+	<Position/>
+	<LabelList/>
+	<DescriptionList/>
+	<LyricsList/>
+	<CopyrightList/>
+	<CopyrightCollectiveList/>
+	<TagList/>
+	<RatingList/>
+	<UrlList/>
+	<CreditList/>
+	<DisambiguationList/>
+	<AnnotationList/>
+</Track><Track>
+	<UniqueIdList/>
+	<NameList/>
+	<TypeList/>
+	<DateList/>
+	<PlaceList/>
+	<FileInfo/>
+	<AudioInfo/>
+	<Position/>
+	<LabelList/>
+	<DescriptionList/>
+	<LyricsList/>
+	<CopyrightList/>
+	<CopyrightCollectiveList/>
+	<TagList/>
+	<RatingList/>
+	<UrlList/>
+	<CreditList/>
+	<DisambiguationList/>
+	<AnnotationList/>
+</Track><Track>
+	<UniqueIdList/>
+	<NameList/>
+	<TypeList/>
+	<DateList/>
+	<PlaceList/>
+	<FileInfo/>
+	<AudioInfo/>
+	<Position/>
+	<LabelList/>
+	<DescriptionList/>
+	<LyricsList/>
+	<CopyrightList/>
+	<CopyrightCollectiveList/>
+	<TagList/>
+	<RatingList/>
+	<UrlList/>
+	<CreditList/>
+	<DisambiguationList/>
+	<AnnotationList/>
+</Track><Track>
+	<UniqueIdList/>
+	<NameList/>
+	<TypeList/>
+	<DateList/>
+	<PlaceList/>
+	<FileInfo/>
+	<AudioInfo/>
+	<Position/>
+	<LabelList/>
+	<DescriptionList/>
+	<LyricsList/>
+	<CopyrightList/>
+	<CopyrightCollectiveList/>
+	<TagList/>
+	<RatingList/>
+	<UrlList/>
+	<CreditList/>
+	<DisambiguationList/>
+	<AnnotationList/>
+</Track></TrackList>
+</Medium></MediumList>
+</Release></ReleaseList>
+</ReleaseGroup></ReleaseGroupList>
 	</Discography>
 </Artist>

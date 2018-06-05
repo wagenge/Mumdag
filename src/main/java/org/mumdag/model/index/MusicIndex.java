@@ -50,6 +50,10 @@ public static synchronized MusicIndex getInstance() {
     return instance;
 }
 
+public void setInstance(MusicIndex instance) {
+    this.instance = instance;
+}
+
 
 //=============================================================================
 /*
@@ -71,6 +75,34 @@ public Long addEntry(HashMap<String, Object> indexInfo) {
 //TEST:				nok
 public Object getCurrentEntry() {
     return findEntry(this.currentEntryId);
+}
+
+//-----------------------------------------------------------------------------
+
+//ERROR HANDLING:	nok
+//DOC:				nok
+//TEST:				nok
+public Artist getCurrentArtist() {
+    Long currentArtistId = (this.currentEntryId / 10000000000L) * 10000000000L;
+    Object obj = findEntry(currentArtistId);
+    if(obj instanceof Artist) {
+        return (Artist) obj;
+    }
+    return null;
+}
+
+//-----------------------------------------------------------------------------
+
+//ERROR HANDLING:	nok
+//DOC:				nok
+//TEST:				nok
+public Album getCurrentAlbum() {
+    Long currentAlbumId = (this.currentEntryId / 10000010000L) * 10000010000L;
+    Object obj = findEntry(currentAlbumId);
+    if(obj instanceof Album) {
+        return (Album) obj;
+    }
+    return null;
 }
 
 //-----------------------------------------------------------------------------
@@ -150,6 +182,44 @@ public Object findEntry(Long key) {
     return null;
 }
 
+//-----------------------------------------------------------------------------
+
+//ERROR HANDLING:	nok
+//DOC:				nok
+//TEST:				nok
+public Track getFirstTrack() {
+    if(artists.values().stream().findFirst().isPresent()) {
+        Artist firstArtist = artists.values().stream().findFirst().get();
+        return firstArtist.getFirstTrack();
+    }
+    else {
+        return null;
+    }
+}
+
+//-----------------------------------------------------------------------------
+
+//ERROR HANDLING:	nok
+//DOC:				nok
+//TEST:				nok
+public Track getFirstTrackFromCurrentEntry() {
+    Object obj = findEntry(this.currentEntryId);
+    if(obj instanceof Track) {
+        return (Track)obj;
+    }
+    else if(obj instanceof Medium) {
+        return ((Medium)obj).getFirstTrack();
+    }
+    else if(obj instanceof Album) {
+        return ((Album)obj).getFirstTrack();
+    }
+    else if(obj instanceof Artist) {
+        return ((Artist)obj).getFirstTrack();
+    }
+    else {
+        return getFirstTrack();
+    }
+}
 
 //-----------------------------------------------------------------------------
 
@@ -161,7 +231,7 @@ public void updateEntry(String key, String value) {
     if(obj instanceof Artist) {
         ((Artist)obj).getArtistIdMap().put(key, value);
     }else if(obj instanceof Album) {
-        ((Album)obj).getReleasegroupIdMap().put(key, value);
+        ((Album)obj).getReleaseGroupIdMap().put(key, value);
     }else if(obj instanceof Medium) {
         ((Medium)obj).getMediumIdMap().put(key, value);
     }else if(obj instanceof Track) {
@@ -191,7 +261,7 @@ public void setArtistId(String key, String value) {
 public void setReleaseGroupId(String key, String value) {
     Object obj = findEntry(this.currentEntryId);
     if(obj instanceof Album) {
-        ((Album)obj).getReleasegroupIdMap().put(key, value);
+        ((Album)obj).getReleaseGroupIdMap().put(key, value);
         calcResolvBaseMaps(key);
     }
 }

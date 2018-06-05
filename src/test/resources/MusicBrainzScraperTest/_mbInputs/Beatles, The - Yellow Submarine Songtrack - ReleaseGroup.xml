@@ -1,0 +1,60 @@
+<metadata xmlns="http://musicbrainz.org/ns/mmd-2.0#">
+	<release-group type="Soundtrack" id="9430dcc6-2164-4bec-bc33-9948f30063f7" type-id="22a628ad-c082-3c4f-b1b6-d41665107b88">
+		<title>Yellow Submarine Songtrack</title>
+		<first-release-date>1999-09-13</first-release-date>
+		<primary-type id="f529b476-6e62-324f-b0aa-1f3e33d313fc">Album</primary-type>
+		<secondary-type-list>
+			<secondary-type id="dd2a21e1-0c00-3729-a7a0-de60b84eb5d1">Compilation</secondary-type>
+			<secondary-type id="22a628ad-c082-3c4f-b1b6-d41665107b88">Soundtrack</secondary-type>
+			<secondary-type id="0c60f497-ff81-3818-befd-abfc84a4858b">Remix</secondary-type>
+		</secondary-type-list>
+		<relation-list target-type="release_group">
+			<relation type-id="cf02e524-9d5b-46b7-a88e-329737395818" type="cover">
+				<target>faed492f-c330-4884-8c7e-535a6b181a20</target>
+				<direction>backward</direction>
+				<release-group id="faed492f-c330-4884-8c7e-535a6b181a20">
+					<title>Yellow Submarine Resurfaces</title>
+					<first-release-date>2012-05</first-release-date>
+				</release-group>
+			</relation>
+		</relation-list>
+		<relation-list target-type="url">
+			<relation type-id="156344d3-da8b-40c6-8b10-7b1c22727124" type="lyrics">
+				<target id="5c72fff3-5623-4105-bbfd-7d05cfad8f4b">http://lyrics.wikia.com/wiki/The_Beatles:Yellow_Submarine_(1999_Reissue)_(1999)</target>
+			</relation>
+			<relation type="allmusic" type-id="a50a1d20-2b20-4d2c-9a29-eb771dd78386">
+				<target id="5f6152ea-6a42-456d-b5ef-251dce2fab0b">http://www.allmusic.com/album/mw0000668441</target>
+			</relation>
+			<relation type="wikipedia" type-id="6578f0e9-1ace-4095-9de8-6e517ddb1ceb">
+				<target id="4fd135e2-5cc6-44a6-9c5a-9948d21960fc">https://en.wikipedia.org/wiki/Yellow_Submarine_Songtrack</target>
+			</relation>
+			<relation type-id="38320e40-9f4a-3ae7-8cb2-3f3c9c5d856d" type="other databases">
+				<target id="3f5ffab8-42f2-45de-9bce-723e7ea5f3a4">https://rateyourmusic.com/release/album/the_beatles/yellow_submarine/</target>
+			</relation>
+			<relation type="discogs" type-id="99e550f3-5ab4-3110-b5b9-fe01d970b126">
+				<target id="fea95672-fed4-4df0-bdd1-7970fd00bc1d">https://www.discogs.com/master/65554</target>
+			</relation>
+			<relation type="wikidata" type-id="b988d08c-5d86-4a57-9557-c83b399e3580">
+				<target id="548f4d80-c7e1-4959-83e1-9609fbb99588">https://www.wikidata.org/wiki/Q1423277</target>
+			</relation>
+		</relation-list>
+		<tag-list>
+			<tag count="2">
+				<name>film score</name>
+			</tag>
+			<tag count="1">
+				<name>film soundtrack</name>
+			</tag>
+			<tag count="1">
+				<name>modern classical</name>
+			</tag>
+			<tag count="1">
+				<name>pop rock</name>
+			</tag>
+			<tag count="1">
+				<name>psychedelic pop</name>
+			</tag>
+		</tag-list>
+		<rating votes-count="1">4</rating>
+	</release-group>
+</metadata>

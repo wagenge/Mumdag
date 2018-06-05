@@ -1,0 +1,192 @@
+<metadata xmlns="http://musicbrainz.org/ns/mmd-2.0#">
+	<release-group type-id="22a628ad-c082-3c4f-b1b6-d41665107b88" type="Soundtrack" id="b93a7c47-a6d4-33f2-9034-53fdd991f4ba">
+		<title>Purple Rain</title>
+		<first-release-date>1984-06-25</first-release-date>
+		<primary-type id="f529b476-6e62-324f-b0aa-1f3e33d313fc">Album</primary-type>
+		<secondary-type-list>
+			<secondary-type id="22a628ad-c082-3c4f-b1b6-d41665107b88">Soundtrack</secondary-type>
+		</secondary-type-list>
+		<relation-list target-type="release_group">
+			<relation type="single from" type-id="fcf680a9-6871-4519-8c4b-8c6549575b35">
+				<target>34fec263-4a8a-36ae-998f-563dafb0f233</target>
+				<direction>backward</direction>
+				<release-group id="34fec263-4a8a-36ae-998f-563dafb0f233">
+					<title>Let’s Go Crazy</title>
+					<first-release-date>1984</first-release-date>
+				</release-group>
+			</relation>
+			<relation type="mashes up" type-id="03786c2a-cd9d-4148-b3ea-35ea61de1283">
+				<target>36c9e154-7995-3b85-89c8-48842579870d</target>
+				<direction>backward</direction>
+				<release-group id="36c9e154-7995-3b85-89c8-48842579870d">
+					<title>The Purple Album</title>
+					<first-release-date>2004</first-release-date>
+				</release-group>
+			</relation>
+			<relation type="single from" type-id="fcf680a9-6871-4519-8c4b-8c6549575b35">
+				<target>8ff97f13-e782-435d-bdf5-dd08ab96423a</target>
+				<direction>backward</direction>
+				<release-group id="8ff97f13-e782-435d-bdf5-dd08ab96423a">
+					<title>Take Me With You</title>
+					<first-release-date>1985-01-25</first-release-date>
+				</release-group>
+			</relation>
+			<relation type-id="589447ea-be2c-46cc-b9e9-469e1d06e18a" type="included in">
+				<target>98d17bb4-eba7-4157-897b-461c2c61008a</target>
+				<release-group id="98d17bb4-eba7-4157-897b-461c2c61008a">
+					<title>Original Album Series</title>
+					<first-release-date>2012</first-release-date>
+				</release-group>
+			</relation>
+			<relation type-id="fcf680a9-6871-4519-8c4b-8c6549575b35" type="single from">
+				<target>a5e580d8-f700-44dd-9f87-e8bec3431e25</target>
+				<direction>backward</direction>
+				<release-group id="a5e580d8-f700-44dd-9f87-e8bec3431e25">
+					<title>I Would Die 4 U</title>
+					<first-release-date>1984</first-release-date>
+				</release-group>
+			</relation>
+			<relation type-id="fcf680a9-6871-4519-8c4b-8c6549575b35" type="single from">
+				<target>d230d994-b6ab-31a0-b3e7-c6ede8307a95</target>
+				<direction>backward</direction>
+				<release-group id="d230d994-b6ab-31a0-b3e7-c6ede8307a95">
+					<title>Purple Rain</title>
+					<first-release-date>1984</first-release-date>
+				</release-group>
+			</relation>
+			<relation type-id="fcf680a9-6871-4519-8c4b-8c6549575b35" type="single from">
+				<target>d4b156ad-fd60-3e9b-8ca7-a9e472770f5b</target>
+				<direction>backward</direction>
+				<release-group id="d4b156ad-fd60-3e9b-8ca7-a9e472770f5b">
+					<title>When Doves Cry / 17 Days</title>
+					<first-release-date>1984</first-release-date>
+				</release-group>
+			</relation>
+		</relation-list>
+		<relation-list target-type="series">
+			<relation type="part of" type-id="01018437-91d8-36b9-bf89-3f885d53b5bd">
+				<target>8668518f-4a1e-4802-8b0d-81703ced6418</target>
+				<ordering-key>76</ordering-key>
+				<attribute-list>
+					<attribute value="76">number</attribute>
+				</attribute-list>
+				<series type-id="4c1c4949-7b6c-3a2d-9d54-a50a27e4fa77" id="8668518f-4a1e-4802-8b0d-81703ced6418" type="Release group">
+					<name>Rolling Stone: 500 Greatest Albums of All Time: 2012 edition</name>
+				</series>
+			</relation>
+		</relation-list>
+		<relation-list target-type="url">
+			<relation type-id="156344d3-da8b-40c6-8b10-7b1c22727124" type="lyrics">
+				<target id="6f4127f5-271e-4802-a74c-b875fe52f6a4">http://genius.com/albums/Prince/Purple-rain</target>
+			</relation>
+			<relation type-id="156344d3-da8b-40c6-8b10-7b1c22727124" type="lyrics">
+				<target id="35c583e3-2c26-4acf-a8a0-6a2250d3c5af">http://lyrics.wikia.com/wiki/Prince:Purple_Rain_(1984)</target>
+			</relation>
+			<relation type="allmusic" type-id="a50a1d20-2b20-4d2c-9a29-eb771dd78386">
+				<target id="0f5ee247-6a02-424c-aae7-9f3868904609">http://www.allmusic.com/album/mw0000382324</target>
+			</relation>
+			<relation type-id="c3ac9c3b-f546-4d15-873f-b294d2c1b708" type="review">
+				<target id="5bac70e9-f209-4c09-9b1c-c2f5a4d9cc77">http://www.bbc.co.uk/music/reviews/6qxm</target>
+			</relation>
+			<relation type="IMDb" type-id="85b0a010-3237-47c7-8476-6fcefd4761af">
+				<target id="27915109-cbc3-469d-a1dc-dc311447b02d">http://www.imdb.com/title/tt0087957/</target>
+			</relation>
+			<relation type="wikipedia" type-id="6578f0e9-1ace-4095-9de8-6e517ddb1ceb">
+				<target id="317d89a7-d2fa-4b32-b35c-14d0d9db8570">https://en.wikipedia.org/wiki/Purple_Rain_(album)</target>
+			</relation>
+			<relation type="other databases" type-id="38320e40-9f4a-3ae7-8cb2-3f3c9c5d856d">
+				<target id="dbe18be0-a930-4aa9-9268-19192c677de4">https://rateyourmusic.com/release/album/prince_and_the_revolution/purple_rain/</target>
+			</relation>
+			<relation type-id="99e550f3-5ab4-3110-b5b9-fe01d970b126" type="discogs">
+				<target id="26575dbd-ca4c-4b67-a273-60d24e34a74e">https://www.discogs.com/master/16245</target>
+			</relation>
+			<relation type-id="38320e40-9f4a-3ae7-8cb2-3f3c9c5d856d" type="other databases">
+				<target id="5439dae5-f08b-4eff-b9bb-6b01729cc19d">https://www.musik-sammler.de/album/65084/</target>
+			</relation>
+		</relation-list>
+		<tag-list>
+			<tag count="3">
+				<name>00s</name>
+			</tag>
+			<tag count="0">
+				<name>1984</name>
+			</tag>
+			<tag count="0">
+				<name>80 s and 90 s pop</name>
+			</tag>
+			<tag count="0">
+				<name>american</name>
+			</tag>
+			<tag count="1">
+				<name>américain</name>
+			</tag>
+			<tag count="0">
+				<name>classic pop and rock</name>
+			</tag>
+			<tag count="3">
+				<name>contemporary pop/rock</name>
+			</tag>
+			<tag count="2">
+				<name>contemporary r&amp;b</name>
+			</tag>
+			<tag count="1">
+				<name>dance-pop</name>
+			</tag>
+			<tag count="1">
+				<name>dance-rock</name>
+			</tag>
+			<tag count="0">
+				<name>electronic</name>
+			</tag>
+			<tag count="5">
+				<name>funk</name>
+			</tag>
+			<tag count="1">
+				<name>funk rock</name>
+			</tag>
+			<tag count="1">
+				<name>funk soul</name>
+			</tag>
+			<tag count="4">
+				<name>pop</name>
+			</tag>
+			<tag count="0">
+				<name>pop 80er</name>
+			</tag>
+			<tag count="5">
+				<name>pop rock</name>
+			</tag>
+			<tag count="1">
+				<name>pop/rock</name>
+			</tag>
+			<tag count="1">
+				<name>r&amp;b</name>
+			</tag>
+			<tag count="0">
+				<name>retro</name>
+			</tag>
+			<tag count="6">
+				<name>rock</name>
+			</tag>
+			<tag count="1">
+				<name>soul</name>
+			</tag>
+			<tag count="1">
+				<name>soundtrack</name>
+			</tag>
+			<tag count="1">
+				<name>synth funk</name>
+			</tag>
+			<tag count="0">
+				<name>synth-pop</name>
+			</tag>
+			<tag count="1">
+				<name>urban</name>
+			</tag>
+			<tag count="0">
+				<name>usa</name>
+			</tag>
+		</tag-list>
+		<rating votes-count="7">4.3</rating>
+	</release-group>
+</metadata>
